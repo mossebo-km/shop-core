@@ -1,0 +1,24 @@
+{
+    "name": "mossebo-cm/mossebo-shop-core",
+    "description": "Ядро проекта",
+    "minimum-stability": "stable",
+    "keywords": [
+        "Mossebo", "Shop", "Laravel"
+    ],
+    "authors": [
+        {
+            "name": "Trigur",
+            "email": "trigur@yandex.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "composer/installers": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "mossebo-shop-core\\": "src/"
+        }
+    }
+}
