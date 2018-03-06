@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboCM\MosseboShopCore;
+namespace MosseboShopCore;
 
 use Cache;
 
