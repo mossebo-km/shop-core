@@ -86,8 +86,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     protected function registerConfigs()
     {
         foreach ($this->configs as $key => $configFileName) {
-            $this->mergeConfigFrom($this->getConfigPath(), $configFileName);
-
+            $this->mergeConfigFrom($this->getConfigPath($configFileName), $configFileName);
         }
     }
 
