@@ -10,7 +10,7 @@ class CategoryRepository extends RamRepository implements CategoryRepositoryCont
     protected $model = Category::class;
 
     protected $modificators = [
-        'i18n', 'productCount'
+        'i18n', 'currentI18n', 'productCount'
     ];
 
     public function getTree($modificators)
@@ -21,6 +21,11 @@ class CategoryRepository extends RamRepository implements CategoryRepositoryCont
     protected function _withI18n($query)
     {
         return $query->with('i18n');
+    }
+
+    protected function _withCurrentI18n($query)
+    {
+        return $query->with('currentI18n');
     }
 
     protected function _withProductCount($query)

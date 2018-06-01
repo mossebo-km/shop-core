@@ -65,11 +65,7 @@ class RamRepository implements RamRepositoryContract {
 
     protected function _getCollection()
     {
-        if (count($this->collectionModificators) === 0) {
-            return $this->model::all();
-        }
-
-        $query = $this->model::query();
+        $query = $this->_getBaseQuery();
 
         foreach ($this->collectionModificators as $modificatorName) {
             $methodName = '_with' . ucfirst($modificatorName);
@@ -77,6 +73,11 @@ class RamRepository implements RamRepositoryContract {
         }
 
         return $query->get();
+    }
+
+    protected function _getBaseQuery()
+    {
+        return $this->model::query();
     }
 
     protected function _getCacheKey()

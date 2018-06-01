@@ -8,7 +8,7 @@ class CurrencyRepository extends RamRepository implements CurrencyRepositoryCont
 {
     protected $model = \App\Models\Currency::class;
 
-    protected function _getCollection() {
-        return $this->model::orderBy('position', 'asc')->get();
+    protected function _getBaseQuery() {
+        return $this->model::orderBy('position', 'asc');
     }
 }

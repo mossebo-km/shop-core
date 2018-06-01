@@ -23,6 +23,7 @@ class RepoServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->singleton('attributes', 'MosseboShopCore\Repositories\AttributeRepository');
         $this->app->singleton('categories', 'MosseboShopCore\Repositories\CategoryRepository');
         $this->app->singleton('currencies', 'MosseboShopCore\Repositories\CurrencyRepository');
         $this->app->singleton('languages', 'MosseboShopCore\Repositories\LanguageRepository');

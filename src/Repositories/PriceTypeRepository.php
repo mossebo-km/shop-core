@@ -9,7 +9,7 @@ class PriceTypeRepository extends RamRepository implements PriceTypeRepositoryCo
 {
     protected $model = PriceType::class;
 
-    protected function _getCollection() {
-        return $this->model::with('i18n')->get();
+    protected function _getBaseQuery() {
+        return $this->model::with('i18n');
     }
 }
