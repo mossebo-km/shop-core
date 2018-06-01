@@ -50,9 +50,9 @@ class RamRepository implements RamRepositoryContract {
         return $this->collection;
     }
 
-    public function enabled()
+    public function enabled($modificators)
     {
-        return $this->getCollection()->where('enabled', 1);
+        return $this->getCollection($modificators)->where('enabled', 1);
     }
 
     public function getModelClassName()
