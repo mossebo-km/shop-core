@@ -23,7 +23,8 @@ abstract class BaseModelI18n extends BaseModel
 
     public function currentI18n()
     {
-        return $this->i18n()->where('language_code', '=', App::getLocale());
+        return$this->hasOne($this->getI18nModelName(), $this->translateRelationField)
+            ->where('language_code', '=', App::getLocale());
     }
 
     public function getI18nModelName()
