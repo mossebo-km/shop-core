@@ -5,16 +5,14 @@ namespace MosseboShopCore;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
-class LocalEnvironmentServiceProvider extends ServiceProvider {
+class MosseboShopCoreServiceProvider extends ServiceProvider {
 
     /**
      * List of Local Environment Providers
      * @var array
      */
     protected $localProviders = [
-        'Laracasts\Generators\GeneratorsServiceProvider'
-        'Barryvdh\Debugbar\ServiceProvider',
-        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'MosseboShopCore\Providers\RepoServiceProvider'
     ];
 
     /**
@@ -22,7 +20,10 @@ class LocalEnvironmentServiceProvider extends ServiceProvider {
      * @var array
      */
     protected $facadeAliases = [
-        'Debugbar' => 'Barryvdh\Debugbar\Facade',
+        'Categories' => 'MosseboShopCore\Support\Facades\Categories',
+        'Currencies' => 'MosseboShopCore\Support\Facades\Currencies',
+        'Languages' => 'MosseboShopCore\Support\Facades\Languages',
+        'PriceTypes' => 'MosseboShopCore\Support\Facades\PriceTypes',
     ];
 
     /**
