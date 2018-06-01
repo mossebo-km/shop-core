@@ -92,7 +92,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
 
     protected function getConfigPath($configFileName)
     {
-        return __DIR__ . '/Config/{$configFileName}.php';
+        return __DIR__ . "/Config/{$configFileName}.php";
     }
 
     protected function getConfigPublishPath($configFileName)
