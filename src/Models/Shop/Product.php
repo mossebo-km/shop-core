@@ -4,7 +4,6 @@ namespace MosseboShopCore\Models\Shop;
 
 use MosseboShopCore\Models\Base\BaseModelI18n;
 
-
 class Product extends BaseModelI18n
 {
     protected $mediaCollectionName = 'images';
@@ -50,7 +49,7 @@ class Product extends BaseModelI18n
     {
         return $this->hasManyThrough(
             Attribute::class, ProductAttribute::class,
-            'product_id', 'id'
+            'product_id', 'id', 'id', 'attribute_id'
         );
     }
 
@@ -63,7 +62,7 @@ class Product extends BaseModelI18n
     {
         return $this->hasManyThrough(
             AttributeOption::class, ProductAttributeOption::class,
-            'product_id', 'id'
+            'product_id', 'id', 'id', 'option_id'
         );
     }
 
