@@ -2,6 +2,7 @@
 
 namespace MosseboShopCore\Models\Base;
 
+use App;
 use Config;
 
 abstract class BaseModelI18n extends BaseModel
@@ -12,12 +13,17 @@ abstract class BaseModelI18n extends BaseModel
     public function __construct(array $attributes = []) {
         parent::__construct($attributes);
 
-        $this->translateTableName = Config::get("migrations.{$this->tableIdentif}I18n");
+        $this->translateTableName = Config::get("tables.{$this->tableIdentif}I18n");
     }
 
     public function i18n()
     {
         return $this->hasMany($this->getI18nModelName(), $this->translateRelationField);
+    }
+
+    public function currentI18n()
+    {
+        return $this->i18n()->where('language_code', '=', App::getLocale());
     }
 
     public function getI18nModelName()
@@ -27,7 +33,7 @@ abstract class BaseModelI18n extends BaseModel
 
     public static function withTranslate($languageCode = null)
     {
-        return self::addTranslateToQuery($languageCode ?: 'ru');
+        return self::addTranslateToQuery($languageCode ?: App::getLocale());
     }
 
     protected static function addTranslateToQuery($languageCode, $query = false)

@@ -12,7 +12,7 @@ abstract class BaseModel extends Model
     public function __construct(array $attributes = []) {
         parent::__construct($attributes);
 
-        $this->table = Config::get("migrations.{$this->tableIdentif}");
+        $this->table = Config::get("tables.{$this->tableIdentif}");
     }
 
     /**

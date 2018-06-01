@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Models\Shop;
+namespace MosseboShopCore\Models;
 
 use MosseboShopCore\Models\Base\Authenticatable;
 

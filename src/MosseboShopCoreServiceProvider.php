@@ -15,6 +15,10 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
         'MosseboShopCore\Providers\RepoServiceProvider'
     ];
 
+    protected $configs = [
+        'tables',
+    ];
+
     /**
      * List of only Local Environment Facade Aliases
      * @var array
@@ -30,24 +34,30 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
      * Bootstrap the application services.
      * @return void
      */
-    public function boot() {
+    public function boot()
+    {
         if ($this->app->isLocal()) {
             $this->registerServiceProviders();
             $this->registerFacadeAliases();
         }
+
+        $this->publishConfigs();
     }
 
     /**
      * Register the application services.
      * @return void
      */
-    public function register() {
+    public function register()
+    {
+        $this->registerConfigs();
     }
 
     /**
      * Load local service providers
      */
-    protected function registerServiceProviders() {
+    protected function registerServiceProviders()
+    {
         foreach ($this->localProviders as $provider) {
             $this->app->register($provider);
         }
@@ -56,10 +66,48 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     /**
      * Load additional Aliases
      */
-    public function registerFacadeAliases() {
+    public function registerFacadeAliases()
+    {
         $loader = AliasLoader::getInstance();
         foreach ($this->facadeAliases as $alias => $facade) {
             $loader->alias($alias, $facade);
         }
+    }
+
+    public function publishConfigs()
+    {
+        $loader = AliasLoader::getInstance();
+        foreach ($this->facadeAliases as $alias => $facade) {
+            $loader->alias($alias, $facade);
+        }
+    }
+
+    protected function publishConfigs()
+    {
+        foreach ($this->configs as $key => $configFileName) {
+            $this->publishes([
+                $this->getConfigPath($configFileName) => $this->getConfigPublishPath($configFileName)
+             ], $configFileName);
+        }
+    }
+
+    protected function registerConfigs()
+    {
+        foreach ($this->configs as $key => $configFileName) {
+            $this->mergeConfigFrom($this->getConfigPath(), $configFileName);
+
+        }
+    }
+
+    protected function getConfigPath($configFileName)
+    {
+        return __DIR__ . '/Config/{$configFileName}.php';
+    }
+
+    protected function getConfigPublishPath($configFileName)
+    {
+        return function_exists('config_path') ?
+            config_path("{$configFileName}.php") :
+            base_path("config/{$configFileName}.php");
     }
 }
