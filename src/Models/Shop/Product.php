@@ -40,17 +40,17 @@ class Product extends BaseModelI18n
         );
     }
 
-    public function productAttributes()
-    {
-        return $this->hasMany(ProductAttribute::class, 'product_id');
-    }
-
     public function attributes()
     {
         return $this->hasManyThrough(
             Attribute::class, ProductAttribute::class,
             'product_id', 'id', 'id', 'attribute_id'
         );
+    }
+
+    public function productAttributes()
+    {
+        return $this->hasMany(ProductAttribute::class, 'product_id');
     }
 
     public function productAttributeOptions()
@@ -68,7 +68,7 @@ class Product extends BaseModelI18n
 
     public function supplier()
     {
-        return $this->hasOne(Supplier::class, 'supplier_id');
+        return $this->hasOne(Supplier::class, 'id', 'supplier_id');
     }
 
     /**

@@ -27,6 +27,10 @@ class RamRepository implements RamRepositoryContract {
 
     public function getCollection($modificators = [])
     {
+        if (! is_array($modificators)) {
+            $modificators = [$modificators];
+        }
+
         $newModificators = [];
         foreach ($modificators as $modificatorName) {
             if (in_array($modificatorName, $this->modificators)) {
