@@ -22,7 +22,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     protected $facadeAliases = [
         'Categories' => 'MosseboShopCore\Support\Facades\Categories',
         'Currencies' => 'MosseboShopCore\Support\Facades\Currencies',
-        'Languages' => 'MosseboShopCore\Support\Facades\Languages',
+        'Languages'  => 'MosseboShopCore\Support\Facades\Languages',
         'PriceTypes' => 'MosseboShopCore\Support\Facades\PriceTypes',
     ];
 

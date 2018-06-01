@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace MosseboShopCore\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,9 +23,9 @@ class RepoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('categories', 'App\Repositories\CategoryRepository');
-        $this->app->singleton('currencies', 'App\Repositories\CurrencyRepository');
-        $this->app->singleton('languages', 'App\Repositories\LanguageRepository');
-        $this->app->singleton('price-types', 'App\Repositories\PriceTypeRepository');
+        $this->app->singleton('categories', 'MosseboShopCore\Repositories\CategoryRepository');
+        $this->app->singleton('currencies', 'MosseboShopCore\Repositories\CurrencyRepository');
+        $this->app->singleton('languages', 'MosseboShopCore\Repositories\LanguageRepository');
+        $this->app->singleton('price-types', 'MosseboShopCore\Repositories\PriceTypeRepository');
     }
 }
