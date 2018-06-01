@@ -74,14 +74,6 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
         }
     }
 
-    public function publishConfigs()
-    {
-        $loader = AliasLoader::getInstance();
-        foreach ($this->facadeAliases as $alias => $facade) {
-            $loader->alias($alias, $facade);
-        }
-    }
-
     protected function publishConfigs()
     {
         foreach ($this->configs as $key => $configFileName) {
