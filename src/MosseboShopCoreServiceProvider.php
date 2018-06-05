@@ -37,11 +37,8 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        if ($this->app->isLocal()) {
-            $this->registerServiceProviders();
-            $this->registerFacadeAliases();
-        }
-
+        $this->registerServiceProviders();
+        $this->registerFacadeAliases();
         $this->publishConfigs();
     }
 
