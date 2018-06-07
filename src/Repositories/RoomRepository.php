@@ -35,6 +35,6 @@ class RoomRepository extends RamRepository implements RoomRepositoryContract
 
         return $query->select(\DB::raw("\"{$modelTableName}\".*, count(\"{$productsTableName}\".\"product_id\") as \"products_count\""))
             ->leftJoin($productsTableName, "{$productsTableName}.room_id", '=', "{$modelTableName}.id")
-            ->groupBy("{$productsTableName}.id");
+            ->groupBy("{$modelTableName}.id");
     }
 }

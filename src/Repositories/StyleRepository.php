@@ -35,6 +35,6 @@ class StyleRepository extends RamRepository implements StyleRepositoryContract
 
         return $query->select(\DB::raw("\"{$modelTableName}\".*, count(\"{$productsTableName}\".\"product_id\") as \"products_count\""))
             ->leftJoin($productsTableName, "{$productsTableName}.style_id", '=', "{$modelTableName}.id")
-            ->groupBy("{$productsTableName}.id");
+            ->groupBy("{$modelTableName}.id");
     }
 }
