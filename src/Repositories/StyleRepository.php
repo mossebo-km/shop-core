@@ -2,12 +2,12 @@
 
 namespace MosseboShopCore\Repositories;
 
-use MosseboShopCore\Contracts\Repositories\CategoryRepository as CategoryRepositoryContract;
-use MosseboShopCore\Models\Shop\Category;
+use MosseboShopCore\Contracts\Repositories\CategoryRepository as StyleRepositoryContract;
+use MosseboShopCore\Models\Shop\Style;
 
-class CategoryRepository extends RamRepository implements CategoryRepositoryContract
+class StyleRepository extends RamRepository implements StyleRepositoryContract
 {
-    protected $model = Category::class;
+    protected $model = Style::class;
 
     protected $modificators = [
         'i18n', 'currentI18n', 'productCount'
@@ -28,11 +28,10 @@ class CategoryRepository extends RamRepository implements CategoryRepositoryCont
         return $query->with('currentI18n');
     }
 
-    // todo: // RoomRepository, StyleRepository - повторяется
     protected function _withProductCount($query)
     {
-        $modelTableName = \Config::get('tables.Categories');
-        $productsTableName = \Config::get('tables.CategoryProducts');
+        $modelTableName = \Config::get('tables.Styles');
+        $productsTableName = \Config::get('tables.StyleProducts');
 
         return $query->select(\DB::raw("\"{$modelTableName}\".*, count(\"{$productsTableName}\".\"product_id\") as \"products_count\""))
             ->leftJoin($productsTableName, "{$productsTableName}.style_id", '=', "{$modelTableName}.id")
