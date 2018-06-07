@@ -5,22 +5,22 @@ namespace MosseboShopCore\Models\Shop;
 use MosseboShopCore\Models\Base\BaseModelI18n;
 use MosseboShopCore\Support\Traits\Models\NestedTrait;
 
-class Category extends BaseModelI18n
+class Style extends BaseModelI18n
 {
     use NestedTrait;
 
-    protected $tableIdentif = 'Categories';
-    protected $relationFieldName = 'category_id';
+    protected $tableIdentif = 'Styles';
+    protected $relationFieldName = 'style_id';
 
     public function productsRelations()
     {
-        return $this->hasMany(CategoryProduct::class, $this->relationFieldName);
+        return $this->hasMany(StyleProduct::class, $this->relationFieldName);
     }
 
     public function products()
     {
         return $this->hasManyThrough(
-            Product::class, CategoryProduct::class,
+            Product::class, StyleProduct::class,
             $this->relationFieldName, 'id', 'id', 'product_id'
         );
     }
