@@ -48,7 +48,7 @@ class Product extends BaseModelI18n
         );
     }
 
-    public function attributeRealtions()
+    public function attributeRelations()
     {
         return $this->hasMany(ProductAttribute::class, 'product_id');
     }
