@@ -4,7 +4,6 @@ namespace MosseboShopCore\Support\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-
 /**
  * Class Categories
  * @package MosseboShopCore\Support\Facades

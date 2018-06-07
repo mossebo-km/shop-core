@@ -26,6 +26,8 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     protected $facadeAliases = [
         'Attributes' => 'MosseboShopCore\Support\Facades\Attributes',
         'Categories' => 'MosseboShopCore\Support\Facades\Categories',
+        'Rooms'      => 'MosseboShopCore\Support\Facades\Rooms',
+        'Styles'     => 'MosseboShopCore\Support\Facades\Styles',
         'Currencies' => 'MosseboShopCore\Support\Facades\Currencies',
         'Languages'  => 'MosseboShopCore\Support\Facades\Languages',
         'PriceTypes' => 'MosseboShopCore\Support\Facades\PriceTypes',
