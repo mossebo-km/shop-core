@@ -30,8 +30,8 @@ class CategoryRepository extends RamRepository implements CategoryRepositoryCont
 
     protected function _withProductCount($query)
     {
-        $categoriesTableName = \Config::get('migrations.Categories');
-        $categoryProductsTableName = \Config::get('migrations.CategoryProducts');
+        $categoriesTableName = \Config::get('tables.Categories');
+        $categoryProductsTableName = \Config::get('tables.CategoryProducts');
 
         return $query->select(\DB::raw("\"{$categoriesTableName}\".*, count(\"{$categoryProductsTableName}\".\"product_id\") as \"products_count\""))
             ->leftJoin($categoryProductsTableName, "{$categoryProductsTableName}.category_id", '=', "{$categoriesTableName}.id")
