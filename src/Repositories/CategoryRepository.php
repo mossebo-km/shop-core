@@ -3,7 +3,7 @@
 namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\CategoryRepository as CategoryRepositoryContract;
-use MosseboShopCore\Models\Category;
+use MosseboShopCore\Models\Shop\Category;
 
 class CategoryRepository extends RamRepository implements CategoryRepositoryContract
 {

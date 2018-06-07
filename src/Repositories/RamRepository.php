@@ -50,7 +50,7 @@ class RamRepository implements RamRepositoryContract {
         return $this->collection;
     }
 
-    public function enabled($modificators)
+    public function enabled($modificators = [])
     {
         return $this->getCollection($modificators)->where('enabled', 1);
     }
