@@ -27,6 +27,14 @@ class AttributeOption extends BaseModelI18n
 
     public function products()
     {
-        return $this->belongsTo(Product::class, 'product_id');
+        return $this->hasManyThrough(
+            Product::class, ProductAttributeOption::class,
+            'option_id', 'id', 'id', 'product_id'
+        );
+    }
+
+    public function productRelations()
+    {
+        return $this->hasMany(ProductAttributeOption::class, 'option_id');
     }
 }

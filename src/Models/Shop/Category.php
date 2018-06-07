@@ -12,7 +12,7 @@ class Category extends BaseModelI18n
     protected $tableIdentif = 'Categories';
     protected $translateRelationField = 'category_id';
 
-    public function categoryProducts()
+    public function productsRelations()
     {
         return $this->hasMany(CategoryProduct::class, 'category_id');
     }

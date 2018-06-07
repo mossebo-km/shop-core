@@ -20,7 +20,7 @@ class Attribute extends BaseModelI18n
      */
     protected $translateRelationField = 'attribute_id';
 
-    public function productAttributes()
+    public function productRelations()
     {
         return $this->hasMany(ProductAttribute::class, 'attribute_id');
     }

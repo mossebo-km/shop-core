@@ -27,7 +27,7 @@ class Product extends BaseModelI18n
         return $this->morphMany(Price::class, 'item');
     }
 
-    public function categoryProducts()
+    public function categoryRelations()
     {
         return $this->hasMany(CategoryProduct::class, 'product_id');
     }
@@ -48,14 +48,9 @@ class Product extends BaseModelI18n
         );
     }
 
-    public function productAttributes()
+    public function attributeRealtions()
     {
         return $this->hasMany(ProductAttribute::class, 'product_id');
-    }
-
-    public function productAttributeOptions()
-    {
-        return $this->hasMany(ProductAttributeOption::class, 'product_id');
     }
 
     public function attributeOptions()
@@ -64,6 +59,11 @@ class Product extends BaseModelI18n
             AttributeOption::class, ProductAttributeOption::class,
             'product_id', 'id', 'id', 'option_id'
         );
+    }
+
+    public function attributeOptionRelations()
+    {
+        return $this->hasMany(ProductAttributeOption::class, 'product_id');
     }
 
     public function supplier()
