@@ -35,7 +35,7 @@ class CategoryRepository extends RamRepository implements CategoryRepositoryCont
         $productsTableName = \Config::get('tables.CategoryProducts');
 
         return $query->select(\DB::raw("\"{$modelTableName}\".*, count(\"{$productsTableName}\".\"product_id\") as \"products_count\""))
-            ->leftJoin($productsTableName, "{$productsTableName}.style_id", '=', "{$modelTableName}.id")
+            ->leftJoin($productsTableName, "{$productsTableName}.category_id", '=', "{$modelTableName}.id")
             ->groupBy("{$productsTableName}.id");
     }
 }
