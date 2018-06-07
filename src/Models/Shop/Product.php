@@ -6,21 +6,9 @@ use MosseboShopCore\Models\Base\BaseModelI18n;
 
 class Product extends BaseModelI18n
 {
-    protected $mediaCollectionName = 'images';
-
-    /**
-     * Идентификатор таблицы.
-     *
-     * @var string
-     */
     protected $tableIdentif = 'Products';
-
-    /**
-     * Поле, через которое осуществляется связь с таблицей переводов.
-     *
-     * @var string
-     */
-    protected $translateRelationField = 'product_id';
+    protected $relationFieldName = 'product_id';
+    protected $mediaCollectionName = 'images';
 
     public function prices()
     {
@@ -29,14 +17,14 @@ class Product extends BaseModelI18n
 
     public function categoryRelations()
     {
-        return $this->hasMany(CategoryProduct::class, 'product_id');
+        return $this->hasMany(CategoryProduct::class, $this->relationFieldName);
     }
 
     public function categories()
     {
         return $this->hasManyThrough(
             Category::class, CategoryProduct::class,
-            'product_id', 'id'
+            $this->relationFieldName, 'id'
         );
     }
 
@@ -44,26 +32,26 @@ class Product extends BaseModelI18n
     {
         return $this->hasManyThrough(
             Attribute::class, ProductAttribute::class,
-            'product_id', 'id', 'id', 'attribute_id'
+            $this->relationFieldName, 'id', 'id', 'attribute_id'
         );
     }
 
     public function attributeRelations()
     {
-        return $this->hasMany(ProductAttribute::class, 'product_id');
+        return $this->hasMany(ProductAttribute::class, $this->relationFieldName);
     }
 
     public function attributeOptions()
     {
         return $this->hasManyThrough(
             AttributeOption::class, ProductAttributeOption::class,
-            'product_id', 'id', 'id', 'option_id'
+            $this->relationFieldName, 'id', 'id', 'option_id'
         );
     }
 
     public function attributeOptionRelations()
     {
-        return $this->hasMany(ProductAttributeOption::class, 'product_id');
+        return $this->hasMany(ProductAttributeOption::class, $this->relationFieldName);
     }
 
     public function supplier()

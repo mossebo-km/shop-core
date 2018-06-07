@@ -7,7 +7,19 @@ use Config;
 
 abstract class BaseModel extends Model
 {
+    /**
+     * Ключ таблицы в конфиге.
+     *
+     * @var string
+     */
     protected $tableIdentif;
+
+    /**
+     * Поле, через которое осуществляются связи с другими таблицами.
+     *
+     * @var string
+     */
+    protected $relationFieldName;
 
     public function __construct(array $attributes = []) {
         parent::__construct($attributes);

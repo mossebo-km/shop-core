@@ -28,6 +28,11 @@ class Price extends BaseModel
         return \Currencies::where('code', $this->currency_code)->first();
     }
 
+    /**
+     * Получение форматированной (побитой на разряды, с символом валюты) цены.
+     *
+     * @return mixed|string
+     */
     public function getFormatted()
     {
         extract($this->getCurrency()->toArray(), EXTR_OVERWRITE);
@@ -51,13 +56,20 @@ class Price extends BaseModel
         return $price;
     }
 
+    /**
+     * Возвращает цену с учетом количества знаков после запятой.
+     *
+     * @return float|int
+     */
     public function getValue()
     {
         return $this->value / $this->getDivider();
     }
 
     /**
-     * @return integer
+     * Получение значения, на которое нужно разделить значение из базы, чтобы получить верный результат.
+     *
+     * @return float|int
      */
     public function getDivider()
     {

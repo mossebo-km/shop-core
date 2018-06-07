@@ -8,7 +8,6 @@ use Config;
 abstract class BaseModelI18n extends BaseModel
 {
     protected $translateTableName;
-    protected $translateRelationField;
 
     public function __construct(array $attributes = []) {
         parent::__construct($attributes);
@@ -18,12 +17,12 @@ abstract class BaseModelI18n extends BaseModel
 
     public function i18n()
     {
-        return $this->hasMany($this->getI18nModelName(), $this->translateRelationField);
+        return $this->hasMany($this->getI18nModelName(), $this->relationFieldName);
     }
 
     public function currentI18n()
     {
-        return$this->hasOne($this->getI18nModelName(), $this->translateRelationField)
+        return$this->hasOne($this->getI18nModelName(), $this->relationFieldName)
             ->where('language_code', '=', App::getLocale());
     }
 
@@ -46,7 +45,7 @@ abstract class BaseModelI18n extends BaseModel
         }
 
         return $query
-            ->join($instance->translateTableName, "{$instance->translateTableName}.{$instance->translateRelationField}", '=', "{$instance->table}.id")
+            ->join($instance->translateTableName, "{$instance->translateTableName}.{$instance->relationFieldName}", '=', "{$instance->table}.id")
             ->where("{$instance->translateTableName}.language_code", '=', $languageCode);
     }
 }

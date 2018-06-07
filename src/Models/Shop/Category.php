@@ -10,18 +10,18 @@ class Category extends BaseModelI18n
     use NodeTrait;
 
     protected $tableIdentif = 'Categories';
-    protected $translateRelationField = 'category_id';
+    protected $relationFieldName = 'category_id';
 
     public function productsRelations()
     {
-        return $this->hasMany(CategoryProduct::class, 'category_id');
+        return $this->hasMany(CategoryProduct::class, $this->relationFieldName);
     }
 
     public function products()
     {
         return $this->hasManyThrough(
             Product::class, CategoryProduct::class,
-            'category_id', 'id', 'id', 'product_id'
+            $this->relationFieldName, 'id', 'id', 'product_id'
         );
     }
 

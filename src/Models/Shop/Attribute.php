@@ -6,23 +6,12 @@ use MosseboShopCore\Models\Base\BaseModelI18n;
 
 class Attribute extends BaseModelI18n
 {
-    /**
-     * Идентификатор таблицы.
-     *
-     * @var string
-     */
     protected $tableIdentif = 'Attributes';
-
-    /**
-     * Поле, через которое осуществляется связь с таблицей переводов.
-     *
-     * @var string
-     */
-    protected $translateRelationField = 'attribute_id';
+    protected $relationFieldName = 'attribute_id';
 
     public function productRelations()
     {
-        return $this->hasMany(ProductAttribute::class, 'attribute_id');
+        return $this->hasMany(ProductAttribute::class, $this->relationFieldName);
     }
 
     public function products()
@@ -30,15 +19,15 @@ class Attribute extends BaseModelI18n
         return $this->hasManyThrough(
             Product::class,
             ProductAttribute::class,
-            'product_id',
-            'attribute_id',
+            $this->relationFieldName,
             'id',
-            'id'
+            'id',
+            'product_id'
         );
     }
 
     public function options()
     {
-        return $this->hasMany(AttributeOption::class, 'attribute_id');
+        return $this->hasMany(AttributeOption::class, $this->relationFieldName);
     }
 }
