@@ -18,8 +18,10 @@ class RamRepository implements RamRepositoryContract {
 
     protected $collectionModificators = [];
 
-    public function __construct()
+    public function __construct($model)
     {
+        $this->model = $model;
+
         if (is_null($this->cacheKey)) {
             $this->cacheKey = $this->model . 'RepositoryCache';
         }

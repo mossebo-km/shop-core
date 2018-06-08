@@ -3,12 +3,9 @@
 namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\CategoryRepository as RoomRepositoryContract;
-use MosseboShopCore\Models\Shop\Room;
 
 class RoomRepository extends RamRepository implements RoomRepositoryContract
 {
-    protected $model = Room::class;
-
     protected $modificators = [
         'i18n',
         'currentI18n',

@@ -12,7 +12,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
      * @var array
      */
     protected $localProviders = [
-        'MosseboShopCore\Providers\RepoServiceProvider'
+
     ];
 
     protected $configs = [

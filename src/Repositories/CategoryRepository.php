@@ -3,12 +3,9 @@
 namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\CategoryRepository as CategoryRepositoryContract;
-use MosseboShopCore\Models\Shop\Category;
 
 class CategoryRepository extends RamRepository implements CategoryRepositoryContract
 {
-    protected $model = Category::class;
-
     protected $modificators = [
         'i18n',
         'currentI18n',

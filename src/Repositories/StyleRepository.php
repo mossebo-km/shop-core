@@ -3,8 +3,6 @@
 namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\CategoryRepository as StyleRepositoryContract;
-use MosseboShopCore\Models\Shop\Style;
-
 class StyleRepository extends RamRepository implements StyleRepositoryContract
 {
     protected $model = Style::class;
