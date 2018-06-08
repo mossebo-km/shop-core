@@ -10,22 +10,15 @@ class RoomRepository extends RamRepository implements RoomRepositoryContract
     protected $model = Room::class;
 
     protected $modificators = [
-        'i18n', 'currentI18n', 'productCount'
+        'i18n',
+        'currentI18n',
+        'productCount',
+        'image'
     ];
 
     public function getTree($modificators)
     {
         return $this->getCollection($modificators)->toTree();
-    }
-
-    protected function _withI18n($query)
-    {
-        return $query->with('i18n');
-    }
-
-    protected function _withCurrentI18n($query)
-    {
-        return $query->with('currentI18n');
     }
 
     protected function _withProductCount($query)

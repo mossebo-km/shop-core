@@ -4,17 +4,12 @@ namespace MosseboShopCore\Models\Shop;
 
 use MosseboShopCore\Models\Base\BaseModel;
 
-class Currency extends BaseModel
+abstract class Currency extends BaseModel
 {
     protected $tableIdentif = 'Currencies';
 
-    public function prices()
-    {
-        return $this->hasMany(Price::class, 'currency_code', 'code');
-    }
-
     /**
-     *
+     * Максимальное значение цены для текущей валюты
      *
      * @return string
      */

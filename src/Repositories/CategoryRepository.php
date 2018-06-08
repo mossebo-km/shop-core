@@ -10,22 +10,15 @@ class CategoryRepository extends RamRepository implements CategoryRepositoryCont
     protected $model = Category::class;
 
     protected $modificators = [
-        'i18n', 'currentI18n', 'productCount'
+        'i18n',
+        'currentI18n',
+        'productCount',
+        'image'
     ];
 
     public function getTree($modificators)
     {
         return $this->getCollection($modificators)->toTree();
-    }
-
-    protected function _withI18n($query)
-    {
-        return $query->with('i18n');
-    }
-
-    protected function _withCurrentI18n($query)
-    {
-        return $query->with('currentI18n');
     }
 
     // todo: // RoomRepository, StyleRepository - повторяется

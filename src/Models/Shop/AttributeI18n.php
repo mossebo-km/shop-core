@@ -4,7 +4,7 @@ namespace MosseboShopCore\Models\Shop;
 
 use MosseboShopCore\Models\Base\BaseModel;
 
-class AttributeI18n extends BaseModel
+abstract class AttributeI18n extends BaseModel
 {
     protected $tableIdentif = 'AttributesI18n';
 }

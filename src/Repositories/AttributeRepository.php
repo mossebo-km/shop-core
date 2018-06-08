@@ -10,22 +10,15 @@ class AttributeRepository extends RamRepository implements AttributeRepositoryCo
     protected $model = Attribute::class;
 
     protected $modificators = [
-        'i18n', 'currentI18n'
+        'i18n',
+        'currentI18n'
     ];
 
-    protected function _withI18n($query)
-    {
-        return $query->with('i18n');
-    }
-
-    protected function _withCurrentI18n($query)
-    {
-        return $query->with('currentI18n');
-    }
-
     protected function _getBaseQuery() {
-        return $this->model::with(['options' => function ($query) {
-            $query->with('currentI18n')->orderBy('position', 'asc');
-        }])->orderBy('position', 'asc');
+        return $this->model::with([
+            'options' => function ($query) {
+                $query->with('currentI18n')->orderBy('position', 'asc');
+            }
+        ])->orderBy('position', 'asc');
     }
 }

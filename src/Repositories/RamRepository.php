@@ -73,7 +73,12 @@ class RamRepository implements RamRepositoryContract {
 
         foreach ($this->collectionModificators as $modificatorName) {
             $methodName = '_with' . ucfirst($modificatorName);
-            $query = $this->$methodName($query);
+            if (method_exists($this, $methodName)) {
+                $query = $this->$methodName($query);
+            }
+            else {
+                $query = $query->with($modificatorName);
+            }
         }
 
         return $query->get();

@@ -59,4 +59,10 @@ abstract class BaseModel extends Model
 //            return isset($data[$paramName]) ? $data[$paramName] : Null;
 //        }, $fillable);
     }
+
+
+    public function relationNotEmpty($relationName)
+    {
+        return $this->relationLoaded($relationName) && !empty($this[$relationName]);
+    }
 }

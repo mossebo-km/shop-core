@@ -4,24 +4,9 @@ namespace MosseboShopCore\Models\Shop;
 
 use MosseboShopCore\Models\Base\BaseModel;
 
-class Price extends BaseModel
+abstract class Price extends BaseModel
 {
     protected $tableIdentif = 'Prices';
-
-    public function type()
-    {
-        return $this->hasOne(PriceType::class, 'price_type_id');
-    }
-
-    public function products()
-    {
-        return $this->morphedByMany(Product::class, 'item');
-    }
-
-    public function currency()
-    {
-        return $this->belongsTo(Currency::class, 'currency_code', 'code');
-    }
 
     public function getCurrency()
     {
