@@ -20,7 +20,7 @@ class CreateProductAttributeOptionsTable extends Migration
             $table->foreign('attribute_id')->references('id')->on(config('tables.Attributes'))->onDelete('cascade');
 
             $table->integer('option_id')->unsigned()->index();
-            $table->foreign('option_id')->references('id')->on(config('tables.AttributeOption'))->onDelete('cascade');
+            $table->foreign('option_id')->references('id')->on(config('tables.AttributeOptions'))->onDelete('cascade');
 
             $table->unique(['product_id', 'option_id']);
             $table->index(['product_id', 'option_id']);
