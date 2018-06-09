@@ -78,4 +78,8 @@ return [
     'AttributeOptionsI18n' => 'shop_attribute_options_i18n',
     'ProductAttributes' => 'shop_product_attributes',
     'ProductAttributeOptions' => 'shop_product_attribute_options',
+
+
+    'Cart' => 'shop_cart',
+    'Media' => 'media'
 ];

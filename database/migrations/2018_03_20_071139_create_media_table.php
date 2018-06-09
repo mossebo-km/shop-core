@@ -10,7 +10,7 @@ class CreateMediaTable extends Migration
     {
         echo 'Create Media Table \r\n';
 
-        Schema::create('media', function (Blueprint $table) {
+        Schema::create(config('tables.Media'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id');
             $table->morphs('model');
