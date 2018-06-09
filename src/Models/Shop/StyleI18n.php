@@ -6,5 +6,5 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class StyleI18n extends BaseModel
 {
-    protected $tableIdentif = 'StyleI18n';
+    protected $tableIdentif = 'StylesI18n';
 }
