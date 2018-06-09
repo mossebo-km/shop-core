@@ -10,7 +10,7 @@ class CreateCategoryProductsTable extends Migration
     {
         echo "Create CategoryProducts Table\r\n";
 
-        Schema::create(config('tables.ProductResource'), function (Blueprint $table) {
+        Schema::create(config('tables.CategoryProducts'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on(config('tables.Categories'))->onDelete('cascade');

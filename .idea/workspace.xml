@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000710_create_products_i18n_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000710_create_products_i18n_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_05_31_101857_create_orders_temp_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_05_31_101857_create_orders_temp_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_900620_create_category_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_900620_create_category_products_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,15 +61,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PriceTypeRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repositories/PriceTypeRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MosseboShopCoreServiceProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,11 +117,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_05_31_101857_create_orders_temp_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018_05_31_101857_create_orders_temp_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_05_31_101857_create_orders_temp_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="252">
+              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_02_27_900620_create_category_products_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_900620_create_category_products_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -226,6 +224,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000710_create_products_i18n_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_05_31_101857_create_orders_temp_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_27_900620_create_category_products_table.php" />
       </list>
     </option>
   </component>
@@ -390,12 +389,12 @@
       <updated>1528371698871</updated>
       <workItem from="1528371700316" duration="6945000" />
       <workItem from="1528442530250" duration="8013000" />
-      <workItem from="1528529486981" duration="1551000" />
+      <workItem from="1528529486981" duration="1746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16509000" />
+    <option name="totallyTimeSpent" value="16704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -430,13 +429,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Base/BaseStructureModel.php" />
     <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/NestedTrait.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -772,8 +764,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_05_31_101857_create_orders_temp_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="252">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_900620_create_category_products_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
         </state>
       </provider>
     </entry>
