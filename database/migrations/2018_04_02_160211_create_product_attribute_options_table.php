@@ -10,7 +10,7 @@ class CreateProductAttributeOptionsTable extends Migration
     {
         echo "Create ProductAttributeOptions Table\r\n";
 
-        Schema::create(config('tables.ProductAttributeOption'), function (Blueprint $table) {
+        Schema::create(config('tables.ProductAttributeOptions'), function (Blueprint $table) {
             $table->engine = "InnoDB";
 
             $table->integer('product_id')->unsigned()->index();

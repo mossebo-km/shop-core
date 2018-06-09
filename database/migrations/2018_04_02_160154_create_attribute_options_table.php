@@ -10,7 +10,7 @@ class CreateAttributeOptionsTable extends Migration
     {
         echo "Create AttributeOptions Table\r\n";
 
-        Schema::create(config('tables.AttributeOption'), function (Blueprint $table) {
+        Schema::create(config('tables.AttributeOptions'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 
