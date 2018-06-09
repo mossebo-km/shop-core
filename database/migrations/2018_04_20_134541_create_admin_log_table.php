@@ -10,7 +10,7 @@ class CreateAdminLogTable extends Migration
     {
         echo "Create AdminLog Table\r\n";
 
-        Schema::create(config('tables.AdminLog'), function (Blueprint $table) {
+        Schema::create(config('tables.AdminLogs'), function (Blueprint $table) {
             $table->engine = "InnoDB";
 
             $table->increments('id');

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_04_02_160211_create_product_attribute_options_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_04_02_160211_create_product_attribute_options_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_04_20_134541_create_admin_log_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_04_20_134541_create_admin_log_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,15 +79,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_05_31_101857_create_orders_temp_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_05_31_101857_create_orders_temp_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2018_02_27_900620_create_category_products_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_900620_create_category_products_table.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,13 +111,32 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="2018_04_02_160211_create_product_attribute_options_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018_04_02_160211_create_product_attribute_options_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_02_160211_create_product_attribute_options_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
               <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_04_20_134541_create_admin_log_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_20_134541_create_admin_log_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_04_27_081259_create_admin_roles_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_27_081259_create_admin_roles_table.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="2018_04_27_081308_create_admin_role_relations_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_27_081308_create_admin_role_relations_table.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -152,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Models/Shop/Styles.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Rooms.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/RoomsI18n.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Repositories/RoomRepository.php" />
@@ -203,6 +212,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_04_02_160154_create_attribute_options_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_04_02_160155_create_attribute_options_i18n_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_04_02_160211_create_product_attribute_options_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_04_20_134541_create_admin_log_table.php" />
       </list>
     </option>
   </component>
@@ -367,12 +377,12 @@
       <updated>1528371698871</updated>
       <workItem from="1528371700316" duration="6945000" />
       <workItem from="1528442530250" duration="8013000" />
-      <workItem from="1528529486981" duration="2171000" />
+      <workItem from="1528529486981" duration="2294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17129000" />
+    <option name="totallyTimeSpent" value="17252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -407,27 +417,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Support/Facades/Rooms.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Facades/Styles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Repositories/CategoryRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Supplier.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -753,6 +742,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_27_081259_create_admin_roles_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_27_081308_create_admin_role_relations_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_20_134541_create_admin_log_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
