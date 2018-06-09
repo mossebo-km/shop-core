@@ -61,6 +61,7 @@ return [
     'Orders' => 'shop_orders',
     'OrderProducts' => 'shop_order_products',
     'OrderStatuses' => 'shop_order_statuses',
+    'OrdersTemp' => 'shop_orders_temp',
 
   // 'Reviews' => 'reviews',
   // 'ReviewLikesDislikes' => 'review_likes_dislikes',
@@ -81,5 +82,5 @@ return [
 
 
     'Cart' => 'shop_cart',
-    'Media' => 'media'
+    'Media' => 'media',
 ];

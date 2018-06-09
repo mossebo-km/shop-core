@@ -10,7 +10,7 @@ class CreateOrdersTempTable extends Migration
     {
         echo "Create OrdersTemp Table\r\n";
 
-        Schema::create(config('tables.OrdersTemps'), function (Blueprint $table) {
+        Schema::create(config('tables.OrdersTemp'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
             $table->longText('data')->nullable();
