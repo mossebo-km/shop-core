@@ -34,7 +34,7 @@ return [
     'RoomsI18n' => 'shop_rooms_i18n',
     'RoomProducts' => 'shop_room_products',
 
-    'Style' => 'shop_styles',
+    'Styles' => 'shop_styles',
     'StylesI18n' => 'shop_styles_i18n',
     'StyleProducts' => 'shop_style_products',
 
