@@ -42,6 +42,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
         $this->registerServiceProviders();
         $this->registerFacadeAliases();
         $this->publishConfigs();
+        $this->publishMigrations();
     }
 
     /**
@@ -81,6 +82,18 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
                 $this->getConfigPath($configFileName) => $this->getConfigPublishPath($configFileName)
              ], $configFileName);
         }
+    }
+
+    private function publishMigrations()
+    {
+        $this->publishes([
+            $this->getMigrationsPath() => database_path('migrations')
+        ], 'migrations');
+    }
+
+    private function getMigrationsPath()
+    {
+        return __DIR__ . '/../database/migrations/';
     }
 
     protected function registerConfigs()
