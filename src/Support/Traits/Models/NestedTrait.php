@@ -19,4 +19,17 @@ trait NestedTrait
     {
         return array_column(self::descendantsOf($parentId)->toArray(), 'id');
     }
+
+
+    // Удаление предка - обнуляет parent_id потомков
+    public function delete()
+    {
+        \DB::transaction(function() {
+            self::where('parent_id', $this->id)->update([
+                'parent_id' => 0
+            ]);
+
+            parent::delete();
+        });
+    }
 }
