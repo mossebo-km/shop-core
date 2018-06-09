@@ -10,7 +10,9 @@ class CreateProductsTable extends Migration
     {
         echo "Create Products Table\r\n";
 
-        Schema::create(config('tables.Products'), function (Blueprint $table) {
+        $tableName = config('tables.Products');
+
+        Schema::create($tableName, function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
             $table->integer('supplier_id')->nullable();
@@ -35,10 +37,10 @@ class CreateProductsTable extends Migration
 
         switch ($driver) {
             case 'mysql':
-                DB::unprepared("ALTER TABLE {$this->tableName} AUTO_INCREMENT = 100000;");
+                DB::unprepared("ALTER TABLE {$tableName} AUTO_INCREMENT = 100000;");
                 break;
             case 'pgsql':
-                DB::update("ALTER SEQUENCE {$this->tableName}_id_seq RESTART WITH 100000;");
+                DB::update("ALTER SEQUENCE {$tableName}_id_seq RESTART WITH 100000;");
                 break;
         }
     }

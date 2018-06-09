@@ -6,9 +6,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateOrdersTempTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up()
     {
         echo "Create OrdersTemp Table\r\n";
