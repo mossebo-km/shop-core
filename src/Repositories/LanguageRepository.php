@@ -6,4 +6,7 @@ use MosseboShopCore\Contracts\Repositories\LanguageRepository as LanguageReposit
 
 class LanguageRepository extends RamRepository implements LanguageRepositoryContract
 {
+    protected $modificators = [
+        'currency',
+    ];
 }
