@@ -14,7 +14,7 @@ class CreateCitiesTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 
-            $table->string('postal_code', 2)->nullable();
+            $table->string('postal_code')->index();
 
             $table->string('lat')->nullable();
             $table->string('lon')->nullable();
