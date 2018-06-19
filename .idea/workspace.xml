@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Repositories/RamRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RamRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AttributeRepository.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AttributeRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Repositories/AttributeRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="252">
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -133,7 +133,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RamRepository.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RamRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repositories/RamRepository.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="366">
@@ -233,11 +233,11 @@
         <option value="$PROJECT_DIR$/src/Repositories/StyleRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/CategoryRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/LanguageRepository.php" />
-        <option value="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/CityRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/CountryRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/CurrencyRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/RamRepository.php" />
+        <option value="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" />
       </list>
     </option>
   </component>
@@ -386,12 +386,12 @@
       <workItem from="1528888081902" duration="211000" />
       <workItem from="1528888316699" duration="5588000" />
       <workItem from="1529306734168" duration="598000" />
-      <workItem from="1529309019875" duration="7537000" />
+      <workItem from="1529309019875" duration="8084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40546000" />
+    <option name="totallyTimeSpent" value="41093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -723,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repositories/AttributeRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repositories/CategoryRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -790,6 +783,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repositories/AttributeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>

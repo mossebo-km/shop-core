@@ -12,7 +12,7 @@ class AttributeRepository extends RamRepository implements AttributeRepositoryCo
     ];
 
     protected function _getBaseQuery() {
-        return parent::_getBaseQuery()::with([
+        return parent::_getBaseQuery()->with([
             'options' => function ($query) {
                 $query->with('currentI18n')->orderBy('position', 'asc');
             }
