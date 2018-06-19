@@ -16,6 +16,11 @@ return [
 
     'Settings' => 'settings',
 
+    'Countries' => 'countries',
+    'CountriesI18n' => 'countries_i18n',
+    'Cities' => 'cities',
+    'CitiesI18n' => 'cities_i18n',
+
     'Languages' => 'languages',
 
     'Currencies' => 'shop_currencies',

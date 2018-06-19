@@ -1,5 +1,6 @@
 <?php
 
+
 namespace MosseboShopCore;
 
 use Illuminate\Foundation\AliasLoader;

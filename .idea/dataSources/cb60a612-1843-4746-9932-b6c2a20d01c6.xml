@@ -47,8 +47,8 @@
     </role>
     <schema id="9" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-06-09.16:56:29.788</IntrospectionTimestamp>
-      <IntrospectionStateNumber>13639</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-06-14.13:02:14.603</IntrospectionTimestamp>
+      <IntrospectionStateNumber>21091</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -289,7 +289,7 @@
     </table>
     <table id="49" parent="9" name="shop_attribute_options_i18n">
       <ObjectId>54039</ObjectId>
-      <StateNumber>12880</StateNumber>
+      <StateNumber>21051</StateNumber>
     </table>
     <table id="50" parent="9" name="shop_attributes">
       <ObjectId>53996</ObjectId>
@@ -297,7 +297,7 @@
     </table>
     <table id="51" parent="9" name="shop_attributes_i18n">
       <ObjectId>54006</ObjectId>
-      <StateNumber>12876</StateNumber>
+      <StateNumber>21054</StateNumber>
     </table>
     <table id="52" parent="9" name="shop_cart">
       <ObjectId>54191</ObjectId>
@@ -313,7 +313,7 @@
     </table>
     <table id="55" parent="9" name="shop_category_products">
       <ObjectId>53941</ObjectId>
-      <StateNumber>12868</StateNumber>
+      <StateNumber>18926</StateNumber>
     </table>
     <table id="56" parent="9" name="shop_currencies">
       <ObjectId>53737</ObjectId>
@@ -349,11 +349,11 @@
     </table>
     <table id="64" parent="9" name="shop_product_attribute_options">
       <ObjectId>54071</ObjectId>
-      <StateNumber>12884</StateNumber>
+      <StateNumber>21057</StateNumber>
     </table>
     <table id="65" parent="9" name="shop_product_attributes">
       <ObjectId>54054</ObjectId>
-      <StateNumber>12882</StateNumber>
+      <StateNumber>21058</StateNumber>
     </table>
     <table id="66" parent="9" name="shop_products">
       <ObjectId>53851</ObjectId>
@@ -361,11 +361,11 @@
     </table>
     <table id="67" parent="9" name="shop_products_i18n">
       <ObjectId>53869</ObjectId>
-      <StateNumber>12860</StateNumber>
+      <StateNumber>13737</StateNumber>
     </table>
     <table id="68" parent="9" name="shop_room_products">
       <ObjectId>54276</ObjectId>
-      <StateNumber>13637</StateNumber>
+      <StateNumber>18927</StateNumber>
     </table>
     <table id="69" parent="9" name="shop_rooms">
       <ObjectId>54214</ObjectId>
@@ -385,7 +385,7 @@
     </table>
     <table id="73" parent="9" name="shop_styles_i18n">
       <ObjectId>54258</ObjectId>
-      <StateNumber>12917</StateNumber>
+      <StateNumber>21091</StateNumber>
     </table>
     <table id="74" parent="9" name="shop_suppliers">
       <ObjectId>53889</ObjectId>

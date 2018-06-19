@@ -4,7 +4,7 @@ namespace MosseboShopCore\Models;
 
 use MosseboShopCore\Models\Base\BaseModel;
 
-abstract class Language extends BaseModel
+abstract class CityI18n extends BaseModel
 {
-    protected $tableIdentif = 'Languages';
+    protected $tableIdentif = 'CitiesI18n';
 }
