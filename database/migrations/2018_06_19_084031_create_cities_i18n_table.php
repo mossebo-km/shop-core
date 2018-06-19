@@ -8,7 +8,7 @@ class CreateCitiesI18nTable extends Migration
 {
     public function up()
     {
-        echo "Create CountriesI18n Table\r\n";
+        echo "Create CitiesI18n Table\r\n";
 
         Schema::create(config('tables.CitiesI18n'), function (Blueprint $table) {
             $table->engine = "InnoDB";

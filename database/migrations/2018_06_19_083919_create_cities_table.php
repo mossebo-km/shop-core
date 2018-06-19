@@ -8,9 +8,9 @@ class CreateCitiesTable extends Migration
 {
     public function up()
     {
-        echo "Create Countries Table\r\n";
+        echo "Create Cities Table\r\n";
 
-        Schema::create(config('tables.Countries'), function (Blueprint $table) {
+        Schema::create(config('tables.Cities'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 

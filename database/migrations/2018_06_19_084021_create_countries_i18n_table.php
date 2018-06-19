@@ -20,7 +20,7 @@ class CreateCountriesI18nTable extends Migration
 
             $table->string('name');
 
-            $table->primary(['country_id', 'language_code'])->index();
+            $table->primary(['country_code', 'language_code'])->index();
         });
     }
 }
