@@ -12,7 +12,7 @@ class CreateCountriesI18nTable extends Migration
 
         Schema::create(config('tables.CountriesI18n'), function (Blueprint $table) {
             $table->engine = "InnoDB";
-            $table->integer('country_code')->unsigned();
+            $table->char('country_code', 2);
             $table->foreign('country_code')->references('code')->on(config('tables.Countries'))->onDelete('cascade');
 
             $table->char('language_code', 2);
