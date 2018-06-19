@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/CurrencyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/CurrencyRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositories/RamRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RamRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/RoomRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RoomRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/StyleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/StyleRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -141,8 +136,8 @@
       <file leaf-file-name="RamRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Repositories/RamRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+            <state relative-caret-position="366">
+              <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -391,12 +386,12 @@
       <workItem from="1528888081902" duration="211000" />
       <workItem from="1528888316699" duration="5588000" />
       <workItem from="1529306734168" duration="598000" />
-      <workItem from="1529309019875" duration="6936000" />
+      <workItem from="1529309019875" duration="7537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39945000" />
+    <option name="totallyTimeSpent" value="40546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -793,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Repositories/RamRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+        <state relative-caret-position="366">
+          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
         </state>
       </provider>
     </entry>

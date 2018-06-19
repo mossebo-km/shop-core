@@ -56,6 +56,10 @@ class RamRepository implements RamRepositoryContract {
 
     public function enabled($modificators = [])
     {
+        if (! is_array($modificators)) {
+            $modificators = [$modificators];
+        }
+
         $modificators[] = 'enabled';
 
         return $this->getCollection($modificators);
