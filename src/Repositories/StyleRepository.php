@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Repositories;
 
-use MosseboShopCore\Contracts\Repositories\CategoryRepository as StyleRepositoryContract;
+use MosseboShopCore\Contracts\Repositories\StyleRepository as StyleRepositoryContract;
 class StyleRepository extends RamRepository implements StyleRepositoryContract
 {
     protected $model = Style::class;
@@ -13,11 +13,6 @@ class StyleRepository extends RamRepository implements StyleRepositoryContract
         'productCount',
         'image'
     ];
-
-    public function getTree($modificators)
-    {
-        return $this->getCollection($modificators)->toTree();
-    }
 
     protected function _withProductCount($query)
     {

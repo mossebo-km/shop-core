@@ -13,7 +13,6 @@ class CreateCitiesTable extends Migration
         Schema::create(config('tables.Countries'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
-            $table->integer('position')->unsigned()->default(0);
 
             $table->string('postal_code', 2)->nullable();
 
@@ -24,6 +23,9 @@ class CreateCitiesTable extends Migration
 
             $table->char('country_code', 2)->nullable()->index();
             $table->foreign('country_code')->references('code')->on(config('tables.Countries'))->onDelete('set null');
+
+            $table->boolean('enabled')->index()->default(1);
+            $table->integer('position')->unsigned()->default(0);
 
             $table->timestamps();
         });

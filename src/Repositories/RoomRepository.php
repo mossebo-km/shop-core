@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Repositories;
 
-use MosseboShopCore\Contracts\Repositories\CategoryRepository as RoomRepositoryContract;
+use MosseboShopCore\Contracts\Repositories\RoomRepository as RoomRepositoryContract;
 
 class RoomRepository extends RamRepository implements RoomRepositoryContract
 {
@@ -12,11 +12,6 @@ class RoomRepository extends RamRepository implements RoomRepositoryContract
         'productCount',
         'image'
     ];
-
-    public function getTree($modificators)
-    {
-        return $this->getCollection($modificators)->toTree();
-    }
 
     protected function _withProductCount($query)
     {

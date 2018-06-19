@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface StyleRepository extends RamRepository
+interface CityRepository extends RamRepository
 {
 
 }
