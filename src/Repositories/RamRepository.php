@@ -25,6 +25,8 @@ class RamRepository implements RamRepositoryContract {
         if (is_null($this->cacheKey)) {
             $this->cacheKey = $this->model . 'RepositoryCache';
         }
+
+        $this->modificators[] = 'enabled';
     }
 
     public function getCollection($modificators = [])
@@ -54,7 +56,14 @@ class RamRepository implements RamRepositoryContract {
 
     public function enabled($modificators = [])
     {
-        return $this->getCollection($modificators)->where('enabled', 1);
+        $modificators[] = 'enabled';
+
+        return $this->getCollection($modificators);
+    }
+
+    protected function _enabledQueryModificator($query)
+    {
+        return $query->where('enabled', 1);
     }
 
     public function getModelClassName()
@@ -74,7 +83,8 @@ class RamRepository implements RamRepositoryContract {
         $query = $this->_getBaseQuery();
 
         foreach ($this->collectionModificators as $modificatorName) {
-            $methodName = '_with' . ucfirst($modificatorName);
+            $methodName = '_' . lcfirst($modificatorName) . 'QueryModificator';
+
             if (method_exists($this, $methodName)) {
                 $query = $this->$methodName($query);
             }
@@ -88,7 +98,7 @@ class RamRepository implements RamRepositoryContract {
 
     protected function _getBaseQuery()
     {
-        return $this->model::query();
+        return $this->model::orderBy('position', 'asc');
     }
 
     protected function _getCacheKey()

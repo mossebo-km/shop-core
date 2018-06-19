@@ -13,7 +13,7 @@ class RoomRepository extends RamRepository implements RoomRepositoryContract
         'image'
     ];
 
-    protected function _withProductCount($query)
+    protected function _productCountQueryModificator($query)
     {
         $modelTableName = \Config::get('tables.Rooms');
         $productsTableName = \Config::get('tables.RoomProducts');

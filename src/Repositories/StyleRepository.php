@@ -14,7 +14,7 @@ class StyleRepository extends RamRepository implements StyleRepositoryContract
         'image'
     ];
 
-    protected function _withProductCount($query)
+    protected function _productCountQueryModificator($query)
     {
         $modelTableName = \Config::get('tables.Styles');
         $productsTableName = \Config::get('tables.StyleProducts');

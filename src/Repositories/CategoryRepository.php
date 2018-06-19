@@ -19,7 +19,7 @@ class CategoryRepository extends RamRepository implements CategoryRepositoryCont
     }
 
     // todo: // RoomRepository, StyleRepository - повторяется
-    protected function _withProductCount($query)
+    protected function _productCountQueryModificator($query)
     {
         $modelTableName = \Config::get('tables.Categories');
         $productsTableName = \Config::get('tables.CategoryProducts');
