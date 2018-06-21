@@ -14,13 +14,13 @@ class CreateProductCountTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 
-            $table->char('category_id')->unsigned()->nullable();
+            $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on(config('tables.Categories'))->onDelete('cascade');
 
-            $table->char('room_id')->unsigned()->nullable();
+            $table->integer('room_id')->unsigned()->nullable();
             $table->foreign('room_id')->references('id')->on(config('tables.Rooms'))->onDelete('cascade');
 
-            $table->char('style_id')->unsigned()->nullable();
+            $table->integer('style_id')->unsigned()->nullable();
             $table->foreign('style_id')->references('id')->on(config('tables.Styles'))->onDelete('cascade');
 
             $table->integer('count')->unsigned()->nullable()->default(0);

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/RamRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RamRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_06_21_145552_create_product_count_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_06_21_145552_create_product_count_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/Repositories/PriceTypeRepository.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -102,8 +101,8 @@
       <file leaf-file-name="2018_06_21_145552_create_product_count_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_21_145552_create_product_count_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="338">
+              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -112,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_27_081259_create_admin_roles_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+              <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -131,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_08_150531_create_styles_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="19" selection-end-column="11" />
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="19" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -140,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_19_083904_create_countries_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="24" selection-end-column="11" />
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="24" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -378,12 +377,12 @@
       <workItem from="1528888316699" duration="5588000" />
       <workItem from="1529306734168" duration="598000" />
       <workItem from="1529309019875" duration="8198000" />
-      <workItem from="1529506028466" duration="4381000" />
+      <workItem from="1529506028466" duration="4917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45588000" />
+    <option name="totallyTimeSpent" value="46124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -737,7 +736,7 @@
     <entry file="file://$PROJECT_DIR$/src/Repositories/PriceTypeRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -751,14 +750,14 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_19_083904_create_countries_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="24" selection-end-column="11" />
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_27_081259_create_admin_roles_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -771,7 +770,7 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_08_150531_create_styles_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="19" selection-end-column="11" />
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="19" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -784,8 +783,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_21_145552_create_product_count_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="338">
+          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
         </state>
       </provider>
     </entry>
