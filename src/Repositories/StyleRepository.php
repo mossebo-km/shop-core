@@ -11,6 +11,7 @@ class StyleRepository extends RamRepository implements StyleRepositoryContract
         'i18n',
         'currentI18n',
         'productCount',
+        'productCounts',
         'image'
     ];
 

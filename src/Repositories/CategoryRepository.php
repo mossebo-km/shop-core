@@ -10,6 +10,7 @@ class CategoryRepository extends RamRepository implements CategoryRepositoryCont
         'i18n',
         'currentI18n',
         'productCount',
+        'productCounts',
         'image'
     ];
 

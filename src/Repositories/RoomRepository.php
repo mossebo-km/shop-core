@@ -10,6 +10,7 @@ class RoomRepository extends RamRepository implements RoomRepositoryContract
         'i18n',
         'currentI18n',
         'productCount',
+        'productCounts',
         'image'
     ];
 
