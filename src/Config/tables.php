@@ -46,6 +46,8 @@ return [
     'Products' => 'shop_products',
     'ProductsI18n' => 'shop_products_i18n',
 
+    'ProductCounts' => 'shop_product_counts',
+
   // 'ProductsFields' => 'shop_product_fields',
   // 'ProductsFieldsI18' => 'shop_product_fields_i18',
   // 'ProductsFieldsData' => 'shop_product_fields_data',

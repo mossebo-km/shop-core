@@ -29,6 +29,10 @@ class RamRepository implements RamRepositoryContract {
         $this->modificators[] = 'enabled';
     }
 
+    /**
+     * Получение коллекции данных с указанными модификаторами.
+     * Данные кэшируются, и в следующий раз берутся из кэша.
+     */
     public function getCollection($modificators = [])
     {
         if (! is_array($modificators)) {
@@ -54,6 +58,9 @@ class RamRepository implements RamRepositoryContract {
         return $this->collection;
     }
 
+    /**
+     * Добавляет 'enabled' к модификаторам и возвращает getCollection
+     */
     public function enabled($modificators = [])
     {
         if (! is_array($modificators)) {
@@ -70,18 +77,25 @@ class RamRepository implements RamRepositoryContract {
         return $query->where('enabled', 1);
     }
 
+    /**
+     * Возвращает имени класса модели
+     */
     public function getModelClassName()
     {
         return $this->model;
     }
 
-    protected function _getCachedCollection()
+    /**
+     * Формирует базовый запрос в базу
+     */
+    protected function _getBaseQuery()
     {
-        return \Cache::remember($this->_getCacheKey(), $this->_getCacheMinutes(), function(){
-            return $this->_getCollection();
-        });
+        return $this->model::orderBy('position', 'asc');
     }
 
+    /**
+     * Формирует колекцию, с учетом модификаторов
+     */
     protected function _getCollection()
     {
         $query = $this->_getBaseQuery();
@@ -100,11 +114,9 @@ class RamRepository implements RamRepositoryContract {
         return $query->get();
     }
 
-    protected function _getBaseQuery()
-    {
-        return $this->model::orderBy('position', 'asc');
-    }
-
+    /**
+     * Формирование ключа для кэша на основе модификаторов
+     */
     protected function _getCacheKey()
     {
         $cacheKey = $this->cacheKey;
@@ -116,11 +128,27 @@ class RamRepository implements RamRepositoryContract {
         return $cacheKey;
     }
 
+    /**
+     * Возвращает время, на которое надо кэшировать коллекцию
+     */
     protected function _getCacheMinutes()
     {
         return isset($this->cacheMinutes) ? $this->cacheMinutes : config('repository.cache.minutes', 30);
     }
 
+    /**
+     * Сохраняет коллекцию в кэш.
+     */
+    protected function _getCachedCollection()
+    {
+        return \Cache::remember($this->_getCacheKey(), $this->_getCacheMinutes(), function() {
+            return $this->_getCollection();
+        });
+    }
+
+    /**
+     * Чистка кэша
+     */
     public function clearCache()
     {
         $this->collection = null;
@@ -134,6 +162,9 @@ class RamRepository implements RamRepositoryContract {
     }
 
     // todo: переделать это замечательное творение
+    /**
+     * Чистка кэша с учетом всех модификаторов
+     */
     protected function clearCacheDeep($modificatorName = false, $modificators = [], $count = 0)
     {
         if (! $modificatorName) {
