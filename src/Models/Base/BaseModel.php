@@ -53,16 +53,16 @@ abstract class BaseModel extends Model
         return array_filter($data, function($key) use($fillable){
             return in_array($key, $fillable);
         }, ARRAY_FILTER_USE_KEY);
+    }
 
-
-//        return array_map(function($paramName) use ($data) {
-//            return isset($data[$paramName]) ? $data[$paramName] : Null;
-//        }, $fillable);
+    public function relationEmpty($relationName)
+    {
+        return !$this->relationLoaded($relationName) || empty($this[$relationName]);
     }
 
 
     public function relationNotEmpty($relationName)
     {
-        return $this->relationLoaded($relationName) && !empty($this[$relationName]);
+        return !$this->relationEmpty($relationName);
     }
 }
