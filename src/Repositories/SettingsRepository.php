@@ -33,4 +33,11 @@ class SettingsRepository extends RamRepository implements RoomRepositoryContract
     {
         return $this->filterByNamespace('public-social');
     }
+
+    public function get($key)
+    {
+        $item = $this->getCollection()->where('key', $key)->first();
+
+        return $item ? $item->value : null;
+    }
 }
