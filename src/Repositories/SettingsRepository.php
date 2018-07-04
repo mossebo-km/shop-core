@@ -15,7 +15,7 @@ class SettingsRepository extends RamRepository implements RoomRepositoryContract
         $namespace .= '-';
 
         return $this->getCollection()->reduce(function($carry, $item) use($namespace) {
-            if (strpos($namespace, $item->key) === 0) {
+            if (strpos($item->key, $namespace) === 0) {
                 $item->key = str_replace($namespace, '', $item->key);
                 $carry->push($item);
             }
