@@ -26,7 +26,7 @@ class SettingsRepository extends RamRepository implements RoomRepositoryContract
 
     public function notifySocials()
     {
-        return $this->filterByNamespace('email-social');
+        return $this->filterByNamespace('notify-social');
     }
 
     public function publicSocials()

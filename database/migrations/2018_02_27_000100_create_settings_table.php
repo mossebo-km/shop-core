@@ -14,6 +14,7 @@ class CreateSettingsTable extends Migration
             $table->engine = "InnoDB";
             $table->string('key')->primary()->index();
             $table->text('value');
+            $table->integer('position')->unsigned()->default(0);
         });
     }
 }
