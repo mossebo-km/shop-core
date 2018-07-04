@@ -13,7 +13,7 @@ class CreateStyleProductsTable extends Migration
         Schema::create(config('tables.StyleProducts'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->integer('style_id')->unsigned();
-            $table->foreign('style_id')->references('id')->on(config('tables.Categories'))->onDelete('cascade');
+            $table->foreign('style_id')->references('id')->on(config('tables.Styles'))->onDelete('cascade');
 
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on(config('tables.Products'))->onDelete('cascade');

@@ -13,7 +13,7 @@ class CreateRoomProductsTable extends Migration
         Schema::create(config('tables.RoomProducts'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->integer('room_id')->unsigned();
-            $table->foreign('room_id')->references('id')->on(config('tables.Categories'))->onDelete('cascade');
+            $table->foreign('room_id')->references('id')->on(config('tables.Rooms'))->onDelete('cascade');
 
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on(config('tables.Products'))->onDelete('cascade');

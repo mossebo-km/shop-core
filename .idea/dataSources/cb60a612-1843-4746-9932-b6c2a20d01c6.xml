@@ -47,8 +47,8 @@
     </role>
     <schema id="9" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-06-14.13:02:14.603</IntrospectionTimestamp>
-      <IntrospectionStateNumber>21091</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-07-03.14:11:05.355</IntrospectionTimestamp>
+      <IntrospectionStateNumber>22377</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -365,11 +365,11 @@
     </table>
     <table id="68" parent="9" name="shop_room_products">
       <ObjectId>54276</ObjectId>
-      <StateNumber>18927</StateNumber>
+      <StateNumber>22377</StateNumber>
     </table>
     <table id="69" parent="9" name="shop_rooms">
       <ObjectId>54214</ObjectId>
-      <StateNumber>12913</StateNumber>
+      <StateNumber>22377</StateNumber>
     </table>
     <table id="70" parent="9" name="shop_rooms_i18n">
       <ObjectId>54226</ObjectId>
@@ -377,11 +377,11 @@
     </table>
     <table id="71" parent="9" name="shop_style_products">
       <ObjectId>54291</ObjectId>
-      <StateNumber>13639</StateNumber>
+      <StateNumber>22375</StateNumber>
     </table>
     <table id="72" parent="9" name="shop_styles">
       <ObjectId>54246</ObjectId>
-      <StateNumber>12917</StateNumber>
+      <StateNumber>22375</StateNumber>
     </table>
     <table id="73" parent="9" name="shop_styles_i18n">
       <ObjectId>54258</ObjectId>
@@ -2715,12 +2715,12 @@ product_id</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="422" parent="68" name="shop_room_products_room_id_foreign">
-      <ObjectId>54279</ObjectId>
+      <ObjectId>54354</ObjectId>
       <ColNames>room_id</ColNames>
-      <RefTableId>53816</RefTableId>
+      <RefTableId>54214</RefTableId>
       <RefColPositions>1</RefColPositions>
-      <RefTableName>shop_categories</RefTableName>
-      <RefKeyName>shop_categories_pkey</RefKeyName>
+      <RefTableName>shop_rooms</RefTableName>
+      <RefKeyName>shop_rooms_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
@@ -2906,12 +2906,12 @@ product_id</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="450" parent="71" name="shop_style_products_style_id_foreign">
-      <ObjectId>54294</ObjectId>
+      <ObjectId>54349</ObjectId>
       <ColNames>style_id</ColNames>
-      <RefTableId>53816</RefTableId>
+      <RefTableId>54246</RefTableId>
       <RefColPositions>1</RefColPositions>
-      <RefTableName>shop_categories</RefTableName>
-      <RefKeyName>shop_categories_pkey</RefKeyName>
+      <RefTableName>shop_styles</RefTableName>
+      <RefKeyName>shop_styles_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>

@@ -34,6 +34,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
         'PriceTypes' => 'MosseboShopCore\Support\Facades\PriceTypes',
         'Cities'     => 'MosseboShopCore\Support\Facades\Cities',
         'Countries'  => 'MosseboShopCore\Support\Facades\Countries',
+        'Settings'  => 'MosseboShopCore\Support\Facades\Settings',
     ];
 
     /**
