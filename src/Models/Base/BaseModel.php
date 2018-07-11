@@ -57,7 +57,7 @@ abstract class BaseModel extends Model
 
     public function relationEmpty($relationName)
     {
-        return !$this->relationLoaded($relationName) || $this[$relationName]->count() === 0;
+        return !$this->relationLoaded($relationName) || empty($this[$relationName]) || $this[$relationName]->count() === 0;
     }
 
 
