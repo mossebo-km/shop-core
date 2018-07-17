@@ -38,8 +38,8 @@ class CreateReviewsTable extends Migration
             $table->text('comment');
             $table->timestamp('usage_time');
 
-            $table->boolean('enabled');
-            $table->boolean('confirmed');
+            $table->boolean('enabled')->default(1);
+            $table->boolean('confirmed')->default(0);
 
             $table->timestamps();
         });
