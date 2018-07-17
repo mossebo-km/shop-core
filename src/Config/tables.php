@@ -90,4 +90,6 @@ return [
 
     'Cart' => 'shop_cart',
     'Media' => 'media',
+
+    'Reviews' => 'reviews'
 ];
