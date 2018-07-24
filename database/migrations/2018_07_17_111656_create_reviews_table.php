@@ -36,7 +36,7 @@ class CreateReviewsTable extends Migration
             $table->text('advantages');
             $table->text('disadvantages');
             $table->text('comment');
-            $table->timestamp('usage_time');
+            $table->string('usage_time');
 
             $table->boolean('enabled')->default(1);
             $table->boolean('confirmed')->default(0);
