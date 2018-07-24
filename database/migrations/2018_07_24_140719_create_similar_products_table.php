@@ -9,13 +9,13 @@ class CreateSimilarProductsTable extends Migration
     public function up()
     {
         Schema::create(config('tables.SimilarProducts'), function (Blueprint $table) {
-            $table->increments('id');
-
-            $table->integer('product_id')->unsigned();
+            $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on(config('tables.Products'))->onDelete('cascade');
 
             $table->integer('similar_id')->unsigned();
             $table->foreign('similar_id')->references('id')->on(config('tables.Products'))->onDelete('cascade');
+
+            $table->primary(['product_id', 'similar_id']);
         });
     }
 }
