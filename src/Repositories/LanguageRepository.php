@@ -9,4 +9,9 @@ class LanguageRepository extends RamRepository implements LanguageRepositoryCont
     protected $modificators = [
         'currency',
     ];
+
+    public function default()
+    {
+        return $this->enabled()->where('default', 1)->first();
+    }
 }
