@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_04_02_160220__create_order_product_attribute_options_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_04_02_160220__create_order_product_attribute_options_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/OrderProductAttributeOption.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/OrderProductAttributeOption.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_02_27_000910_create_orders_table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2018_02_27_000910_create_orders_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+            <state relative-caret-position="468">
+              <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -117,15 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="9" column="1" lean-forward="true" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderProductAttributeOption.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderProductAttributeOption.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -208,7 +196,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000840_create_delivery_types_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000850_create_pay_types_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000841_create_delivery_types_18n_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000920_create_order_product_attribute_options_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000911_create_order_products_table.php" />
@@ -228,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/OrderProductAttributeOption.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_04_02_160220__create_order_product_attribute_options_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" />
       </list>
     </option>
   </component>
@@ -436,12 +424,12 @@
       <workItem from="1532502333067" duration="365000" />
       <workItem from="1532589275172" duration="2252000" />
       <workItem from="1532675219550" duration="1643000" />
-      <workItem from="1532859876066" duration="5703000" />
+      <workItem from="1532859876066" duration="5871000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98502000" />
+    <option name="totallyTimeSpent" value="98670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -753,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/DeliveryTypeI18n.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -770,13 +751,6 @@
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="1" lean-forward="true" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
           <caret line="9" column="1" lean-forward="true" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
@@ -816,6 +790,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="9" column="1" lean-forward="true" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
         </state>
       </provider>
     </entry>
