@@ -17,6 +17,9 @@ class CreateDeliveryTypesI18nTable extends Migration
             $table->integer('delivery_type_id')->unsigned()->index();
             $table->foreign('delivery_type_id')->references('id')->on(config('tables.DeliveryTypes'))->onDelete('cascade');
 
+            $table->char('language_code', 2);
+            $table->foreign('language_code')->references('code')->on(config('tables.Languages'));
+
             $table->string('name');
         });
     }
