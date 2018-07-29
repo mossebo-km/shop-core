@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrdersTable extends Migration
+class CreatePayTypesI18nTable extends Migration
 {
     public function up()
     {
-        echo "Create PayTypesTable Table\r\n";
+        echo "Create PayTypesI18nTable Table\r\n";
 
         Schema::create(config('tables.PayTypesI18n'), function (Blueprint $table) {
             $table->engine = "InnoDB";
