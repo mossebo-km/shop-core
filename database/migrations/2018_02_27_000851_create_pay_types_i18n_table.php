@@ -12,7 +12,6 @@ class CreatePayTypesI18nTable extends Migration
 
         Schema::create(config('tables.PayTypesI18n'), function (Blueprint $table) {
             $table->engine = "InnoDB";
-            $table->increments('id');
 
             $table->integer('pay_type_id')->unsigned()->index();
             $table->foreign('pay_type_id')->references('id')->on(config('tables.PayTypes'))->onDelete('cascade');
@@ -21,6 +20,8 @@ class CreatePayTypesI18nTable extends Migration
             $table->foreign('language_code')->references('code')->on(config('tables.Languages'));
 
             $table->string('name');
+
+            $table->primary(['pay_type_id', 'language_code'])->index();
         });
     }
 }
