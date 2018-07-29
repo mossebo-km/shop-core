@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_04_02_160220__create_order_product_attribute_options_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_04_02_160220__create_order_product_attribute_options_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Shop/OrderProductsAttributeOption.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/OrderProductAttributeOption.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,15 +91,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PayType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Shop/PayType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="1" lean-forward="true" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PayTypeI18n.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/PayTypeI18n.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,8 +118,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderProductsAttributeOption.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderProductsAttributeOption.php">
+      <file leaf-file-name="OrderProductAttributeOption.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderProductAttributeOption.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
               <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
@@ -145,7 +136,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderStatusI18n.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderStatusI18n.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderStatusI18n.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -436,12 +427,12 @@
       <workItem from="1532502333067" duration="365000" />
       <workItem from="1532589275172" duration="2252000" />
       <workItem from="1532675219550" duration="1643000" />
-      <workItem from="1532859876066" duration="5103000" />
+      <workItem from="1532859876066" duration="5649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97902000" />
+    <option name="totallyTimeSpent" value="98448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -452,7 +443,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32935324" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32636815" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32636815" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.25346112" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
@@ -498,13 +489,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/shop_products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -795,13 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderProductsAttributeOption.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderProduct.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -816,7 +793,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderStatusI18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/OrderProductAttributeOption.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
