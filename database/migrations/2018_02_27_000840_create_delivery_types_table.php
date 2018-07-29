@@ -13,6 +13,7 @@ class CreateDeliveryTypesTable extends Migration
         Schema::create(config('tables.DeliveryTypes'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id');
+            $table->integer('position')->unsigned()->default(0);
         });
     }
 }
