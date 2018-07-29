@@ -18,9 +18,15 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique()->index();
             $table->string('phone')->unique()->index()->nullable();
             $table->string('address', 512)->nullable();
+            $table->string('city', 255)->nullable();
+            $table->string('post_code', 255)->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+
+            $table->integer('price_type_id')->nullable()->unsigned()->index();
+            $table->foreign('price_type_id')->references('id')->on(config('tables.PriceTypes'))->onDelete('cascade');
         });
     }
 }

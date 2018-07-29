@@ -67,9 +67,18 @@ return [
   // 'ComplectsI18' => 'shop_complects_i18',
   // 'ComplectProducts' => 'shop_complect_products',
 
+
+    'DeliveryTypes' => 'shop_delivery_types',
+    'DeliveryTypesI18n' => 'shop_delivery_types_i18n',
+
+    'PayTypes' => 'shop_pay_types',
+    'PayTypesI18n' => 'shop_pay_types_i18n',
+
     'Orders' => 'shop_orders',
     'OrderProducts' => 'shop_order_products',
+    'OrderProductsAttributeOptions' => 'shop_order_product_attribute_options',
     'OrderStatuses' => 'shop_order_statuses',
+    'OrderStatusesI18n' => 'shop_order_statuses_i18n',
     'OrdersTemp' => 'shop_orders_temp',
 
   // 'Reviews' => 'reviews',

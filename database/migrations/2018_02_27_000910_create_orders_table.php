@@ -14,7 +14,7 @@ class CreateOrdersTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id');
 
-            $table->integer('user_id')->unsigned()->index();
+            $table->integer('user_id')->nullable()->unsigned()->index();
             $table->foreign('user_id')->references('id')->on(config('tables.Users'))->onDelete('cascade');
 
             $table->char('language_code', 2);
@@ -23,12 +23,19 @@ class CreateOrdersTable extends Migration
             $table->integer('order_status_id')->unsigned()->index();
             $table->foreign('order_status_id')->references('id')->on(config('tables.OrderStatuses'));
 
-            $table->string('name'); // Имя пользователя, указанное при оформлении заказа
-            $table->text('address'); // Адрес пользователя, указанный при оформлении заказа
-            $table->string('email'); // E-mail пользователя, указанный при оформлении заказа
-            $table->string('phone', 64); // Телефон пользователя, указанный при оформлении заказа
+            $table->integer('pay_type_id')->unsigned()->index();
+            $table->foreign('pay_type_id')->references('id')->on(config('tables.PayTypes'));
 
-            $table->integer('is_one_click')->unsigned()->index()->default(0);
+            $table->integer('delivery_type_id')->unsigned()->index();
+            $table->foreign('delivery_type_id')->references('id')->on(config('tables.DeliveryTypes'));
+
+            $table->string('name');
+            $table->string('city');
+            $table->text('address');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('post_code');
+            $table->text('comment');
 
             $table->timestamps();
         });
