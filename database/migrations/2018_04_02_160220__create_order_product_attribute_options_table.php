@@ -8,9 +8,9 @@ class CreateOrderProductAttributeOptionsTable extends Migration
 {
     public function up()
     {
-        echo "Create OrderProductsAttributeOptions Table\r\n";
+        echo "Create OrderProductAttributeOptions Table\r\n";
 
-        Schema::create(config('tables.OrderProductsAttributeOptions'), function (Blueprint $table) {
+        Schema::create(config('tables.OrderProductAttributeOptions'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id');
 

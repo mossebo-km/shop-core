@@ -6,5 +6,5 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class OrderProductAttributeOption extends BaseModel
 {
-    protected $tableIdentif = 'OrderProductsAttributeOptions';
+    protected $tableIdentif = 'OrderProductAttributeOptions';
 }

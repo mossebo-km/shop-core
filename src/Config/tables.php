@@ -76,7 +76,7 @@ return [
 
     'Orders' => 'shop_orders',
     'OrderProducts' => 'shop_order_products',
-    'OrderProductsAttributeOptions' => 'shop_order_product_attribute_options',
+    'OrderProductAttributeOptions' => 'shop_order_product_attribute_options',
     'OrderStatuses' => 'shop_order_statuses',
     'OrderStatusesI18n' => 'shop_order_statuses_i18n',
     'OrdersTemp' => 'shop_orders_temp',
