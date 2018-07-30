@@ -8,5 +8,6 @@ class DeliveryTypeRepository extends RamRepository implements DeliveryTypeReposi
 {
     protected $modificators = [
         'i18n',
+        'currentI18n'
     ];
 }

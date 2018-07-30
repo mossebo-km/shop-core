@@ -8,5 +8,6 @@ class PayTypeRepository extends RamRepository implements PayTypeRepositoryContra
 {
     protected $modificators = [
         'i18n',
+        'currentI18n'
     ];
 }
