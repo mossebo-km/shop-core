@@ -17,9 +17,6 @@ class CreateOrderProductAttributeOptionsTable extends Migration
             $table->integer('order_product_id')->nullable()->unsigned()->index();
             $table->foreign('order_product_id')->references('id')->on(config('tables.OrderProducts'))->onDelete('cascade');
 
-            $table->integer('attribute_id')->unsigned();
-            $table->foreign('attribute_id')->references('id')->on(config('tables.Attributes'));
-
             $table->integer('option_id')->unsigned();
             $table->foreign('option_id')->references('id')->on(config('tables.AttributeOptions'));
         });

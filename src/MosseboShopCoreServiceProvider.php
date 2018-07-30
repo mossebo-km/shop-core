@@ -25,16 +25,18 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
      * @var array
      */
     protected $facadeAliases = [
-        'Attributes' => 'MosseboShopCore\Support\Facades\Attributes',
-        'Categories' => 'MosseboShopCore\Support\Facades\Categories',
-        'Rooms'      => 'MosseboShopCore\Support\Facades\Rooms',
-        'Styles'     => 'MosseboShopCore\Support\Facades\Styles',
-        'Currencies' => 'MosseboShopCore\Support\Facades\Currencies',
-        'Languages'  => 'MosseboShopCore\Support\Facades\Languages',
-        'PriceTypes' => 'MosseboShopCore\Support\Facades\PriceTypes',
-        'Cities'     => 'MosseboShopCore\Support\Facades\Cities',
-        'Countries'  => 'MosseboShopCore\Support\Facades\Countries',
-        'Settings'  => 'MosseboShopCore\Support\Facades\Settings',
+        'Attributes'    => 'MosseboShopCore\Support\Facades\Attributes',
+        'Categories'    => 'MosseboShopCore\Support\Facades\Categories',
+        'Rooms'         => 'MosseboShopCore\Support\Facades\Rooms',
+        'Styles'        => 'MosseboShopCore\Support\Facades\Styles',
+        'Currencies'    => 'MosseboShopCore\Support\Facades\Currencies',
+        'DeliveryTypes' => 'MosseboShopCore\Support\Facades\DeliveryTypes',
+        'Languages'     => 'MosseboShopCore\Support\Facades\Languages',
+        'PayTypes'      => 'MosseboShopCore\Support\Facades\PayTypes',
+        'PriceTypes'    => 'MosseboShopCore\Support\Facades\PriceTypes',
+        'Cities'        => 'MosseboShopCore\Support\Facades\Cities',
+        'Countries'     => 'MosseboShopCore\Support\Facades\Countries',
+        'Settings'      => 'MosseboShopCore\Support\Facades\Settings',
     ];
 
     /**

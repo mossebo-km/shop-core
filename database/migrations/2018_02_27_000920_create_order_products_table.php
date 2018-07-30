@@ -26,6 +26,8 @@ class CreateOrderProductsTable extends Migration
 
             $table->integer('quantity')->unsigned();
 
+            $table->text('params');
+
             $table->timestamps();
         });
     }
