@@ -39,7 +39,7 @@ class CreateOrdersTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('post_code');
-            $table->text('comment');
+            $table->text('comment')->nullable();
 
             $table->timestamps();
         });
