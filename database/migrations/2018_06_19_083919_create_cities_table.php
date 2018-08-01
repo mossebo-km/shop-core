@@ -20,12 +20,12 @@ class CreateCitiesTable extends Migration
             $table->char('country_code', 2)->nullable()->index();
             $table->foreign('country_code')->references('code')->on(config('tables.Countries'))->onDelete('set null');
 
-            $table->string('name');
-            $table->string('region');
+            $table->string('name')->nullable();
+            $table->string('region')->nullable();
 
-            $table->string('cdek_code');
-            $table->string('fias_code');
-            $table->string('kladr_code');
+            $table->string('cdek_code')->nullable();
+            $table->string('fias_code')->nullable();
+            $table->string('kladr_code')->nullable();
 
             $table->boolean('enabled')->index()->default(1);
             $table->integer('position')->unsigned()->default(0);
