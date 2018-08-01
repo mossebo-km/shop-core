@@ -24,6 +24,9 @@ class CreateOrderProductsTable extends Migration
             $table->integer('default_price')->unsigned();
             $table->integer('final_price')->unsigned();
 
+            $table->char('currency_code', 3);
+            $table->foreign('currency_code')->references('code')->on(config('tables.Currencies'));
+
             $table->integer('quantity')->unsigned();
 
             $table->text('params');

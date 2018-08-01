@@ -14,15 +14,18 @@ class CreateCitiesTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 
-            $table->string('postal_code')->index();
-
             $table->string('lat')->nullable();
             $table->string('lon')->nullable();
 
-            $table->string('phone')->nullable();
-
             $table->char('country_code', 2)->nullable()->index();
             $table->foreign('country_code')->references('code')->on(config('tables.Countries'))->onDelete('set null');
+
+            $table->string('name');
+            $table->string('region');
+
+            $table->string('cdek_code');
+            $table->string('fias_code');
+            $table->string('kladr_code');
 
             $table->boolean('enabled')->index()->default(1);
             $table->integer('position')->unsigned()->default(0);

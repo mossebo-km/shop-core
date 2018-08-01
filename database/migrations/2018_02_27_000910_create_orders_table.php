@@ -20,9 +20,6 @@ class CreateOrdersTable extends Migration
             $table->char('language_code', 2);
             $table->foreign('language_code')->references('code')->on(config('tables.Languages'));
 
-            $table->char('currency_code', 3);
-            $table->foreign('currency_code')->references('code')->on(config('tables.Currencies'));
-
             $table->integer('order_status_id')->unsigned()->index();
             $table->foreign('order_status_id')->references('id')->on(config('tables.OrderStatuses'));
 

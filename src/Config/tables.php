@@ -20,6 +20,7 @@ return [
     'CountriesI18n' => 'countries_i18n',
     'Cities' => 'cities',
     'CitiesI18n' => 'cities_i18n',
+    'PostCodes' => 'post_codes',
 
     'Languages' => 'languages',
 

@@ -4,7 +4,7 @@ namespace MosseboShopCore\Models;
 
 use MosseboShopCore\Models\Base\BaseModel;
 
-abstract class City extends BaseModel
+abstract class PostCode extends BaseModel
 {
-    protected $tableIdentif = 'Cities';
+    protected $tableIdentif = 'PostCodes';
 }
