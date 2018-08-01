@@ -8,6 +8,8 @@ class CreateSimilarProductsTable extends Migration
 {
     public function up()
     {
+        echo "Create SimilarProducts Table\r\n";
+
         Schema::create(config('tables.SimilarProducts'), function (Blueprint $table) {
             $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on(config('tables.Products'))->onDelete('cascade');

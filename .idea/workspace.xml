@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000920_create_order_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000920_create_order_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_04_02_160220__create_order_product_attribute_options_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_04_02_160220_create_order_product_attribute_options_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_similar_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_similar_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_24_140800_create_post_codes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_140800_create_post_codes_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,11 +74,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_07_24_140800_create_post_codes_table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2018_07_24_140800_create_post_codes_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_140800_create_post_codes_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="180">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_07_24_140719_create_similar_products_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_similar_products_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="10" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_07_17_111656_create_reviews_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -115,29 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_06_19_083919_create_cities_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018_06_19_083919_create_cities_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
               <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderStatusRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Contracts/Repositories/OrderStatusRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderStatusRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repositories/OrderStatusRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -199,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/Models/Review.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/SimilarProduct.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_similar_products_table.php" />
         <option value="$PROJECT_DIR$/src/Repositories/LanguageRepository.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000900_create_order_statuses_i18n_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000901_create_order_statuses_i18n_table.php" />
@@ -237,11 +231,12 @@
         <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000920_create_order_products_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_140800_create_post_codes_table.php" />
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
         <option value="$PROJECT_DIR$/src/Models/PostCode.php" />
         <option value="$PROJECT_DIR$/src/Models/City.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_similar_products_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_140800_create_post_codes_table.php" />
       </list>
     </option>
   </component>
@@ -458,12 +453,12 @@
       <workItem from="1532934503374" duration="6086000" />
       <workItem from="1533021010697" duration="2005000" />
       <workItem from="1533107793445" duration="112000" />
-      <workItem from="1533134293480" duration="724000" />
+      <workItem from="1533134293480" duration="1030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112376000" />
+    <option name="totallyTimeSpent" value="112682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -478,7 +473,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32935324" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3255814" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32537314" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.5004975" side_tool="true" weight="0.25346112" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -520,20 +515,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Repositories/OrderStatusRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repositories/OrderStatusRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Repositories/PayTypeRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -842,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_140800_create_post_codes_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/PostCode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -874,6 +848,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_similar_products_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_140800_create_post_codes_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
