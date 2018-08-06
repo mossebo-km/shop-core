@@ -17,15 +17,11 @@ class CreateCitiesTable extends Migration
             $table->string('lat')->nullable();
             $table->string('lon')->nullable();
 
-            $table->char('country_code', 2)->nullable()->index();
-            $table->foreign('country_code')->references('code')->on(config('tables.Countries'))->onDelete('set null');
+            $table->integer('region_id', 2)->nullable()->index();
+            $table->foreign('region_id')->references('id')->on(config('tables.Regions'))->onDelete('set null');
 
             $table->string('name')->nullable();
-            $table->string('region')->nullable();
-
-            $table->string('cdek_code')->nullable();
-            $table->string('fias_code')->nullable();
-            $table->string('kladr_code')->nullable();
+            $table->string('postal_code')->nullable();
 
             $table->boolean('enabled')->index()->default(1);
             $table->integer('position')->unsigned()->default(0);

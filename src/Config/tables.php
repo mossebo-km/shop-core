@@ -22,6 +22,8 @@ return [
     'CitiesI18n' => 'cities_i18n',
     'PostCodes' => 'post_codes',
 
+    'Regions' => 'regions',
+
     'Languages' => 'languages',
 
     'Currencies' => 'shop_currencies',
