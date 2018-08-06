@@ -17,7 +17,7 @@ class CreateCitiesTable extends Migration
             $table->string('lat')->nullable();
             $table->string('lon')->nullable();
 
-            $table->integer('region_id', 2)->nullable()->index();
+            $table->integer('region_id')->nullable()->index();
             $table->foreign('region_id')->references('id')->on(config('tables.Regions'))->onDelete('set null');
 
             $table->string('name')->nullable();
