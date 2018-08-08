@@ -27,6 +27,9 @@ class CreateUsersTable extends Migration
 
             $table->integer('price_type_id')->nullable()->unsigned()->index();
             $table->foreign('price_type_id')->references('id')->on(config('tables.PriceTypes'))->onDelete('cascade');
+
+
+            $table->integer('msb', 255)->unsigned();
         });
     }
 }

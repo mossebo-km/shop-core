@@ -47,8 +47,8 @@
     </role>
     <schema id="9" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-08-08.12:13:50.471</IntrospectionTimestamp>
-      <IntrospectionStateNumber>308292</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-08-08.14:50:20.773</IntrospectionTimestamp>
+      <IntrospectionStateNumber>309105</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -67,15 +67,7 @@
     <schema id="14" parent="2" name="information_schema">
       <ObjectId>12965</ObjectId>
     </schema>
-    <sequence id="15" parent="9" name="cities_id_seq">
-      <ObjectId>54959</ObjectId>
-      <StateNumber>32871</StateNumber>
-      <SequenceIdentity>1..2147483647</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-      <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
-    </sequence>
-    <sequence id="16" parent="9" name="admin_logs_id_seq">
+    <sequence id="15" parent="9" name="admin_logs_id_seq">
       <ObjectId>54096</ObjectId>
       <StateNumber>12886</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
@@ -83,7 +75,7 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="17" parent="9" name="admin_role_permission_groups_id_seq">
+    <sequence id="16" parent="9" name="admin_role_permission_groups_id_seq">
       <ObjectId>54153</ObjectId>
       <StateNumber>12894</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
@@ -91,7 +83,7 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="18" parent="9" name="admin_role_permissions_id_seq">
+    <sequence id="17" parent="9" name="admin_role_permissions_id_seq">
       <ObjectId>54144</ObjectId>
       <StateNumber>12892</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
@@ -99,7 +91,7 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="19" parent="9" name="admin_roles_id_seq">
+    <sequence id="18" parent="9" name="admin_roles_id_seq">
       <ObjectId>54113</ObjectId>
       <StateNumber>12888</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
@@ -107,9 +99,17 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="20" parent="9" name="admins_id_seq">
+    <sequence id="19" parent="9" name="admins_id_seq">
       <ObjectId>53677</ObjectId>
       <StateNumber>12836</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="20" parent="9" name="cities_id_seq">
+      <ObjectId>54959</ObjectId>
+      <StateNumber>32871</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
@@ -345,7 +345,7 @@
     </table>
     <table id="53" parent="9" name="cities">
       <ObjectId>54961</ObjectId>
-      <StateNumber>308292</StateNumber>
+      <StateNumber>309105</StateNumber>
     </table>
     <table id="54" parent="9" name="countries">
       <ObjectId>54359</ObjectId>
@@ -381,7 +381,7 @@
     </table>
     <table id="62" parent="9" name="regions">
       <ObjectId>54850</ObjectId>
-      <StateNumber>32871</StateNumber>
+      <StateNumber>309105</StateNumber>
     </table>
     <table id="63" parent="9" name="reviews">
       <ObjectId>54512</ObjectId>

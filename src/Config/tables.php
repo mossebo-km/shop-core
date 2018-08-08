@@ -104,5 +104,8 @@ return [
     'Cart' => 'shop_cart',
     'Media' => 'media',
 
-    'Reviews' => 'reviews'
+    'Reviews' => 'reviews',
+
+
+    'MsbTransactions' => 'msb_transactions'
 ];
