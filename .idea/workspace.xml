@@ -5,10 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/cb60a612-1843-4746-9932-b6c2a20d01c6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cb60a612-1843-4746-9932-b6c2a20d01c6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/cb60a612-1843-4746-9932-b6c2a20d01c6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cb60a612-1843-4746-9932-b6c2a20d01c6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_06_19_083910_create_regions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_06_19_083910_create_regions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/PostCode.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Region.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Region.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,29 +67,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2018_06_19_083910_create_regions_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_19_083910_create_regions_table.php">
+      <file leaf-file-name="City.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/City.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" lean-forward="true" selection-end-line="34" />
+            <state relative-caret-position="71">
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mossebo_public_regions_2018_08_07_17_52_12.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/mossebo_public_regions_2018_08_07_17_52_12.txt">
+      <file leaf-file-name="Region.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Models/Region.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="67" />
+            <state relative-caret-position="234">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="migrations" pinned="false" current-in-tab="false">
-        <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/migrations">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="9" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -102,6 +99,15 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NestedTrait.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/NestedTrait.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -123,13 +129,13 @@
       <file leaf-file-name="2018_06_19_083919_create_cities_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="594">
+              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_02_27_000700_create_products_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018_02_27_000700_create_products_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
@@ -138,13 +144,9 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cities_i18n" pinned="false" current-in-tab="false">
-        <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/cities_i18n">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
+      <file leaf-file-name="2018_07_24_140719_create_related_products_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_related_products_table.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -220,16 +222,16 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000920_create_order_products_table.php" />
         <option value="$PROJECT_DIR$/src/Models/PostCode.php" />
-        <option value="$PROJECT_DIR$/src/Models/City.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_similar_products_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_140800_create_post_codes_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_related_products_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/RelatedProduct.php" />
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
-        <option value="$PROJECT_DIR$/src/Models/Region.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_06_19_083910_create_regions_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php" />
+        <option value="$PROJECT_DIR$/src/Models/City.php" />
+        <option value="$PROJECT_DIR$/src/Models/Region.php" />
       </list>
     </option>
   </component>
@@ -452,12 +454,12 @@
       <workItem from="1533281116404" duration="392000" />
       <workItem from="1533286981726" duration="1298000" />
       <workItem from="1533541078876" duration="4831000" />
-      <workItem from="1533650192795" duration="7057000" />
+      <workItem from="1533650192795" duration="9701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130607000" />
+    <option name="totallyTimeSpent" value="133251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -472,7 +474,7 @@
       <window_info anchor="bottom" id="Database Console" order="8" sideWeight="0.49893504" weight="0.3283582" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.19914803" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.31948882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.5004975" side_tool="true" weight="0.25346112" />
@@ -514,27 +516,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/cities">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/cities_i18n">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/cities">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/cities">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -800,27 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Region.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/cities">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="1" selection-start-line="13" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repositories/SettingsRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -845,6 +805,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_140719_create_related_products_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/settings">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -852,17 +829,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="30" selection-end-column="44" />
+    <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/cities">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000700_create_products_table.php">
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="162">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/NestedTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Region.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
