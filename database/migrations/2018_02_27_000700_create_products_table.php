@@ -31,6 +31,7 @@ class CreateProductsTable extends Migration
             $table->integer('weight')->unsigned()->nullable();
 
             $table->timestamps();
+            $table->timestamp('indexed_at');
         });
 
         $driver = DB::connection()->getPDO()->getAttribute(PDO::ATTR_DRIVER_NAME);

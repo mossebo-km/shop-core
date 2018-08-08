@@ -18,6 +18,11 @@ class CreateRegionsTable extends Migration
             $table->foreign('country_code')->references('code')->on(config('tables.Countries'))->onDelete('set null');
 
             $table->string('name')->nullable();
+            $table->string('short_name')->nullable();
+
+            $table->string('region_code')->nullable();
+            $table->string('area_code')->nullable();
+
             $table->string('aoguid');
             $table->nestedSet();
 

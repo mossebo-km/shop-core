@@ -21,12 +21,14 @@ class CreateCitiesTable extends Migration
             $table->foreign('region_id')->references('id')->on(config('tables.Regions'))->onDelete('set null');
 
             $table->string('name')->nullable();
+            $table->string('short_name')->nullable();
             $table->string('postal_code')->nullable();
 
             $table->boolean('enabled')->index()->default(1);
             $table->integer('position')->unsigned()->default(0);
 
             $table->timestamps();
+            $table->timestamp('indexed_at');
         });
     }
 }
