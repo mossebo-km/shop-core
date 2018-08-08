@@ -107,5 +107,9 @@ return [
     'Reviews' => 'reviews',
 
 
-    'MsbTransactions' => 'msb_transactions'
+    'MsbTransactions' => 'msb_transactions',
+
+    'PromoCodes'      => 'promo_codes',
+    'PromoConditions' => 'promo_conditions',
+    'PromoUses'       => 'promo_uses',
 ];
