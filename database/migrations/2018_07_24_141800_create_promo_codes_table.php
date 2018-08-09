@@ -23,6 +23,10 @@ class CreatePromoCodesTable extends Migration
 
             $table->integer('amount');
             $table->integer('percent');
+            $table->char('currency_code', 3)->nullable();
+            $table->foreign('currency_code')->references('code')->on(config('tables.Currencies'))->onDelete('cascade');
+
+            $table->timestamps();
         });
     }
 }
