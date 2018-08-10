@@ -109,7 +109,7 @@ return [
 
     'MsbTransactions' => 'msb_transactions',
 
-    'PromoCodes'      => 'promo_codes',
-    'PromoConditions' => 'promo_conditions',
-    'PromoUses'       => 'promo_uses',
+    'PromoCodes'      => 'shop_promo_codes',
+    'PromoConditions' => 'shop_promo_conditions',
+    'PromoUses'       => 'shop_promo_uses',
 ];

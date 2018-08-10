@@ -26,6 +26,9 @@ class CreatePromoCodesTable extends Migration
             $table->char('currency_code', 3)->nullable();
             $table->foreign('currency_code')->references('code')->on(config('tables.Currencies'))->onDelete('cascade');
 
+            $table->boolean('enabled')->index()->default(1);
+            $table->integer('position')->unsigned()->default(0);
+
             $table->timestamps();
         });
     }
