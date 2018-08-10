@@ -1,7 +1,7 @@
 <?php
 
 namespace MosseboShopCore\Shop\Promo\Conditions;
-use MosseboShopCore\Contracts\Shop\Order\Order;
+use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
 
 class BaseCondition
@@ -20,7 +20,7 @@ class BaseCondition
         return $this->params[$key];
     }
 
-    public function apply(Order & $order): void
+    public function apply(Cart & $cart): void
     {
     }
 }

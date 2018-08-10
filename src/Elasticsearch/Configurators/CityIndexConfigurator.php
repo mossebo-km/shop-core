@@ -15,6 +15,15 @@ class CityIndexConfigurator extends IndexConfigurator
      * @var array
      */
     protected $settings = [
-        //
+        'analysis' => [
+            'analyzer' => [
+                'default' => [
+                    'tokenizer' => 'keyword',
+                    'filter' => [
+                        'lowercase',
+                    ]
+                ]
+            ]
+        ]
     ];
 }

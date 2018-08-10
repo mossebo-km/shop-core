@@ -2,11 +2,11 @@
 
 namespace MosseboShopCore\Contracts\Shop\Promo;
 
-use MosseboShopCore\Contracts\Shop\Order\Order;
+use MosseboShopCore\Contracts\Shop\Cart\Cart;
 
 interface Condition
 {
-    public function check(Order $order): bool;
+    public function check(Cart $cart): bool;
 
-    public function apply(Order & $order): void;
+    public function apply(Cart & $cart): void;
 }

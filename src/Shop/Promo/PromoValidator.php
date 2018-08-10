@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Order;
+namespace MosseboShopCore\Shop\Cart;
 
 use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
@@ -22,11 +22,14 @@ class PromoValidator implements PromoValidatorInterface
         $this->validate();
     }
 
+    /**
+     * Проверка промокода для корзины
+     */
     protected function validate()
     {
         try {
             $this->checkIsUsed();
-
+            $this->checkConditions();
 
             $this->status = 'success';
         }
@@ -36,6 +39,11 @@ class PromoValidator implements PromoValidatorInterface
         }
     }
 
+    /**
+     * Проверяет, вышел ли лимит использований кода для данного пользователя
+     *
+     * @throws PromoCheckException
+     */
     protected function checkIsUsed()
     {
         if (! $this->cart->hasUser()) {
@@ -58,13 +66,42 @@ class PromoValidator implements PromoValidatorInterface
         }
     }
 
+    /**
+     * Проверка корзины на дополнительные условия
+     *
+     * @throws PromoCheckException
+     */
+    protected function checkConditions()
+    {
+        $conditions = $this->promoCode->getConditions();
 
+        foreach ($conditions as $condition) {
+            $className = str_replace('_', '', ucwords($condition->type, '_'));
+
+            $condition = app()->make("\MosseboShopCore\Shop\Promo\Conditions\{$className}");
+
+            if (! $condition->check($this->cart)) {
+                throw new PromoCheckException(trans("shop.promo.errors.{$condition->type}"));
+            }
+        }
+    }
+
+    /**
+     * Были ли обнаружены ошибки при валидации
+     *
+     * @return bool
+     */
     public function hasError(): bool
     {
         return $this->status === 'error';
     }
 
-    public function getMessage(): string
+    /**
+     * Сообщение ошибки при неудачной валидации
+     *
+     * @return string
+     */
+    public function getErrorMessage(): string
     {
         return $this->errorMessage;
     }

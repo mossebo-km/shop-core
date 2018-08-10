@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Order;
+namespace MosseboShopCore\Shop\Cart;
 
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode as PromoCodeInterface;
 use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
