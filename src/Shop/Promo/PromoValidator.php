@@ -29,6 +29,7 @@ class PromoValidator implements PromoValidatorInterface
     {
         try {
             $this->checkIsUsed();
+            $this->checkCurrency();
             $this->checkConditions();
 
             $this->status = 'success';

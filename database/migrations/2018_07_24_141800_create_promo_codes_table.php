@@ -18,8 +18,7 @@ class CreatePromoCodesTable extends Migration
             $table->timestamp('date_start');
             $table->timestamp('date_finish');
             $table->integer('quantity');
-            $table->boolean('once');
-            $table->boolean('user_related');
+            $table->integer('quantity_per_user');
 
             $table->integer('amount');
             $table->integer('percent');

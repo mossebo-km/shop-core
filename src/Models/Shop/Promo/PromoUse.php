@@ -6,5 +6,5 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class PromoUse extends BaseModel
 {
-    protected $tableIdentif = 'PromoUse';
+    protected $tableIdentif = 'PromoUses';
 }

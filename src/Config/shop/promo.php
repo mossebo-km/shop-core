@@ -2,7 +2,10 @@
 
 return [
     'discount' => [
-        'max-percent' => 20,
+        'percent' => [
+            'max_percent' => env('SHOP_PROMO_DISCOUNT_PERCENT_MAX_PERCENT', 20),
+        ],
+
         'amount' => [
             'max_percent' => env('SHOP_PROMO_DISCOUNT_AMOUNT_MAX_PERCENT', 10)
         ]
