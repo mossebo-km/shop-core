@@ -43,7 +43,7 @@ abstract class PromoCode implements PromoCodeInterface
             $timeStart = Carbon::createFromTimeString($this->date_start)->timestamp;
 
             if ($currentTime < $timeStart) {
-                return false;
+                return true;
             }
         }
 
@@ -51,13 +51,15 @@ abstract class PromoCode implements PromoCodeInterface
             $timeFinish  = Carbon::createFromTimeString($this->date_finish)->timestamp;
 
             if ($currentTime > $timeFinish) {
-                return false;
+                return true;
             }
         }
 
         if ($this->quantity === 0) {
-            return false;
+            return true;
         }
+
+        return false;
     }
 
     public function validate(Cart $cart): PromoValidatorInterface
