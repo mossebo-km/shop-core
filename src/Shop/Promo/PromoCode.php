@@ -30,16 +30,22 @@ abstract class PromoCode implements PromoCodeInterface
             return true;
         }
 
-        $timeStart   = Carbon::createFromTimeString($this->date_start)->timestamp;
-        $timeFinish  = Carbon::createFromTimeString($this->date_finish)->timestamp;
         $currentTime = time();
 
-        if ($currentTime < $timeStart) {
-            return false;
+        if ($this->date_start) {
+            $timeStart = Carbon::createFromTimeString($this->date_start)->timestamp;
+
+            if ($currentTime < $timeStart) {
+                return false;
+            }
         }
 
-        if ($currentTime > $timeFinish) {
-            return false;
+        if ($this->date_finish) {
+            $timeFinish  = Carbon::createFromTimeString($this->date_finish)->timestamp;
+
+            if ($currentTime > $timeFinish) {
+                return false;
+            }
         }
 
         if ($this->quantity === 0) {

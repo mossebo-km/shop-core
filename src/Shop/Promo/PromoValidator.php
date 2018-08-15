@@ -40,6 +40,15 @@ class PromoValidator implements PromoValidatorInterface
         }
     }
 
+    protected function checkCurrency()
+    {
+        if ($this->promoCode->amount || $this->promoCode->currency_code) {
+            if ($this->promoCode->currency_code !== $this->cart->getCurrencyCode()) {
+                throw new PromoCheckException(trans('shop.promo.errors.currency'));
+            }
+        }
+    }
+
     /**
      * Проверяет, вышел ли лимит использований кода для данного пользователя
      *
