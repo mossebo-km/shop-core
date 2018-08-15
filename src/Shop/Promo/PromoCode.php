@@ -7,11 +7,16 @@ use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterfa
 
 abstract class PromoCode implements PromoCodeInterface
 {
-    protected $model;
+    protected $model = null;
 
     public function __construct($codeName)
     {
-        $this->model = $this->getModel($codeName);
+        $this->setModel($codeName);
+    }
+
+    public function setModel($codeName = ''): void
+    {
+        // установить в реализации
     }
 
     public function notExist(): bool
