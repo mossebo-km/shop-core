@@ -92,7 +92,7 @@ class PromoValidator implements PromoValidatorInterface
         $conditionModels = $this->promoCode->getConditions();
 
         foreach ($conditionModels as $conditionModel) {
-            $condition = $this->getConditionByType($conditionModel->type);
+            $condition = $this->getConditionByType($conditionModel);
 
             if (is_null($condition)) {
                 continue;
@@ -110,14 +110,14 @@ class PromoValidator implements PromoValidatorInterface
      * @param $type
      * @return PromoCondition|null
      */
-    protected function getConditionByType($type): ?PromoCondition
+    protected function getConditionByType($promoCodeConditionModel): ?PromoCondition
     {
-        $className = str_replace('_', '', ucwords($type, '_'));
+        $className = str_replace('_', '', ucwords($promoCodeConditionModel->type, '_'));
 
         $namespacedClassName = "\MosseboShopCore\Shop\Promo\Conditions\{$className}";
 
         if (class_exists($namespacedClassName)) {
-            return new $namespacedClassName;
+            return new $namespacedClassName($promoCodeConditionModel);
         }
 
         return null;
