@@ -5,6 +5,7 @@ namespace MosseboShopCore\Shop\Promo;
 use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
+use MosseboShopCore\Contracts\Shop\Promo\PromoCondition;
 use MosseboShopCore\Exceptions\PromoCheckException;
 
 class PromoValidator implements PromoValidatorInterface
@@ -40,21 +41,12 @@ class PromoValidator implements PromoValidatorInterface
         }
     }
 
-    protected function checkCurrency()
-    {
-        if ($this->promoCode->amount || $this->promoCode->currency_code) {
-            if ($this->promoCode->currency_code !== $this->cart->getCurrencyCode()) {
-                throw new PromoCheckException(trans('shop.promo.errors.currency'));
-            }
-        }
-    }
-
     /**
      * Проверяет, вышел ли лимит использований кода для данного пользователя
      *
      * @throws PromoCheckException
      */
-    protected function checkIsUsed()
+    protected function checkIsUsed(): void
     {
         if (! $this->cart->hasUser()) {
             return;
@@ -77,23 +69,58 @@ class PromoValidator implements PromoValidatorInterface
     }
 
     /**
+     * Проверяет, совпдают ли валюты промокода и корзины
+     *
+     * @throws PromoCheckException
+     */
+    protected function checkCurrency(): void
+    {
+        if ($this->promoCode->amount || $this->promoCode->currency_code) {
+            if ($this->promoCode->currency_code !== $this->cart->getCurrencyCode()) {
+                throw new PromoCheckException(trans('shop.promo.errors.currency'));
+            }
+        }
+    }
+
+    /**
      * Проверка корзины на дополнительные условия
      *
      * @throws PromoCheckException
      */
-    protected function checkConditions()
+    protected function checkConditions(): void
     {
-        $conditions = $this->promoCode->getConditions();
+        $conditionModels = $this->promoCode->getConditions();
 
-        foreach ($conditions as $condition) {
-            $className = str_replace('_', '', ucwords($condition->type, '_'));
+        foreach ($conditionModels as $conditionModel) {
+            $condition = $this->getConditionByType($conditionModel->type);
 
-            $condition = app()->make("\MosseboShopCore\Shop\Promo\Conditions\{$className}");
+            if (is_null($condition)) {
+                continue;
+            }
 
             if (! $condition->check($this->cart)) {
-                throw new PromoCheckException(trans("shop.promo.errors.{$condition->type}"));
+                throw new PromoCheckException(trans("shop.promo.errors.{$conditionModel->type}", $condition->getParams()));
             }
         }
+    }
+
+    /**
+     * Возвращает условие проверки промокода
+     *
+     * @param $type
+     * @return PromoCondition|null
+     */
+    protected function getConditionByType($type): ?PromoCondition
+    {
+        $className = str_replace('_', '', ucwords($type, '_'));
+
+        $namespacedClassName = "\MosseboShopCore\Shop\Promo\Conditions\{$className}";
+
+        if (class_exists($namespacedClassName)) {
+            return new $namespacedClassName;
+        }
+
+        return null;
     }
 
     /**
@@ -109,9 +136,9 @@ class PromoValidator implements PromoValidatorInterface
     /**
      * Сообщение ошибки при неудачной валидации
      *
-     * @return string
+     * @return string|null
      */
-    public function getErrorMessage(): string
+    public function getErrorMessage(): ?string
     {
         return $this->errorMessage;
     }

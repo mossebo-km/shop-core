@@ -4,6 +4,7 @@ namespace MosseboShopCore\Shop\Promo;
 
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode as PromoCodeInterface;
 use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
+use Illuminate\Database\Eloquent\Collection;
 
 abstract class PromoCode implements PromoCodeInterface
 {
@@ -22,6 +23,11 @@ abstract class PromoCode implements PromoCodeInterface
     public function notExist(): bool
     {
         return is_null($this->model);
+    }
+
+    public function getConditions(): Collection
+    {
+        return $this->model->conditions;
     }
 
     public function notActual(): bool

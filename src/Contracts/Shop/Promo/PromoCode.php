@@ -3,7 +3,7 @@
 namespace MosseboShopCore\Contracts\Shop\Promo;
 
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
-use MosseboShopCore\Contracts\Shop\Promo\PromoValidator;
+use Illuminate\Database\Eloquent\Collection;
 
 interface PromoCode
 {
@@ -11,4 +11,5 @@ interface PromoCode
     public function notActual(): bool;
     public function setModel($codeName = ''): void;
     public function validate(Cart $cart): PromoValidator;
+    public function getConditions(): Collection;
 }
