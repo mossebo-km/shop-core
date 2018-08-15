@@ -9,26 +9,26 @@ use Illuminate\Database\Eloquent\Collection;
 
 abstract class PromoCode implements PromoCodeInterface
 {
-    protected $model = null;
+    protected $resource = null;
 
     public function __construct($codeName)
     {
-        $this->setModel($codeName);
+        $this->setResource($codeName);
     }
 
-    public function setModel($codeName = ''): void
+    public function setResource($codeName = ''): void
     {
         // установить в реализации
     }
 
     public function notExist(): bool
     {
-        return is_null($this->model);
+        return is_null($this->resource);
     }
 
     public function getConditions(): Collection
     {
-        return $this->model->conditions;
+        return $this->resource->conditions;
     }
 
     public function notActual(): bool
