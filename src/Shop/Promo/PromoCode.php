@@ -5,15 +5,14 @@ namespace MosseboShopCore\Shop\Cart;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode as PromoCodeInterface;
 use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
 
-class PromoCode implements PromoCodeInterface
+abstract class PromoCode implements PromoCodeInterface
 {
     protected $model;
 
     public function __construct($codeName)
     {
-        $this->model = app()->make(PromoCodeModel::class, $codeName);
+        $this->model = $this->getModel($codeName);
     }
-
 
     public function notExist(): bool
     {
