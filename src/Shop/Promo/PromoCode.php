@@ -47,7 +47,7 @@ abstract class PromoCode implements PromoCodeInterface
         }
     }
 
-    public function canBeApplyedByCart(Cart $cart): PromoValidatorInterface
+    public function validate(Cart $cart): PromoValidatorInterface
     {
         return new PromoValidator($this, $cart);
     }
