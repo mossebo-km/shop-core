@@ -3,15 +3,14 @@
 namespace MosseboShopCore\Models\Shop;
 
 use MosseboShopCore\Models\Base\BaseModel;
+use MosseboShopCore\Shop\Price as ShopPrice;
+use MosseboShopCore\Support\Traits\Models\Shop\StorePriceValueAsInteger;
 
 abstract class Price extends BaseModel
 {
-    protected $tableIdentif = 'Prices';
+    use StorePriceValueAsInteger;
 
-    public function getCurrency()
-    {
-        return \Currencies::where('code', $this->currency_code)->first();
-    }
+    protected $tableIdentif = 'Prices';
 
     /**
      * Получение форматированной (побитой на разряды, с символом валюты) цены.
@@ -20,65 +19,9 @@ abstract class Price extends BaseModel
      */
     public function getFormatted()
     {
-        extract($this->getCurrency()->toArray(), EXTR_OVERWRITE);
-
-        $price = number_format(
+        return ShopPrice::formatPrice(
             $this->getValue(),
-            $precision,
-            $decimal_separator,
-            $thousand_separator
+            $this->currency_code
         );
-
-        $price = str_replace(('.' . str_pad('', $precision, '0')), '', $price);
-
-        if ($swap_currency_symbol) {
-            $price = "$price $symbol";
-        }
-        else {
-            $price = "$symbol $price";
-        }
-
-        return $price;
-    }
-
-    /**
-     * Возвращает цену с учетом количества знаков после запятой.
-     *
-     * @return float|int
-     */
-    public function getValue()
-    {
-        return $this->value / $this->getDivider();
-    }
-
-    /**
-     * Получение значения, на которое нужно разделить значение из базы, чтобы получить верный результат.
-     *
-     * @return float|int
-     */
-    public function getDivider()
-    {
-        return pow(10, $this->getCurrency()['precision']);
-    }
-
-
-    public static function formatPrice($value, $currencyCode)
-    {
-        $price = new static;
-
-        $price->value = $value;
-        $price->currency_code = $currencyCode;
-
-        return $price->getFormatted();
-    }
-
-    public static function getPriceValue($value, $currencyCode)
-    {
-        $price = new static;
-
-        $price->value = $value;
-        $price->currency_code = $currencyCode;
-
-        return $price->getValue();
     }
 }
