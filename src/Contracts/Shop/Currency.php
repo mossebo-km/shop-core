@@ -8,7 +8,7 @@ interface Currency
     public function getPrecision();
     public function getDecimalSeparator();
     public function getThousandSeparator();
-    public function isSymbolFirst(): bool;
+    public function isSymbolAfterPrice(): bool;
 
     public function formatPrice($price): string;
 }
