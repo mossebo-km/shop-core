@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Contracts\Shop\Order;
+namespace MosseboShopCore\Contracts\Shop\Cart;
 
 interface CartProduct
 {

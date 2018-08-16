@@ -5,6 +5,8 @@ namespace MosseboShopCore\Contracts\Shop\Cart;
 use Illuminate\Support\Collection;
 
 use MosseboShopCore\Contracts\Models\User;
+use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
+
 
 interface Cart
 {
@@ -17,4 +19,5 @@ interface Cart
     public function setAmountDiscount($amount, $currencyCode, $percent = 0, $isSummable = false): void;
     public function setPercentDiscount($percent, $isSummable = false): void;
     public function getBestDiscount();
+    public function setPromoCode(PromoCode $code);
 }
