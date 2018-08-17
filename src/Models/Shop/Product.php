@@ -64,7 +64,7 @@ abstract class Product extends BaseModelI18n
         $supplierTableName = config('tables.Suppliers');
         $productTableName = config('tables.Products');
 
-        return self::select(\DB::raw("{$productTableName}.*"))
+        return self::select(\DB::raw("{$productTableName}.*, {$supplierTableName}.enabled as supplierEnabled"))
             ->where("{$productTableName}.enabled", 1)
             ->leftJoin("{$supplierTableName}", function($join) use($supplierTableName, $productTableName) {
                 $join->on("{$supplierTableName}.id", '=', "{$productTableName}.supplier_id")

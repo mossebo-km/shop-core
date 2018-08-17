@@ -6,6 +6,7 @@ use Illuminate\Support\Collection;
 
 use MosseboShopCore\Contracts\Models\User;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
+use MosseboShopCore\Contracts\Shop\Price;
 
 
 interface Cart
@@ -14,7 +15,7 @@ interface Cart
     public function getUser(): User;
     public function getProducts(): Collection;
     public function getCurrencyCode(): string;
-    public function getAmount(): integer;
+    public function getAmount(): Price;
     public function getProductsQuantity(): integer;
     public function setAmountDiscount($amount, $currencyCode, $percent = 0, $isSummable = false): void;
     public function setPercentDiscount($percent, $isSummable = false): void;

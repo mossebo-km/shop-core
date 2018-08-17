@@ -3,7 +3,7 @@
 namespace MosseboShopCore\Shop\Cart;
 
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
-use MosseboShopCore\Contracts\Shop\Order\CartProduct;
+use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
 use MosseboShopCore\Exceptions\PromoCheckException;
 

@@ -25,6 +25,8 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
      * @var array
      */
     protected $facadeAliases = [
+        'Shop'          => 'MosseboShopCore\Support\Facades\Shop',
+
         'Attributes'    => 'MosseboShopCore\Support\Facades\Attributes',
         'Categories'    => 'MosseboShopCore\Support\Facades\Categories',
         'Rooms'         => 'MosseboShopCore\Support\Facades\Rooms',
@@ -59,6 +61,10 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->registerConfigs();
+
+        $this->app->singleton('shop', function() {
+            return new \MosseboShopCore\Shop\Shop;
+        });
     }
 
     /**
