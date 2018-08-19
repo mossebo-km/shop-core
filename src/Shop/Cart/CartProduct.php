@@ -164,10 +164,8 @@ abstract class CartProduct implements CartProductInterface
         );
     }
 
+    protected static function findProduct($id, $options = []): ?Product
+    {
 
-    // todo: реализовать
-//    public static function findProduct($id, $options = [])
-//    {
-//        return Product::getCartItem($id, $options);
-//    }
+    }
 }

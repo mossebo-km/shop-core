@@ -3,7 +3,6 @@
 namespace MosseboShopCore\Contracts\Shop\Cart;
 
 use MosseboShopCore\Contracts\Shop\Price;
-use MosseboShopCore\Models\Shop\Product;
 
 interface CartProduct
 {
