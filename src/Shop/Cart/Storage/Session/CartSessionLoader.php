@@ -5,7 +5,6 @@ namespace MosseboShopCore\Shop\Cart\Storage\Session;
 use Auth;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
-use MosseboShopCore\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
 use MosseboShopCore\Contracts\Shop\User;
@@ -66,9 +65,22 @@ class CartSessionLoader extends CartSessionConnector
         });
     }
 
+    public function find($cartProducts)
+    {
+
+    }
+
     protected function buildCartProducts()
     {
         $storedProducts = $this->getCartData('products');
+
+        $productsDataFinder = new ProductsDataFinder();
+
+        $products = $productsDataFinder->find(
+            $this->getCartData('products')
+        );
+
+
         $ids = array_unique(array_column($storedProducts, 'id'));
 
 

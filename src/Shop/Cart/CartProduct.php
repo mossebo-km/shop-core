@@ -3,32 +3,31 @@
 namespace MosseboShopCore\Shop\Cart;
 
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
+use MosseboShopCore\Contracts\Shop\Cart\CartProductData as CartProductDataInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Shop\Price;
 
 abstract class CartProduct implements CartProductInterface
 {
-    protected $key       = null;
-    protected $productId = null;
-    protected $options   = null;
-    protected $quantity  = null;
-    protected $resource  = null;
-    protected $addedAt   = null;
-    protected $updatedAt = null;
+    protected $key         = null;
+    protected $productId   = null;
+    protected $options     = null;
+    protected $quantity    = null;
+    protected $productData = null;
+    protected $addedAt     = null;
+    protected $updatedAt   = null;
 
-    public function __construct($productId, $options = [], $quantity = 1, $addedAt = null, $updatedAt = null, $resource = null)
-    {
-        $this->productId = $productId;
-        $this->options   = $options;
-        $this->quantity  = $quantity;
-        $this->addedAt   = is_null($addedAt) ? time() : $addedAt;
-        $this->updatedAt = is_null($updatedAt) ? time() : $updatedAt;
-        $this->resource  = $resource;
-    }
+    protected $basePrice   = null;
+    protected $finalPrice  = null;
 
-    public function setKey($key)
+    public function __construct($productId, $options = [], $quantity = 1, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
     {
-        $this->key = $key;
+        $this->productId   = $productId;
+        $this->options     = $options;
+        $this->quantity    = $quantity;
+        $this->addedAt     = is_null($addedAt) ? time() : $addedAt;
+        $this->updatedAt   = is_null($updatedAt) ? time() : $updatedAt;
+        $this->productData = $productData;
     }
 
     public function getKey(): string
@@ -38,11 +37,6 @@ abstract class CartProduct implements CartProductInterface
         }
 
         return $this->key;
-    }
-
-    public function getResource()
-    {
-        return $this->resource;
     }
 
     public function add($num): integer
@@ -64,8 +58,6 @@ abstract class CartProduct implements CartProductInterface
 
         return $this->quantity = min(1, $quantity);
     }
-
-
 
 
     public function getQuantity(): integer
@@ -100,8 +92,20 @@ abstract class CartProduct implements CartProductInterface
         // TODO: Implement setPromoPrice() method.
     }
 
+    public function setBasePrice($value, $currencyCode)
+    {
+        $this->basePrice = app()->makeWith(Price::class, [
+            'value' => $value,
+            'currencyCode' => $currencyCode,
+        ]);
+    }
+
     public function getBasePrice($typeId, $currencyCode): ?PriceInterface
     {
+        if (! is_null($this->basePrice)) {
+            return $this->basePrice;
+        }
+
         foreach ($this->resource->prices as $price) {
             if ($price->price_type_id === $typeId && $price->currency_code === $currencyCode) {
                 return app()->makeWith(Price::class, [
@@ -114,8 +118,19 @@ abstract class CartProduct implements CartProductInterface
         return null;
     }
 
+    public function setFinalPrice($value, $currencyCode)
+    {
+        $this->finalPrice = app()->makeWith(Price::class, [
+            'value' => $value,
+            'currencyCode' => $currencyCode,
+        ]);
+    }
+
     public function getFinalPrice($typeId, $currencyCode): ?PriceInterface
     {
+        if (! is_null($this->finalPrice)) {
+            return $this->finalPrice;
+        }
         // TODO: Implement getPrice() method.
 
         return $this->getBasePrice($typeId, $currencyCode);
@@ -160,12 +175,29 @@ abstract class CartProduct implements CartProductInterface
             $quantity,
             time(),
             time(),
-            static::findProduct($decoded['id'], $decoded['options'])
+            static::findCartProductData($decoded['id'], $decoded['options'])
         );
     }
 
-    protected static function findProduct($id, $options = []): ?Product
+    protected static function findCartProductData($id, $options = []): ?Product
     {
 
+    }
+
+    public function toStore()
+    {
+        return [
+            'key'       => $this->key,
+            'productId' => $this->productId,
+            'options'   => $this->options,
+            'addedAt'   => $this->addedAt,
+            'updatedAt' => $this->updatedAt,
+
+            'product'   => [
+                'image'  => $this->productData->getImage(),
+                'prices' => $this->productData->getPrices(),
+                'titles' => $this->productData->getI18nTitles(),
+            ]
+        ];
     }
 }

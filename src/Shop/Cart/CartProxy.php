@@ -12,6 +12,8 @@ class CartProxy
         $this->addProduct($productKey, $quantity);
 
         $this->save();
+
+        return $this;
     }
 
     public function set($productKey, $quantity = null)
@@ -19,6 +21,8 @@ class CartProxy
         $this->cart->setProduct($productKey, $quantity);
 
         $this->save();
+
+        return $this;
     }
 
     public function setMany($items)
@@ -28,6 +32,8 @@ class CartProxy
         }
 
         $this->save();
+
+        return $this;
     }
 
     protected function addProduct($productKey, $quantity = null)
@@ -45,8 +51,18 @@ class CartProxy
         return app()->call([$this->cart, $methodName], $arguments);
     }
 
+    public function clear()
+    {
+        $this->cart->clear();
+        $this->save();
+
+        return $this;
+    }
+
     public function save()
     {
         $this->saver->save($this->cart);
+
+        return $this;
     }
 }
