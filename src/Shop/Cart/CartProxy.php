@@ -7,11 +7,6 @@ class CartProxy
     protected $cart;
     protected $saver;
 
-    public function __construct($cartClass, Loader $loader, Saver $saver)
-    {
-
-    }
-
     public function add($productKey, $quantity = null)
     {
         $this->addProduct($productKey, $quantity);

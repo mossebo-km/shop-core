@@ -11,15 +11,6 @@ use MosseboShopCore\Shop\Cart\Traits\HasDiscount;
 use MosseboShopCore\Shop\Price;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 
-
-
-//public function getProducts(): Collection;
-//public function getCurrencyCode(): string;
-//public function setAmountDiscount($amount, $currencyCode, $percent = 0, $isSummable = false): void;
-//public function setPercentDiscount($percent, $isSummable = false): void;
-//public function getBestDiscount();
-//public function setPromoCode(PromoCode $code);
-
 class Cart implements CartInterface
 {
     use HasDiscount;
@@ -27,10 +18,9 @@ class Cart implements CartInterface
     protected $products     = null;
     protected $currencyCode = null;
     protected $promoCode    = null;
+    protected $discounts    = null;
     protected $createdAt    = null;
     protected $updatedAt    = null;
-
-    protected $storage      = null;
 
     protected $amount       = null;
     protected $total        = null;
@@ -231,6 +221,17 @@ class Cart implements CartInterface
         $this->hasChanged();
     }
 
+    /**
+     * Отчистка корзины
+     */
+    public function clear()
+    {
+        $this->products = new Collection;
+        $this->promoCode = null;
+        $this->discounts = [];
+
+        $this->hasChanged();
+    }
 
     /**
      * Удаляет вычисляемые данные

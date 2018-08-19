@@ -27,9 +27,6 @@ class CartSessionSaver extends CartSessionConnector
         $this->put('cart', $data);
     }
 
-
-
-
     protected function setProductsToSave(& $data)
     {
         $data['products'] = $this->cart->getProducts()->reduce(function ($carry, CartProduct $product) {

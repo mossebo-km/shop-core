@@ -10,7 +10,7 @@ interface CartProduct
     public function isExist(): bool;
     public function getResource();
     public function setPromoPrice();
-    public function setKey(): string;
+    public function setKey($key);
     public function getKey(): string;
     public function getQuantity(): integer;
     public function getBasePrice($typeId, $currencyCode): ?Price;
@@ -28,5 +28,4 @@ interface CartProduct
     public static function decodeKey(): array;
 
     public static function makeByKey($productKey, $quantity = 1): CartProduct;
-    public static function findProductResource(): ?Product;
 }

@@ -4,7 +4,6 @@ namespace MosseboShopCore\Shop\Cart;
 
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
-use MosseboShopCore\Models\Shop\Product;
 use MosseboShopCore\Shop\Price;
 
 abstract class CartProduct implements CartProductInterface
@@ -25,6 +24,11 @@ abstract class CartProduct implements CartProductInterface
         $this->addedAt   = is_null($addedAt) ? time() : $addedAt;
         $this->updatedAt = is_null($updatedAt) ? time() : $updatedAt;
         $this->resource  = $resource;
+    }
+
+    public function setKey($key)
+    {
+        $this->key = $key;
     }
 
     public function getKey(): string
