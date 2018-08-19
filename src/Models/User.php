@@ -3,7 +3,7 @@
 namespace MosseboShopCore\Models;
 
 use MosseboShopCore\Models\Base\Authenticatable;
-use MosseboShopCore\Contracts\Models\User as UserInterface;
+use MosseboShopCore\Contracts\Shop\User as UserInterface;
 
 abstract class User extends Authenticatable implements UserInterface
 {

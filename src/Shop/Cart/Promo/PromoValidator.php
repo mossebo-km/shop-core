@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Promo;
+namespace MosseboShopCore\Shop\Cart\Promo;
 
 use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
@@ -114,13 +114,9 @@ class PromoValidator implements PromoValidatorInterface
     {
         $className = str_replace('_', '', ucwords($promoCodeConditionModel->type, '_'));
 
-        $namespacedClassName = "\MosseboShopCore\Shop\Promo\Conditions\{$className}";
-
-        if (class_exists($namespacedClassName)) {
-            return new $namespacedClassName($promoCodeConditionModel);
-        }
-
-        return null;
+        return app()->makeWith("\MosseboShopCore\Shop\Promo\Conditions\{$className}", [
+            'model' => $promoCodeConditionModel
+        ]);
     }
 
     /**

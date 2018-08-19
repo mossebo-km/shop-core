@@ -2,151 +2,248 @@
 
 namespace MosseboShopCore\Shop\Cart;
 
+use Illuminate\Support\Collection;
+use MosseboShopCore\Contracts\Models\User;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
-use MosseboShopCore\Exceptions\PromoCheckException;
+use MosseboShopCore\Shop\Cart\Traits\HasDiscount;
+use MosseboShopCore\Shop\Price;
+use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
+
+
+
+//public function getProducts(): Collection;
+//public function getCurrencyCode(): string;
+//public function setAmountDiscount($amount, $currencyCode, $percent = 0, $isSummable = false): void;
+//public function setPercentDiscount($percent, $isSummable = false): void;
+//public function getBestDiscount();
+//public function setPromoCode(PromoCode $code);
 
 class Cart implements CartInterface
 {
-    protected $discounts = [];
+    use HasDiscount;
 
-    public function setAmountDiscount($amount, $currencyCode, $percent = 0, $isSummable = false): void
+    protected $products     = null;
+    protected $currencyCode = null;
+    protected $promoCode    = null;
+    protected $createdAt    = null;
+    protected $updatedAt    = null;
+
+    protected $storage      = null;
+
+    protected $amount       = null;
+    protected $total        = null;
+
+    public function __construct(Collection $products, $currencyCode, $promoCode = null, $discounts = [])
     {
-        $this->addDiscount([
-            'type'         => 'percent',
-            'amount'       => $amount,
-            'currencyCode' => $currencyCode,
-            'percent'      => $this->getAmountDiscountPercent($percent),
-            'isSummable'   => $isSummable
-        ]);
+        $this->products     = $products;
+        $this->currencyCode = $currencyCode;
+        $this->promoCode    = $promoCode;
+        $this->discounts    = $discounts;
     }
 
-    protected function getAmountDiscountPercent($percent = 0)
+    public function hasUser(): bool
     {
-        $maxPercent = config('shop.promo.discount.amount.max-percent');
+        return ! is_null(Auth::user());
+    }
 
-        if ($percent === 0 || $percent > $maxPercent) {
-            return $maxPercent;
+    public function getUser(): User
+    {
+        return Auth::user();
+    }
+
+    /**
+     * Коллекция товаров, находящихся в корзине
+     *
+     * @return \Illuminate\Support\Collection|null
+     */
+    public function getProducts(): Collection
+    {
+        return clone $this->products;
+    }
+
+    /**
+     * Возвращает количество товаров в корзине
+     *
+     * @return int
+     */
+    public function getProductsQuantity(): integer
+    {
+        $quantity = 0;
+
+        foreach ($this->getProducts() as $product) {
+            $quantity += $product->getQuantity();
         }
 
-        return $percent;
+        return $quantity;
     }
 
-    public function setPercentDiscount($percent, $isSummable = false): void
+    /**
+     * Возвращает количество наименований товаров в корзине
+     *
+     * @return int
+     */
+    public function getProductNamesQuantity(): integer
     {
-        $this->addDiscount([
-            'type' => 'amount',
-            'percent' => $percent,
-            'isSummable' => $isSummable
-        ]);
+        return $this->getProducts()->count();
     }
 
-    protected function addDiscount($discount)
-    {
-        $this->discounts[] = $discount;
-    }
 
-    public function getBestDiscount()
+    /**
+     * Возвращает текущую суммарную цену товаров в корзине
+     *
+     * @return PriceInterface
+     * @throws \Exception
+     */
+    public function getAmount(): PriceInterface
     {
-        $count = count($this->discounts);
-        if (! $count) {
-            return 0;
+        if (! is_null($this->amount)) {
+            return $this->amount;
         }
 
-        if ($count === 1) {
-            return $this->prepareDiscountValue(
-                $this->getDiscountValue($this->discounts[0])
+        $products = $this->getProducts();
+
+        $amount = app()->makeWith(Price::class, [
+            'value' => 0,
+            'currencyCode' => $this->getCurrencyCode(),
+        ]);
+
+        foreach ($products as $product) {
+            $amount->plus($product->getPrice());
+        }
+
+        return $this->amount;
+    }
+
+    public function getTotal()
+    {
+        if (is_null($this->promoCode)) {
+            $this->total = $this->amount;
+        }
+        else {
+            $this->total = $this->promoCode->apply($this->amount);
+        }
+    }
+
+    public function getCurrencyCode(): string
+    {
+        return $this->currencyCode;
+    }
+
+
+    /**
+     * Устанавливает код валюты.
+     *
+     * @param $currencyCode
+     */
+    public function setCurrencyCode($currencyCode)
+    {
+        $this->currencyCode = $currencyCode;
+
+        $this->hasChanged();
+    }
+
+    /**
+     * Устанавливает промокод.
+     *
+     * @param $currencyCode
+     */
+    public function setPromoCode(PromoCode $code)
+    {
+        $this->promoCode = $code;
+
+        $this->hasChanged();
+    }
+
+    public function getPromoCode(): ?PromoCode
+    {
+        return $this->promoCode;
+    }
+
+
+    /**
+     * Работа с товарами
+     *
+     * @param $productKey
+     * @return null
+     */
+
+    protected function findProductByKey($productKey)
+    {
+        foreach ($this->products as $product) {
+            if ($product->getKey() === $productKey) {
+                return $product;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Добавление товара по ключу
+     *
+     * @param $productKey
+     * @param int $quantity
+     */
+    public function addProductByKey($productKey, $quantity = 1)
+    {
+        $this->handleProductOperation('add', $productKey, $quantity);
+    }
+
+    public function setProductByKey($productKey, $quantity)
+    {
+        $this->handleProductOperation('setQuantity', $productKey, $quantity);
+    }
+
+    protected function handleProductOperation($method, $productKey, $quantity)
+    {
+        $product = $this->findProductByKey($productKey);
+
+        if (is_null($product)) {
+            $this->products->push(
+                CartProduct::makeByKey($productKey, $quantity)
             );
         }
-
-        $summable = [];
-        $notSummable = [];
-
-        foreach ($this->discounts as $discount) {
-            if ($discount['isSummable']) {
-                $summable[] = $discount;
-            }
-            else {
-                $notSummable[] = $discount;
-            }
+        else {
+            $product->$method($quantity);
         }
 
-        $discountValues = [];
-
-        foreach ($notSummable as $discount) {
-            $discountValues[] = $this->getDiscountValue($discount);
-        }
-
-        $totalSummable = 0;
-
-        foreach ($summable as $discount) {
-            $totalSummable += $this->getDiscountValue($discount);
-        }
-
-        if ($totalSummable) {
-            $discountValues[] = $totalSummable;
-        }
-
-        return $this->prepareDiscountValue(max($discountValues));
+        $this->hasChanged();
     }
 
-    protected function prepareDiscountValue($value)
+    public function removeProductByKey($productKey)
     {
-        return round(
-            min(
-                $this->getMaxDiscountValue(),
-                $value
-            )
-        );
+        $this->products->reject(function ($product) use($productKey) {
+            return $product->getKey() === $productKey;
+        });
+
+        $this->hasChanged();
     }
 
-    protected function getMaxDiscountValue()
+
+    /**
+     * Удаляет вычисляемые данные
+     */
+    protected function hasChanged()
     {
-        return $this->getPercentDiscountValue([
-            'percent' => config('shop.promo.discount.max-percent')
-        ]);
+        $this->amount = null;
+        $this->updatedAt = time();
+
+        $this->checkPromo();
     }
 
-    protected function getDiscountValue($discount)
+    /**
+     * Сбрасываем промокод, если он перестал подходить.
+     */
+    protected function checkPromo()
     {
-        if ($discount['type'] === 'percent') {
-            return $this->getPercentDiscountValue($discount);
-        }
+        if (is_null($this->promoCode)) return;
 
-        if ($discount['type'] === 'amount') {
-            return $this->getAmountDiscountValue($discount);
-        }
-    }
+        $validator = $this->promoCode->validate($this);
 
-    protected function getPercentDiscountValue($discount)
-    {
-        $amount = $this->getAmountCanByCoveredByTheDiscount();
-
-        return $amount * $discount['percent'] / 100;
-    }
-
-    protected function getAmountDiscountValue($discount)
-    {
-        $amount = $this->getAmountCanByCoveredByTheDiscount();
-
-        $byPercent = $amount * $discount['percent'] / 100;
-
-        return min($byPercent, $discount['amount']);
-    }
-
-    protected function getAmountCanByCoveredByTheDiscount()
-    {
-        return 0;
-    }
-
-    public function setPromoCode($code)
-    {
-        try {
-            $code->canBeApplyedByOrder($this);
-        }
-        catch(PromoCheckException $e) {
-
+        if ($validator->hasError()) {
+            $this->promoCode = null;
         }
     }
 }

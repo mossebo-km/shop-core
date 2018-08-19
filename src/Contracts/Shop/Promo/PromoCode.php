@@ -12,4 +12,5 @@ interface PromoCode
     public function setResource($codeName = ''): void;
     public function validate(Cart $cart): PromoValidator;
     public function getConditions(): Collection;
+    public function getName(): string;
 }

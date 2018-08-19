@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Contracts\Models;
+namespace MosseboShopCore\Contracts\Shop;
 
 interface User
 {

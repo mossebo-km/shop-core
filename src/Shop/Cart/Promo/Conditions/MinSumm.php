@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Promo\Conditions;
+namespace MosseboShopCore\Shop\Cart\Promo\Conditions;
 
 use MosseboShopCore\Contracts\Shop\Promo\PromoCondition as ConditionInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;

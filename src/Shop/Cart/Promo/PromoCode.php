@@ -1,12 +1,13 @@
 <?php
 
-namespace MosseboShopCore\Shop\Promo;
+namespace MosseboShopCore\Shop\Cart\Promo;
 
+use Illuminate\Database\Eloquent\Collection;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
+use MosseboShopCore\Contracts\Shop\Price;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode as PromoCodeInterface;
 use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
 use MosseboShopCore\Support\Traits\HasResource;
-use Illuminate\Database\Eloquent\Collection;
 
 
 abstract class PromoCode implements PromoCodeInterface
@@ -21,6 +22,11 @@ abstract class PromoCode implements PromoCodeInterface
     public function setResource($codeName = ''): void
     {
         // установить в реализации
+    }
+
+    public function getName(): string
+    {
+        return $this->resource->name;
     }
 
     public function notExist(): bool
@@ -66,6 +72,49 @@ abstract class PromoCode implements PromoCodeInterface
 
     public function validate(Cart $cart): PromoValidatorInterface
     {
-        return new PromoValidator($this, $cart);
+        return app()->makeWith(PromoValidator::class, [
+            'promoCode' => $this,
+            'cart' => $cart
+        ]);
+    }
+
+    public function apply(Price $price)
+    {
+        $codeType = $this->getType();
+
+        switch ($codeType) {
+            case 'amount':
+                $discountValue = $this->amountTypeDiscountValue($price);
+                break;
+
+            case 'percent':
+                $discountValue = $this->percentTypeDiscountValue($price);
+                break;
+        }
+
+        $price->setValue(
+            $price->getValue() - $discountValue
+        );
+    }
+
+    public function getType()
+    {
+        if ($this->resource->amount && $this->resource->currency_code) {
+            return 'amount';
+        }
+
+        return 'percent';
+    }
+
+    protected function amountTypeDiscountValue(Price $price): float
+    {
+        $discountValue = $price->getValue() * $this->resource->percent / 100;
+
+        return min($this->resource->amount, $discountValue);
+    }
+
+    protected function percentTypeDiscountValue(Price $price): float
+    {
+        return $price->getValue() * $this->resource->percent / 100;
     }
 }

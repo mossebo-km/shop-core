@@ -1,6 +1,7 @@
 <?php
 
-namespace MosseboShopCore\Shop\Promo\Conditions;
+namespace MosseboShopCore\Shop\Cart\Promo\Conditions;
+
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Models\Shop\Promo\PromoCondition;
 
