@@ -131,6 +131,16 @@ class Cart implements CartInterface
         return $this->currencyCode;
     }
 
+    public function  getCreatedAt(): integer
+    {
+        return $this->createdAt;
+    }
+
+    public function  getUpdatedAt(): integer
+    {
+        return $this->updatedAt;
+    }
+
 
     /**
      * Устанавливает код валюты.

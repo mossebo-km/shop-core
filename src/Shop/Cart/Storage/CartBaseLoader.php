@@ -11,13 +11,20 @@ abstract class CartBaseLoader
     protected $promoCodeClass = null;
     protected $cartProductClass = null;
 
-    public function init()
+    public function getCart()
     {
-        app()->makeWith(Cart::class, [
+        return app()->makeWith(Cart::class, $this->getCartContent());
+    }
+
+    public function getCartContent()
+    {
+        return [
             'products'     => $this->getProducts(),
             'currencyCode' => $this->getCurrencyCode(),
             'promoCode'    => $this->getPromoCode(),
-            'discounts'    => $this->getDiscounts()
-        ]);
+            'discounts'    => $this->getDiscounts(),
+            'createdAt'    => $this->getCreatedAt(),
+            'updatedAt'    => $this->getUpdatedAt(),
+        ];
     }
 }

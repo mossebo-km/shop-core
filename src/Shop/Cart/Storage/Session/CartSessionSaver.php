@@ -20,9 +20,15 @@ class CartSessionSaver extends CartSessionConnector
         $this->setProductsToSave($data);
         $this->setPromoToSave($data);
         $this->setCurrencyCodeToSave($data);
+        $this->setTimestamps($data);
 
         // todo: доделать, или убрать скидки из корзины
+
+        $this->put('cart', $data);
     }
+
+
+
 
     protected function setProductsToSave(& $data)
     {
@@ -47,5 +53,11 @@ class CartSessionSaver extends CartSessionConnector
     protected function setCurrencyCodeToSave(& $data)
     {
         $data['currencyCode'] = $this->cart->getCurrencyCode();
+    }
+
+    protected function setTimestamps(& $data)
+    {
+        $data['createdAt'] = $this->cart->getCreatedAt();
+        $data['updatedAt'] = $this->cart->getUpdatedAt();
     }
 }

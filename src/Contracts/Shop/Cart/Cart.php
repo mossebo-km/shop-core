@@ -30,7 +30,8 @@ interface Cart
     public function setPromoCode(PromoCode $code);
     public function getPromoCode(): ?PromoCode;
 
-
+    public function getCreatedAt(): integer;
+    public function getUpdatedAt(): integer;
 
     public function addProductByKey($productKey, $quantity = 1);
     public function setProductByKey($productKey, $quantity);

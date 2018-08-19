@@ -14,14 +14,14 @@ class CartSessionLoader extends CartSessionConnector
 {
     protected $cartData = null;
 
-    protected function getCartContent($key = null)
+    protected function getCartData($key = null)
     {
         if (is_null($this->cartData)) {
             $this->cartData = $this->get('cart', false);
         }
 
         if (! $this->cartData) {
-            $this->cartData = $this->makeEmptyCart();
+            $this->cartData = $this->makeEmptyCartData();
         }
 
         if (is_null($key)) {
@@ -35,7 +35,7 @@ class CartSessionLoader extends CartSessionConnector
         return null;
     }
 
-    protected function makeEmptyCart()
+    protected function makeEmptyCartData()
     {
         return [
             'products'     => [],
@@ -49,7 +49,7 @@ class CartSessionLoader extends CartSessionConnector
 
     public function __call($methodName)
     {
-        return $this->getCartContent(
+        return $this->getCartData(
             str_replace('get', '', $methodName)
         );
     }
@@ -68,7 +68,7 @@ class CartSessionLoader extends CartSessionConnector
 
     protected function buildCartProducts()
     {
-        $storedProducts = $this->getCartContent('products');
+        $storedProducts = $this->getCartData('products');
         $ids = array_unique(array_column($storedProducts, 'id'));
 
 
@@ -104,7 +104,7 @@ class CartSessionLoader extends CartSessionConnector
 
     protected function getPromoCode()
     {
-        $promoCodeName = $this->getCartContent('promoCode');
+        $promoCodeName = $this->getCartData('promoCode');
 
         if (is_null($promoCodeName)) {
             return null;

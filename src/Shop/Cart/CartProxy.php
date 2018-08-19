@@ -2,7 +2,6 @@
 
 namespace MosseboShopCore\Shop\Cart;
 
-
 class CartProxy
 {
     protected $cart;
@@ -15,24 +14,35 @@ class CartProxy
 
     public function add($productKey, $quantity = null)
     {
-        $this->addProductToCart($productKey, $quantity);
+        $this->addProduct($productKey, $quantity);
 
         $this->save();
     }
 
     public function set($productKey, $quantity = null)
     {
-        $this->cart->setProductByKey($productKey, $quantity);
+        $this->cart->setProduct($productKey, $quantity);
+
+        $this->save();
     }
 
     public function setMany($items)
     {
+        foreach ($items as $item) {
+            $this->setProduct($item['key'], $item['qty']);
+        }
 
+        $this->save();
     }
 
-    protected function addProductToCart($productKey, $quantity = null)
+    protected function addProduct($productKey, $quantity = null)
     {
         $this->cart->addProductByKey($productKey, $quantity);
+    }
+
+    protected function setProduct($productKey, $quantity = null)
+    {
+        $this->cart->setProductByKey($productKey, $quantity);
     }
 
     public function __call($methodName, $arguments)
