@@ -5,8 +5,9 @@ namespace MosseboShopCore\Models\Shop;
 use MosseboShopCore\Models\Base\BaseModelI18n;
 use ScoutElastic\Searchable;
 use MosseboShopCore\Elasticsearch\Configurators\ProductIndexConfigurator;
+use MosseboShopCore\Contracts\Shop\Product as ProductInterface;
 
-abstract class Product extends BaseModelI18n
+abstract class Product extends BaseModelI18n implements ProductInterface
 {
     use Searchable;
 
