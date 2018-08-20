@@ -2,11 +2,13 @@
 
 namespace MosseboShopCore\Shop\Shop\Traits;
 
+use Languages;
+
 trait HasLanguage
 {
     public function getDefaultLanguage()
     {
-        return \Languages::default();
+        return Languages::default();
     }
 
     public function getCurrentLanguage()
@@ -14,7 +16,7 @@ trait HasLanguage
         $locale = App::getLocale();
 
         if ($locale) {
-            $language = \Languages::where('code', $locale)->first();
+            $language = Languages::where('code', $locale)->first();
         }
 
         if (empty($language)) {

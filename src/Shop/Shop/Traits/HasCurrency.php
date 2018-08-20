@@ -2,6 +2,8 @@
 
 namespace MosseboShopCore\Shop\Shop\Traits;
 
+use Currencies;
+
 trait HasCurrency
 {
     protected function getCurrentCurrencyCode()
@@ -12,7 +14,7 @@ trait HasCurrency
             return $currencyCode;
         }
 
-        return \Currencies::first()->code;
+        return Currencies::first()->code;
     }
 
     protected function getCurrentLanguageDefaultCurrencyCode()
