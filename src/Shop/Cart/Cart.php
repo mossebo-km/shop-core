@@ -5,7 +5,7 @@ namespace MosseboShopCore\Shop\Cart;
 use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\User;
 use MosseboShopCore\Shop\Price;
-use MosseboShopCore\Shop\Cart\CartProduct;
+use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
@@ -204,7 +204,7 @@ class Cart implements CartInterface
 
         if (is_null($product)) {
             $this->products->push(
-                CartProduct::makeByKey($productKey, $quantity)
+                (app()->getAlias(CartProductInterface::class))::makeByKey($productKey, $quantity)
             );
         }
         else {

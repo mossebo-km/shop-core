@@ -29,5 +29,5 @@ interface CartProduct
     public static function makeKey($id, $options = []);
     public static function decodeKey(string $key): array;
 
-    public static function makeByKey($productKey, $quantity = 1): CartProduct;
+    public function initByKey($productKey, $quantity = 1);
 }

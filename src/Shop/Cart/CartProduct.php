@@ -19,7 +19,14 @@ abstract class CartProduct implements CartProductInterface
     protected $basePrice   = null;
     protected $finalPrice  = null;
 
-    public function __construct($productId, $options = [], $quantity = 1, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
+    public function __construct($productId = null, $options = [], $quantity = 1, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
+    {
+        if (! is_null($productId)) {
+            $this->init($productId, $options, $quantity, $addedAt, $updatedAt, $productData);
+        }
+    }
+
+    public function init($productId, $options = [], $quantity = 1, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
     {
         $this->productId   = $productId;
         $this->options     = $options;
@@ -27,6 +34,20 @@ abstract class CartProduct implements CartProductInterface
         $this->addedAt     = is_null($addedAt) ? time() : $addedAt;
         $this->updatedAt   = is_null($updatedAt) ? time() : $updatedAt;
         $this->productData = $productData;
+    }
+
+    public function initByKey($productKey, $quantity = 1)
+    {
+        $decoded = static::decodeKey($productKey);
+
+        $this->init(
+            $decoded['id'],
+            $decoded['options'],
+            $quantity,
+            time(),
+            time(),
+            static::findCartProductData($decoded['id'], $decoded['options'])
+        );
     }
 
     public function getOptions(): array
@@ -178,18 +199,9 @@ abstract class CartProduct implements CartProductInterface
         ];
     }
 
-    public static function makeByKey($productKey, $quantity = 1): CartProductInterface
+    protected static function findCartProductData($id, $options = []): ?Product
     {
-        $decoded = static::decodeKey($productKey);
 
-        return app()->makeWith(CartProductInterface::class, [
-            'productId'   => $decoded['id'],
-            'options'     => $decoded['options'],
-            'quantity'    => $quantity,
-            'addedAt'     => time(),
-            'updatedAt'   => time(),
-            'productData' => static::findCartProductData($decoded['id'], $decoded['options'])
-        ]);
     }
 
     public function getImage()
