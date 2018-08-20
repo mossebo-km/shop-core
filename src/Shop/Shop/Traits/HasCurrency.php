@@ -6,7 +6,7 @@ use Currencies;
 
 trait HasCurrency
 {
-    protected function getCurrentCurrencyCode()
+    public function getCurrentCurrencyCode()
     {
         $currencyCode = $this->getCurrentLanguageDefaultCurrencyCode();
 
@@ -17,7 +17,7 @@ trait HasCurrency
         return Currencies::first()->code;
     }
 
-    protected function getCurrentLanguageDefaultCurrencyCode()
+    public function getCurrentLanguageDefaultCurrencyCode()
     {
         if (!$this->hasLanguage()) {
             return;
