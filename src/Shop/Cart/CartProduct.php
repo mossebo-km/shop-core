@@ -106,11 +106,12 @@ abstract class CartProduct implements CartProductInterface
         }
 
         if ($this->options) {
-            $optionsDiff = array_diff($this->options, array_column($this->productData->getOptions(), 'id'));
+            $allProductOptions = $this->productData->getOptions();
 
-            if (! empty($optionsDiff)) {
-                // todo:: можно помечать товар как недоступный, а не просто убирать его из корзины.
-                return false;
+            foreach ($this->options as $optionId) {
+                if (! in_array((int) $optionId, $allProductOptions)) {
+                    return false;
+                }
             }
         }
 

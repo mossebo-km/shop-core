@@ -31,11 +31,13 @@ class CartSessionSaver extends CartSessionConnector implements CartSaver
     protected function setProductsToSave(& $data)
     {
         $data['products'] = $this->cart->getProducts()->reduce(function ($carry, CartProduct $product) {
-            if (! $product->isExist()) {
-                return;
-            }
+//            if (! $product->isExist()) {
+//                return;
+//            }
 
             $carry[] = $product->toStore();
+
+            return $carry;
         }, []);
     }
 
