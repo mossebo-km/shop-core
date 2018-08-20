@@ -89,11 +89,6 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
         });
     }
 
-    public function find($cartProducts)
-    {
-
-    }
-
     protected function buildCartProducts()
     {
         $storedProducts = $this->getCartData('products');
@@ -135,7 +130,9 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
                 'quantity'    => $storedProduct['quantity'],
                 'addedAt'     => $storedProduct['addedAt'],
                 'updatedAt'   => $storedProduct['updatedAt'],
-                'productData' => app()->makeWith(CartProductData::class, $storedProduct['productData'])
+                'productData' => app()->makeWith(CartProductData::class, [
+                    'data' => $storedProduct['productData']
+                ])
             ]));
         }
 

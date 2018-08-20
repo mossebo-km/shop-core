@@ -15,7 +15,7 @@ class CartProductData implements CartProductDataInterface
 
     protected function get($key): ?array
     {
-        if (isset($this->data[$key]) && is_array($this->data[$key])) {
+        if (isset($this->data[$key])) {
             return $this->data[$key];
         }
 
