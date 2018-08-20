@@ -182,14 +182,14 @@ abstract class CartProduct implements CartProductInterface
     {
         $decoded = static::decodeKey($productKey);
 
-        return new static(
-            $decoded['id'],
-            $decoded['options'],
-            $quantity,
-            time(),
-            time(),
-            static::findCartProductData($decoded['id'], $decoded['options'])
-        );
+        return app()->makeWith(CartProductInterface::class, [
+            'productId'   => $decoded['id'],
+            'options'     => $decoded['options'],
+            'quantity'    => $quantity,
+            'addedAt'     => time(),
+            'updatedAt'   => time(),
+            'productData' => static::findCartProductData($decoded['id'], $decoded['options'])
+        ]);
     }
 
     protected static function findCartProductData($id, $options = []): ?Product
