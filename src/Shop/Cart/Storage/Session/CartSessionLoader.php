@@ -5,6 +5,7 @@ namespace MosseboShopCore\Shop\Cart\Storage\Session;
 use Illuminate\Session\SessionManager;
 use Shop;
 use Auth;
+use Cache;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
 use MosseboShopCore\Contracts\Shop\Cart\CartLoader;
@@ -20,7 +21,7 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
 
     public function getCart(): CartInterface
     {
-        return app()->makeWith(Cart::class, $this->getCartContent());
+        return app()->makeWith(CartInterface::class, $this->getCartContent());
     }
 
     public function getCartContent()
