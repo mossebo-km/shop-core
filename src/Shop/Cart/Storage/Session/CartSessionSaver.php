@@ -6,8 +6,9 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
 use MosseboShopCore\Shop\Cart\Cart;
 use MosseboShopCore\Shop\Cart\CartProduct;
+use MosseboShopCore\Contracts\Shop\Cart\CartSaver;
 
-class CartSessionSaver extends CartSessionConnector
+class CartSessionSaver extends CartSessionConnector implements CartSaver
 {
     protected $cart = null;
 
