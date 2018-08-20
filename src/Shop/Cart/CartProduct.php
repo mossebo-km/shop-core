@@ -172,7 +172,7 @@ abstract class CartProduct implements CartProductInterface
         ];
     }
 
-    public static function makeByKey($productKey, $quantity = 1): CartProduct
+    public static function makeByKey($productKey, $quantity = 1): CartProductInterface
     {
         $decoded = static::decodeKey($productKey);
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartProduct.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CartProduct.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2430">
-              <caret line="135" column="33" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="33" />
+            <state relative-caret-position="766">
+              <caret line="186" column="5" lean-forward="true" selection-start-line="186" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -127,11 +127,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartProxy.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartProxy.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProxy.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
               <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HasPriceTypes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasPriceTypes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -156,7 +165,6 @@
       <find>findProductByKey</find>
       <find>findProduct</find>
       <find>app()-&gt;</find>
-      <find>makeByKey</find>
       <find>setKey</find>
       <find>with</find>
       <find>getResource</find>
@@ -170,6 +178,7 @@
       <find>get</find>
       <find>integer</find>
       <find>getOptions</find>
+      <find>makeByKey</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/Models</dir>
@@ -227,15 +236,15 @@
         <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProduct.php" />
         <option value="$PROJECT_DIR$/src/Models/Base/BaseModel.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProductData.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/User.php" />
         <option value="$PROJECT_DIR$/src/Models/User.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop.php" />
         <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasPriceTypes.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProductData.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasPriceTypes.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
       </list>
     </option>
   </component>
@@ -525,12 +534,12 @@
       <workItem from="1534317545029" duration="10755000" />
       <workItem from="1534400456183" duration="17726000" />
       <workItem from="1534490353895" duration="22842000" />
-      <workItem from="1534680617376" duration="19238000" />
+      <workItem from="1534680617376" duration="19561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250502000" />
+    <option name="totallyTimeSpent" value="250825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -541,7 +550,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.32254803" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.32254803" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.21192758" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
@@ -817,13 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasPriceTypes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -873,17 +875,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2430">
-          <caret line="135" column="33" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProxy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasPriceTypes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="186" column="5" lean-forward="true" selection-start-line="186" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
         </state>
       </provider>
     </entry>
