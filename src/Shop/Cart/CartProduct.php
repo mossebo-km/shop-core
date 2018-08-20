@@ -142,9 +142,9 @@ abstract class CartProduct implements CartProductInterface
         $prices = $this->getPrices();
 
         foreach ($prices as $price) {
-            if ($price->price_type_id === $typeId && $price->currency_code === $currencyCode) {
+            if ($price['price_type_id'] === $typeId && $price['currency_code'] === $currencyCode) {
                 return app()->makeWith(PriceInterface::class, [
-                    'value' => $price->value,
+                    'value' => $price['value'],
                     'currencyCode' => $currencyCode,
                 ]);
             }
