@@ -4,10 +4,11 @@ namespace MosseboShopCore\Shop;
 
 use MosseboShopCore\Shop\Shop\Traits\HasLanguage;
 use MosseboShopCore\Shop\Shop\Traits\HasCurrency;
+use MosseboShopCore\Shop\Shop\Traits\HasPriceTypes;
 
 class Shop
 {
-    use HasLanguage, HasCurrency;
+    use HasLanguage, HasCurrency, HasPriceTypes;
 
     public function hasLanguage()
     {
@@ -15,6 +16,11 @@ class Shop
     }
 
     public function hasCurrency()
+    {
+        return true;
+    }
+
+    public function hasPriceTypes()
     {
         return true;
     }

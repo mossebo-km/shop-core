@@ -9,13 +9,12 @@ abstract class User extends Authenticatable implements UserInterface
 {
     protected $relationFieldName = 'user_id';
 
-
-    public function ordersCount(): integer
+    public function ordersCount(): int
     {
         return $this->orders()->count();
     }
 
-    public function getPromoCodeUsesNum($promoCodeId): integer
+    public function getPromoCodeUsesNum($promoCodeId): int
     {
         return $this->promoCodeUses()->where('id', $promoCodeId)->count();
     }

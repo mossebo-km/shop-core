@@ -17,7 +17,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     ];
 
     protected $configs = [
-        'tables', 'repositories', 'shop/promo'
+        'tables', 'repositories', 'shop/promo', 'shop/price'
     ];
 
     /**
