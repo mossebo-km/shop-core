@@ -71,9 +71,10 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
 
     public function __call($methodName, $arguments = null)
     {
-        return $this->getCartData(
-            str_replace('get', '', $methodName)
-        );
+        $key = str_replace('get', '', $methodName);
+        $key = lcfirst($key);
+
+        return $this->getCartData($key);
     }
 
     public function getUser(): ?User
