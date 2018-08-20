@@ -34,6 +34,13 @@ abstract class CartProduct implements CartProductInterface
         return $this->options;
     }
 
+    public function getProductId()
+    {
+        // TODO: Implement getProductId() method.
+
+        return $this->productId;
+    }
+
     public function getKey(): string
     {
         if (is_null($this->key)) {
