@@ -5,7 +5,6 @@ namespace MosseboShopCore\Shop\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProductData as CartProductDataInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
-use MosseboShopCore\Shop\Price;
 
 abstract class CartProduct implements CartProductInterface
 {
@@ -99,7 +98,7 @@ abstract class CartProduct implements CartProductInterface
 
     public function setBasePrice($value, $currencyCode)
     {
-        $this->basePrice = app()->makeWith(Price::class, [
+        $this->basePrice = app()->makeWith(PriceInterface::class, [
             'value' => $value,
             'currencyCode' => $currencyCode,
         ]);
@@ -115,7 +114,7 @@ abstract class CartProduct implements CartProductInterface
 
         foreach ($prices as $price) {
             if ($price->price_type_id === $typeId && $price->currency_code === $currencyCode) {
-                return app()->makeWith(Price::class, [
+                return app()->makeWith(PriceInterface::class, [
                     'value' => $price->value,
                     'currencyCode' => $currencyCode,
                 ]);
@@ -127,7 +126,7 @@ abstract class CartProduct implements CartProductInterface
 
     public function setFinalPrice($value, $currencyCode)
     {
-        $this->finalPrice = app()->makeWith(Price::class, [
+        $this->finalPrice = app()->makeWith(PriceInterface::class, [
             'value' => $value,
             'currencyCode' => $currencyCode,
         ]);
