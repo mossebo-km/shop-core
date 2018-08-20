@@ -67,6 +67,7 @@ abstract class Product extends BaseModelI18n implements ProductInterface
 
         return self::select(\DB::raw("{$productTableName}.*, {$supplierTableName}.enabled as supplier_enabled"))
             ->where("{$productTableName}.enabled", 1)
+            ->groupBy("{$productTableName}.id")
             ->groupBy("{$supplierTableName}.enabled")
             ->leftJoin("{$supplierTableName}", function($join) use($supplierTableName, $productTableName) {
                 $join->on("{$supplierTableName}.id", '=', "{$productTableName}.supplier_id")
