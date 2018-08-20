@@ -206,6 +206,8 @@ class Cart implements CartInterface
             $product = app()->make(CartProductInterface::class);
 
             $product->initByKey($productKey, $quantity);
+
+            $this->products->push($product);
         }
         else {
             $product->$method($quantity);
