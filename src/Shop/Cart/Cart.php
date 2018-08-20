@@ -18,7 +18,7 @@ class Cart implements CartInterface
     protected $products     = null;
     protected $currencyCode = null;
     protected $promoCode    = null;
-    protected $discounts    = null;
+    protected $discounts    = [];
     protected $createdAt    = null;
     protected $updatedAt    = null;
 
