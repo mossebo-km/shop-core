@@ -13,7 +13,7 @@ trait HasLanguage
 
     public function getCurrentLanguage()
     {
-        $locale = App::getLocale();
+        $locale = app()->getLocale();
 
         if ($locale) {
             $language = Languages::where('code', $locale)->first();

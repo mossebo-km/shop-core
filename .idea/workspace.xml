@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Shop/Shop/Traits/HasCurrency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Shop/Traits/HasCurrency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,16 +73,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HasLanguage.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HasLanguage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HasCurrency.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HasCurrency.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasCurrency.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -252,8 +252,8 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
         <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasCurrency.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php" />
       </list>
     </option>
   </component>
@@ -515,12 +515,12 @@
       <workItem from="1534317545029" duration="10755000" />
       <workItem from="1534400456183" duration="17726000" />
       <workItem from="1534490353895" duration="22842000" />
-      <workItem from="1534680617376" duration="9820000" />
+      <workItem from="1534680617376" duration="9895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241084000" />
+    <option name="totallyTimeSpent" value="241159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -531,7 +531,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946752" weight="0.32254803" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946752" visible="true" weight="0.32254803" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.21192758" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
@@ -860,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
@@ -878,6 +871,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
