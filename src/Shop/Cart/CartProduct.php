@@ -6,7 +6,7 @@ use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProductData as CartProductDataInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 
-abstract class CartProduct implements CartProductInterface
+class CartProduct implements CartProductInterface
 {
     protected $key         = null;
     protected $productId   = null;
