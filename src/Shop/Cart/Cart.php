@@ -25,12 +25,14 @@ class Cart implements CartInterface
     protected $amount       = null;
     protected $total        = null;
 
-    public function __construct(Collection $products, $currencyCode, $promoCode = null, $discounts = [])
+    public function __construct(Collection $products, $currencyCode, $promoCode = null, $discounts = [], $createdAt = null, $updatedAt = null)
     {
         $this->products     = $products;
         $this->currencyCode = $currencyCode;
         $this->promoCode    = $promoCode;
         $this->discounts    = $discounts;
+        $this->createdAt    = is_null($createdAt) ? time() : $createdAt;
+        $this->updatedAt    = is_null($updatedAt) ? time() : $updatedAt;
     }
 
     public function hasUser(): bool

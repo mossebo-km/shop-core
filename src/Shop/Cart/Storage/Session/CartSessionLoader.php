@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
 use MosseboShopCore\Contracts\Shop\User;
+use MosseboShopCore\Shop\Cart\CartProductData;
 
 class CartSessionLoader extends CartSessionConnector
 {
@@ -74,42 +75,44 @@ class CartSessionLoader extends CartSessionConnector
     protected function buildCartProducts()
     {
         $storedProducts = $this->getCartData('products');
-
-        $productsDataFinder = new ProductsDataFinder();
-
-        $products = $productsDataFinder->find(
-            $this->getCartData('products')
-        );
-
-
-        $ids = array_unique(array_column($storedProducts, 'id'));
-
-
-        // todo: товары то без связей
-        $products = Product::enabled()
-            ->whereIn('id', $ids)
-            ->with(['image', 'prices', 'currentI18n', 'options'])
-            ->get();
-
         $result = new Collection;
 
+//        $ids = array_unique(array_column($storedProducts, 'id'));
+//
+//
+//        // todo: товары то без связей
+//        $products = Product::enabled()
+//            ->whereIn('id', $ids)
+//            ->with(['image', 'prices', 'currentI18n', 'options'])
+//            ->get();
+//
+//        foreach ($storedProducts as $storedProduct) {
+//            $product = $products->where('id', $storedProduct['id'])->first();
+//
+//            if (is_null($product)) {
+//                continue;
+//            }
+//
+//            $cartProduct = app()->makeWith(CartProduct::class, [
+//                'id'       => $storedProduct['id'],
+//                'options'  => $storedProduct['options'],
+//                'quantity' => $storedProduct['quantity'],
+//                'product'  => $product
+//            ]);
+//
+//            if ($cartProduct->isExist()) {
+//                $result->push($cartProduct);
+//            }
+//        }
+
+
         foreach ($storedProducts as $storedProduct) {
-            $product = $products->where('id', $storedProduct['id'])->first();
-
-            if (is_null($product)) {
-                continue;
-            }
-
-            $cartProduct = app()->makeWith(CartProduct::class, [
+            $result->push(app()->makeWith(CartProduct::class, [
                 'id'       => $storedProduct['id'],
                 'options'  => $storedProduct['options'],
                 'quantity' => $storedProduct['quantity'],
-                'product'  => $product
-            ]);
-
-            if ($cartProduct->isExist()) {
-                $result->push($cartProduct);
-            }
+                'product'  => app()->makeWith(CartProductData::class, $storedProduct['product'])
+            ]));
         }
 
         return $result;
