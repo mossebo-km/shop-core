@@ -88,7 +88,7 @@ abstract class CartProduct implements CartProductInterface
 
         $this->updatedAt = time();
 
-        return $this->quantity = min(1, $quantity);
+        return $this->quantity = max(1, $quantity);
     }
 
 

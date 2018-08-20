@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Shop/Price.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Shop/Price.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,20 +91,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartProduct.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CartProduct.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="146" column="46" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="46" />
+            <state relative-caret-position="569">
+              <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Price.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Price.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Price.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+            <state relative-caret-position="162">
+              <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -252,8 +252,8 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProductData.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Price.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
       </list>
     </option>
   </component>
@@ -543,12 +543,12 @@
       <workItem from="1534317545029" duration="10755000" />
       <workItem from="1534400456183" duration="17726000" />
       <workItem from="1534490353895" duration="22842000" />
-      <workItem from="1534680617376" duration="29928000" />
+      <workItem from="1534680617376" duration="30295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261192000" />
+    <option name="totallyTimeSpent" value="261559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -891,17 +891,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
+    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Price.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="146" column="46" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="46" />
+        <state relative-caret-position="162">
+          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Price.php">
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        <state relative-caret-position="569">
+          <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
         </state>
       </provider>
     </entry>
