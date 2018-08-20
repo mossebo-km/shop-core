@@ -26,7 +26,7 @@ interface CartProduct
 
     public function toStore();
 
-    public static function makeKey($id, $options = []): CartProductInterface;
+    public static function makeKey($id, $options = []);
     public static function decodeKey(): array;
 
     public static function makeByKey($productKey, $quantity = 1): CartProduct;
