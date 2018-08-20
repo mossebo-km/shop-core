@@ -130,10 +130,12 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
 
         foreach ($storedProducts as $storedProduct) {
             $result->push(app()->makeWith(CartProduct::class, [
-                'id'       => $storedProduct['id'],
-                'options'  => $storedProduct['options'],
-                'quantity' => $storedProduct['quantity'],
-                'product'  => app()->makeWith(CartProductData::class, $storedProduct['product'])
+                'productId'   => $storedProduct['productId'],
+                'options'     => $storedProduct['options'],
+                'quantity'    => $storedProduct['quantity'],
+                'addedAt'     => $storedProduct['addedAt'],
+                'updatedAt'   => $storedProduct['updatedAt'],
+                'productData' => app()->makeWith(CartProductData::class, $storedProduct['productData'])
             ]));
         }
 

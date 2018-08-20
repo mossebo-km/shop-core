@@ -241,7 +241,7 @@ abstract class CartProduct implements CartProductInterface
             'addedAt'   => $this->getAddedAtTimestamp(),
             'updatedAt' => $this->getUpdatedAtTimestamp(),
 
-            'product'   => [
+            'productData'   => [
                 'image'  => $this->getImage(),
                 'prices' => $this->getPrices(),
                 'titles' => $this->getI18nTitles(),
