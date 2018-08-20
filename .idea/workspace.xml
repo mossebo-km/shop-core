@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Shop/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Shop/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/Shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Shop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartProduct.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartProduct.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2430">
@@ -126,6 +123,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="910">
               <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartProxy.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProxy.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -216,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Price.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasCurrency.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasLanguage.php" />
@@ -230,6 +235,7 @@
         <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasPriceTypes.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProductData.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" />
       </list>
     </option>
   </component>
@@ -519,23 +525,23 @@
       <workItem from="1534317545029" duration="10755000" />
       <workItem from="1534400456183" duration="17726000" />
       <workItem from="1534490353895" duration="22842000" />
-      <workItem from="1534680617376" duration="19009000" />
+      <workItem from="1534680617376" duration="19238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250273000" />
+    <option name="totallyTimeSpent" value="250502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005325" side_tool="true" weight="0.3233831" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005325" side_tool="true" weight="0.3233831" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946752" weight="0.32254803" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.32254803" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.21192758" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
@@ -549,7 +555,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="10" sideWeight="0.49893504" weight="0.3273632" />
+      <window_info anchor="bottom" id="Database Console" order="9" sideWeight="0.49893504" weight="0.3273632" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProxy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasCurrency.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -878,6 +877,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
           <caret line="135" column="33" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProxy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>

@@ -16,6 +16,11 @@ class CartProxy
         $this->saver = $saver;
     }
 
+    public function get()
+    {
+        return $this->cart;
+    }
+
     public function add($productKey, $quantity = null)
     {
         $this->addProduct($productKey, $quantity);
