@@ -46,7 +46,7 @@ class CartSessionLoader extends CartSessionConnector
         ];
     }
 
-    public function __call($methodName)
+    public function __call($methodName, $arguments = null)
     {
         return $this->getCartData(
             str_replace('get', '', $methodName)
