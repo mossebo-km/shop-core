@@ -14,7 +14,7 @@ abstract class CartSessionConnector
         $this->session = $session;
     }
 
-    protected function get($key, $defaultValue)
+    protected function get($key, $defaultValue = null)
     {
         return $this->session->get(static::makeStorageKey($key), $defaultValue);
     }

@@ -39,10 +39,10 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
     protected function getCartData($key = null)
     {
         if (is_null($this->cartData)) {
-            $this->cartData = $this->get('cart', false);
+            $this->cartData = $this->get('cart');
         }
 
-        if (! $this->cartData) {
+        if (is_null($this->cartData)) {
             $this->cartData = $this->makeEmptyCartData();
         }
 
