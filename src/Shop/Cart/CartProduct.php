@@ -199,7 +199,7 @@ abstract class CartProduct implements CartProductInterface
         ];
     }
 
-    protected static function findCartProductData($id, $options = []): ?Product
+    protected static function findCartProductData($id, $options = []): ?CartProductDataInterface
     {
 
     }
