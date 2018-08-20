@@ -39,18 +39,18 @@ abstract class CartProduct implements CartProductInterface
         return $this->key;
     }
 
-    public function add($num): integer
+    public function add($num): int
     {
         // todo: Остатки
         return $this->setQuantity($this->quantity + $num);
     }
 
-    public function remove($num): integer
+    public function remove($num): int
     {
         return $this->setQuantity($this->quantity - $num);
     }
 
-    public function setQuantity($quantity): integer
+    public function setQuantity($quantity): int
     {
         // todo: Остатки
 
@@ -60,7 +60,7 @@ abstract class CartProduct implements CartProductInterface
     }
 
 
-    public function getQuantity(): integer
+    public function getQuantity(): int
     {
         $this->updatedAt = time();
 
@@ -137,12 +137,12 @@ abstract class CartProduct implements CartProductInterface
     }
 
 
-    public function getAddedAtTimestamp(): integer
+    public function getAddedAtTimestamp(): int
     {
         return $this->addedAt;
     }
 
-    public function getUpdatedAtTimestamp(): integer
+    public function getUpdatedAtTimestamp(): int
     {
         return $this->updatedAt;
     }

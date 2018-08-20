@@ -60,7 +60,7 @@ class Cart implements CartInterface
      *
      * @return int
      */
-    public function getProductsQuantity(): integer
+    public function getProductsQuantity(): int
     {
         $quantity = 0;
 
@@ -76,7 +76,7 @@ class Cart implements CartInterface
      *
      * @return int
      */
-    public function getProductNamesQuantity(): integer
+    public function getProductNamesQuantity(): int
     {
         return $this->getProducts()->count();
     }
@@ -123,12 +123,12 @@ class Cart implements CartInterface
         return $this->currencyCode;
     }
 
-    public function  getCreatedAt(): integer
+    public function  getCreatedAt(): int
     {
         return $this->createdAt;
     }
 
-    public function  getUpdatedAt(): integer
+    public function  getUpdatedAt(): int
     {
         return $this->updatedAt;
     }

@@ -11,15 +11,15 @@ interface CartProduct
     public function setPromoPrice();
     public function setKey($key);
     public function getKey(): string;
-    public function getQuantity(): integer;
+    public function getQuantity(): int;
     public function getBasePrice($typeId, $currencyCode): ?Price;
     public function getFinalPrice($typeId, $currencyCode): ?Price;
-    public function getAddedAtTimestamp(): ?integer;
-    public function getUpdatedAtTimestamp(): ?integer;
+    public function getAddedAtTimestamp(): ?int;
+    public function getUpdatedAtTimestamp(): ?int;
 
-    public function add($num): integer;
-    public function remove($num): integer;
-    public function setQuantity($num): integer;
+    public function add($num): int;
+    public function remove($num): int;
+    public function setQuantity($num): int;
 
     public function toStore();
 
