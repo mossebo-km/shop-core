@@ -2,10 +2,19 @@
 
 namespace MosseboShopCore\Shop\Cart;
 
+use MosseboShopCore\Contracts\Shop\Cart\Cart;
+use MosseboShopCore\Contracts\Shop\Cart\CartSaver;
+
 class CartProxy
 {
     protected $cart;
     protected $saver;
+
+    public function __construct(Cart $cart, CartSaver $saver)
+    {
+        $this->cart = $cart;
+        $this->saver = $saver;
+    }
 
     public function add($productKey, $quantity = null)
     {

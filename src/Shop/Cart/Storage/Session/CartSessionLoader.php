@@ -2,6 +2,7 @@
 
 namespace MosseboShopCore\Shop\Cart\Storage\Session;
 
+use Illuminate\Session\SessionManager;
 use Shop;
 use Auth;
 use Illuminate\Support\Collection;
