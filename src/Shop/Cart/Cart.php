@@ -3,13 +3,13 @@
 namespace MosseboShopCore\Shop\Cart;
 
 use Illuminate\Support\Collection;
-use MosseboShopCore\Contracts\Models\User;
+use MosseboShopCore\Contracts\Shop\User;
+use MosseboShopCore\Shop\Price;
+use MosseboShopCore\Shop\Cart\CartProduct;
+use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
-use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
 use MosseboShopCore\Shop\Cart\Traits\HasDiscount;
-use MosseboShopCore\Shop\Price;
-use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 
 class Cart implements CartInterface
 {
