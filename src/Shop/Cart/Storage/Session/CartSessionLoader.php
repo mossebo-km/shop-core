@@ -7,14 +7,33 @@ use Shop;
 use Auth;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
+use MosseboShopCore\Contracts\Shop\Cart\CartLoader;
+use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
 use MosseboShopCore\Contracts\Shop\User;
 use MosseboShopCore\Shop\Cart\CartProductData;
 
-class CartSessionLoader extends CartSessionConnector
+class CartSessionLoader extends CartSessionConnector implements CartLoader
 {
     protected $cartData = null;
+
+    public function getCart(): CartInterface
+    {
+        return app()->makeWith(Cart::class, $this->getCartContent());
+    }
+
+    public function getCartContent()
+    {
+        return [
+            'products'     => $this->getProducts(),
+            'currencyCode' => $this->getCurrencyCode(),
+            'promoCode'    => $this->getPromoCode(),
+            'discounts'    => $this->getDiscounts(),
+            'createdAt'    => $this->getCreatedAt(),
+            'updatedAt'    => $this->getUpdatedAt(),
+        ];
+    }
 
     protected function getCartData($key = null)
     {
