@@ -192,11 +192,6 @@ abstract class CartProduct implements CartProductInterface
         ]);
     }
 
-    protected static function findCartProductData($id, $options = []): ?Product
-    {
-
-    }
-
     public function getImage()
     {
         return $this->productData->getImage();
