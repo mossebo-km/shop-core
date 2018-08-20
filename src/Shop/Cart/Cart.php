@@ -203,9 +203,9 @@ class Cart implements CartInterface
         $product = $this->findProductByKey($productKey);
 
         if (is_null($product)) {
-            $this->products->push(
-                (app()->getAlias(CartProductInterface::class))::makeByKey($productKey, $quantity)
-            );
+            $product = app()->make(CartProductInterface::class);
+
+            $product->initByKey($productKey, $quantity);
         }
         else {
             $product->$method($quantity);
