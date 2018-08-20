@@ -36,4 +36,17 @@ class CartProductData implements CartProductDataInterface
     {
         return $this->get('prices');
     }
+
+    public function getOptions(): array
+    {
+        $options = $this->get('options');
+
+        return is_null($options) ? [] : $options;
+    }
+
+    public function canBeShowed(): bool
+    {
+        // TODO: Implement canBeShow() method.
+//        ????
+    }
 }

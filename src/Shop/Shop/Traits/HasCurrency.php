@@ -6,21 +6,25 @@ use Currencies;
 
 trait HasCurrency
 {
+    protected $currencyCode = null;
+
     public function getCurrentCurrencyCode()
     {
-        $currencyCode = $this->getCurrentLanguageDefaultCurrencyCode();
+        if (is_null($this->currencyCode)) {
+            $this->currencyCode = $this->getCurrentLanguageDefaultCurrencyCode();
 
-        if (! is_null($currencyCode)) {
-            return $currencyCode;
+            if (is_null($this->currencyCode)) {
+                $this->currencyCode = Currencies::first()->code;
+            }
         }
 
-        return Currencies::first()->code;
+        return $this->currencyCode;
     }
 
-    public function getCurrentLanguageDefaultCurrencyCode()
+    protected function getCurrentLanguageDefaultCurrencyCode()
     {
         if (!$this->hasLanguage()) {
-            return;
+            return null;
         }
 
         $language = $this->getCurrentLanguage();

@@ -11,7 +11,7 @@ abstract class CartProduct implements CartProductInterface
 {
     protected $key         = null;
     protected $productId   = null;
-    protected $options     = null;
+    protected $options     = [];
     protected $quantity    = null;
     protected $productData = null;
     protected $addedAt     = null;
@@ -28,6 +28,11 @@ abstract class CartProduct implements CartProductInterface
         $this->addedAt     = is_null($addedAt) ? time() : $addedAt;
         $this->updatedAt   = is_null($updatedAt) ? time() : $updatedAt;
         $this->productData = $productData;
+    }
+
+    public function getOptions(): array
+    {
+        return $this->options;
     }
 
     public function getKey(): string
@@ -69,12 +74,12 @@ abstract class CartProduct implements CartProductInterface
 
     public function isExist(): bool
     {
-        if (is_null($this->resource)) {
+        if (is_null($this->productData)) {
             return false;
         }
 
         if ($this->options) {
-            $optionsDiff = array_diff($this->options, array_column($this->resource->options->toArray(), 'id'));
+            $optionsDiff = array_diff($this->options, array_column($this->productData->getOptions(), 'id'));
 
             if (! empty($optionsDiff)) {
                 // todo:: можно помечать товар как недоступный, а не просто убирать его из корзины.
@@ -82,7 +87,7 @@ abstract class CartProduct implements CartProductInterface
             }
         }
 
-        return $this->resource->canBeShowed();
+        return $this->productData->canBeShowed();
     }
 
     public function setPromoPrice()
@@ -106,7 +111,9 @@ abstract class CartProduct implements CartProductInterface
             return $this->basePrice;
         }
 
-        foreach ($this->resource->prices as $price) {
+        $prices = $this->getPrices();
+
+        foreach ($prices as $price) {
             if ($price->price_type_id === $typeId && $price->currency_code === $currencyCode) {
                 return app()->makeWith(Price::class, [
                     'value' => $price->value,
@@ -184,19 +191,46 @@ abstract class CartProduct implements CartProductInterface
 
     }
 
+    public function getImage()
+    {
+        return $this->productData->getImage();
+    }
+
+    public function getPrices()
+    {
+        return $this->productData->getPrices();
+    }
+
+    public function getI18nTitles()
+    {
+        return $this->productData->getI18nTitles();
+    }
+
+    public function getTitle($languageCode)
+    {
+        $titles = $this->getI18nTitles();
+
+        if (isset($titles[$languageCode])) {
+            return $titles[$languageCode];
+        }
+
+        return null;
+    }
+
     public function toStore()
     {
         return [
-            'key'       => $this->key,
-            'productId' => $this->productId,
-            'options'   => $this->options,
-            'addedAt'   => $this->addedAt,
-            'updatedAt' => $this->updatedAt,
+            'key'       => $this->getKey(),
+            'productId' => $this->getProductId(),
+            'options'   => $this->getOptions(),
+            'quantity'  => $this->getQuantity(),
+            'addedAt'   => $this->getAddedAtTimestamp(),
+            'updatedAt' => $this->getUpdatedAtTimestamp(),
 
             'product'   => [
-                'image'  => $this->productData->getImage(),
-                'prices' => $this->productData->getPrices(),
-                'titles' => $this->productData->getI18nTitles(),
+                'image'  => $this->getImage(),
+                'prices' => $this->getPrices(),
+                'titles' => $this->getI18nTitles(),
             ]
         ];
     }

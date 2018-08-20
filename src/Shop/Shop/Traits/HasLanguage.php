@@ -6,23 +6,27 @@ use Languages;
 
 trait HasLanguage
 {
-    public function getDefaultLanguage()
-    {
-        return Languages::default();
-    }
+    protected $language = null;
 
     public function getCurrentLanguage()
     {
-        $locale = app()->getLocale();
+        if (is_null($this->language)) {
+            $locale = app()->getLocale();
 
-        if ($locale) {
-            $language = Languages::where('code', $locale)->first();
+            if ($locale) {
+                $this->language = Languages::where('code', $locale)->first();
+            }
+
+            if (empty($this->language)) {
+                $this->language = $this->getDefaultLanguage();
+            }
         }
 
-        if (empty($language)) {
-            return $this->getDefaultLanguage();
-        }
+        return $this->language;
+    }
 
-        return $language;
+    public function getDefaultLanguage()
+    {
+        return Languages::default();
     }
 }

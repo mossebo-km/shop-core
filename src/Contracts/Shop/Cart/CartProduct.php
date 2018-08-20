@@ -7,15 +7,18 @@ use MosseboShopCore\Contracts\Shop\Price;
 interface CartProduct
 {
     public function isExist(): bool;
-    public function getResource();
-    public function setPromoPrice();
-    public function setKey($key);
+
     public function getKey(): string;
+    public function getProductId();
+    public function getOptions(): array;
+
     public function getQuantity(): int;
     public function getBasePrice($typeId, $currencyCode): ?Price;
     public function getFinalPrice($typeId, $currencyCode): ?Price;
     public function getAddedAtTimestamp(): ?int;
     public function getUpdatedAtTimestamp(): ?int;
+
+//    public function setPromoPrice();
 
     public function add($num): int;
     public function remove($num): int;

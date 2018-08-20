@@ -55,7 +55,7 @@ abstract class BaseModel extends Model
         }, ARRAY_FILTER_USE_KEY);
     }
 
-    public function relationEmpty($relationName)
+    public function relationIsEmpty($relationName)
     {
         return !$this->relationLoaded($relationName) || empty($this[$relationName]);
     }
@@ -63,6 +63,6 @@ abstract class BaseModel extends Model
 
     public function relationNotEmpty($relationName)
     {
-        return !$this->relationEmpty($relationName);
+        return !$this->relationIsEmpty($relationName);
     }
 }
