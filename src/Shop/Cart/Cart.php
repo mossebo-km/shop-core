@@ -261,4 +261,16 @@ class Cart implements CartInterface
             $this->promoCode = null;
         }
     }
+
+
+    /**
+     * Декодируют ключ предмета из корзины. Возвращает массив из id и параметров товара.
+     *
+     * @param String $key
+     * @return array
+     */
+    public static function decodeKey(string $key): array
+    {
+        return CartProduct::decodeKey($key);
+    }
 }

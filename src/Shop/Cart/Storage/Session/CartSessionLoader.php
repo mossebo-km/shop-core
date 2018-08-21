@@ -151,17 +151,5 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
             'name' => $promoCodeName
         ]);
     }
-
-
-    /**
-     * Декодируют ключ предмета из корзины. Возвращает массив из id и параметров товара.
-     *
-     * @param String $key
-     * @return array
-     */
-    public static function decodeKey(string $key): array
-    {
-        return CartProduct::decodeKey($key);
-    }
 }
 
