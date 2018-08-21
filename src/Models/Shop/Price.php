@@ -12,6 +12,10 @@ abstract class Price extends BaseModel
 
     protected $tableIdentif = 'Prices';
 
+    protected $priceAttributeKeys = [
+        'value'
+    ];
+
     /**
      * Получение форматированной (побитой на разряды, с символом валюты) цены.
      *

@@ -33,8 +33,8 @@ class CreateReviewsTable extends Migration
 
             $table->integer('rate')->unsigned()->nullable();
 
-            $table->text('advantages');
-            $table->text('disadvantages');
+            $table->text('advantages')->nullable();
+            $table->text('disadvantages')->nullable();
             $table->text('comment');
             $table->string('usage_time');
 

@@ -13,10 +13,6 @@ trait StorePriceValueAsInteger
 {
     use Price;
 
-    protected $priceAttributeKeys = [
-        'value'
-    ];
-
     /**
      * Название стандартного аттрибута цены
      *
