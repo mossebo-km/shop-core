@@ -93,7 +93,7 @@ class Price implements PriceInterface
             return null;
         }
 
-        return $currency->formatPrice($this->getPrice());
+        return $currency->formatPrice($this->getValue());
     }
 
     public static function formatPrice($value, $currencyCode): ?string
