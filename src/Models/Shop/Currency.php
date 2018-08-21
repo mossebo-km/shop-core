@@ -4,7 +4,6 @@ namespace MosseboShopCore\Models\Shop;
 
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Contracts\Shop\Currency as CurrencyInterface;
-use MosseboShopCore\Contracts\Shop\Price;
 
 abstract class Currency extends BaseModel implements CurrencyInterface
 {
@@ -17,6 +16,11 @@ abstract class Currency extends BaseModel implements CurrencyInterface
      */
     public function getMaxPriceValue() {
         return 2147483647 / pow(10 , $this->getPrecision());
+    }
+
+    public function getSymbol()
+    {
+        return $this->symbol;
     }
 
     public function getPrecision()
@@ -39,10 +43,10 @@ abstract class Currency extends BaseModel implements CurrencyInterface
         return $this->swap_currency_symbol;
     }
 
-    public function formatPrice($price): string
+    public function formatPrice($priceValue): string
     {
         $formattedPrice = number_format(
-            $price,
+            $priceValue,
             $this->getPrecision(),
             $this->getDecimalSeparator(),
             $this->getThousandSeparator()
@@ -53,6 +57,8 @@ abstract class Currency extends BaseModel implements CurrencyInterface
             '',
             $formattedPrice
         );
+
+        $symbol = $this->getSymbol();
 
         if ($this->isSymbolAfterPrice()) {
             $formattedPrice = "$formattedPrice $symbol";
