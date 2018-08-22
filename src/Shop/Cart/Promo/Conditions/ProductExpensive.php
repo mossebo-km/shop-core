@@ -25,7 +25,7 @@ class ProductExpensive extends BaseCondition implements ConditionInterface
                 $currencyCode
             );
 
-            if ($minPrice->lessOrEqualThan($price)) {
+            if ($minPrice->equalOrLessThan($price)) {
                 return true;
             }
         }

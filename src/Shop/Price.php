@@ -78,7 +78,7 @@ class Price implements PriceInterface
         }
     }
 
-    public function moreOrEqualThan(PriceInterface $price): bool
+    public function equalOrMoreThan(PriceInterface $price): bool
     {
         if ($this->priceIsComparable($price)) {
             return $price->getValue() >= $this->getValue();
@@ -92,7 +92,7 @@ class Price implements PriceInterface
         }
     }
 
-    public function lessOrEqualThan(PriceInterface $price): bool
+    public function equalOrLessThan(PriceInterface $price): bool
     {
         if ($this->priceIsComparable($price)) {
             return $price->getValue() <= $this->getValue();
