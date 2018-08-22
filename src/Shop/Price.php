@@ -38,12 +38,14 @@ class Price implements PriceInterface
 
     public function priceIsComparable(PriceInterface $price): bool
     {
+        // todo: Бросать ошибку, или возвращать null????
+
         if ($price->getCurrencyCode() !== $this->currencyCode) {
-            return false;
+            throw new \Exception('Non-comparable price');
         }
 
         if (! is_numeric($price->getValue())) {
-            return false;
+            throw new \Exception('Non-comparable price');
         }
 
         return true;
@@ -57,9 +59,6 @@ class Price implements PriceInterface
                 $this->currencyCode
             );
         }
-
-        // todo: Бросать ошибку, или возвращать null????
-        throw new \Exception('Non-comparable price');
     }
 
     public function minus(PriceInterface $price): PriceInterface
@@ -70,9 +69,41 @@ class Price implements PriceInterface
                 $this->currencyCode
             );
         }
+    }
 
-        // todo: Бросать ошибку, или возвращать null????
-        throw new \Exception('Non-comparable price');
+    public function moreThan(PriceInterface $price): bool
+    {
+        if ($this->priceIsComparable($price)) {
+            return $price->getValue() < $this->getValue();
+        }
+    }
+
+    public function moreOrEqualThan(PriceInterface $price): bool
+    {
+        if ($this->priceIsComparable($price)) {
+            return $price->getValue() >= $this->getValue();
+        }
+    }
+
+    public function lessThan(PriceInterface $price): bool
+    {
+        if ($this->priceIsComparable($price)) {
+            return $price->getValue() > $this->getValue();
+        }
+    }
+
+    public function lessOrEqualThan(PriceInterface $price): bool
+    {
+        if ($this->priceIsComparable($price)) {
+            return $price->getValue() <= $this->getValue();
+        }
+    }
+
+    public function equal(PriceInterface $price): bool
+    {
+        if ($this->priceIsComparable($price)) {
+            return $price->getValue() === $this->getValue();
+        }
     }
 
     public function getCurrency(): ?Currency

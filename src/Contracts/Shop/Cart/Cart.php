@@ -17,6 +17,7 @@ interface Cart
     public function getProducts(): Collection;
 
     public function getCurrencyCode(): string;
+    public function getPriceTypeId(): int;
 
     public function getAmount(): Price;
 

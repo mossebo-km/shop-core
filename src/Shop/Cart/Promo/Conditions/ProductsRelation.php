@@ -15,9 +15,4 @@ class ProductsRelation extends BaseCondition implements ConditionInterface
             array_diff($productIds, $this->getParam('relations'))
         );
     }
-
-    public function apply(Cart & $cart): void
-    {
-
-    }
 }

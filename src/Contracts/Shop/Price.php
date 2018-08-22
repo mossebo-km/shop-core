@@ -11,6 +11,11 @@ interface Price
     public function priceIsComparable(Price $price): bool;
     public function plus(Price $price): Price;
     public function minus(Price $price): Price;
+    public function moreThan(Price $price): bool;
+    public function moreOrEqualThan(Price $price): bool;
+    public function lessThan(Price $price): bool;
+    public function lessOrEqualThan(Price $price): bool;
+    public function equal(Price $price): bool;
     public function getCurrency(): ?Currency;
 
     public function getFormatted(): ?string;

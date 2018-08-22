@@ -3,6 +3,7 @@
 namespace MosseboShopCore\Shop\Cart;
 
 use Auth;
+use Shop;
 use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\User;
 use MosseboShopCore\Shop\Price;
@@ -122,6 +123,16 @@ class Cart implements CartInterface
     public function getCurrencyCode(): string
     {
         return $this->currencyCode;
+    }
+
+    public function getPriceTypeId(): int
+    {
+        if ($this->hasUser()) {
+            return $this->getUser()->getPriceTypeId();
+        }
+        else {
+            return Shop::getDefaultPriceTypeId();
+        }
     }
 
     public function  getCreatedAt(): int
