@@ -9,8 +9,8 @@ interface Price
     public function setCurrencyCode($currencyCode): void;
     public function getCurrencyCode(): ?string;
     public function priceIsComparable(Price $price): bool;
-    public function plus(Price $price): Price;
-    public function minus(Price $price): Price;
+    public function plus(Price $price);
+    public function minus(Price $price);
     public function moreThan(Price $price): bool;
     public function equalOrMoreThan(Price $price): bool;
     public function lessThan(Price $price): bool;

@@ -4,6 +4,7 @@ namespace MosseboShopCore\Shop\Cart;
 
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\CartSaver;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 
 class CartProxy
 {
@@ -58,6 +59,13 @@ class CartProxy
     protected function setProduct($productKey, $quantity = null)
     {
         $this->cart->setProductByKey($productKey, $quantity);
+    }
+
+    public function setPromoCode(PromoCode $promoCode)
+    {
+        $this->cart->setPromoCode($promoCode);
+
+        return $this->save();
     }
 
     public function __call($methodName, $arguments)

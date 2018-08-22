@@ -12,13 +12,13 @@ class Price implements PriceInterface
 
     public function __construct($value = null, $currencyCode = null)
     {
-        $this->value = $value;
-        $this->currencyCode = $currencyCode;
+        $this->setValue($value);
+        $this->setCurrencyCode($currencyCode);
     }
 
     public function setValue($value): void
     {
-        $this->value = $value;
+        $this->value = (float) $value;
     }
 
     public function getValue(): float
@@ -51,22 +51,20 @@ class Price implements PriceInterface
         return true;
     }
 
-    public function plus(PriceInterface $price): PriceInterface
+    public function plus(PriceInterface $price)
     {
         if ($this->priceIsComparable($price)) {
-            return new static(
-                $this->value + $price->getValue(),
-                $this->currencyCode
+            $this->setValue(
+                $this->value + $price->getValue()
             );
         }
     }
 
-    public function minus(PriceInterface $price): PriceInterface
+    public function minus(PriceInterface $price)
     {
         if ($this->priceIsComparable($price)) {
-            return new static(
-                $this->value - $price->getValue(),
-                $this->currencyCode
+            $this->setValue(
+                $this->value - $price->getValue()
             );
         }
     }
@@ -74,35 +72,35 @@ class Price implements PriceInterface
     public function moreThan(PriceInterface $price): bool
     {
         if ($this->priceIsComparable($price)) {
-            return $price->getValue() < $this->getValue();
+            return $this->getValue() > $price->getValue();
         }
     }
 
     public function equalOrMoreThan(PriceInterface $price): bool
     {
         if ($this->priceIsComparable($price)) {
-            return $price->getValue() >= $this->getValue();
+            return $this->getValue() >= $price->getValue();
         }
     }
 
     public function lessThan(PriceInterface $price): bool
     {
         if ($this->priceIsComparable($price)) {
-            return $price->getValue() > $this->getValue();
+            return $this->getValue() < $price->getValue();
         }
     }
 
     public function equalOrLessThan(PriceInterface $price): bool
     {
         if ($this->priceIsComparable($price)) {
-            return $price->getValue() <= $this->getValue();
+            return $this->getValue() <= $price->getValue();
         }
     }
 
     public function equal(PriceInterface $price): bool
     {
         if ($this->priceIsComparable($price)) {
-            return $price->getValue() === $this->getValue();
+            return $this->getValue() === $price->getValue();
         }
     }
 

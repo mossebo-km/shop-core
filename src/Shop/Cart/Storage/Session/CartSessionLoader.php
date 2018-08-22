@@ -143,12 +143,13 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
     {
         $promoCodeName = $this->getCartData('promoCode');
 
+
         if (is_null($promoCodeName)) {
             return null;
         }
 
         return app()->makeWith(PromoCode::class, [
-            'name' => $promoCodeName
+            'codeName' => $promoCodeName
         ]);
     }
 }

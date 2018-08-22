@@ -101,13 +101,13 @@ class Cart implements CartInterface
         $priceTypeId = $this->getPriceTypeId();
         $currencyCode = $this->getCurrencyCode();
 
-        $amount = app()->makeWith(Price::class, [
+        $this->amount = app()->makeWith(Price::class, [
             'value' => 0,
             'currencyCode' => $currencyCode,
         ]);
 
         foreach ($products as $product) {
-            $amount->plus($product->getBasePrice(
+            $this->amount->plus($product->getBasePrice(
                 $priceTypeId,
                 $currencyCode
             ));

@@ -61,10 +61,6 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->registerConfigs();
-
-        $this->app->singleton('shop', function() {
-            return new \MosseboShopCore\Shop\Shop;
-        });
     }
 
     /**

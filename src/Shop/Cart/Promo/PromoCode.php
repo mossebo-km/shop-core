@@ -2,6 +2,7 @@
 
 namespace MosseboShopCore\Shop\Cart\Promo;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Price;

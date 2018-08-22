@@ -9,6 +9,6 @@ class ProductsQuantity extends BaseCondition implements ConditionInterface
 {
     public function check(Cart $cart): bool
     {
-        return $cart->getProductsQuantity() >= $this->getParam('quantity');
+        return $cart->getProductsQuantity() >= $this->getParam('value');
     }
 }

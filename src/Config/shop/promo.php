@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'default' => env('SHOP_PROMO_DEFAULT_ID', false),
+
     'discount' => [
         'percent' => [
             'max_percent' => env('SHOP_PROMO_DISCOUNT_PERCENT_MAX_PERCENT', 20),
