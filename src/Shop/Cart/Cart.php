@@ -98,13 +98,19 @@ class Cart implements CartInterface
 
         $products = $this->getProducts();
 
+        $priceTypeId = $this->getPriceTypeId();
+        $currencyCode = $this->getCurrencyCode();
+
         $amount = app()->makeWith(Price::class, [
             'value' => 0,
-            'currencyCode' => $this->getCurrencyCode(),
+            'currencyCode' => $currencyCode,
         ]);
 
         foreach ($products as $product) {
-            $amount->plus($product->getPrice());
+            $amount->plus($product->getBasePrice(
+                $priceTypeId,
+                $currencyCode
+            ));
         }
 
         return $this->amount;
@@ -135,12 +141,12 @@ class Cart implements CartInterface
         }
     }
 
-    public function  getCreatedAt(): int
+    public function getCreatedAt(): int
     {
         return $this->createdAt;
     }
 
-    public function  getUpdatedAt(): int
+    public function getUpdatedAt(): int
     {
         return $this->updatedAt;
     }
