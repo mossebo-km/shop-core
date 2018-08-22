@@ -24,7 +24,7 @@ abstract class Price extends BaseModel
     public function getFormatted()
     {
         return ShopPrice::formatPrice(
-            $this->getValue(),
+            $this->value,
             $this->currency_code
         );
     }
