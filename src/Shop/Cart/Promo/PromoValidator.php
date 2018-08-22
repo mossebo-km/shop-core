@@ -6,6 +6,7 @@ use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoValidator as PromoValidatorIn
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCondition;
+use MosseboShopCore\Contracts\Models\Shop\Promo\PromoCondition as PromoConditionResourceInterface;
 use MosseboShopCore\Exceptions\PromoCheckException;
 
 class PromoValidator implements PromoValidatorInterface
@@ -110,12 +111,12 @@ class PromoValidator implements PromoValidatorInterface
      * @param $type
      * @return PromoCondition|null
      */
-    protected function getConditionByType($promoCodeConditionModel): ?PromoCondition
+    protected function getConditionByType(PromoConditionResourceInterface $promoCodeConditionModel): ?PromoCondition
     {
         $className = str_replace('_', '', ucwords($promoCodeConditionModel->type, '_'));
 
         return app()->makeWith("\\MosseboShopCore\\Shop\\Cart\\Promo\\Conditions\\{$className}", [
-            'model' => $promoCodeConditionModel
+            'resource' => $promoCodeConditionModel
         ]);
     }
 

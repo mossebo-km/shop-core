@@ -2,23 +2,25 @@
 
 namespace MosseboShopCore\Shop\Cart\Promo\Conditions;
 
-use MosseboShopCore\Contracts\Models\Shop\Promo\PromoCondition;
+use MosseboShopCore\Contracts\Models\Shop\Promo\PromoCondition as PromoConditionResourceInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
+use MosseboShopCore\Support\Traits\HasResource;
 
 abstract class BaseCondition
 {
-    protected $condition;
+    use HasResource;
+
     protected $params = null;
 
-    public function __construct(PromoCondition $condition)
+    public function __construct(PromoConditionResourceInterface $resource)
     {
-        $this->condition = $condition;
+        $this->resource = $resource;
     }
 
     public function getParams()
     {
         if (is_null($this->params)) {
-            $this->params = json_decode($this->condition->params, true);
+            $this->params = json_decode($this->resource->params, true);
         }
 
         return $this->params;
