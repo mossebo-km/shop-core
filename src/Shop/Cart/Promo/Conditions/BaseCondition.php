@@ -2,8 +2,8 @@
 
 namespace MosseboShopCore\Shop\Cart\Promo\Conditions;
 
+use MosseboShopCore\Contracts\Models\Shop\Promo\PromoCondition;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
-use MosseboShopCore\Models\Shop\Promo\PromoCondition;
 
 abstract class BaseCondition
 {

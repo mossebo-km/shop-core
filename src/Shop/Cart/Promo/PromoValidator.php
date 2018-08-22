@@ -114,7 +114,7 @@ class PromoValidator implements PromoValidatorInterface
     {
         $className = str_replace('_', '', ucwords($promoCodeConditionModel->type, '_'));
 
-        return app()->makeWith("\MosseboShopCore\Shop\Promo\Conditions\{$className}", [
+        return app()->makeWith("\\MosseboShopCore\\Shop\\Cart\\Promo\\Conditions\\{$className}", [
             'model' => $promoCodeConditionModel
         ]);
     }
