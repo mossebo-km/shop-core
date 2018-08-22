@@ -5,7 +5,7 @@ namespace MosseboShopCore\Contracts\Shop\Cart;
 use Illuminate\Support\Collection;
 
 use MosseboShopCore\Contracts\Shop\User;
-use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 use MosseboShopCore\Contracts\Shop\Price;
 
 

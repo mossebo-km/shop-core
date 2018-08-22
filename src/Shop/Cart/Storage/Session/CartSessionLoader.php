@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Session;
 use MosseboShopCore\Contracts\Shop\Cart\CartLoader;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
-use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 use MosseboShopCore\Contracts\Shop\User;
 use MosseboShopCore\Shop\Cart\CartProductData;
 
