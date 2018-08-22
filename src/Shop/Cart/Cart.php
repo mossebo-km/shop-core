@@ -2,6 +2,7 @@
 
 namespace MosseboShopCore\Shop\Cart;
 
+use Auth;
 use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\User;
 use MosseboShopCore\Shop\Price;
