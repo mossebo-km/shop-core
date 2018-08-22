@@ -2,10 +2,10 @@
 
 namespace MosseboShopCore\Shop\Cart\Promo;
 
-use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoValidator as PromoValidatorInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
-use MosseboShopCore\Contracts\Shop\Promo\PromoCode;
-use MosseboShopCore\Contracts\Shop\Promo\PromoCondition;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCondition;
 use MosseboShopCore\Exceptions\PromoCheckException;
 
 class PromoValidator implements PromoValidatorInterface

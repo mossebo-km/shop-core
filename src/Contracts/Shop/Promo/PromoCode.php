@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Contracts\Shop\Promo;
+namespace MosseboShopCore\Contracts\Shop\Cart\Promo;
 
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use Illuminate\Database\Eloquent\Collection;

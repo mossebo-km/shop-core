@@ -5,8 +5,8 @@ namespace MosseboShopCore\Shop\Cart\Promo;
 use Illuminate\Database\Eloquent\Collection;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Price;
-use MosseboShopCore\Contracts\Shop\Promo\PromoCode as PromoCodeInterface;
-use MosseboShopCore\Contracts\Shop\Promo\PromoValidator as PromoValidatorInterface;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode as PromoCodeInterface;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoValidator as PromoValidatorInterface;
 use MosseboShopCore\Support\Traits\HasResource;
 
 
