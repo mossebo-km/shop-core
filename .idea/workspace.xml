@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Shop/Currency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Shop/Currency.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Currency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Currency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Elasticsearch/Configurators/ProductIndexConfigurator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Elasticsearch/Configurators/ProductIndexConfigurator.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -118,35 +117,35 @@
       <file leaf-file-name="Currency.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Currency.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+            <state relative-caret-position="-283">
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Currency.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Currency.php">
+      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="234">
+              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartProxy.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProxy.php">
+      <file leaf-file-name="CityIndexConfigurator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Elasticsearch/Configurators/CityIndexConfigurator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="414">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartProductData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProductData.php">
+      <file leaf-file-name="ProductIndexConfigurator.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Elasticsearch/Configurators/ProductIndexConfigurator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="198">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -201,7 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Shop/Shop/Cart/Traits/CartDiscount.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Cart/Loaders/BaseCartLoader.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Cart/Loaders/StorageCartLoader.php" />
@@ -252,6 +250,7 @@
         <option value="$PROJECT_DIR$/src/Shop/Price.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Currency.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Currency.php" />
+        <option value="$PROJECT_DIR$/src/Elasticsearch/Configurators/ProductIndexConfigurator.php" />
       </list>
     </option>
   </component>
@@ -293,56 +292,14 @@
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Elasticsearch" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Contracts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Contracts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Contracts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Contracts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Promo" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Elasticsearch" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Configurators" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
@@ -536,12 +493,12 @@
       <workItem from="1534317545029" duration="10755000" />
       <workItem from="1534400456183" duration="17726000" />
       <workItem from="1534490353895" duration="22842000" />
-      <workItem from="1534680617376" duration="34033000" />
+      <workItem from="1534680617376" duration="35308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265297000" />
+    <option name="totallyTimeSpent" value="266572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -552,8 +509,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.32254803" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.21192758" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.32254803" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.21192758" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -581,20 +538,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Promo/Conditions/BaseCondition.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/shop_prices">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/shop_order_products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -816,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/StorePriceValueAsInteger.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -896,17 +832,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Currency.php">
+    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Currency.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        <state relative-caret-position="252">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Currency.php">
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Currency.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="-283">
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Elasticsearch/Configurators/CityIndexConfigurator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Elasticsearch/Configurators/ProductIndexConfigurator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
