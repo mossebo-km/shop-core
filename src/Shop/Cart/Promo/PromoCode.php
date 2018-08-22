@@ -3,6 +3,7 @@
 namespace MosseboShopCore\Shop\Cart\Promo;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Price;
@@ -16,7 +17,12 @@ abstract class PromoCode implements PromoCodeInterface
 
     public function __construct($codeName)
     {
-        $this->setResource($codeName);
+        if ($codeName instanceof Model) {
+            $this->resource = $codeName;
+        }
+        else {
+            $this->setResource($codeName);
+        }
     }
 
     public function setResource($codeName = ''): void
