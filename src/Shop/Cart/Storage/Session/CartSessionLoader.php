@@ -59,10 +59,12 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
 
     protected function makeEmptyCartData()
     {
+        $defaultPromo = Shop::getDefaultPromoCode();
+
         return [
             'products'     => [],
             'currencyCode' => Shop::getCurrentCurrencyCode(),
-            'promoCode'    => null,
+            'promoCode'    => $defaultPromo ? $defaultPromo : null,
             'discounts'    => [],
             'createdAt'    => time(),
             'updatedAt'    => time(),
@@ -141,15 +143,18 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
 
     protected function getPromoCode()
     {
-        $promoCodeName = $this->getCartData('promoCode');
+        $promoCode = $this->getCartData('promoCode');
 
-
-        if (is_null($promoCodeName)) {
+        if (is_null($promoCode)) {
             return null;
         }
 
+        if ($promoCode instanceof PromoCode) {
+            return $promoCode;
+        }
+
         return app()->makeWith(PromoCode::class, [
-            'codeName' => $promoCodeName
+            'codeName' => $promoCode
         ]);
     }
 }
