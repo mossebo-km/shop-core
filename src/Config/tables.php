@@ -113,4 +113,7 @@ return [
     'PromoCodesI18n'  => 'shop_promo_codes_i18n',
     'PromoConditions' => 'shop_promo_conditions',
     'PromoUses'       => 'shop_promo_uses',
+
+    'BadgeTypes'      => 'shop_badge_types',
+    'Badges'          => 'shop_badges',
 ];
