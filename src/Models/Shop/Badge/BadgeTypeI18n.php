@@ -6,5 +6,5 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class BadgeTypeI18n extends BaseModel
 {
-    protected $tableIdentif = 'BadgeTypeI18n';
+    protected $tableIdentif = 'BadgeTypesI18n';
 }

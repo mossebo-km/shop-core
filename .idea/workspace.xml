@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,8 +76,17 @@
       <file leaf-file-name="BadgeTypeI18n.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="144">
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tables.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -91,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BadgeType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BadgeType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+            <state relative-caret-position="198">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -241,12 +250,12 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badges_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142850_create_badge_types_i18n_table.php" />
-        <option value="$PROJECT_DIR$/src/Config/tables.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/AttributeI18n.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Badge/Badge.php" />
-        <option value="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php" />
+        <option value="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php" />
+        <option value="$PROJECT_DIR$/src/Config/tables.php" />
       </list>
     </option>
   </component>
@@ -586,12 +595,12 @@
       <workItem from="1534490353895" duration="22842000" />
       <workItem from="1534680617376" duration="41474000" />
       <workItem from="1534935573276" duration="5851000" />
-      <workItem from="1534949080679" duration="9678000" />
+      <workItem from="1534949080679" duration="9789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288267000" />
+    <option name="totallyTimeSpent" value="288378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -913,13 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="104" column="23" lean-forward="true" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000600_create_categories_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -955,13 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Attribute.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -971,8 +966,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
         </state>
       </provider>
     </entry>
