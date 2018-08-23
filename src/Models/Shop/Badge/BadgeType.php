@@ -2,9 +2,9 @@
 
 namespace MosseboShopCore\Models\Shop\Badge;
 
-use MosseboShopCore\Models\Base\BaseModel;
+use MosseboShopCore\Models\Base\BaseModelI18n;
 
-abstract class BadgeType extends BaseModel
+abstract class BadgeType extends BaseModelI18n
 {
     protected $tableIdentif = 'BadgeTypes';
 }
