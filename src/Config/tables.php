@@ -114,5 +114,6 @@ return [
     'PromoUses'       => 'shop_promo_uses',
 
     'BadgeTypes'      => 'shop_badge_types',
+    'BadgeTypesI18n'  => 'shop_badge_types_i18n',
     'Badges'          => 'shop_badges',
 ];
