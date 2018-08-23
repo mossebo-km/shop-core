@@ -18,6 +18,7 @@ class CreateBadgeTypesTable extends Migration
             $table->string('color')->nullable();
 
             $table->boolean('hasValue')->default(false);
+            $table->integer('position')->unsigned()->default(0);
 
             $table->timestamps();
         });
