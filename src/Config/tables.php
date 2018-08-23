@@ -106,7 +106,6 @@ return [
 
     'Reviews' => 'reviews',
 
-
     'MsbTransactions' => 'msb_transactions',
 
     'PromoCodes'      => 'shop_promo_codes',
