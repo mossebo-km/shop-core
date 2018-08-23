@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePromoCodesTable extends Migration
+class CreatePromoCodesI18nTable extends Migration
 {
     public function up()
     {
