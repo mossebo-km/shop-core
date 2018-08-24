@@ -88,7 +88,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     protected function publishAssets()
     {
         $this->publishes([
-            __DIR__ . '/../public/images/badges.svg' => public_path('images/badges.svg'),
+            __DIR__ . '/../public/assets/images/badges.svg' => public_path('images/badges.svg'),
         ], 'public');
     }
 
