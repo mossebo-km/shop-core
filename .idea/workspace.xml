@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,12 +65,12 @@
     <favorites_list name="mossebo-shop-core" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="Badge.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/Badge.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -82,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tables.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
+            <state relative-caret-position="2088">
               <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
             </state>
           </provider>
@@ -95,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/AttributeOption.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -104,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -113,43 +115,39 @@
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Attribute.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="9" selection-end-column="50" />
+              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="9" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_07_24_142860_create_badges_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_142860_create_badges_table.php">
+      <file leaf-file-name="MosseboShopCoreServiceProvider.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="336">
+              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_07_24_142850_create_badge_types_i18n_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_142850_create_badge_types_i18n_table.php">
+      <file leaf-file-name="badges.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Config/shop/badges.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="52" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="52" />
+            <state relative-caret-position="252">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_07_24_142840_create_badge_types_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-            </state>
-          </provider>
+      <file leaf-file-name="badges.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/images/badges.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="AttributeI18n.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Shop/AttributeI18n.php">
+      <file leaf-file-name="promo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Config/shop/promo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="10" lean-forward="true" selection-end-line="10" />
+            <state>
+              <caret selection-end-line="29" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -205,8 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProductData.php" />
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/User.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasPriceTypes.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProduct.php" />
@@ -240,7 +236,6 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Promo/Conditions/ProductsQuantity.php" />
         <option value="$PROJECT_DIR$/src/Config/shop/promo.php" />
-        <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Promo/PromoCode.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_141800_create_promo_codes_table.php" />
@@ -252,10 +247,13 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142850_create_badge_types_i18n_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/AttributeI18n.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Badge/Badge.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php" />
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php" />
+        <option value="$PROJECT_DIR$/src/Config/icons.php" />
+        <option value="$PROJECT_DIR$/src/Config/shop/badges.php" />
+        <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -280,6 +278,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,13 +289,20 @@
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
@@ -496,7 +502,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,19 +513,19 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/database/migrations" />
-      <recent name="$PROJECT_DIR$/src/Config/shop" />
-      <recent name="$PROJECT_DIR$/src/Shop/Cart" />
-      <recent name="$PROJECT_DIR$/src/Shop/Shop/Cart" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Contracts/Shop/Cart" />
       <recent name="$PROJECT_DIR$/src/Http/Resources" />
       <recent name="$PROJECT_DIR$/src/Contracts/Shop" />
       <recent name="$PROJECT_DIR$/src/Shop/Cart/Storage" />
       <recent name="$PROJECT_DIR$/src/Shop/Cart/Storage/Cache" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/images" />
+      <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$/src/Config/shop" />
+      <recent name="$PROJECT_DIR$/src/Shop/Cart" />
+      <recent name="$PROJECT_DIR$/src/Shop/Shop/Cart" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -595,28 +600,28 @@
       <workItem from="1534490353895" duration="22842000" />
       <workItem from="1534680617376" duration="41474000" />
       <workItem from="1534935573276" duration="5851000" />
-      <workItem from="1534949080679" duration="9789000" />
+      <workItem from="1534949080679" duration="10998000" />
+      <workItem from="1535092232460" duration="1737000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288378000" />
+    <option name="totallyTimeSpent" value="291324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17358893" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005325" side_tool="true" weight="0.3233831" />
+      <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.32238805" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17199148" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.3215369" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.5004975" side_tool="true" weight="0.25346112" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -626,6 +631,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="9" sideWeight="0.49893504" weight="0.3265925" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,27 +765,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Cart/CartLoader.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Price.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/shop/promo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -789,9 +778,6 @@
           <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Facades/Categories.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Promo/PromoCode.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -877,9 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_19_083919_create_cities_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -896,8 +879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/AttributeI18n.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="10" lean-forward="true" selection-end-line="10" />
+        <state relative-caret-position="180">
+          <caret line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -905,20 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/AttributeOption.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/Badge.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -936,10 +905,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php">
+    <entry file="file://$PROJECT_DIR$/src/Config/icons.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="738">
+          <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/AttributeOption.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2088">
+          <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/Badge.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -957,31 +961,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/shop/promo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/badges.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/shop/badges.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="19" column="57" lean-forward="true" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Attribute.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="9" selection-end-column="50" />
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="9" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php">
+    <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
+        <state relative-caret-position="336">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
         </state>
       </provider>
     </entry>

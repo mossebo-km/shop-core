@@ -17,7 +17,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
     ];
 
     protected $configs = [
-        'tables', 'repositories', 'shop/promo', 'shop/price'
+        'tables', 'repositories', 'shop/promo', 'shop/price', 'shop/badges'
     ];
 
     /**
@@ -52,6 +52,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
         $this->registerFacadeAliases();
         $this->publishConfigs();
         $this->publishMigrations();
+        $this->publishAssets();
     }
 
     /**
@@ -82,6 +83,13 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
         foreach ($this->facadeAliases as $alias => $facade) {
             $loader->alias($alias, $facade);
         }
+    }
+
+    protected function publishAssets()
+    {
+        $this->publishes([
+            __DIR__ . '../public/images/badges.svg' => public_path('images/badges.svg'),
+        ], 'public');
     }
 
     protected function publishConfigs()
