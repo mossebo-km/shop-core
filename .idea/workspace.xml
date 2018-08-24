@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Config/shop/badges.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/shop/badges.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,20 +82,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MosseboShopCoreServiceProvider.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MosseboShopCoreServiceProvider.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1228">
-              <caret line="95" column="5" lean-forward="true" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+            <state relative-caret-position="738">
+              <caret line="41" column="71" lean-forward="true" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BadgeTypeRepository.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BadgeTypeRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repositories/BadgeTypeRepository.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
               <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BadgeTypes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Support/Facades/BadgeTypes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -238,11 +247,11 @@
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php" />
         <option value="$PROJECT_DIR$/src/Config/icons.php" />
-        <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Config/shop/badges.php" />
         <option value="$PROJECT_DIR$/src/Support/Facades/BadgeTypes.php" />
         <option value="$PROJECT_DIR$/src/Repositories/BadgeTypeRepository.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Repositories/BadgeTypeRepository.php" />
+        <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -597,12 +606,12 @@
       <workItem from="1534680617376" duration="41474000" />
       <workItem from="1534935573276" duration="5851000" />
       <workItem from="1534949080679" duration="10998000" />
-      <workItem from="1535092232460" duration="3667000" />
+      <workItem from="1535092232460" duration="4113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293254000" />
+    <option name="totallyTimeSpent" value="293700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -946,24 +955,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Facades/BadgeTypes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Config/shop/badges.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1228">
-          <caret line="95" column="5" lean-forward="true" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -992,6 +987,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Facades/BadgeTypes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="41" column="71" lean-forward="true" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
         </state>
       </provider>
     </entry>

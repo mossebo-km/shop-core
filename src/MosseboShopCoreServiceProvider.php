@@ -37,6 +37,7 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
         'PayTypes'      => 'MosseboShopCore\Support\Facades\PayTypes',
         'OrderStatuses' => 'MosseboShopCore\Support\Facades\OrderStatuses',
         'PriceTypes'    => 'MosseboShopCore\Support\Facades\PriceTypes',
+        'BadgeTypes'    => 'MosseboShopCore\Support\Facades\BadgeTypes',
         'Cities'        => 'MosseboShopCore\Support\Facades\Cities',
         'Countries'     => 'MosseboShopCore\Support\Facades\Countries',
         'Settings'      => 'MosseboShopCore\Support\Facades\Settings',
