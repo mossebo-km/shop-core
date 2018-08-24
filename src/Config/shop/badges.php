@@ -8,7 +8,6 @@ return [
         'symbol-thumbs-up',
         'symbol-plus-one',
         'symbol-leaf',
-        'symbol-leaf',
         'symbol-giftbox',
     ]
 ];
