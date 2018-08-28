@@ -124,8 +124,10 @@ class Cart implements CartInterface
             $this->total = $this->amount;
         }
         else {
-            $this->total = $this->promoCode->apply($this->amount);
+            $this->promoCode->apply($this->amount);
         }
+
+        return $this->total;
     }
 
     public function getCurrencyCode(): string
