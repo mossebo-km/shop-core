@@ -171,6 +171,14 @@ abstract class CartProduct implements CartProductInterface
         return $this->getBasePrice($typeId, $currencyCode);
     }
 
+    public function getTotalFinalPrice($typeId, $currencyCode)
+    {
+        $price = clone $this->getFinalPrice($typeId, $currencyCode);
+        $price->setValue($price->getValue() * $this->getQuantity());
+
+        return $price;
+    }
+
 
     public function getAddedAtTimestamp(): int
     {

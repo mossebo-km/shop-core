@@ -22,7 +22,7 @@ class Cart implements CartInterface
     protected $currencyCode      = null;
     protected $promoCode         = null;
     protected $lastPromoCodeInfo = null;
-    protected $discounts         = [];
+    protected $priceTypeId       = null;
     protected $createdAt         = null;
     protected $updatedAt         = null;
 
@@ -109,10 +109,14 @@ class Cart implements CartInterface
         ]);
 
         foreach ($products as $product) {
-            $this->amount->plus($product->getBasePrice(
+            $price = $product->getFinalPrice(
                 $priceTypeId,
                 $currencyCode
-            ));
+            );
+
+            $price->setValue($price->getValue() * $this->getProductsQuantity());
+
+            $this->amount->plus($price);
         }
 
         return $this->amount;
@@ -141,12 +145,16 @@ class Cart implements CartInterface
 
     public function getPriceTypeId(): int
     {
-        if ($this->hasUser()) {
-            return $this->getUser()->getPriceTypeId();
+        if (is_null($this->priceTypeId)) {
+            if ($this->hasUser()) {
+                $this->priceTypeId = $this->getUser()->getPriceTypeId();
+            }
+            else {
+                $this->priceTypeId = Shop::getDefaultPriceTypeId();
+            }
         }
-        else {
-            return Shop::getDefaultPriceTypeId();
-        }
+
+        return $this->priceTypeId;
     }
 
     public function getCreatedAt(): int
