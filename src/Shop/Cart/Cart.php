@@ -17,15 +17,17 @@ class Cart implements CartInterface
 {
 //    use HasDiscount;
 
-    protected $user         = null;
-    protected $products     = null;
-    protected $currencyCode = null;
-    protected $promoCode    = null;
-    protected $createdAt    = null;
-    protected $updatedAt    = null;
+    protected $user              = null;
+    protected $products          = null;
+    protected $currencyCode      = null;
+    protected $promoCode         = null;
+    protected $lastPromoCodeInfo = null;
+    protected $discounts         = [];
+    protected $createdAt         = null;
+    protected $updatedAt         = null;
 
-    protected $amount       = null;
-    protected $total        = null;
+    protected $amount            = null;
+    protected $total             = null;
 
     public function __construct($user = null, Collection $products, $currencyCode, $promoCode = null, $createdAt = null, $updatedAt = null)
     {
@@ -181,6 +183,11 @@ class Cart implements CartInterface
         return $this->promoCode;
     }
 
+    public function getLastPromoCodeInfo(): ?array
+    {
+        return $this->lastPromoCodeInfo;
+    }
+
 
     /**
      * Работа с товарами
@@ -248,10 +255,15 @@ class Cart implements CartInterface
      */
     public function clear()
     {
-        $this->products = new Collection;
+        $this->clearProducts();
         $this->promoCode = null;
 
         $this->hasChanged();
+    }
+
+    public function clearProducts()
+    {
+        $this->products = new Collection;
     }
 
     /**
@@ -275,10 +287,14 @@ class Cart implements CartInterface
         $validator = $this->promoCode->validate($this);
 
         if ($validator->hasError()) {
+            $this->lastPromoCodeInfo = [
+                'error' => $validator->getErrorMessage(),
+                'code' => $this->promoCode
+            ];
+
             $this->promoCode = null;
         }
     }
-
 
     /**
      * Декодируют ключ предмета из корзины. Возвращает массив из id и параметров товара.
