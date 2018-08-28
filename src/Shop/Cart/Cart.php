@@ -120,6 +120,10 @@ class Cart implements CartInterface
 
     public function getTotal()
     {
+        if (! is_null($this->total)) {
+            return $this->total;
+        }
+
         if (is_null($this->promoCode)) {
             $this->total = $this->amount;
         }
@@ -274,6 +278,7 @@ class Cart implements CartInterface
     protected function hasChanged()
     {
         $this->amount = null;
+        $this->total = null;
         $this->updatedAt = time();
 
         $this->checkPromo();
