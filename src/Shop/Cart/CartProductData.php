@@ -32,6 +32,17 @@ class CartProductData implements CartProductDataInterface
         return $this->get('titles');
     }
 
+    public function getTitle($languageCode)
+    {
+        $titles = $this->getI18nTitles();
+
+        if (! $titles || !isset($titles[$languageCode])) {
+            return null;
+        }
+
+        return $titles[$languageCode];
+    }
+
     public function getPrices(): ?array
     {
         return $this->get('prices');
