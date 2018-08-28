@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Shop/Cart/Promo/PromoCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Shop/Cart/Promo/PromoCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Promo/PromoCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Promo/PromoCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Cart.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,7 +64,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PromoCode.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PromoCode.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Promo/PromoCode.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -101,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="147" column="30" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
+            <state relative-caret-position="762">
+              <caret line="134" column="68" selection-start-line="134" selection-start-column="68" selection-end-line="134" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -225,11 +224,11 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Checkout/CartCheckoutLoader.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProductData.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProductData.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/Promo/PromoCode.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Promo/PromoCode.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Cart/Cart.php" />
       </list>
     </option>
   </component>
@@ -587,12 +586,12 @@
       <workItem from="1535353652750" duration="427000" />
       <workItem from="1535358712617" duration="101000" />
       <workItem from="1535454431085" duration="47000" />
-      <workItem from="1535454504999" duration="11218000" />
+      <workItem from="1535454504999" duration="12036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308548000" />
+    <option name="totallyTimeSpent" value="309366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -937,13 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="147" column="30" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Cart/Promo/PromoCode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -976,6 +968,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="95" column="36" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="134" column="68" selection-start-line="134" selection-start-column="68" selection-end-line="134" selection-end-column="68" />
         </state>
       </provider>
     </entry>
