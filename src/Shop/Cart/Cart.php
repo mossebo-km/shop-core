@@ -124,7 +124,7 @@ class Cart implements CartInterface
             $this->total = $this->amount;
         }
         else {
-            $this->promoCode->apply($this->amount);
+            $this->total = $this->promoCode->apply($this->amount);
         }
 
         return $this->total;

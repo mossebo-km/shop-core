@@ -86,6 +86,8 @@ abstract class PromoCode implements PromoCodeInterface
 
     public function apply(Price $price): Price
     {
+        $price = clone $price;
+
         $codeType = $this->getType();
 
         switch ($codeType) {
