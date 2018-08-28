@@ -254,11 +254,16 @@ class Cart implements CartInterface
      */
     public function clear()
     {
-        $this->products = new Collection;
+        $this->clearProducts();
         $this->promoCode = null;
         $this->discounts = [];
 
         $this->hasChanged();
+    }
+
+    public function clearProducts()
+    {
+        $this->products = new Collection;
     }
 
     /**
