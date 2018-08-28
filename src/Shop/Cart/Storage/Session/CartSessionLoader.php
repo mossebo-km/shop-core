@@ -50,8 +50,8 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
             return $this->cartData;
         }
 
-        if (isset($this->cartData[$key])) {
-            return $this->cartData[$key];
+        if (array_has($this->cartData, $key)) {
+            return array_get($this->cartData, $key);
         }
 
         return null;

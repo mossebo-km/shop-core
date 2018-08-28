@@ -49,8 +49,8 @@ class CartCheckoutLoader implements CartLoader
             return $this->cartData;
         }
 
-        if (isset($this->cartData[$key])) {
-            return $this->cartData[$key];
+        if (array_has($this->cartData, $key)) {
+            return array_get($this->cartData, $key);
         }
 
         return null;
@@ -73,7 +73,7 @@ class CartCheckoutLoader implements CartLoader
     {
         $products = new Collection;
 
-        foreach ($this->getCartData('products') as $productKey => $quantity) {
+        foreach ($this->getCartData('cart.products') as $productKey => $quantity) {
             $product = app()->make(CartProduct::class);
 
             $product->initByKey($productKey, $quantity);
@@ -91,7 +91,7 @@ class CartCheckoutLoader implements CartLoader
 
     protected function getPromoCode()
     {
-        $promoCodeName = $this->getCartData('promoCode');
+        $promoCodeName = $this->getCartData('cart.promo_code');
 
         if (is_null($promoCodeName)) {
             return null;
