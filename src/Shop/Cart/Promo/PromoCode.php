@@ -84,7 +84,7 @@ abstract class PromoCode implements PromoCodeInterface
         ]);
     }
 
-    public function apply(Price $price)
+    public function apply(Price $price): Price
     {
         $codeType = $this->getType();
 
@@ -101,6 +101,8 @@ abstract class PromoCode implements PromoCodeInterface
         $price->setValue(
             $price->getValue() - $discountValue
         );
+
+        return $price;
     }
 
     public function getType()
