@@ -88,6 +88,13 @@ abstract class PromoCode implements PromoCodeInterface
     {
         $price = clone $price;
 
+        $price->minus($this->getDiscountPrice($price));
+
+        return $price;
+    }
+
+    public function getDiscountPrice(Price $price): Price
+    {
         $codeType = $this->getType();
 
         switch ($codeType) {
@@ -100,9 +107,8 @@ abstract class PromoCode implements PromoCodeInterface
                 break;
         }
 
-        $price->setValue(
-            $price->getValue() - $discountValue
-        );
+        $price = clone $price;
+        $price->setValue($discountValue);
 
         return $price;
     }

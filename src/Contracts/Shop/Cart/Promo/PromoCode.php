@@ -15,4 +15,5 @@ interface PromoCode
     public function getConditions(): Collection;
     public function getName(): string;
     public function apply(Price $price): Price;
+    public function getDiscountPrice(Price $price): Price;
 }
