@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProductData.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProductData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" afterDir="false" />
-    </list>
+    <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,8 +74,8 @@
       <file leaf-file-name="CartProduct.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="178" column="22" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
+            <state relative-caret-position="536">
+              <caret line="176" column="64" selection-start-line="176" selection-start-column="53" selection-end-line="176" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -597,12 +593,12 @@
       <workItem from="1535353652750" duration="427000" />
       <workItem from="1535358712617" duration="101000" />
       <workItem from="1535454431085" duration="47000" />
-      <workItem from="1535454504999" duration="10225000" />
+      <workItem from="1535454504999" duration="10340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307555000" />
+    <option name="totallyTimeSpent" value="307670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -613,8 +609,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.3215369" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17465389" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.3215369" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17465389" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -984,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="178" column="22" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
+        <state relative-caret-position="536">
+          <caret line="176" column="64" selection-start-line="176" selection-start-column="53" selection-end-line="176" selection-end-column="64" />
         </state>
       </provider>
     </entry>
