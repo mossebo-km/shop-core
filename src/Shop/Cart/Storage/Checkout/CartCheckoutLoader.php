@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Cart\Storage\Session;
+namespace MosseboShopCore\Shop\Cart\Storage\Checkout;
 
 use Illuminate\Session\SessionManager;
 use Shop;
