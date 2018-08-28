@@ -15,36 +15,36 @@ use MosseboShopCore\Shop\Cart\Traits\HasDiscount;
 
 class Cart implements CartInterface
 {
-    use HasDiscount;
+//    use HasDiscount;
 
+    protected $user         = null;
     protected $products     = null;
     protected $currencyCode = null;
     protected $promoCode    = null;
-    protected $discounts    = [];
     protected $createdAt    = null;
     protected $updatedAt    = null;
 
     protected $amount       = null;
     protected $total        = null;
 
-    public function __construct(Collection $products, $currencyCode, $promoCode = null, $discounts = [], $createdAt = null, $updatedAt = null)
+    public function __construct($user = null, Collection $products, $currencyCode, $promoCode = null, $createdAt = null, $updatedAt = null)
     {
+        $this->user         = $user;
         $this->products     = $products;
         $this->currencyCode = $currencyCode;
         $this->promoCode    = $promoCode;
-        $this->discounts    = $discounts;
         $this->createdAt    = is_null($createdAt) ? time() : $createdAt;
         $this->updatedAt    = is_null($updatedAt) ? time() : $updatedAt;
     }
 
     public function hasUser(): bool
     {
-        return ! is_null(Auth::user());
+        return ! is_null($this->user);
     }
 
-    public function getUser(): User
+    public function getUser(): ?User
     {
-        return Auth::user();
+        return $this->user;
     }
 
     /**
@@ -250,7 +250,6 @@ class Cart implements CartInterface
     {
         $this->products = new Collection;
         $this->promoCode = null;
-        $this->discounts = [];
 
         $this->hasChanged();
     }

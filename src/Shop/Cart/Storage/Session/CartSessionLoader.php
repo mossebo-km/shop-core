@@ -27,10 +27,10 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
     public function getCartContent()
     {
         return [
+            'user'         => $this->getUser(),
             'products'     => $this->getProducts(),
             'currencyCode' => $this->getCurrencyCode(),
             'promoCode'    => $this->getPromoCode(),
-            'discounts'    => $this->getDiscounts(),
             'createdAt'    => $this->getCreatedAt(),
             'updatedAt'    => $this->getUpdatedAt(),
         ];
@@ -65,7 +65,6 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
             'products'     => [],
             'currencyCode' => Shop::getCurrentCurrencyCode(),
             'promoCode'    => $defaultPromo ? $defaultPromo : null,
-            'discounts'    => [],
             'createdAt'    => time(),
             'updatedAt'    => time(),
         ];

@@ -23,6 +23,11 @@ class CreatePromoUsesTable extends Migration
             $table->integer('user_id')->nullable()->unsigned()->index();
             $table->foreign('user_id')->references('id')->on(config('tables.Users'))->onDelete('cascade');
 
+            $table->integer('amount')->nullable();
+            $table->integer('percent')->nullable();
+            $table->char('currency_code', 3)->nullable();
+            $table->foreign('currency_code')->references('code')->on(config('tables.Currencies'))->onDelete('cascade');
+
             $table->timestamps();
         });
     }

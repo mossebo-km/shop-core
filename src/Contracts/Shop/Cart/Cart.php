@@ -12,7 +12,7 @@ use MosseboShopCore\Contracts\Shop\Price;
 interface Cart
 {
     public function hasUser(): bool;
-    public function getUser(): User;
+    public function getUser(): ?User;
 
     public function getProducts(): Collection;
 
@@ -24,9 +24,9 @@ interface Cart
     public function getProductsQuantity(): int;
     public function getProductNamesQuantity(): int;
 
-    public function setAmountDiscount($amount, $currencyCode, $percent = 0, $isSummable = false): void;
-    public function setPercentDiscount($percent, $isSummable = false): void;
-    public function getBestDiscount();
+//    public function setAmountDiscount($amount, $currencyCode, $percent = 0, $isSummable = false): void;
+//    public function setPercentDiscount($percent, $isSummable = false): void;
+//    public function getBestDiscount();
 
     public function setPromoCode(PromoCode $code);
     public function getPromoCode(): ?PromoCode;
