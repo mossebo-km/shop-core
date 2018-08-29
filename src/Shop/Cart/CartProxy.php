@@ -40,8 +40,25 @@ class CartProxy
         return $this;
     }
 
-    public function setMany($items)
+    public function sync($items)
     {
+        $cartProducts = $this->cart->getProducts();
+
+        foreach ($cartProducts as $cartProduct) {
+            $finded = false;
+
+            foreach ($items as $index => $item) {
+                if ($item['key'] === $cartProduct->getKey()) {
+                    $this->setProduct($item['key'], $item['qty']);
+                    unset($items[$index]);
+                }
+            }
+
+            if (! $finded) {
+                $this->removeProductByKey($cartProduct->getKey());
+            }
+        }
+
         foreach ($items as $item) {
             $this->setProduct($item['key'], $item['qty']);
         }
@@ -59,6 +76,11 @@ class CartProxy
     protected function setProduct($productKey, $quantity = null)
     {
         $this->cart->setProductByKey($productKey, $quantity);
+    }
+
+    protected function removeProduct($productKey)
+    {
+        $this->cart->removeProductByKey($productKey);
     }
 
     public function setPromoCode(PromoCode $promoCode)

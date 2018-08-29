@@ -15,7 +15,7 @@ class CreatePromoUsesTable extends Migration
             $table->increments('id')->index();
 
             $table->integer('promo_code_id')->unsigned()->index();
-            $table->foreign('promo_code_id')->references('id')->on(config('tables.PromoCodes'))->onDelete('cascade');
+            $table->foreign('promo_code_id')->references('id')->on(config('tables.PromoCodes'))->onDelete('set null');
 
             $table->integer('order_id')->unsigned()->index();
             $table->foreign('order_id')->references('id')->on(config('tables.Orders'))->onDelete('cascade');
