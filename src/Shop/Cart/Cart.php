@@ -109,12 +109,10 @@ class Cart implements CartInterface
         ]);
 
         foreach ($products as $product) {
-            $price = $product->getFinalPrice(
+            $price = $product->getTotalFinalPrice(
                 $priceTypeId,
                 $currencyCode
             );
-
-            $price->setValue($price->getValue() * $this->getProductsQuantity());
 
             $this->amount->plus($price);
         }
@@ -128,11 +126,10 @@ class Cart implements CartInterface
             return $this->total;
         }
 
-        if (is_null($this->promoCode)) {
-            $this->total = clone $this->getAmount();
-        }
-        else {
-            $this->total = $this->promoCode->apply($this->getAmount());
+        $this->total = clone $this->getAmount();
+
+        if (! is_null($this->promoCode)) {
+            $this->promoCode->apply($this->total);
         }
 
         return $this->total;
