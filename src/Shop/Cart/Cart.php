@@ -129,7 +129,7 @@ class Cart implements CartInterface
         $this->total = clone $this->getAmount();
 
         if (! is_null($this->promoCode)) {
-            $this->promoCode->apply($this->total);
+            $this->total = $this->promoCode->apply($this->total);
         }
 
         return $this->total;
