@@ -13,7 +13,7 @@ class CreateBannersI18nTable extends Migration
         Schema::create(config('tables.BannersI18n'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->integer('banner_id')->unsigned();
-            $table->foreign('banner_id')->references('id')->on(config('tables.Banners'))->onDelete('cascade');
+            $table->foreign('banner_id')->references('id')->on(config('tables.Banner'))->onDelete('cascade');
 
             $table->char('language_code', 2);
             $table->foreign('language_code')->references('code')->on(config('tables.Languages'));
