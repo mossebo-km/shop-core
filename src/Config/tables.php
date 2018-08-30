@@ -116,4 +116,8 @@ return [
     'BadgeTypes'      => 'shop_badge_types',
     'BadgeTypesI18n'  => 'shop_badge_types_i18n',
     'Badges'          => 'shop_badges',
+
+    'Banners'         => 'shop_banners',
+    'BannersI18n'     => 'shop_banners_i18n',
+    'BannerPositions' => 'shop_banner_positions',
 ];
