@@ -12,10 +12,8 @@ class CreateBannerPositionsTable extends Migration
 
         Schema::create(config('tables.BannerPositions'), function (Blueprint $table) {
             $table->engine = "InnoDB";
-            $table->integer('banner_id')->unsigned();
-            $table->foreign('banner_id')->references('id')->on(config('tables.Banner'))->onDelete('cascade');
-
-            $table->string('position_name')->index();
+            $table->integer('id')->unsigned();
+            $table->string('name')->index();
         });
     }
 }
