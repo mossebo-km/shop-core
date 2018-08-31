@@ -46,7 +46,7 @@ abstract class BaseModel extends Model
      * @param  Array
      * @return Array
      */
-    protected function getFillableData(Array $data): Array
+    protected function getFillableData(array $data): array
     {
         $fillable = $this->getFillable();
 
