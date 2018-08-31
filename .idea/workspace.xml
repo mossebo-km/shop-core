@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_positions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_positions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Banner/BannerPosition.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Banner/BannerPosition.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BannerPosition.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BannerPosition.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/BannerPosition.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+            <state relative-caret-position="180">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -95,17 +94,35 @@
       <file leaf-file-name="2018_07_24_143890_create_banner_position_relations_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143890_create_banner_position_relations_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="12" column="61" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="61" />
+            <state relative-caret-position="72">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BannerPositionRelation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/BannerPositionRelation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tables.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
               <caret line="123" column="2" lean-forward="true" selection-start-line="123" selection-start-column="2" selection-end-line="123" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Banner.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/Banner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -128,29 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_07_24_143860_create_banners_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143860_create_banners_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BannerI18n.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/BannerI18n.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Banner.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/Banner.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -206,7 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Models/Shop/Promo/PromoCondition.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Promo/PromoCode.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Promo/PromoValidator.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Promo/PromoValidator.php" />
@@ -251,12 +249,13 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banners_positions_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Banner/Banner.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Banner/BannerI18n.php" />
-        <option value="$PROJECT_DIR$/src/Models/Shop/Banner/BannerPosition.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143860_create_banners_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143870_create_banners_i18n_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_positions_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143890_create_banner_position_relations_table.php" />
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
+        <option value="$PROJECT_DIR$/src/Models/Shop/Banner/BannerPositionRelation.php" />
+        <option value="$PROJECT_DIR$/src/Models/Shop/Banner/BannerPosition.php" />
       </list>
     </option>
   </component>
@@ -636,12 +635,12 @@
       <workItem from="1535454431085" duration="47000" />
       <workItem from="1535454504999" duration="16809000" />
       <workItem from="1535610912110" duration="2506000" />
-      <workItem from="1535703943175" duration="3969000" />
+      <workItem from="1535703943175" duration="4234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320614000" />
+    <option name="totallyTimeSpent" value="320879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -681,7 +680,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Config/icons.php" />
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -962,20 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/Banner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/BannerI18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143860_create_banners_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -997,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/BannerPosition.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_positions_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1018,17 +995,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143890_create_banner_position_relations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="123" column="2" lean-forward="true" selection-start-line="123" selection-start-column="2" selection-end-line="123" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143890_create_banner_position_relations_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/BannerPositionRelation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/BannerI18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/Banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Banner/BannerPosition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
