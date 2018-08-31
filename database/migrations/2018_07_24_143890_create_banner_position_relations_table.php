@@ -16,7 +16,7 @@ class CreateBannerPositionRelationsTable extends Migration
             $table->foreign('banner_id')->references('id')->on(config('tables.Banner'))->onDelete('cascade');
 
             $table->integer('position_id')->unsigned();
-            $table->foreign('position_id')->references('id')->on(config('tables.BannerPosition'))->onDelete('cascade');
+            $table->foreign('position_id')->references('id')->on(config('tables.BannerPositions'))->onDelete('cascade');
 
             $table->primary(['banner_id', 'position_id'])->index();
         });
