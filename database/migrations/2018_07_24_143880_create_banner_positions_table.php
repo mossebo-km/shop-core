@@ -15,7 +15,7 @@ class CreateBannerPositionsTable extends Migration
             $table->integer('banner_id')->unsigned();
             $table->foreign('banner_id')->references('id')->on(config('tables.Banner'))->onDelete('cascade');
 
-            $table->string('position')->index();
+            $table->string('position_name')->index();
         });
     }
 }

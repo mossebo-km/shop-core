@@ -15,9 +15,14 @@ class CreateBannersTable extends Migration
             $table->increments('id')->index();
 
             $table->text('gradient')->nullable();
-            $table->string('color')->nullable();
+            $table->string('title_color')->nullable();
+            $table->string('caption_color')->nullable();
             $table->string('button_color')->nullable();
             $table->string('button_background_color')->nullable();
+
+            $table->string('mobile_image')->nullable();
+            $table->string('desktop_image')->nullable();
+            $table->string('background_image')->nullable();
 
             $table->boolean('enabled')->index()->default(1);
             $table->integer('position');
@@ -26,3 +31,4 @@ class CreateBannersTable extends Migration
         });
     }
 }
+
