@@ -13,7 +13,7 @@ class CreateBannerPositionRelationsTable extends Migration
         Schema::create(config('tables.BannerPositionRelations'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->integer('banner_id')->unsigned();
-            $table->foreign('banner_id')->references('id')->on(config('tables.Banner'))->onDelete('cascade');
+            $table->foreign('banner_id')->references('id')->on(config('tables.Banners'))->onDelete('cascade');
 
             $table->integer('position_id')->unsigned();
             $table->foreign('position_id')->references('id')->on(config('tables.BannerPositions'))->onDelete('cascade');

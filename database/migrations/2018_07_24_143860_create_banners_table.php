@@ -8,9 +8,9 @@ class CreateBannersTable extends Migration
 {
     public function up()
     {
-        echo "Create Banner Table\r\n";
+        echo "Create Banners Table\r\n";
 
-        Schema::create(config('tables.Banner'), function (Blueprint $table) {
+        Schema::create(config('tables.Banners'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 
