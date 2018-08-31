@@ -12,7 +12,7 @@ class CreateBannerPositionsTable extends Migration
 
         Schema::create(config('tables.BannerPositions'), function (Blueprint $table) {
             $table->engine = "InnoDB";
-            $table->integer('id')->unsigned();
+            $table->increments('id')->index();
             $table->string('name')->index();
         });
     }
