@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Facade;
  * Class Categories
  * @package MosseboShopCore\Support\Facades
  */
-class BannerPositions extends Facade
+class BannerPlaces extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -17,6 +17,6 @@ class BannerPositions extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'banner-positions';
+        return 'banner-places';
     }
 }

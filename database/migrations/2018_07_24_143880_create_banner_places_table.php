@@ -8,12 +8,14 @@ class CreateBannerPositionsTable extends Migration
 {
     public function up()
     {
-        echo "Create BannerPositions Table\r\n";
+        echo "Create BannerPlaces Table\r\n";
 
-        Schema::create(config('tables.BannerPositions'), function (Blueprint $table) {
+        Schema::create(config('tables.BannerPlaces'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
             $table->string('name')->index();
+            $table->boolean('enabled')->default(1);
+            $table->integer('position')->unsigned()->default(0);
         });
     }
 }
