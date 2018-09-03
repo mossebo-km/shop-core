@@ -25,22 +25,23 @@ class MosseboShopCoreServiceProvider extends ServiceProvider {
      * @var array
      */
     protected $facadeAliases = [
-        'Shop'          => 'MosseboShopCore\Support\Facades\Shop',
+        'Shop'            => 'MosseboShopCore\Support\Facades\Shop',
 
-        'Attributes'    => 'MosseboShopCore\Support\Facades\Attributes',
-        'Categories'    => 'MosseboShopCore\Support\Facades\Categories',
-        'Rooms'         => 'MosseboShopCore\Support\Facades\Rooms',
-        'Styles'        => 'MosseboShopCore\Support\Facades\Styles',
-        'Currencies'    => 'MosseboShopCore\Support\Facades\Currencies',
-        'DeliveryTypes' => 'MosseboShopCore\Support\Facades\DeliveryTypes',
-        'Languages'     => 'MosseboShopCore\Support\Facades\Languages',
-        'PayTypes'      => 'MosseboShopCore\Support\Facades\PayTypes',
-        'OrderStatuses' => 'MosseboShopCore\Support\Facades\OrderStatuses',
-        'PriceTypes'    => 'MosseboShopCore\Support\Facades\PriceTypes',
-        'BadgeTypes'    => 'MosseboShopCore\Support\Facades\BadgeTypes',
-        'Cities'        => 'MosseboShopCore\Support\Facades\Cities',
-        'Countries'     => 'MosseboShopCore\Support\Facades\Countries',
-        'Settings'      => 'MosseboShopCore\Support\Facades\Settings',
+        'Attributes'      => 'MosseboShopCore\Support\Facades\Attributes',
+        'Categories'      => 'MosseboShopCore\Support\Facades\Categories',
+        'Rooms'           => 'MosseboShopCore\Support\Facades\Rooms',
+        'Styles'          => 'MosseboShopCore\Support\Facades\Styles',
+        'Currencies'      => 'MosseboShopCore\Support\Facades\Currencies',
+        'DeliveryTypes'   => 'MosseboShopCore\Support\Facades\DeliveryTypes',
+        'Languages'       => 'MosseboShopCore\Support\Facades\Languages',
+        'PayTypes'        => 'MosseboShopCore\Support\Facades\PayTypes',
+        'OrderStatuses'   => 'MosseboShopCore\Support\Facades\OrderStatuses',
+        'PriceTypes'      => 'MosseboShopCore\Support\Facades\PriceTypes',
+        'BadgeTypes'      => 'MosseboShopCore\Support\Facades\BadgeTypes',
+        'Cities'          => 'MosseboShopCore\Support\Facades\Cities',
+        'Countries'       => 'MosseboShopCore\Support\Facades\Countries',
+        'Settings'        => 'MosseboShopCore\Support\Facades\Settings',
+        'BannerPositions' => 'MosseboShopCore\Support\Facades\BannerPositions',
     ];
 
     /**
