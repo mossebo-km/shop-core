@@ -4,7 +4,7 @@ namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\BadgeTypeRepository as BadgeTypeRepositoryContract;
 
-class BadgeTypeRepository extends RamRepository implements BadgeTypeRepositoryContract
+class BadgeTypeRepository extends BaseRepository implements BadgeTypeRepositoryContract
 {
     protected $modificators = [
         'i18n',

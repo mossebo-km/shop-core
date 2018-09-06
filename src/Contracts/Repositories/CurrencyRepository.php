@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface CurrencyRepository extends RamRepository
+interface CurrencyRepository extends Repository
 {
 
 }

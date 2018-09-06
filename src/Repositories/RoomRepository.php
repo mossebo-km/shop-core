@@ -4,7 +4,7 @@ namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\RoomRepository as RoomRepositoryContract;
 
-class RoomRepository extends RamRepository implements RoomRepositoryContract
+class RoomRepository extends BaseRepository implements RoomRepositoryContract
 {
     protected $modificators = [
         'i18n',

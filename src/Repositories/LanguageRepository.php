@@ -4,7 +4,7 @@ namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\LanguageRepository as LanguageRepositoryContract;
 
-class LanguageRepository extends RamRepository implements LanguageRepositoryContract
+class LanguageRepository extends BaseRepository implements LanguageRepositoryContract
 {
     protected $modificators = [
         'currency',

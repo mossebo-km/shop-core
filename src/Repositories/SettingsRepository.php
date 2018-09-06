@@ -5,7 +5,7 @@ namespace MosseboShopCore\Repositories;
 use MosseboShopCore\Contracts\Repositories\RoomRepository as RoomRepositoryContract;
 use \Illuminate\Support\Collection;
 
-class SettingsRepository extends RamRepository implements RoomRepositoryContract
+class SettingsRepository extends BaseRepository implements RoomRepositoryContract
 {
     protected $modificators = [
     ];

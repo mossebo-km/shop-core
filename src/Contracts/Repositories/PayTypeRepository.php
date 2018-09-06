@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface PayTypeRepository extends RamRepository
+interface PayTypeRepository extends Repository
 {
 
 }

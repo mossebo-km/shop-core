@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface CategoryRepository extends RamRepository
+interface CategoryRepository extends Repository
 {
     public function getTree($modificators);
 }

@@ -4,7 +4,7 @@ namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\DeliveryTypeRepository as DeliveryTypeRepositoryContract;
 
-class DeliveryTypeRepository extends RamRepository implements DeliveryTypeRepositoryContract
+class DeliveryTypeRepository extends BaseRepository implements DeliveryTypeRepositoryContract
 {
     protected $modificators = [
         'i18n',

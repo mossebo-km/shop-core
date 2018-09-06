@@ -4,7 +4,7 @@ namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\CategoryRepository as CategoryRepositoryContract;
 
-class CategoryRepository extends RamRepository implements CategoryRepositoryContract
+class CategoryRepository extends BaseRepository implements CategoryRepositoryContract
 {
     protected $modificators = [
         'i18n',

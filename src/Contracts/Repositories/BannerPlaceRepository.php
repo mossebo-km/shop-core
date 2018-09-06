@@ -2,6 +2,6 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface BannerPlaceRepository extends RamRepository
+interface BannerPlaceRepository extends Repository
 {
 }

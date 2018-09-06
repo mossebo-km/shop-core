@@ -4,7 +4,7 @@ namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\AttributeRepository as AttributeRepositoryContract;
 
-class AttributeRepository extends RamRepository implements AttributeRepositoryContract
+class AttributeRepository extends BaseRepository implements AttributeRepositoryContract
 {
     protected $modificators = [
         'i18n',

@@ -4,7 +4,7 @@ namespace MosseboShopCore\Repositories;
 
 use MosseboShopCore\Contracts\Repositories\CountryRepository as CountryRepositoryContract;
 
-class CountryRepository extends RamRepository implements CountryRepositoryContract
+class CountryRepository extends BaseRepository implements CountryRepositoryContract
 {
     protected $modificators = [
         'i18n',

@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface CountryRepository extends RamRepository
+interface CountryRepository extends Repository
 {
 
 }

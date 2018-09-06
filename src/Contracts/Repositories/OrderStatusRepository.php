@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface OrderStatusRepository extends RamRepository
+interface OrderStatusRepository extends Repository
 {
 
 }
