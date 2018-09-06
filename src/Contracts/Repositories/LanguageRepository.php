@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface LanguagesRepository extends Repository
+interface LanguageRepository extends Repository
 {
 
 }

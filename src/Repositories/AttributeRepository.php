@@ -2,6 +2,7 @@
 
 namespace MosseboShopCore\Repositories;
 
+use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Repositories\AttributeRepository as AttributeRepositoryContract;
 
 class AttributeRepository extends BaseRepository implements AttributeRepositoryContract
@@ -11,11 +12,5 @@ class AttributeRepository extends BaseRepository implements AttributeRepositoryC
         'currentI18n'
     ];
 
-    protected function _getBaseQuery() {
-        return parent::_getBaseQuery()->with([
-            'options' => function ($query) {
-                $query->with('currentI18n')->orderBy('position', 'asc');
-            }
-        ])->orderBy('position', 'asc');
-    }
+
 }

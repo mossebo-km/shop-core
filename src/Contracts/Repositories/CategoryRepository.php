@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Repositories;
 
-interface CategoriesRepository extends Repository
+interface CategoryRepository extends Repository
 {
     public function getTree();
 }
