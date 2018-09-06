@@ -11,4 +11,15 @@ abstract class AttributeOption extends BaseModelI18n
 
     protected $tableIdentif = 'AttributeOptions';
     protected $relationFieldName = 'option_id';
+
+    protected $fillable = [
+        'attribute_id',
+        'position',
+        'enabled'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }

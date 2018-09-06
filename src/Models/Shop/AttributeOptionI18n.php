@@ -7,4 +7,10 @@ use MosseboShopCore\Models\Base\BaseModel;
 abstract class AttributeOptionI18n extends BaseModel
 {
     protected $tableIdentif = 'AttributeOptionsI18n';
+
+    protected $fillable = [
+        'option_id',
+        'language_code',
+        'value'
+    ];
 }

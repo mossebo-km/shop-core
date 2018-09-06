@@ -9,6 +9,21 @@ abstract class Currency extends BaseModel implements CurrencyInterface
 {
     protected $tableIdentif = 'Currencies';
 
+    protected $fillable = [
+        'code',
+        'name',
+        'symbol',
+        'precision',
+        'thousand_separator',
+        'decimal_separator',
+        'swap_currency_symbol'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
+
     /**
      * Максимальное значение цены для текущей валюты
      *

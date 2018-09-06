@@ -12,4 +12,16 @@ abstract class Category extends BaseModelI18n
 
     protected $tableIdentif = 'Categories';
     protected $relationFieldName = 'category_id';
+
+    protected $fillable = [
+        'parent_id',
+        'slug',
+        'enabled',
+        'position'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }

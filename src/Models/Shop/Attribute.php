@@ -11,4 +11,15 @@ abstract class Attribute extends BaseModelI18n
 
     protected $tableIdentif = 'Attributes';
     protected $relationFieldName = 'attribute_id';
+
+    protected $fillable = [
+        'layout_class',
+        'selectable',
+        'enabled'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }
