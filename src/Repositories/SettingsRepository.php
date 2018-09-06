@@ -2,14 +2,12 @@
 
 namespace MosseboShopCore\Repositories;
 
+use MosseboShopCore\Repositories\Base\BaseRepository;
 use MosseboShopCore\Contracts\Repositories\RoomRepository as RoomRepositoryContract;
 use \Illuminate\Support\Collection;
 
-class SettingsRepository extends BaseRepository implements RoomRepositoryContract
+abstract class SettingsRepository extends BaseRepository implements RoomRepositoryContract
 {
-    protected $modificators = [
-    ];
-
     protected function filterByNamespace($namespace)
     {
         $namespace .= '-';

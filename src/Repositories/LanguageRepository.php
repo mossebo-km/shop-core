@@ -2,9 +2,10 @@
 
 namespace MosseboShopCore\Repositories;
 
+use MosseboShopCore\Repositories\Base\BaseRepository;
 use MosseboShopCore\Contracts\Repositories\LanguageRepository as LanguageRepositoryInterface;
 
-class LanguageRepository extends BaseRepository implements LanguageRepositoryInterface
+abstract class LanguageRepository extends BaseRepository implements LanguageRepositoryInterface
 {
     public function default()
     {

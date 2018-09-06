@@ -16,7 +16,9 @@ abstract class Currency extends BaseModel implements CurrencyInterface
         'precision',
         'thousand_separator',
         'decimal_separator',
-        'swap_currency_symbol'
+        'swap_currency_symbol',
+        'enabled',
+        'position'
     ];
 
     protected $dates = [

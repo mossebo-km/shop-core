@@ -38,7 +38,7 @@ trait HasI18n
         $i18nTableName = $i18nModel->getTable();
         $modelTableName = $this->getTable();
 
-        $i18nFields = array_reduce($this->getFillable(), function($carry, $item) use($i18nTableName) {
+        $i18nFields = array_reduce($i18nModel->getFillable(), function($carry, $item) use($i18nTableName) {
             if ($item !== 'language_code' && $item !== $this->relationFieldName) {
                 $carry[] = "{$i18nTableName}.{$item}";
             }

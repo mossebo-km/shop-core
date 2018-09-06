@@ -16,6 +16,7 @@ abstract class BadgeType extends BaseModel
         'icon',
         'color',
         'has_value',
+        'position',
     ];
 
     protected $dates = [

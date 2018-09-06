@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Repositories;
+namespace MosseboShopCore\Repositories\Base;
 
 use Illuminate\Support\Collection;
 use Illuminate\Contracts\Cache\Repository as CacheInterface;
