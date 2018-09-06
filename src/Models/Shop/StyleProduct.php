@@ -6,5 +6,15 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class StyleProduct extends BaseModel
 {
-    protected $tableIdentif = 'StyleProducts';
+    protected $tableKey = 'StyleProducts';
+
+    protected $primaryKey = null;
+    public $incrementing = false;
+
+    protected $fillable = [
+        'style_id',
+        'product_id'
+    ];
+
+    public $timestamps = false;
 }

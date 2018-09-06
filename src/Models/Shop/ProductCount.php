@@ -6,5 +6,17 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class ProductCount extends BaseModel
 {
-    protected $tableIdentif = 'ProductCounts';
+    protected $tableKey = 'ProductCounts';
+
+    protected $fillable = [
+        'category_id',
+        'room_id',
+        'style_id',
+        'count'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }

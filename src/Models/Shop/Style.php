@@ -2,10 +2,24 @@
 
 namespace MosseboShopCore\Models\Shop;
 
-use MosseboShopCore\Models\Base\BaseModelI18n;
+use MosseboShopCore\Models\Base\BaseModel;
+use MosseboShopCore\Support\Traits\Models\HasI18n;
 
-abstract class Style extends BaseModelI18n
+abstract class Style extends BaseModel
 {
-    protected $tableIdentif = 'Styles';
+    use HasI18n;
+
+    protected $tableKey = 'Styles';
     protected $relationFieldName = 'style_id';
+
+    protected $fillable = [
+        'slug',
+        'enabled',
+        'position'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }

@@ -10,7 +10,20 @@ abstract class Price extends BaseModel
 {
     use StorePriceValueAsInteger;
 
-    protected $tableIdentif = 'Prices';
+    protected $tableKey = 'Prices';
+
+    protected $fillable = [
+        'item_type',
+        'item_id',
+        'currency_code',
+        'price_type_id',
+        'value'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 
     protected $priceAttributeKeys = [
         'value'

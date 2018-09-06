@@ -6,5 +6,16 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class Settings extends BaseModel
 {
-    protected $tableIdentif = 'Settings';
+    protected $tableKey = 'Settings';
+
+    protected $primaryKey = null;
+    public $incrementing = false;
+
+    protected $fillable = [
+        'key',
+        'value',
+        'position',
+    ];
+
+    public $timestamps = false;
 }

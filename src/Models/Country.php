@@ -2,9 +2,21 @@
 
 namespace MosseboShopCore\Models;
 
-use MosseboShopCore\Models\Base\BaseModelI18n;
+use MosseboShopCore\Models\Base\BaseModel;
 
-abstract class Country extends BaseModelI18n
+abstract class Country extends BaseModel
 {
-    protected $tableIdentif = 'Countries';
+    protected $tableKey = 'Countries';
+
+    protected $fillable = [
+        'code',
+        'position',
+        'language_code',
+        'currency_code',
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }

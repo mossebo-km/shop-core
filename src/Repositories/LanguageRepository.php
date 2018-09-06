@@ -8,6 +8,6 @@ class LanguageRepository extends BaseRepository implements LanguageRepositoryInt
 {
     public function default()
     {
-        return $this->getCollection()->where('id', config('languages.default'))->first();
+        return $this->getCollection()->where('default', 1)->first();
     }
 }

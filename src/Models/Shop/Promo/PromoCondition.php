@@ -7,5 +7,13 @@ use MosseboShopCore\Contracts\Models\Shop\Promo\PromoCondition as PromoCondition
 
 abstract class PromoCondition extends BaseModel implements PromoConditionInterface
 {
-    protected $tableIdentif = 'PromoConditions';
+    protected $tableKey = 'PromoConditions';
+
+    public $timestamps = false;
+
+    protected $fillable = [
+        'type',
+        'params',
+        'promo_code_id',
+    ];
 }

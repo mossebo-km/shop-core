@@ -1,14 +1,9 @@
 <?php
 
-namespace MosseboShopCore\Models\Base;
+namespace MosseboShopCore\Support\Traits\Models;
 
-use App;
-use Config;
-
-abstract class BaseModelI18n extends BaseModel
+trait HasI18n
 {
-    protected $translateTableName;
-
     public function i18n()
     {
         return $this->hasMany($this->getI18nModelName(), $this->relationFieldName);
@@ -44,7 +39,7 @@ abstract class BaseModelI18n extends BaseModel
         $modelTableName = $this->getTable();
 
         $i18nFields = array_reduce($this->getFillable(), function($carry, $item) use($i18nTableName) {
-            if ($item !== 'language_code') {
+            if ($item !== 'language_code' && $item !== $this->relationFieldName) {
                 $carry[] = "{$i18nTableName}.{$item}";
             }
 

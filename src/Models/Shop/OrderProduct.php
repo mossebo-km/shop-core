@@ -9,10 +9,25 @@ abstract class OrderProduct extends BaseModel
 {
     use StorePriceValueAsInteger;
 
-    protected $tableIdentif = 'OrderProducts';
+    protected $tableKey = 'OrderProducts';
 
     protected $priceAttributeKeys = [
         'default_price',
         'final_price'
+    ];
+
+    protected $fillable = [
+        'order_id',
+        'product_id',
+        'default_price',
+        'final_price',
+        'currency_code',
+        'quantity',
+        'params'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
     ];
 }

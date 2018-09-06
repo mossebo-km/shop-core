@@ -6,5 +6,17 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class PromoCodeI18n extends BaseModel
 {
-    protected $tableIdentif = 'PromoCodesI18n';
+    protected $tableKey = 'PromoCodesI18n';
+
+    public $timestamps = false;
+    public $incrementing = false;
+
+    protected $primaryKey = null;
+
+    protected $fillable = [
+        'promo_code_id',
+        'language_code',
+        'title',
+        'description',
+    ];
 }

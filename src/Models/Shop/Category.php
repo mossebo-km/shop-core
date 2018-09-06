@@ -2,15 +2,16 @@
 
 namespace MosseboShopCore\Models\Shop;
 
-use MosseboShopCore\Models\Base\BaseModelI18n;
+use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Support\Traits\Models\NestedTrait;
 use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
+use MosseboShopCore\Support\Traits\Models\HasI18n;
 
-abstract class Category extends BaseModelI18n
+abstract class Category extends BaseModel
 {
-    use NestedTrait, HasEnabledStatus;
+    use NestedTrait, HasEnabledStatus, HasI18n;
 
-    protected $tableIdentif = 'Categories';
+    protected $tableKey = 'Categories';
     protected $relationFieldName = 'category_id';
 
     protected $fillable = [

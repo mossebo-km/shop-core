@@ -7,7 +7,7 @@ use MosseboShopCore\Contracts\Shop\Currency as CurrencyInterface;
 
 abstract class Currency extends BaseModel implements CurrencyInterface
 {
-    protected $tableIdentif = 'Currencies';
+    protected $tableKey = 'Currencies';
 
     protected $fillable = [
         'code',

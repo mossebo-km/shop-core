@@ -6,10 +6,15 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class CategoryProduct extends BaseModel
 {
-    protected $tableIdentif = 'CategoryProducts';
+    protected $tableKey = 'CategoryProducts';
+
+    public $incrementing = false;
+    protected $primaryKey = null;
 
     protected $fillable = [
         'category_id',
         'product_id'
     ];
+
+    public $timestamps = false;
 }

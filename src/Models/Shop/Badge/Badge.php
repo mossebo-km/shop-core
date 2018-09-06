@@ -2,10 +2,23 @@
 
 namespace MosseboShopCore\Models\Shop\Badge;
 
-use MosseboShopCore\Models\Base\BaseModelI18n;
+use MosseboShopCore\Models\Base\BaseModel;
 
-abstract class Badge extends BaseModelI18n
+abstract class Badge extends BaseModel
 {
-    protected $tableIdentif = 'Badges';
+    protected $tableKey = 'Badges';
     protected $relationFieldName = 'badge_type_id';
+
+    protected $fillable = [
+        'item_type',
+        'item_id',
+        'badge_type_id',
+        'value',
+        'position'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }

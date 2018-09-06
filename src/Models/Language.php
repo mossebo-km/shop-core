@@ -11,7 +11,22 @@ abstract class Language extends BaseModel implements LanguageInterface
 {
     use HasEnabledStatus;
 
-    protected $tableIdentif = 'Languages';
+    protected $tableKey = 'Languages';
+
+    protected $fillable = [
+        'code',
+        'name',
+        'image',
+        'currency_code',
+        'enabled',
+        'position',
+        'default',
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 
     public function getDefaultCurrencyCode(): ?string
     {

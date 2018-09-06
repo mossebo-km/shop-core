@@ -6,5 +6,15 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class ProductAttribute extends BaseModel
 {
-    protected $tableIdentif = 'ProductAttributes';
+    protected $tableKey = 'ProductAttributes';
+
+    protected $primaryKey = null;
+    public $incrementing = false;
+
+    protected $fillable = [
+        'product_id',
+        'attribute_id'
+    ];
+
+    public $timestamps = false;
 }

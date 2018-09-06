@@ -2,20 +2,91 @@
 
 namespace MosseboShopCore\Models\Shop;
 
-use MosseboShopCore\Models\Base\BaseModelI18n;
-use ScoutElastic\Searchable;
+use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Elasticsearch\Configurators\ProductIndexConfigurator;
 use MosseboShopCore\Contracts\Shop\Product as ProductInterface;
+use ScoutElastic\Searchable;
+use MosseboShopCore\Support\Traits\Models\HasI18n;
 
-abstract class Product extends BaseModelI18n implements ProductInterface
+abstract class Product extends BaseModel implements ProductInterface
 {
-    use Searchable;
+    use Searchable, HasI18n;
 
     protected $indexConfigurator = ProductIndexConfigurator::class;
 
-    protected $tableIdentif = 'Products';
+    protected $tableKey = 'Products';
     protected $relationFieldName = 'product_id';
     protected $mediaCollectionName = 'images';
+
+    protected $fillable = [
+        'supplier_id',
+        'quantity',
+        'showed',
+        'bought',
+        'is_new',
+        'is_popular',
+        'enabled',
+        'is_payable',
+        'width',
+        'height',
+        'length',
+        'weight'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
+
+    protected $mapping = [
+        'properties' => [
+            'index' => [
+                'type' => 'text',
+            ],
+        ]
+    ];
+
+    public function toSearchableArray()
+    {
+        $index = [
+            $this->id
+        ];
+
+        foreach ($this->attributeOptions as $option) {
+            foreach ($option->i18n as $translate) {
+                $index[] = $translate->value;
+            }
+        }
+
+        foreach ($this->categories as $category) {
+            foreach ($category->i18n as $translate) {
+                $index[] = $translate->title;
+            }
+        }
+
+        foreach ($this->styles as $style) {
+            foreach ($style->i18n as $translate) {
+                $index[] = $translate->title;
+            }
+        }
+
+        foreach ($this->rooms as $room) {
+            foreach ($room->i18n as $translate) {
+                $index[] = $translate->title;
+            }
+        }
+
+        foreach ($this->i18n as $translate) {
+            $index[] = $translate->title;
+            $index[] = $translate->description;
+        }
+
+        $index = array_unique($index);
+
+        return [
+            'index' => join(' ', preg_replace('/\s\s+/', ' ', $index)),
+        ];
+    }
 
     /**
      * Адрес товара на сайте.
@@ -60,12 +131,12 @@ abstract class Product extends BaseModelI18n implements ProductInterface
         });
     }
 
-    public static function enabled()
+    public function scopeEnabled($query)
     {
         $supplierTableName = config('tables.Suppliers');
         $productTableName = config('tables.Products');
 
-        return self::select(\DB::raw("{$productTableName}.*, {$supplierTableName}.enabled as supplier_enabled"))
+        return $query->select(\DB::raw("{$productTableName}.*, {$supplierTableName}.enabled as supplier_enabled"))
             ->where("{$productTableName}.enabled", 1)
             ->groupBy("{$productTableName}.id")
             ->groupBy("{$supplierTableName}.enabled")

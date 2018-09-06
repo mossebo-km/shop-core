@@ -2,10 +2,21 @@
 
 namespace MosseboShopCore\Models\Shop;
 
-use MosseboShopCore\Models\Base\BaseModelI18n;
+use MosseboShopCore\Models\Base\BaseModel;
+use MosseboShopCore\Support\Traits\Models\HasI18n;
 
-abstract class PayType extends BaseModelI18n
+abstract class PayType extends BaseModel
 {
-    protected $tableIdentif = 'PayTypes';
+    use HasI18n;
+
+    protected $tableKey = 'PayTypes';
     protected $relationFieldName = 'pay_type_id';
+
+    protected $fillable = [
+        'default',
+        'enabled',
+        'position',
+    ];
+
+    public $timestamps = false;
 }

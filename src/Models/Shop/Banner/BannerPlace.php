@@ -6,6 +6,17 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class BannerPlace extends BaseModel
 {
-    protected $tableIdentif = 'BannerPlaces';
+    protected $tableKey = 'BannerPlaces';
     protected $relationFieldName = 'place_id';
+
+    protected $fillable = [
+        'name',
+        'enabled',
+        'position',
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }

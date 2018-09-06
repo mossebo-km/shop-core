@@ -13,6 +13,8 @@ class CreatePriceTypesTable extends Migration
         Schema::create(config('tables.PriceTypes'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
+
+            $table->boolean('default')->default(0);
             $table->boolean('enabled')->default(0);
             $table->integer('position')->unsigned()->default(0);
             $table->timestamps();

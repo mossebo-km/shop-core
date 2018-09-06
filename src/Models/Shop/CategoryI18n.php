@@ -6,7 +6,10 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class CategoryI18n extends BaseModel
 {
-    protected $tableIdentif = 'CategoriesI18n';
+    protected $tableKey = 'CategoriesI18n';
+
+    public $incrementing = false;
+    protected $primaryKey = null;
 
     protected $fillable = [
         'category_id',
@@ -16,4 +19,6 @@ abstract class CategoryI18n extends BaseModel
         'meta_title',
         'meta_description'
     ];
+
+    public $timestamps = false;
 }

@@ -6,5 +6,15 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 abstract class RelatedProduct extends BaseModel
 {
-    protected $tableIdentif = 'RelatedProducts';
+    protected $tableKey = 'RelatedProducts';
+
+    protected $primaryKey = null;
+    public $incrementing = false;
+
+    protected $fillable = [
+        'product_id',
+        'related_id'
+    ];
+
+    public $timestamps = false;
 }
