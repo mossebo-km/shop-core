@@ -3,39 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/AttributeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/AttributeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/BadgeTypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/BadgeTypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/BannerPlaceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/BannerPlaceRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/CityRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/CityRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/CountryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/CountryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/CurrencyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/CurrencyRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/DeliveryTypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/DeliveryTypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/LanguageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/LanguageRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/OrderStatusRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/OrderStatusRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/PayTypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/PayTypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/PriceTypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/PriceTypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/RamRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/Repository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/RoomRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/RoomRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/SettingsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/SettingsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/StyleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/StyleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/BadgeTypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/BadgeTypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/BannerPlaceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/BannerPlaceRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/CityRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/CityRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/CountryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/CountryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/CurrencyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/CurrencyRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/DeliveryTypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/DeliveryTypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/LanguageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/LanguageRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/OrderStatusRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/OrderStatusRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/PayTypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/PayTypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/PriceTypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/PriceTypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/RamRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Base/BaseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/RoomRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RoomRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/SettingsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/SettingsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/StyleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/StyleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/CityRepository.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -97,15 +66,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2018_02_27_000510_create_prices_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000510_create_prices_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="66" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MosseboShopCoreServiceProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,29 +75,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseModelI18n.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BaseRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repositories/Base/BaseRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="810">
+              <caret line="45" column="36" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StyleRepository.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CategoryRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Contracts/Repositories/CategoryRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributeRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repositories/AttributeRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repositories/CategoryRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StyleRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repositories/StyleRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="485">
+              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -165,24 +143,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
               <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2018_02_27_000500_create_price_types_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000500_create_price_types_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -238,9 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badges_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_142850_create_badge_types_i18n_table.php" />
-        <option value="$PROJECT_DIR$/src/Models/Shop/AttributeI18n.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Badge/Badge.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeType.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Badge/BadgeTypeI18n.php" />
@@ -289,6 +246,9 @@
         <option value="$PROJECT_DIR$/src/Repositories/Base/BaseRepository.php" />
         <option value="$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Repositories/StyleRepository.php" />
+        <option value="$PROJECT_DIR$/src/Repositories/CityRepository.php" />
+        <option value="$PROJECT_DIR$/src/Contracts/Repositories/CategoryRepository.php" />
+        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductRelation.php" />
       </list>
     </option>
   </component>
@@ -443,6 +403,36 @@
               <item name="Repositories" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Base" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Support" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Support" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Traits" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Support" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Traits" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Support" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Traits" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -559,12 +549,12 @@
       <workItem from="1536045619689" duration="1254000" />
       <workItem from="1536060332695" duration="1383000" />
       <workItem from="1536132543921" duration="5664000" />
-      <workItem from="1536218465812" duration="3053000" />
+      <workItem from="1536218465812" duration="4108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340594000" />
+    <option name="totallyTimeSpent" value="341649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -604,20 +594,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="100" column="42" selection-end-line="123" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="72" lean-forward="true" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -678,13 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="1" lean-forward="true" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Repositories/CategoryRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="1" lean-forward="true" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -926,13 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repositories/Base/BaseRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-437">
@@ -942,8 +904,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Repositories/StyleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="485">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repositories/CityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repositories/AttributeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repositories/CategoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repositories/Base/BaseRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductRelation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contracts/Repositories/CategoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
         </state>
       </provider>
     </entry>
