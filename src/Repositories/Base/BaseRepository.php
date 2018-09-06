@@ -3,8 +3,8 @@
 namespace MosseboShopCore\Repositories;
 
 use Illuminate\Support\Collection;
+use Illuminate\Contracts\Cache\Repository as CacheInterface;
 use MosseboShopCore\Contracts\Repositories\Repository as RepositoryInterface;
-use MosseboShopCore\Contracts\Repositories\Storage as StorageInterface;
 
 /**
  * Занимается кэшированием выборок моделей, чтобы лишний раз не дергать базу данных.
@@ -16,7 +16,7 @@ abstract class BaseRepository implements RepositoryInterface
     protected $collection = null;
     protected $cacheMinutes = null;
 
-    public function __construct(StorageInterface $storage, int $cacheMinutes = null)
+    public function __construct(CacheInterface $storage, int $cacheMinutes = null)
     {
         $this->storage = $storage;
 
