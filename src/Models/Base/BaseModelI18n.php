@@ -25,9 +25,9 @@ abstract class BaseModelI18n extends BaseModel
         return get_class($this) . 'I18n';
     }
 
-    public function getI18nTable()
+    protected function getI18nModelInstance()
     {
-        return app()->make($this->getI18nModelName())->getTable();
+        return app()->make($this->getI18nModelName());
     }
 
     public static function query()
@@ -39,10 +39,23 @@ abstract class BaseModelI18n extends BaseModel
 
     public function scopeLocalized($query)
     {
-        $i18nTableName = $this->getI18nTable();
+        $i18nModel = $this->getI18nModelInstance();
+        $i18nTableName = $i18nModel->getTable();
+        $modelTableName = $this->getTable();
+
+        $i18nFields = array_reduce($this->getFillable(), function($carry, $item) use($i18nTableName) {
+            if ($item !== 'language_code') {
+                $carry[] = "{$i18nTableName}.{$item}";
+            }
+
+            return $carry;
+        }, []);
+
+        $i18nFields = implode(', ', $i18nFields);
 
         return $query
-            ->join($i18nTableName, "{$i18nTableName}.{$this->relationFieldName}", '=', "{$this->getTable()}.{$this->getKeyName()}")
+            ->select(\DB::raw("{$modelTableName}.*, {$i18nFields}"))
+            ->join($i18nTableName, "{$i18nTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.{$this->getKeyName()}")
             ->where("{$i18nTableName}.language_code", '=', $this->getCurrentLocale());
     }
 

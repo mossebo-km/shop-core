@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/CategoriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contracts/Repositories/LanguagesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contracts/Repositories/LanguageRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Attribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Attribute.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/AttributeOption.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/AttributeOption.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/CategoriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/LanguagesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/LanguageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,15 +64,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HasEnabledStatus.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasEnabledStatus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MosseboShopCoreServiceProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MosseboShopCoreServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -134,11 +118,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AttributeOption.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AttributeOption.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/AttributeOption.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+            <state relative-caret-position="216">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseModelI18n.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="715">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
@@ -165,7 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getCond</find>
       <find>price</find>
       <find>getAmount</find>
       <find>setPro</find>
@@ -195,6 +187,7 @@
       <find>primaryKey</find>
       <find>getCacheMinutes</find>
       <find>Illuminate\Contracts\Cache\Store</find>
+      <find>getI18nTable</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/Shop</dir>
@@ -252,7 +245,6 @@
         <option value="$PROJECT_DIR$/src/Repositories/Base/BaseRepository.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasEnabledStatus.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Category.php" />
-        <option value="$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php" />
         <option value="$PROJECT_DIR$/src/Repositories/CategoriesRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/LanguagesRepository.php" />
         <option value="$PROJECT_DIR$/src/Config/languages.php" />
@@ -263,6 +255,7 @@
         <option value="$PROJECT_DIR$/src/Repositories/AttributeRepository.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Attribute.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/AttributeOption.php" />
+        <option value="$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php" />
       </list>
     </option>
   </component>
@@ -570,12 +563,12 @@
       <workItem from="1536045619689" duration="1254000" />
       <workItem from="1536060332695" duration="1383000" />
       <workItem from="1536132543921" duration="5664000" />
-      <workItem from="1536218465812" duration="8034000" />
+      <workItem from="1536218465812" duration="9032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345575000" />
+    <option name="totallyTimeSpent" value="346573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -856,13 +849,6 @@
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/CategoryI18n.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Config/languages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -963,8 +949,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/AttributeOption.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        <state relative-caret-position="216">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModelI18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
