@@ -61,7 +61,11 @@ abstract class BaseRepository implements RepositoryInterface
      */
     protected function getCacheKey()
     {
-        return "repository::{$this->model}";
+        return implode('::',[
+            "repository",
+            app()->getLocale(),
+            get_class($this)
+        ]);
     }
 
     /**
