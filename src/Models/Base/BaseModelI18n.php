@@ -27,7 +27,7 @@ abstract class BaseModelI18n extends BaseModel
 
     public function getI18nTable()
     {
-        return (new $this->getI18nModelName())->getTable();
+        return app()->make($this->getI18nModelName())->getTable();
     }
 
     public static function query()
