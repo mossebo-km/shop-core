@@ -60,7 +60,10 @@ abstract class BaseModel extends Model
         return !$this->relationLoaded($relationName) || empty($this[$relationName]);
     }
 
-
+    /**
+     * @param $relationName
+     * @return bool
+     */
     public function relationNotEmpty($relationName)
     {
         return !$this->relationIsEmpty($relationName);

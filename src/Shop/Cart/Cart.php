@@ -243,7 +243,7 @@ class Cart implements CartInterface
 
             $product->initByKey($productKey, $quantity);
 
-            $this->products->push($product);
+            $this->products->prepend($product);
         }
         else {
             $product->$method($quantity);

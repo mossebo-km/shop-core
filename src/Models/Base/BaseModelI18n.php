@@ -9,12 +9,6 @@ abstract class BaseModelI18n extends BaseModel
 {
     protected $translateTableName;
 
-    public function __construct(array $attributes = []) {
-        parent::__construct($attributes);
-
-        $this->translateTableName = Config::get("tables.{$this->tableIdentif}I18n");
-    }
-
     public function i18n()
     {
         return $this->hasMany($this->getI18nModelName(), $this->relationFieldName);
@@ -22,8 +16,8 @@ abstract class BaseModelI18n extends BaseModel
 
     public function currentI18n()
     {
-        return$this->hasOne($this->getI18nModelName(), $this->relationFieldName)
-            ->where('language_code', '=', App::getLocale());
+        return $this->hasOne($this->getI18nModelName(), $this->relationFieldName)
+            ->where('language_code', '=', $this->getCurrentLocale());
     }
 
     public function getI18nModelName()
@@ -31,21 +25,29 @@ abstract class BaseModelI18n extends BaseModel
         return get_class($this) . 'I18n';
     }
 
-    public static function withTranslate($languageCode = null)
+    public function getI18nTable()
     {
-        return self::addTranslateToQuery($languageCode ?: App::getLocale());
+        return (new $this->getI18nModelName())->getTable();
     }
 
-    protected static function addTranslateToQuery($languageCode, $query = false)
+    public static function query()
     {
-        $instance = new static;
+        $query = parent::query();
 
-        if (! $query) {
-            $query = $instance->newQuery();
-        }
+        return $query->localized();
+    }
+
+    public function scopeLocalized($query)
+    {
+        $i18nTableName = $this->getI18nTable();
 
         return $query
-            ->join($instance->translateTableName, "{$instance->translateTableName}.{$instance->relationFieldName}", '=', "{$instance->table}.id")
-            ->where("{$instance->translateTableName}.language_code", '=', $languageCode);
+            ->join($i18nTableName, "{$i18nTableName}.{$this->relationFieldName}", '=', "{$this->getTable()}.{$this->getKeyName()}")
+            ->where("{$i18nTableName}.language_code", '=', $this->getCurrentLocale());
+    }
+
+    protected function getCurrentLocale()
+    {
+        return app()->getLocale();
     }
 }

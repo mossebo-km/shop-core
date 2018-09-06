@@ -18,10 +18,10 @@ class CreateBannersI18nTable extends Migration
             $table->char('language_code', 2);
             $table->foreign('language_code')->references('code')->on(config('tables.Languages'));
 
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->string('caption');
             $table->string('button');
-            $table->string('link');
+            $table->string('link')->nullable();
 
             $table->primary(['banner_id', 'language_code'])->index();
         });
