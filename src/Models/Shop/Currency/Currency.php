@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Models\Shop;
+namespace MosseboShopCore\Models\Shop\Currency;
 
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Contracts\Shop\Currency as CurrencyInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Models\Shop;
+namespace MosseboShopCore\Models\Shop\Style;
 
 use MosseboShopCore\Models\Base\BaseModel;
 

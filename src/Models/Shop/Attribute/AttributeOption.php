@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Models\Shop;
+namespace MosseboShopCore\Models\Shop\Attribute;
 
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;

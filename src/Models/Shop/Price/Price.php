@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Models\Shop;
+namespace MosseboShopCore\Models\Shop\Price;
 
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Shop\Price as ShopPrice;
