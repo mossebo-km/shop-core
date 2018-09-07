@@ -72,7 +72,7 @@ abstract class BaseModel extends Model
     public function newQuery()
     {
         if (! $this->getKeyName()) {
-            return $this->newQuery();
+            return parent::newQuery();
         }
 
         return parent::newQuery()
