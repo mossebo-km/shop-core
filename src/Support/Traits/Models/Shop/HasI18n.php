@@ -51,7 +51,8 @@ trait HasI18n
         return $query
             ->select(\DB::raw("{$modelTableName}.*, {$i18nFields}"))
             ->join($i18nTableName, "{$i18nTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.{$this->getKeyName()}")
-            ->where("{$i18nTableName}.language_code", '=', $this->getCurrentLocale());
+            ->where("{$i18nTableName}.language_code", '=', $this->getCurrentLocale())
+            ->groupBy(\DB::raw("{$modelTableName}.id, {$i18nFields}"));
     }
 
     protected function getCurrentLocale()

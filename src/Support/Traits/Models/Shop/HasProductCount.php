@@ -11,6 +11,6 @@ trait HasProductCount
 
         return $query->addSelect(\DB::raw("(\"{$productsTableName}\".\"count\") as \"products_count\""))
             ->leftJoin($productsTableName, "{$productsTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.id")
-            ->groupBy("{$modelTableName}.id");
+            ->groupBy(\DB::raw("{$modelTableName}.id, {$productsTableName}.count"));
     }
 }

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Category/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Category/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Room/Room.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Room/Room.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Style/Style.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Style/Style.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,11 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Style.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Style.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Style/Style.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+            <state relative-caret-position="234">
+              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -107,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HasProductCount.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HasProductCount.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="234">
+              <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -142,8 +140,8 @@
       <file leaf-file-name="HasI18n.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+            <state relative-caret-position="539">
+              <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -199,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Repositories/Shop/CategoryRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/Shop/BannerPlaceRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/Shop/BadgeTypeRepository.php" />
         <option value="$PROJECT_DIR$/src/Repositories/Shop/AttributeRepository.php" />
@@ -246,10 +243,11 @@
         <option value="$PROJECT_DIR$/src/Models/Language.php" />
         <option value="$PROJECT_DIR$/src/Models/Region.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductsCount.php" />
-        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Category/Category.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Room/Room.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Style/Style.php" />
+        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" />
+        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" />
       </list>
     </option>
   </component>
@@ -683,12 +681,12 @@
       <workItem from="1536060332695" duration="1383000" />
       <workItem from="1536132543921" duration="5664000" />
       <workItem from="1536218465812" duration="20095000" />
-      <workItem from="1536304974802" duration="2170000" />
+      <workItem from="1536304974802" duration="2530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359806000" />
+    <option name="totallyTimeSpent" value="360166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -986,22 +984,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasEnabledStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/Price.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-        </state>
-      </provider>
     </entry>
     <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/shop_product_counts">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1014,13 +998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="32" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1040,8 +1017,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Style/Style.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        <state relative-caret-position="234">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasEnabledStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
         </state>
       </provider>
     </entry>
