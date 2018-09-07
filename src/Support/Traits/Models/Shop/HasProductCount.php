@@ -7,10 +7,11 @@ trait HasProductCount
     public function scopeWithProductCount($query)
     {
         $modelTableName = $this->getTable();
-        $productsTableName = config('tables.ProductCounts');
+        $productsCountTableName = config('tables.ProductCounts');
 
-        return $query->addSelect(\DB::raw("(\"{$productsTableName}\".\"count\") as \"products_count\""))
-            ->leftJoin($productsTableName, "{$productsTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.id")
-            ->groupBy(\DB::raw("{$modelTableName}.id, {$productsTableName}.count"));
+        return $query
+            ->addSelect(\DB::raw("\"{$productsCountTableName}\".\"count\" as \"products_count\""))
+            ->groupBy(\DB::raw("{$modelTableName}.{$this->getKeyName()},  products_count"))
+            ->leftJoin($productsCountTableName, "{$productsCountTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.{$this->getKeyName()}");
     }
 }

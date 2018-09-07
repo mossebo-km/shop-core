@@ -49,10 +49,13 @@ trait HasI18n
         $i18nFields = implode(', ', $i18nFields);
 
         return $query
-            ->select(\DB::raw("{$modelTableName}.*, {$i18nFields}"))
-            ->join($i18nTableName, "{$i18nTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.{$this->getKeyName()}")
-            ->where("{$i18nTableName}.language_code", '=', $this->getCurrentLocale())
-            ->groupBy(\DB::raw("{$modelTableName}.id, {$i18nFields}"));
+            ->select(\DB::raw("DISTINCT on ({$modelTableName}.id) {$modelTableName}.*"))
+            ->addSelect(\DB::raw($i18nFields))
+            ->groupBy(\DB::raw("{$i18nFields}"))
+            ->join($i18nTableName, function($join) use($i18nFields, $modelTableName, $i18nTableName) {
+                $join->on("{$i18nTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.{$this->getKeyName()}")
+                    ->where("{$i18nTableName}.language_code", '=', $this->getCurrentLocale());
+            });
     }
 
     protected function getCurrentLocale()
