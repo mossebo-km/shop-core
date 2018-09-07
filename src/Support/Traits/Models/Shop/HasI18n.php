@@ -4,6 +4,8 @@ namespace MosseboShopCore\Support\Traits\Models;
 
 trait HasI18n
 {
+    protected $isLocalized = false;
+
     public function i18n()
     {
         return $this->hasMany($this->getI18nModelName(), $this->relationFieldName);
