@@ -71,6 +71,10 @@ abstract class BaseModel extends Model
 
     public function newQuery()
     {
+        if (! $this->getKeyName()) {
+            return $this->newQuery();
+        }
+
         return parent::newQuery()
             ->select(\DB::raw("DISTINCT on ({$this->getTable()}.id) {$this->getTable()}.*"));
     }

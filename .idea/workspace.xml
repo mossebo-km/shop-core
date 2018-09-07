@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Base/BaseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Base/BaseModel.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,20 +109,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HasI18n.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HasI18n.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="292">
+              <caret line="60" column="115" selection-start-line="60" selection-start-column="105" selection-end-line="60" selection-end-column="115" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+            <state relative-caret-position="383">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
@@ -241,8 +241,8 @@
         <option value="$PROJECT_DIR$/src/Models/Shop/Room/Room.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Style/Style.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" />
-        <option value="$PROJECT_DIR$/src/Models/Base/BaseModel.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" />
+        <option value="$PROJECT_DIR$/src/Models/Base/BaseModel.php" />
       </list>
     </option>
   </component>
@@ -676,12 +676,12 @@
       <workItem from="1536060332695" duration="1383000" />
       <workItem from="1536132543921" duration="5664000" />
       <workItem from="1536218465812" duration="20095000" />
-      <workItem from="1536304974802" duration="3979000" />
+      <workItem from="1536304974802" duration="4395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361615000" />
+    <option name="totallyTimeSpent" value="362031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -1024,17 +1024,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+        <state relative-caret-position="292">
+          <caret line="60" column="115" selection-start-line="60" selection-start-column="105" selection-end-line="60" selection-end-column="115" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
+    <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="383">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
