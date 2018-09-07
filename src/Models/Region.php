@@ -4,10 +4,11 @@ namespace MosseboShopCore\Models;
 
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Support\Traits\Models\NestedTrait;
+use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
 abstract class Region extends BaseModel
 {
-    use NestedTrait;
+    use NestedTrait, HasEnabledStatus;
 
     protected $tableKey = 'Regions';
 

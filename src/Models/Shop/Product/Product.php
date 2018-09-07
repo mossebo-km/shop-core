@@ -7,10 +7,11 @@ use MosseboShopCore\Elasticsearch\Configurators\ProductIndexConfigurator;
 use MosseboShopCore\Contracts\Shop\Product as ProductInterface;
 use ScoutElastic\Searchable;
 use MosseboShopCore\Support\Traits\Models\HasI18n;
+use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
 abstract class Product extends BaseModel implements ProductInterface
 {
-    use Searchable, HasI18n;
+    use Searchable, HasI18n, HasEnabledStatus;
 
     protected $indexConfigurator = ProductIndexConfigurator::class;
 

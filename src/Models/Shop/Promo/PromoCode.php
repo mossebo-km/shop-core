@@ -3,13 +3,12 @@
 namespace MosseboShopCore\Models\Shop\Promo;
 
 use MosseboShopCore\Models\Base\BaseModel;
-use MosseboShopCore\Contracts\Shop\Order\Order;
-use MosseboShopCore\Contracts\Shop\Order\OrderProduct;
 use MosseboShopCore\Support\Traits\Models\HasI18n;
+use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
 abstract class PromoCode extends BaseModel
 {
-    use HasI18n;
+    use HasI18n, HasEnabledStatus;
 
     protected $tableKey = 'PromoCodes';
     protected $relationFieldName = 'promo_code_id';

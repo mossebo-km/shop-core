@@ -4,9 +4,12 @@ namespace MosseboShopCore\Models\Shop\Currency;
 
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Contracts\Shop\Currency as CurrencyInterface;
+use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
 abstract class Currency extends BaseModel implements CurrencyInterface
 {
+    use HasEnabledStatus;
+
     protected $tableKey = 'Currencies';
 
     protected $fillable = [

@@ -4,10 +4,11 @@ namespace MosseboShopCore\Models\Shop\Banner;
 
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Support\Traits\Models\HasI18n;
+use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
 abstract class Banner extends BaseModel
 {
-    use HasI18n;
+    use HasI18n, HasEnabledStatus;
 
     protected $tableKey = 'Banners';
     protected $relationFieldName = 'banner_id';

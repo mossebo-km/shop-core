@@ -5,10 +5,11 @@ namespace MosseboShopCore\Models;
 use ScoutElastic\Searchable;
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Elasticsearch\Configurators\CityIndexConfigurator;
+use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
 abstract class City extends BaseModel
 {
-    use Searchable;
+    use Searchable, HasEnabledStatus;
 
     protected $tableKey = 'Cities';
 
