@@ -5,10 +5,11 @@ namespace MosseboShopCore\Models\Shop\Room;
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Support\Traits\Models\HasI18n;
 use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
+use MosseboShopCore\Support\Traits\Models\HasProductCount;
 
 abstract class Room extends BaseModel
 {
-    use HasI18n, HasEnabledStatus;
+    use HasI18n, HasEnabledStatus, HasProductCount;
 
     protected $tableKey = 'Rooms';
     protected $relationFieldName = 'room_id';
