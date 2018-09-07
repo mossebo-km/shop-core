@@ -12,6 +12,8 @@ abstract class Currency extends BaseModel implements CurrencyInterface
 
     protected $tableKey = 'Currencies';
 
+    protected $primaryKey = 'code';
+
     protected $fillable = [
         'code',
         'name',

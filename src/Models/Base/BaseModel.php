@@ -76,7 +76,7 @@ abstract class BaseModel extends Model
         }
 
         return parent::newQuery()
-            ->select(\DB::raw("DISTINCT on ({$this->getTable()}.id) {$this->getTable()}.*"));
+            ->selectRaw("DISTINCT on ({$this->getTable()}.{$this->getKeyName()}) {$this->getTable()}.*");
     }
 }
 
