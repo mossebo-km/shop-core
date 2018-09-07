@@ -68,4 +68,13 @@ abstract class BaseModel extends Model
     {
         return !$this->relationIsEmpty($relationName);
     }
+
+    public function newQuery()
+    {
+        return parent::newQuery()
+            ->select(\DB::raw("DISTINCT on ({$this->getTable()}.id) {$this->getTable()}.*"));
+    }
 }
+
+
+

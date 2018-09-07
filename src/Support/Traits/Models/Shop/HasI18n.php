@@ -25,15 +25,19 @@ trait HasI18n
         return app()->make($this->getI18nModelName());
     }
 
-    public static function query()
+    public function newQuery()
     {
-        $query = parent::query();
-
-        return $query->localized();
+        return parent::newQuery()->localized();
     }
 
     public function scopeLocalized($query)
     {
+        if ($this->isLocalized) {
+            return;
+        }
+
+        $this->isLocalized = true;
+
         $i18nModel = $this->getI18nModelInstance();
         $i18nTableName = $i18nModel->getTable();
         $modelTableName = $this->getTable();
@@ -49,7 +53,6 @@ trait HasI18n
         $i18nFields = implode(', ', $i18nFields);
 
         return $query
-            ->select(\DB::raw("DISTINCT on ({$modelTableName}.id) {$modelTableName}.*"))
             ->addSelect(\DB::raw($i18nFields))
             ->groupBy(\DB::raw("{$i18nFields}"))
             ->join($i18nTableName, function($join) use($i18nFields, $modelTableName, $i18nTableName) {
