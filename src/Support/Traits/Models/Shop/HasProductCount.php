@@ -6,12 +6,21 @@ trait HasProductCount
 {
     public function scopeWithProductCount($query)
     {
-        $modelTableName = $this->getTable();
         $productsCountTableName = config('tables.ProductCounts');
 
         return $query
-            ->addSelect(\DB::raw("\"{$productsCountTableName}\".\"count\" as \"products_count\""))
-            ->groupBy(\DB::raw("{$modelTableName}.{$this->getKeyName()},  products_count"))
-            ->leftJoin($productsCountTableName, "{$productsCountTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.{$this->getKeyName()}");
+            ->addSelect(\DB::raw("{$productsCountTableName}.count as products_count"))
+            ->groupBy(\DB::raw("products_count"))
+            ->leftJoin($productsCountTableName, function ($join) use($productsCountTableName) {
+                $foreignKey = $this->getForeignKey();
+
+                $join->on("{$productsCountTableName}.{$foreignKey}", '=', "{$this->getTable()}.{$this->getKeyName()}");
+
+                foreach (['category_id', 'style_id', 'room_id'] as $fieldKey) {
+                    if ($foreignKey !== $fieldKey) {
+                        $join->whereNull($fieldKey);
+                    }
+                }
+            });
     }
 }

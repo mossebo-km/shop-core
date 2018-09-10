@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Base/BaseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Base/BaseModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +65,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HasProductCount.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HasProductCount.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="468">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -78,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143890_create_banner_place_relations_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
-              <caret line="23" column="1" lean-forward="true" selection-end-line="24" />
+              <caret line="23" column="1" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -92,11 +92,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductSale.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductSale.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product/ProductSale.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="-8">
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HasI18n.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="759">
+              <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -105,7 +114,16 @@
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143860_create_banners_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="28" selection-end-column="64" />
+              <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="28" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
         </entry>
@@ -124,7 +142,7 @@
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000800_create_suppliers_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -225,12 +243,12 @@
         <option value="$PROJECT_DIR$/src/Repositories/SettingsRepository.php" />
         <option value="$PROJECT_DIR$/src/Models/Language.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Currency/Currency.php" />
-        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" />
-        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" />
-        <option value="$PROJECT_DIR$/src/Models/Base/BaseModel.php" />
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143900_create_product_sales_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Product/ProductSale.php" />
+        <option value="$PROJECT_DIR$/src/Models/Base/BaseModel.php" />
+        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" />
+        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" />
       </list>
     </option>
   </component>
@@ -665,12 +683,12 @@
       <workItem from="1536132543921" duration="5664000" />
       <workItem from="1536218465812" duration="20095000" />
       <workItem from="1536304974802" duration="7057000" />
-      <workItem from="1536564357879" duration="1638000" />
+      <workItem from="1536564357879" duration="2091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366331000" />
+    <option name="totallyTimeSpent" value="366784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -685,7 +703,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.320398" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.31951466" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.5004975" side_tool="true" weight="0.25346112" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -976,20 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="78" column="105" selection-start-line="78" selection-start-column="105" selection-end-line="78" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Category/Category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -997,27 +1001,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143890_create_banner_place_relations_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
-          <caret line="23" column="1" lean-forward="true" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143860_create_banners_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="28" selection-end-column="64" />
+          <caret line="23" column="1" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -1045,17 +1032,48 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000800_create_suppliers_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143870_create_banners_i18n_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143860_create_banners_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="28" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product/ProductSale.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="-8">
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

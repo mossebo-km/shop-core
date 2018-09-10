@@ -3,10 +3,12 @@
 namespace MosseboShopCore\Models\Base;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Query\Builder as QueryBuilder;
 use Config;
 
 abstract class BaseModel extends Model
 {
+    protected $queryBuilder = null;
     /**
      * Ключ таблицы в конфиге.
      *
@@ -25,6 +27,11 @@ abstract class BaseModel extends Model
         parent::__construct($attributes);
 
         $this->table = Config::get("tables.{$this->tableKey}");
+    }
+
+    public function getForeignKey()
+    {
+        return $this->relationFieldName ?: parent::getForeignKey();
     }
 
     /**
@@ -71,12 +78,57 @@ abstract class BaseModel extends Model
 
     public function newQuery()
     {
-        if (! $this->getKeyName()) {
-            return parent::newQuery();
+        if (is_null($this->queryBuilder)) {
+            $this->queryBuilder = parent::newQuery();
+
+            if ($this->getKeyName()) {
+                $tableName = $this->getTable();
+                $tableKey = $tableName . '.' . $this->getKeyName();
+
+                $this->queryBuilder
+                    ->selectRaw("DISTINCT on ({$tableKey}) {$tableName}.*")
+                    ->groupBy(\DB::raw("{$tableKey}"))
+                    ->orderBy(\DB::raw("{$tableKey}"));
+            }
         }
 
-        return parent::newQuery()
-            ->selectRaw("DISTINCT on ({$this->getTable()}.{$this->getKeyName()}) {$this->getTable()}.*");
+        return $this->queryBuilder;
+    }
+
+    public function hasManyThrough($related, $through, $firstKey = null, $secondKey = null, $localKey = null, $secondLocalKey = null)
+    {
+        $through = new $through;
+
+        $firstKey = $firstKey ?: $this->getForeignKey();
+        $secondKey = $secondKey ?: $through->getForeignKey();
+        $localKey = $localKey ?: $this->getKeyName();
+        $secondLocalKey = $secondLocalKey ?: $through->getKeyName();
+
+        return $this->newHasManyThrough(
+            $this->newRelatedInstance($related)->newQuery(), $this, $through,
+            $firstKey, $secondKey, $localKey, $secondLocalKey
+        )->groupBy("{$through->getTable()}.{$firstKey}");
+    }
+
+    public function __call($method, $parameters)
+    {
+        if (in_array($method, ['increment', 'decrement'])) {
+            return $this->$method(...$parameters);
+        }
+
+        if ($parameters && is_string($parameters[0])) {
+            if (in_array($parameters[0], $this->getFillable())) {
+                $parameters[0] = "{$this->getTable()}.{$parameters[0]}";
+            }
+        }
+
+        $result = $this->newQuery()->$method(...$parameters);
+
+        if ($result instanceof QueryBuilder) {
+            return $this;
+        }
+
+        return $result;
     }
 }
 
