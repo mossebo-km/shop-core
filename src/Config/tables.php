@@ -120,5 +120,8 @@ return [
     'Banners'         => 'shop_banners',
     'BannersI18n'     => 'shop_banners_i18n',
     'BannerPlaces'    => 'shop_banner_places',
-    'BannerPlaceRelations' => 'shop_banner_place_relations'
+    'BannerPlaceRelations' => 'shop_banner_place_relations',
+
+
+    'ProductSales' => 'shop_product_sales'
 ];
