@@ -27,11 +27,6 @@ trait HasI18n
         return app()->make($this->getI18nModelName());
     }
 
-    public function newQuery()
-    {
-        return parent::newQuery()->localized();
-    }
-
     public function scopeLocalized($query)
     {
         if ($this->isLocalized) {

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,11 +92,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="HasI18n.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HasI18n.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+            <state relative-caret-position="462">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -115,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="287">
+              <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -223,9 +223,9 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143900_create_product_sales_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Product/ProductSale.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" />
-        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" />
         <option value="$PROJECT_DIR$/src/Models/Base/BaseModel.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" />
+        <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" />
       </list>
     </option>
   </component>
@@ -655,12 +655,12 @@
       <workItem from="1536132543921" duration="5664000" />
       <workItem from="1536218465812" duration="20095000" />
       <workItem from="1536304974802" duration="7057000" />
-      <workItem from="1536564357879" duration="6922000" />
+      <workItem from="1536564357879" duration="7464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371615000" />
+    <option name="totallyTimeSpent" value="372157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -988,13 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
@@ -1004,8 +997,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="287">
+          <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
         </state>
       </provider>
     </entry>
