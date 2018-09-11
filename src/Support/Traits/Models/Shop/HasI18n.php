@@ -56,10 +56,10 @@ trait HasI18n
 
         return $query
             ->addSelect(\DB::raw($i18nFields))
-            ->groupBy(\DB::raw("{$i18nFields}"))
             ->join($i18nTableName, function($join) use($i18nFields, $modelTableName, $i18nTableName) {
                 $join->on("{$i18nTableName}.{$this->relationFieldName}", '=', "{$modelTableName}.{$this->getKeyName()}")
-                    ->where("{$i18nTableName}.language_code", '=', $this->getCurrentLocale());
+                    ->where("{$i18nTableName}.language_code", '=', $this->getCurrentLocale())
+                    ->groupBy(\DB::raw("{$i18nFields}"));
             });
     }
 

@@ -10,11 +10,10 @@ trait HasProductCount
 
         return $query
             ->addSelect(\DB::raw("{$productsCountTableName}.count as products_count"))
-            ->groupBy(\DB::raw("products_count"))
             ->leftJoin($productsCountTableName, function ($join) use($productsCountTableName) {
                 $foreignKey = $this->getForeignKey();
-
-                $join->on("{$productsCountTableName}.{$foreignKey}", '=', "{$this->getTable()}.{$this->getKeyName()}");
+                $join->on("{$productsCountTableName}.{$foreignKey}", '=', "{$this->getTable()}.{$this->getKeyName()}")
+                    ->groupBy(\DB::raw("products_count"));
 
                 foreach (['category_id', 'style_id', 'room_id'] as $fieldKey) {
                     if ($foreignKey !== $fieldKey) {
