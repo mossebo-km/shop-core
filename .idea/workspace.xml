@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Base/BaseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Base/BaseModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,8 +67,8 @@
       <file leaf-file-name="HasProductCount.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="396">
+              <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -98,7 +95,7 @@
       <file leaf-file-name="HasI18n.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="269">
               <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
             </state>
           </provider>
@@ -109,11 +106,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
+            <state relative-caret-position="443">
               <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
             </state>
           </provider>
         </entry>
@@ -216,10 +222,10 @@
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143900_create_product_sales_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Product/ProductSale.php" />
-        <option value="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php" />
         <option value="$PROJECT_DIR$/src/Models/Base/BaseModel.php" />
+        <option value="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" />
       </list>
     </option>
   </component>
@@ -649,12 +655,12 @@
       <workItem from="1536132543921" duration="5664000" />
       <workItem from="1536218465812" duration="20095000" />
       <workItem from="1536304974802" duration="7057000" />
-      <workItem from="1536564357879" duration="6664000" />
+      <workItem from="1536564357879" duration="6922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371357000" />
+    <option name="totallyTimeSpent" value="371615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -669,7 +675,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.31951466" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.31951466" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.5004975" side_tool="true" weight="0.25346112" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -911,13 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="147" column="1" lean-forward="true" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -984,22 +983,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasProductCount.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="396">
+          <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/HasI18n.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="269">
           <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Base/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
+        <state relative-caret-position="443">
           <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
         </state>
       </provider>
     </entry>
