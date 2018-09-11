@@ -9,6 +9,7 @@ use Config;
 abstract class BaseModel extends Model
 {
     protected $queryBuilder = null;
+    protected $useTableNameInQuery = true;
     /**
      * Ключ таблицы в конфиге.
      *
@@ -78,7 +79,7 @@ abstract class BaseModel extends Model
 
     public function newQuery()
     {
-        if (is_null($this->queryBuilder)) {
+        if (is_null($this->queryBuilder) && $this->useTableNameInQuery) {
             $this->queryBuilder = parent::newQuery();
 
             if ($this->getKeyName()) {
