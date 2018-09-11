@@ -14,6 +14,7 @@ abstract class Language extends BaseModel implements LanguageInterface
     protected $tableKey = 'Languages';
 
     protected $primaryKey = 'code';
+    public $incrementing = false;
 
     protected $fillable = [
         'code',

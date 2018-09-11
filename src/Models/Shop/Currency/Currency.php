@@ -11,6 +11,7 @@ abstract class Currency extends BaseModel implements CurrencyInterface
     use HasEnabledStatus;
 
     protected $tableKey = 'Currencies';
+    public $incrementing = false;
 
     protected $primaryKey = 'code';
 
