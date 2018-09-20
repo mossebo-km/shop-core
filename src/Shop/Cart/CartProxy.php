@@ -51,6 +51,8 @@ class CartProxy
                 if ($item['key'] === $cartProduct->getKey()) {
                     $this->setProduct($item['key'], $item['qty']);
                     unset($items[$index]);
+                    $finded = true;
+                    break;
                 }
             }
 
