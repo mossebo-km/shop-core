@@ -24,8 +24,6 @@ abstract class Product extends BaseModel implements ProductInterface
         'quantity',
         'showed',
         'bought',
-        'is_new',
-        'is_popular',
         'enabled',
         'is_payable',
         'width',

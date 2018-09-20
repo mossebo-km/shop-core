@@ -41,6 +41,16 @@ abstract class BaseRepository implements RepositoryInterface
     }
 
     /**
+     * Только активные
+     *
+     * @return Collection
+     */
+    public function enabled(): Collection
+    {
+        return $this->getCollection()->where('enabled', true);
+    }
+
+    /**
      * Формирует запрос в базу
      */
     public function getCollectionRaw(): Collection

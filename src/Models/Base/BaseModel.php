@@ -3,7 +3,6 @@
 namespace MosseboShopCore\Models\Base;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Query\Builder as QueryBuilder;
 use Config;
 
 abstract class BaseModel extends Model

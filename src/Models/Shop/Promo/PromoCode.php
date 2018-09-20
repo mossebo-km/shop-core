@@ -29,6 +29,8 @@ abstract class PromoCode extends BaseModel
 
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
+        'date_start',
+        'date_finish'
     ];
 }
