@@ -103,8 +103,14 @@ abstract class Product extends BaseModel implements ProductInterface
         $productTableName = config('tables.Products');
 
         return $query->join($styleRelationsTableName, function($join) use($styleRelationsTableName, $productTableName, $styleId) {
-            $join->on("{$styleRelationsTableName}.product_id", '=', "{$productTableName}.id")
-                ->where("{$styleRelationsTableName}.style_id", $styleId);
+            $join->on("{$styleRelationsTableName}.product_id", '=', "{$productTableName}.id");
+
+            if (is_array($styleId)) {
+                $join->whereIn("{$styleRelationsTableName}.style_id", $styleId);
+            }
+            else {
+                $join->where("{$styleRelationsTableName}.style_id", $styleId);
+            }
         });
     }
 
@@ -114,8 +120,14 @@ abstract class Product extends BaseModel implements ProductInterface
         $productTableName = config('tables.Products');
 
         return $query->join($roomRelationsTableName, function($join) use($roomRelationsTableName, $productTableName, $roomId) {
-            $join->on("{$roomRelationsTableName}.product_id", '=', "{$productTableName}.id")
-                ->where("{$roomRelationsTableName}.room_id", $roomId);
+            $join->on("{$roomRelationsTableName}.product_id", '=', "{$productTableName}.id");
+
+            if (is_array($roomId)) {
+                $join->whereIn("{$roomRelationsTableName}.room_id", $roomId);
+            }
+            else {
+                $join->where("{$roomRelationsTableName}.room_id", $roomId);
+            }
         });
     }
 
@@ -125,8 +137,14 @@ abstract class Product extends BaseModel implements ProductInterface
         $productTableName = config('tables.Products');
 
         return $query->join($categoryRelationsTableName, function($join) use($categoryRelationsTableName, $productTableName, $categoryId) {
-            $join->on("{$categoryRelationsTableName}.product_id", '=', "{$productTableName}.id")
-                ->where("{$categoryRelationsTableName}.category_id", $categoryId);
+            $join->on("{$categoryRelationsTableName}.product_id", '=', "{$productTableName}.id");
+
+            if (is_array($categoryId)) {
+                $join->whereIn("{$categoryRelationsTableName}.category_id", $categoryId);
+            }
+            else {
+                $join->where("{$categoryRelationsTableName}.category_id", $categoryId);
+            }
         });
     }
 
