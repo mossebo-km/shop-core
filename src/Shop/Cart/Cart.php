@@ -254,7 +254,7 @@ class Cart implements CartInterface
 
     public function removeProductByKey($productKey)
     {
-        $this->products->reject(function ($product) use($productKey) {
+        $this->products = $this->products->reject(function ($product) use($productKey) {
             return $product->getKey() === $productKey;
         });
 

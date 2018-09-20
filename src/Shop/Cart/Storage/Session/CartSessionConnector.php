@@ -24,8 +24,6 @@ abstract class CartSessionConnector
         return $this->session->put(static::makeStorageKey($key), $value);
     }
 
-
-
     protected static function makeStorageKey($key)
     {
         return static::$namespace . '::' . $key;
