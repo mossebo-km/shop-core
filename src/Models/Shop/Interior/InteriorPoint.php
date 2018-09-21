@@ -4,7 +4,7 @@ namespace MosseboShopCore\Models\Shop\Interior;
 
 use MosseboShopCore\Models\Base\BaseModel;
 
-abstract class InteriorPoints extends BaseModel
+abstract class InteriorPoint extends BaseModel
 {
     protected $tableKey = 'InteriorPoints';
 

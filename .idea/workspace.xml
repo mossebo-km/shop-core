@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Interior/Interior.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Interior/Interior.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoints.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoints.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoints.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoint.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InteriorPoints.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoints.php">
+      <file leaf-file-name="InteriorPoint.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoint.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            <state relative-caret-position="175">
+              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -143,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Models/Shop/Order/Order.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Order/OrderProduct.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Order/OrderProductAttributeOption.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Order/OrderStatus.php" />
@@ -194,6 +192,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_144100_create_interior_points_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Interior/Interior.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoints.php" />
+        <option value="$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoint.php" />
       </list>
     </option>
   </component>
@@ -576,12 +575,12 @@
       <workItem from="1536909749950" duration="555000" />
       <workItem from="1536914689538" duration="66000" />
       <workItem from="1537375330330" duration="3484000" />
-      <workItem from="1537517745515" duration="2897000" />
+      <workItem from="1537517745515" duration="3067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="386634000" />
+    <option name="totallyTimeSpent" value="386804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -592,7 +591,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.319403" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.319403" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.19488817" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
@@ -961,10 +960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoints.php">
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Interior/InteriorPoint.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        <state relative-caret-position="175">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
