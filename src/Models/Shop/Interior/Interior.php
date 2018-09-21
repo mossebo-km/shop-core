@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Models\Shop\Order;
+namespace MosseboShopCore\Models\Shop\Interior;
 
 use MosseboShopCore\Models\Base\BaseModel;
 //use MosseboShopCore\Support\Traits\Models\HasI18n;
