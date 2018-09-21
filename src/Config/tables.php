@@ -123,5 +123,8 @@ return [
     'BannerPlaceRelations' => 'shop_banner_place_relations',
 
 
-    'ProductSales' => 'shop_product_sales'
+    'ProductSales'    => 'shop_product_sales',
+
+    'Interiors'       => 'shop_interiors',
+    'InteriorPoints'  => 'shop_interior_points'
 ];
