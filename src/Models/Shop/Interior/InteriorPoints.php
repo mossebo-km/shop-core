@@ -9,9 +9,10 @@ abstract class InteriorPoints extends BaseModel
     protected $tableKey = 'InteriorPoints';
 
     protected $fillable = [
+        'interior_id',
+        'product_id',
         'position_x',
         'position_y',
-        'product_id',
         'is_similar'
     ];
 
