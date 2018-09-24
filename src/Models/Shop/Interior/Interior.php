@@ -3,11 +3,11 @@
 namespace MosseboShopCore\Models\Shop\Interior;
 
 use MosseboShopCore\Models\Base\BaseModel;
-//use MosseboShopCore\Support\Traits\Models\HasI18n;
+use MosseboShopCore\Support\Traits\Models\HasI18n;
 
 abstract class Interior extends BaseModel
 {
-//    use HasI18n;
+    use HasI18n;
 
     protected $tableKey = 'Interiors';
     protected $relationFieldName = 'interior_id';

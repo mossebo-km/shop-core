@@ -126,5 +126,8 @@ return [
     'ProductSales'    => 'shop_product_sales',
 
     'Interiors'       => 'shop_interiors',
-    'InteriorPoints'  => 'shop_interior_points'
+    'InteriorsI18n'   => 'shop_interiors_i18n',
+    'InteriorPoints'  => 'shop_interior_points',
+    'InteriorStyles'  => 'shop_interior_styles',
+    'InteriorRooms'   => 'shop_interior_rooms',
 ];
