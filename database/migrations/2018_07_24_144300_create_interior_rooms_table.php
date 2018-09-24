@@ -19,7 +19,7 @@ class CreateInteriorRoomsTable extends Migration
             $table->integer('room_id')->unsigned();
             $table->foreign('room_id')->references('id')->on(config('tables.Rooms'))->onDelete('cascade');
 
-            $table->primary(['room_id', 'product_id']);
+            $table->primary(['interior_id', 'room_id']);
         });
     }
 }

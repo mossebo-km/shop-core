@@ -19,7 +19,7 @@ class CreateInteriorStylesTable extends Migration
             $table->integer('style_id')->unsigned();
             $table->foreign('style_id')->references('id')->on(config('tables.Styles'))->onDelete('cascade');
 
-            $table->primary(['style_id', 'product_id']);
+            $table->primary(['interior_id', 'style_id']);
         });
     }
 }
