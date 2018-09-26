@@ -2,7 +2,6 @@
 
 namespace MosseboShopCore\Shop\Cart\Storage\Session;
 
-use Cache;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
@@ -27,8 +26,6 @@ class CartSessionSaver extends CartSessionConnector implements CartSaver
         // todo: доделать, или убрать скидки из корзины
 
         $this->put('cart', $data);
-
-        Cache::forget(static::makeStorageKey('products'));
     }
 
     protected function setProductsToSave(& $data)

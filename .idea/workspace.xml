@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_24_143870_create_banners_i18n_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_143870_create_banners_i18n_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionConnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionConnector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartSessionSaver.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CartSessionSaver.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="30" column="20" lean-forward="true" selection-end-line="66" />
+            <state relative-caret-position="904">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -102,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartSessionConnector.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartSessionConnector.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionConnector.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            <state relative-caret-position="558">
+              <caret line="31" column="17" lean-forward="true" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -255,9 +254,9 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_144200_create_interior_styles_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_144300_create_interior_rooms_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143870_create_banners_i18n_table.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionConnector.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php" />
       </list>
     </option>
   </component>
@@ -664,12 +663,12 @@
       <workItem from="1536914689538" duration="66000" />
       <workItem from="1537375330330" duration="3484000" />
       <workItem from="1537517745515" duration="8144000" />
-      <workItem from="1537874924737" duration="3543000" />
+      <workItem from="1537874924737" duration="4208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395424000" />
+    <option name="totallyTimeSpent" value="396089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -1039,13 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="30" column="20" lean-forward="true" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="622">
@@ -1055,8 +1047,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionConnector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state relative-caret-position="558">
+          <caret line="31" column="17" lean-forward="true" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionSaver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="904">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>

@@ -2,62 +2,35 @@
 
 namespace MosseboShopCore\Shop\Cart\Storage\Session;
 
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Session;
-use MosseboShopCore\Contracts\Shop\Cart\Cart;
-use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
-use MosseboShopCore\Contracts\Shop\Cart\CartSaver;
+use Illuminate\Session\SessionManager;
+use Session;
 
-class CartSessionSaver extends CartSessionConnector implements CartSaver
+abstract class CartSessionConnector
 {
-    protected $cart = null;
+    protected static $namespace = 'mossebo-cart';
+    protected $session;
 
-    public function save(Cart $cart)
+    public function __construct(SessionManager $session)
     {
-        $this->cart = $cart;
-
-        $data = [];
-
-        $this->setProductsToSave($data);
-        $this->setPromoToSave($data);
-        $this->setCurrencyCodeToSave($data);
-        $this->setTimestamps($data);
-
-        // todo: доделать, или убрать скидки из корзины
-
-        $this->put('cart', $data);
+        $this->session = $session;
     }
 
-    protected function setProductsToSave(& $data)
+    protected function get($key, $defaultValue = null)
     {
-        $data['products'] = $this->cart->getProducts()->reduce(function ($carry, CartProduct $product) {
-//            if (! $product->isExist()) {
-//                return;
-//            }
-
-            $carry[] = $product->toStore();
-
-            return $carry;
-        }, []);
+        return $this->session->get(static::makeStorageKey($key), $defaultValue);
     }
 
-    protected function setPromoToSave(& $data)
+    protected function put($key, $value)
     {
-        $promoCode = $this->cart->getPromoCode();
-
-        if (! is_null($promoCode)) {
-            $data['promoCode'] = $promoCode->getName();
-        }
+        return $this->session->put(static::makeStorageKey($key), $value);
     }
 
-    protected function setCurrencyCodeToSave(& $data)
+    protected static function makeStorageKey($key)
     {
-        $data['currencyCode'] = $this->cart->getCurrencyCode();
-    }
-
-    protected function setTimestamps(& $data)
-    {
-        $data['createdAt'] = $this->cart->getCreatedAt();
-        $data['updatedAt'] = $this->cart->getUpdatedAt();
+        return implode('::', [
+            static::$namespace,
+            $key,
+            Session::getId()
+        ]);
     }
 }
