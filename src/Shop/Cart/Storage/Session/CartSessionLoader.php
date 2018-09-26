@@ -5,7 +5,6 @@ namespace MosseboShopCore\Shop\Cart\Storage\Session;
 use Illuminate\Session\SessionManager;
 use Shop;
 use Auth;
-use Cache;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
 use MosseboShopCore\Contracts\Shop\Cart\CartLoader;
@@ -85,46 +84,9 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
 
     public function getProducts(): Collection
     {
-        return Cache::remember(static::makeStorageKey('products'), 5, function () {
-            return $this->buildCartProducts();
-        });
-    }
-
-    protected function buildCartProducts()
-    {
-        $storedProducts = $this->getCartData('products');
         $result = new Collection;
 
-//        $ids = array_unique(array_column($storedProducts, 'id'));
-//
-//
-//        // todo: товары то без связей
-//        $products = Product::enabled()
-//            ->whereIn('id', $ids)
-//            ->with(['image', 'prices', 'currentI18n', 'options'])
-//            ->get();
-//
-//        foreach ($storedProducts as $storedProduct) {
-//            $product = $products->where('id', $storedProduct['id'])->first();
-//
-//            if (is_null($product)) {
-//                continue;
-//            }
-//
-//            $cartProduct = app()->makeWith(CartProduct::class, [
-//                'id'       => $storedProduct['id'],
-//                'options'  => $storedProduct['options'],
-//                'quantity' => $storedProduct['quantity'],
-//                'product'  => $product
-//            ]);
-//
-//            if ($cartProduct->isExist()) {
-//                $result->push($cartProduct);
-//            }
-//        }
-
-
-        foreach ($storedProducts as $storedProduct) {
+        foreach ($this->getCartData('products') as $storedProduct) {
             $result->push(app()->makeWith(CartProduct::class, [
                 'productId'   => $storedProduct['productId'],
                 'options'     => $storedProduct['options'],
@@ -157,4 +119,3 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
         ]);
     }
 }
-
