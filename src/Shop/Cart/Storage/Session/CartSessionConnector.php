@@ -3,6 +3,7 @@
 namespace MosseboShopCore\Shop\Cart\Storage\Session;
 
 use Illuminate\Session\SessionManager;
+use Session;
 
 abstract class CartSessionConnector
 {
@@ -29,7 +30,7 @@ abstract class CartSessionConnector
         return implode('::', [
             static::$namespace,
             $key,
-            (new static)->session->getId()
+            Session::getId()
         ]);
     }
 }
