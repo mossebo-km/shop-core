@@ -15,12 +15,8 @@ trait HasPriceTypes
 
     public function getCurrentPriceTypeId()
     {
-        if ($this->isFranchiseeDomain()) {
-            $user = $this->getUser();
-
-            if ($user && $user->isFranchisee()) {
-                return config('shop.price.types.franchisee');
-            }
+        if ($this->userIsFranchisee()) {
+            return config('shop.price.types.franchisee');
         }
 
         return $this->getDefaultPriceTypeId();

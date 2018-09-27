@@ -41,4 +41,11 @@ class Shop
 
         return Auth::user();
     }
+
+    public function userIsFranchisee()
+    {
+        $user = $this->getUser();
+
+        return $user && $user->isFranchisee();
+    }
 }
