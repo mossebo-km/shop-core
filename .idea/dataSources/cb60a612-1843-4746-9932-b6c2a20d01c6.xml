@@ -47,8 +47,8 @@
     </role>
     <schema id="9" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-09-06.16:31:07.584</IntrospectionTimestamp>
-      <IntrospectionStateNumber>315077</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-09-27.10:51:55.084</IntrospectionTimestamp>
+      <IntrospectionStateNumber>315078</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -541,7 +541,7 @@
     </table>
     <table id="102" parent="9" name="users">
       <ObjectId>53696</ObjectId>
-      <StateNumber>32669</StateNumber>
+      <StateNumber>315078</StateNumber>
     </table>
     <column id="103" parent="46" name="id">
       <Position>1</Position>
@@ -4577,37 +4577,44 @@ language_code</ColNames>
       <StateNumber>12838</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="701" parent="102" name="users_pkey">
+    <column id="701" parent="102" name="is_franchisee">
+      <Position>11</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>315078</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="702" parent="102" name="users_pkey">
       <ObjectId>53703</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="702" parent="102" name="users_email_unique">
+    <index id="703" parent="102" name="users_email_unique">
       <ObjectId>53706</ObjectId>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="703" parent="102" name="users_phone_unique">
+    <index id="704" parent="102" name="users_phone_unique">
       <ObjectId>53708</ObjectId>
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="704" parent="102" name="users_id_index">
+    <index id="705" parent="102" name="users_id_index">
       <ObjectId>53705</ObjectId>
       <ColNames>id</ColNames>
     </index>
-    <key id="705" parent="102" name="users_pkey">
+    <key id="706" parent="102" name="users_pkey">
       <ObjectId>53704</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="706" parent="102" name="users_email_unique">
+    <key id="707" parent="102" name="users_email_unique">
       <ObjectId>53707</ObjectId>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
-    <key id="707" parent="102" name="users_phone_unique">
+    <key id="708" parent="102" name="users_phone_unique">
       <ObjectId>53709</ObjectId>
       <ColNames>phone</ColNames>
       <UnderlyingIndexName>users_phone_unique</UnderlyingIndexName>

@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('city', 255)->nullable();
             $table->string('post_code', 255)->nullable();
             $table->string('password');
+            $table->boolean('is_franchisee')->default(false);
             $table->rememberToken();
             $table->timestamps();
 

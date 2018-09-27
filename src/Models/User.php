@@ -27,6 +27,6 @@ abstract class User extends Authenticatable implements UserInterface
 
     public function isFranchisee()
     {
-
+        return $this->is_franchisee;
     }
 }
