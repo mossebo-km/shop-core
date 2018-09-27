@@ -24,6 +24,7 @@ class CreateBannersTable extends Migration
             $table->string('mobile_image')->nullable();
             $table->string('desktop_image')->nullable();
             $table->string('background_image')->nullable();
+            $table->string('background_long_image')->nullable();
 
             $table->boolean('enabled')->index()->default(1);
             $table->integer('position')->unsigned()->default(0);

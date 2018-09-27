@@ -24,4 +24,9 @@ abstract class User extends Authenticatable implements UserInterface
     {
         return Shop::getDefaultPriceTypeId();
     }
+
+    public function isFranchisee()
+    {
+
+    }
 }

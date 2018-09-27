@@ -23,6 +23,7 @@ abstract class Banner extends BaseModel
         'mobile_image',
         'desktop_image',
         'background_image',
+        'background_long_image',
         'enabled',
         'position',
     ];
