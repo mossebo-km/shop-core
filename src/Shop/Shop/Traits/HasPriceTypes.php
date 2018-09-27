@@ -2,6 +2,7 @@
 
 namespace MosseboShopCore\Shop\Shop\Traits;
 
+use Auth;
 use PriceTypes;
 
 trait HasPriceTypes
