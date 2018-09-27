@@ -2,7 +2,6 @@
 
 namespace MosseboShopCore\Shop\Shop\Traits;
 
-use Auth;
 use PriceTypes;
 
 trait HasPriceTypes
@@ -16,10 +15,12 @@ trait HasPriceTypes
 
     public function getCurrentPriceTypeId()
     {
-        $user = Auth::user();
+        if ($this->isFranchiseeDomain()) {
+            $user = $this->getUser();
 
-        if ($user && $user->isFranchisee()) {
-            return config('shop.price.types.franchisee');
+            if ($user && $user->isFranchisee()) {
+                return config('shop.price.types.franchisee');
+            }
         }
 
         return $this->getDefaultPriceTypeId();
