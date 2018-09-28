@@ -12,13 +12,4 @@ trait HasPriceTypes
     {
         return config('shop.price.types.default');
     }
-
-    public function getCurrentPriceTypeId()
-    {
-        if ($this->userIsFranchisee()) {
-            return config('shop.price.types.franchisee');
-        }
-
-        return $this->getDefaultPriceTypeId();
-    }
 }

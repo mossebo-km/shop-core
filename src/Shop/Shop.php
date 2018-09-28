@@ -25,27 +25,4 @@ class Shop
     {
         return true;
     }
-
-    public function isFranchiseeDomain()
-    {
-        return strpos(request()->getHost(), 'f.') === 0;
-    }
-
-    public function getUser()
-    {
-        $prefix = app('request')->route()->getPrefix();
-
-        if (strpos($prefix, 'api/') === 0) {
-            return Auth::guard('api')->user();
-        }
-
-        return Auth::user();
-    }
-
-    public function userIsFranchisee()
-    {
-        $user = $this->getUser();
-
-        return $user && $user->isFranchisee();
-    }
 }
