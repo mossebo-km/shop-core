@@ -7,9 +7,12 @@ use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
 use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
 use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
-abstract class Review extends BaseModel implements LikeableContract
+use MosseboShopCore\Contracts\Models\HasMorphRelation as HasMorphRelationInterface;
+use MosseboShopCore\Support\Traits\Models\HasMorphRelation;
+
+abstract class Review extends BaseModel implements LikeableContract, HasMorphRelationInterface
 {
-    use Likeable, HasEnabledStatus;
+    use Likeable, HasEnabledStatus, HasMorphRelation;
 
     protected $tableKey = 'Reviews';
 
@@ -26,6 +29,8 @@ abstract class Review extends BaseModel implements LikeableContract
         'confirmed',
         'enabled'
     ];
+
+    protected $morphTypeName = 'review';
 
     public function item()
     {

@@ -5,13 +5,15 @@ namespace MosseboShopCore\Models\Shop\Product;
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Elasticsearch\Configurators\ProductIndexConfigurator;
 use MosseboShopCore\Contracts\Shop\Product as ProductInterface;
+use MosseboShopCore\Contracts\Models\HasMorphRelation as HasMorphRelationInterface;
+use MosseboShopCore\Support\Traits\Models\HasMorphRelation;
 use ScoutElastic\Searchable;
 use MosseboShopCore\Support\Traits\Models\HasI18n;
 use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
-abstract class Product extends BaseModel implements ProductInterface
+abstract class Product extends BaseModel implements ProductInterface, HasMorphRelationInterface
 {
-    use Searchable, HasI18n, HasEnabledStatus;
+    use Searchable, HasI18n, HasEnabledStatus, HasMorphRelation;
 
     protected $indexConfigurator = ProductIndexConfigurator::class;
 
@@ -44,6 +46,8 @@ abstract class Product extends BaseModel implements ProductInterface
             ],
         ]
     ];
+
+    protected $morphTypeName = 'product';
 
     public function toSearchableArray()
     {
