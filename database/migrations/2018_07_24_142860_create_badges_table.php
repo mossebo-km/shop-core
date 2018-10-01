@@ -14,8 +14,8 @@ class CreateBadgesTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 
-            $table->string('item_type');
-            $table->integer('item_id')->unsigned();
+
+            $table->morphs('item');
 
             $table->integer('badge_type_id')->unsigned()->index();
             $table->foreign('badge_type_id')->references('id')->on(config('tables.BadgeTypes'))->onDelete('cascade');

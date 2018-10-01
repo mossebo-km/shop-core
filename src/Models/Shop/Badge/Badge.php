@@ -10,8 +10,8 @@ abstract class Badge extends BaseModel
     protected $relationFieldName = 'badge_type_id';
 
     protected $fillable = [
-        'item_type',
         'item_id',
+        'item_type',
         'badge_type_id',
         'value',
         'position'
@@ -21,4 +21,9 @@ abstract class Badge extends BaseModel
         'created_at',
         'updated_at'
     ];
+
+    public function item()
+    {
+        return $this->morphTo();
+    }
 }

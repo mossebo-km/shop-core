@@ -4,18 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductSalesTable extends Migration
+class CreateSalesTable extends Migration
 {
     public function up()
     {
-        echo "Create ProductSales Table\r\n";
+        echo "Create Sales Table\r\n";
 
-        Schema::create(config('tables.ProductSales'), function (Blueprint $table) {
+        Schema::create(config('tables.Sales'), function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 
-            $table->integer('product_id')->unsigned();
-            $table->foreign('product_id')->references('id')->on(config('tables.Products'))->onDelete('cascade');
+            $table->morphs('item');
 
             $table->timestamp('date_start');
             $table->timestamp('date_finish');

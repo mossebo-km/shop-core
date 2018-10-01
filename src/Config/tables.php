@@ -123,7 +123,7 @@ return [
     'BannerPlaceRelations' => 'shop_banner_place_relations',
 
 
-    'ProductSales'    => 'shop_product_sales',
+    'Sales'           => 'shop_sales',
 
     'Interiors'       => 'shop_interiors',
     'InteriorsI18n'   => 'shop_interiors_i18n',

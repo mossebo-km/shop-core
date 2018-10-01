@@ -1,18 +1,19 @@
 <?php
 
-namespace MosseboShopCore\Models\Shop\Product;
+namespace MosseboShopCore\Models\Shop\Sale;
 
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
-abstract class ProductSale extends BaseModel
+abstract class Sale extends BaseModel
 {
     use HasEnabledStatus;
 
-    protected $tableKey = 'ProductSales';
+    protected $tableKey = 'Sales';
 
     protected $fillable = [
-        'product_id',
+        'item_id',
+        'item_type',
         'date_start',
         'date_finish',
         'enabled',
@@ -25,4 +26,9 @@ abstract class ProductSale extends BaseModel
         'date_start',
         'date_finish'
     ];
+
+    public function item()
+    {
+        return $this->morphTo();
+    }
 }
