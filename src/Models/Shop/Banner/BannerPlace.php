@@ -14,6 +14,7 @@ abstract class BannerPlace extends BaseModel
 
     protected $fillable = [
         'name',
+        'type',
         'enabled',
         'position',
     ];

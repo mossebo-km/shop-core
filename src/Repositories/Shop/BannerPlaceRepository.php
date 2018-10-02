@@ -7,4 +7,8 @@ use MosseboShopCore\Contracts\Repositories\BannerPlaceRepository as BannerPositi
 
 abstract class BannerPlaceRepository extends BaseRepository implements BannerPositionRepositoryContract
 {
+    public function byType($type)
+    {
+        return $this->getCollection()->where('type', $type);
+    }
 }

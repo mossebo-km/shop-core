@@ -14,6 +14,7 @@ class CreateBannerPositionsTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id')->index();
             $table->string('name')->index();
+            $table->string('type')->nullable();
             $table->boolean('enabled')->default(1);
             $table->integer('position')->unsigned()->default(0);
         });
