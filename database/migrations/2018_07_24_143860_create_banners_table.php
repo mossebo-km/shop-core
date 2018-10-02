@@ -21,8 +21,8 @@ class CreateBannersTable extends Migration
             $table->string('button_background_color')->nullable();
 
             $table->string('image')->nullable();
-            $table->string('background_1')->nullable();
-            $table->string('background_2')->nullable();
+            $table->string('background_image_1')->nullable();
+            $table->string('background_image_2')->nullable();
 
             $table->boolean('enabled')->index()->default(1);
             $table->integer('position')->unsigned()->default(0);

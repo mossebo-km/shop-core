@@ -20,8 +20,8 @@ abstract class Banner extends BaseModel
         'button_color',
         'button_background_color',
         'image',
-        'background_1',
-        'background_2',
+        'background_image_1',
+        'background_image_2',
         'enabled',
         'position',
     ];
