@@ -16,10 +16,10 @@ abstract class Region extends BaseModel
         'country_code',
         'name',
         'short_name',
-        'aoguid',
 
-        'area_code',
-        'region_code',
+        'fias_code',
+        'okato_code',
+        'aoguid',
 
         'parent_id',
         'enabled',

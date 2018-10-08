@@ -19,7 +19,9 @@ abstract class City extends BaseModel
         'region_id',
         'name',
         'short_name',
-        'postal_code',
+        'fias_code',
+        'okato_code',
+        'aoguid',
         'enabled',
     ];
 
