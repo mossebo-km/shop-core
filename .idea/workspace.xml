@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cb60a612-1843-4746-9932-b6c2a20d01c6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cb60a612-1843-4746-9932-b6c2a20d01c6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cb60a612-1843-4746-9932-b6c2a20d01c6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cb60a612-1843-4746-9932-b6c2a20d01c6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,7 +78,7 @@
       <file leaf-file-name="BannerPlaceRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repositories/Shop/BannerPlaceRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state>
               <caret line="9" column="26" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="26" />
             </state>
           </provider>
@@ -100,16 +97,25 @@
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
-              <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="45" />
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_02_27_000507_users_add_price_type.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018_02_27_000507_users_add_price_type.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000507_users_add_price_type.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_07_24_143880_create_banner_places_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -234,7 +240,6 @@
         <option value="$PROJECT_DIR$/src/Models/Review.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Sale/Sale.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Banner/BannerPlace.php" />
         <option value="$PROJECT_DIR$/src/Repositories/Shop/BannerPlaceRepository.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Banner/Banner.php" />
@@ -243,6 +248,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb60a612-1843-4746-9932-b6c2a20d01c6/console_2.sql" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000507_users_add_price_types.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php" />
       </list>
     </option>
   </component>
@@ -741,12 +747,12 @@
       <workItem from="1538465406922" duration="3780000" />
       <workItem from="1538638591411" duration="280000" />
       <workItem from="1538725395614" duration="545000" />
-      <workItem from="1538983577933" duration="2807000" />
+      <workItem from="1538983577933" duration="2956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="416147000" />
+    <option name="totallyTimeSpent" value="416296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -757,8 +763,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.29054725" />
-      <window_info anchor="bottom" id="Database Console" order="9" sideWeight="0.49893504" visible="true" weight="0.32636815" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.29054725" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.23003195" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.31948882" />
@@ -771,6 +776,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="9" sideWeight="0.49893504" weight="0.32636815" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962587" />
     </layout>
   </component>
@@ -975,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Sale/Sale.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
@@ -1012,7 +1011,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Repositories/Shop/BannerPlaceRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state>
           <caret line="9" column="26" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
@@ -1074,13 +1073,6 @@
     <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/sequence/migrations_id_seq">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb60a612-1843-4746-9932-b6c2a20d01c6/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb60a612-1843-4746-9932-b6c2a20d01c6/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1105,7 +1097,7 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
-          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="45" />
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1116,10 +1108,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb60a612-1843-4746-9932-b6c2a20d01c6/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000507_users_add_price_type.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_143880_create_banner_places_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
