@@ -29,6 +29,11 @@ abstract class Price extends BaseModel
         'value'
     ];
 
+    public function item()
+    {
+        return $this->morphTo();
+    }
+
     /**
      * Получение форматированной (побитой на разряды, с символом валюты) цены.
      *

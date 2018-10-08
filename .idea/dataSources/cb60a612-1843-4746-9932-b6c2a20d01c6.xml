@@ -68,14 +68,14 @@
     </schema>
     <schema id="15" parent="2" name="public">
       <ObjectId>55234</ObjectId>
-      <IntrospectionTimestamp>2018-10-08.12:16:25.070</IntrospectionTimestamp>
-      <IntrospectionStateNumber>315559</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-08.12:57:02.191</IntrospectionTimestamp>
+      <IntrospectionStateNumber>332706</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
     <schema id="16" parent="3" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-10-08.12:16:25.178</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-10-08.12:57:02.353</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -460,11 +460,11 @@
     </table>
     <table id="71" parent="15" name="cities">
       <ObjectId>57317</ObjectId>
-      <StateNumber>315517</StateNumber>
+      <StateNumber>332706</StateNumber>
     </table>
     <table id="72" parent="15" name="cities_i18n">
       <ObjectId>57358</ObjectId>
-      <StateNumber>315517</StateNumber>
+      <StateNumber>332706</StateNumber>
     </table>
     <table id="73" parent="15" name="countries">
       <ObjectId>57276</ObjectId>
@@ -1313,8 +1313,7 @@ admin_role_id</ColNames>
     <column id="227" parent="71" name="indexed_at">
       <Position>14</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>315511</StateNumber>
+      <StateNumber>327454</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="228" parent="71" name="cities_pkey">

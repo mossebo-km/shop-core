@@ -18,4 +18,9 @@ abstract class PostalCode extends BaseModel
     ];
 
     public $timestamps = false;
+
+    public function item()
+    {
+        return $this->morphTo();
+    }
 }
