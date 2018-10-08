@@ -20,9 +20,8 @@ class CreateRegionsTable extends Migration
             $table->string('name')->nullable();
             $table->string('short_name')->nullable();
 
-            $table->string('region_code')->nullable();
-            $table->string('area_code')->nullable();
-
+            $table->string('fias_code')->nullable();
+            $table->string('okato_code')->nullable();
             $table->string('aoguid');
             $table->nestedSet();
 
