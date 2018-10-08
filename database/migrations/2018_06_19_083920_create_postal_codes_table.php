@@ -14,7 +14,7 @@ class CreatePostalCodesTable extends Migration
             $table->engine = "InnoDB";
             $table->morphs('item');
 
-            $table->string('code');
+            $table->string('code')->unique()->index();
         });
     }
 }
