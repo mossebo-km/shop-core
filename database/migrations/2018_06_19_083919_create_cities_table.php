@@ -30,7 +30,7 @@ class CreateCitiesTable extends Migration
             $table->integer('position')->unsigned()->default(0);
 
             $table->timestamps();
-            $table->timestamp('indexed_at');
+            $table->timestamp('indexed_at')->nullable();
         });
     }
 }
