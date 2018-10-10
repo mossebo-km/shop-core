@@ -14,6 +14,12 @@ class CartSessionSaver extends CartSessionConnector implements CartSaver
 
     public function save(Cart $cart)
     {
+        if (! $cart->getProducts()->count()) {
+            $this->forget('cart');
+
+            return;
+        }
+
         $this->cart = $cart;
 
         $data = [];

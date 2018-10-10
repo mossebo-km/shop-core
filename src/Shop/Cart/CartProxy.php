@@ -42,6 +42,11 @@ class CartProxy
 
     public function sync($items)
     {
+        if (! $items) {
+            $this->clear();
+            return $this;
+        }
+
         $cartProducts = $this->cart->getProducts();
 
         foreach ($cartProducts as $cartProduct) {
