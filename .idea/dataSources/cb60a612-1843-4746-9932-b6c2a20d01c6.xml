@@ -68,14 +68,14 @@
     </schema>
     <schema id="15" parent="2" name="public">
       <ObjectId>55234</ObjectId>
-      <IntrospectionTimestamp>2018-10-08.12:57:02.191</IntrospectionTimestamp>
-      <IntrospectionStateNumber>332706</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-09.12:07:10.458</IntrospectionTimestamp>
+      <IntrospectionStateNumber>335183</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
     <schema id="16" parent="3" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-10-08.12:57:02.353</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-10-09.12:07:10.573</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -460,11 +460,11 @@
     </table>
     <table id="71" parent="15" name="cities">
       <ObjectId>57317</ObjectId>
-      <StateNumber>332706</StateNumber>
+      <StateNumber>335182</StateNumber>
     </table>
     <table id="72" parent="15" name="cities_i18n">
       <ObjectId>57358</ObjectId>
-      <StateNumber>332706</StateNumber>
+      <StateNumber>335182</StateNumber>
     </table>
     <table id="73" parent="15" name="countries">
       <ObjectId>57276</ObjectId>
@@ -503,8 +503,8 @@
       <StateNumber>315413</StateNumber>
     </table>
     <table id="82" parent="15" name="postal_codes">
-      <ObjectId>57336</ObjectId>
-      <StateNumber>315513</StateNumber>
+      <ObjectId>57794</ObjectId>
+      <StateNumber>335183</StateNumber>
     </table>
     <table id="83" parent="15" name="regions">
       <ObjectId>57294</ObjectId>
@@ -2006,25 +2006,25 @@ model_id</ColNames>
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>315513</StateNumber>
+      <StateNumber>335176</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="332" parent="82" name="item_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>315513</StateNumber>
+      <StateNumber>335176</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="333" parent="82" name="code">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>315513</StateNumber>
+      <StateNumber>335176</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="334" parent="82" name="postal_codes_item_type_item_id_index">
-      <ObjectId>57342</ObjectId>
+      <ObjectId>57800</ObjectId>
       <ColNames>item_type
 item_id</ColNames>
     </index>
