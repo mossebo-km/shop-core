@@ -9,5 +9,6 @@ return [
         'symbol-plus-one',
         'symbol-leaf',
         'symbol-giftbox',
+        'symbol-percent'
     ]
 ];
