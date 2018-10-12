@@ -75,6 +75,13 @@ abstract class BaseModel extends Model
         return !$this->relationIsEmpty($relationName);
     }
 
+    public static function rawQuery()
+    {
+        $item = new static;
+
+        return $item->registerGlobalScopes($item->newQueryWithoutScopes());
+    }
+
     public function newQuery()
     {
         return parent::newQuery()->selectRaw("{$this->getTable()}.*");
