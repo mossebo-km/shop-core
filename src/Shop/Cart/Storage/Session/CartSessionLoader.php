@@ -104,18 +104,20 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
 
     protected function getPromoCode()
     {
-        $promoCode = $this->getCartData('promoCode');
+        $promoCodeName = $this->getCartData('promoCode');
 
-        if (is_null($promoCode)) {
+        if (is_null($promoCodeName)) {
             return null;
         }
 
-        if ($promoCode instanceof PromoCode) {
-            return $promoCode;
+        if ($promoCodeName instanceof PromoCode) {
+            return $promoCodeName;
         }
 
-        return app()->makeWith(PromoCode::class, [
-            'codeName' => $promoCode
+        $promoCode = app()->makeWith(PromoCode::class, [
+            'codeName' => $promoCodeName
         ]);
+
+        return $promoCode->notExist() ? null : $promoCode;
     }
 }

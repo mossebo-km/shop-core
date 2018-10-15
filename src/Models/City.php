@@ -7,6 +7,7 @@ use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Elasticsearch\Configurators\CityIndexConfigurator;
 use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 
+
 abstract class City extends BaseModel
 {
     use Searchable, HasEnabledStatus;

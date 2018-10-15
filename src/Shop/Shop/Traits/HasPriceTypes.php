@@ -12,4 +12,9 @@ trait HasPriceTypes
     {
         return config('shop.price.types.default');
     }
+
+    public function getPriceTypeId($type)
+    {
+        return config('shop.price.types.' . $type);
+    }
 }

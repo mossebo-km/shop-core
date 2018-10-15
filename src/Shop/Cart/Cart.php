@@ -11,7 +11,7 @@ use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
-use MosseboShopCore\Shop\Cart\Traits\HasDiscount;
+//use MosseboShopCore\Shop\Cart\Traits\HasDiscount;
 
 class Cart implements CartInterface
 {
