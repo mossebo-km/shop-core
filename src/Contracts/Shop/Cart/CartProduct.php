@@ -18,8 +18,6 @@ interface CartProduct
     public function getAddedAtTimestamp(): ?int;
     public function getUpdatedAtTimestamp(): ?int;
 
-//    public function setPromoPrice();
-
     public function add($num): int;
     public function remove($num): int;
     public function setQuantity($num): int;

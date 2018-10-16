@@ -126,9 +126,9 @@ abstract class CartProduct implements CartProductInterface
         // TODO: Implement setPromoPrice() method.
     }
 
-    public function setBasePrice($value, $currencyCode)
+    protected static function makePrice($value, $currencyCode)
     {
-        $this->basePrice = app()->makeWith(PriceInterface::class, [
+        return app()->makeWith(PriceInterface::class, [
             'value' => $value,
             'currencyCode' => $currencyCode,
         ]);
@@ -136,33 +136,20 @@ abstract class CartProduct implements CartProductInterface
 
     public function getBasePrice($typeId, $currencyCode): ?PriceInterface
     {
-        if (is_null($this->basePrice)) {
-            $prices = $this->getPrices();
+        $prices = $this->getPrices();
 
-            foreach ($prices as $price) {
-                if ($price['price_type_id'] === $typeId && $price['currency_code'] === $currencyCode) {
-                    $this->setBasePrice($price['value'], $currencyCode);
-                }
+        foreach ($prices as $price) {
+            if ($price['price_type_id'] === $typeId && $price['currency_code'] === $currencyCode) {
+                return static::makePrice($price['value'], $currencyCode);
             }
         }
 
-        return $this->basePrice;
-    }
-
-    public function setFinalPrice($value, $currencyCode)
-    {
-        $this->finalPrice = app()->makeWith(PriceInterface::class, [
-            'value' => $value,
-            'currencyCode' => $currencyCode,
-        ]);
+        return null;
     }
 
     public function getFinalPrice($typeId, $currencyCode): ?PriceInterface
     {
-        if (! is_null($this->finalPrice)) {
-            return $this->finalPrice;
-        }
-        // TODO: Implement getPrice() method.
+        // TODO: Если потребуется доделать цену с учетом промокода или других модификаторов цены.
 
         return $this->getBasePrice($typeId, $currencyCode);
     }
