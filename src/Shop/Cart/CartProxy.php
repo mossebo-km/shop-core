@@ -97,6 +97,13 @@ class CartProxy
         return $this->save();
     }
 
+    public function clearPromoCode()
+    {
+        $this->cart->clearPromoCode();
+
+        return $this->save();
+    }
+
     public function __call($methodName, $arguments)
     {
         return app()->call([$this->cart, $methodName], $arguments);

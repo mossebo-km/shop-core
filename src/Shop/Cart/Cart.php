@@ -189,6 +189,16 @@ class Cart implements CartInterface
         $this->hasChanged();
     }
 
+    /**
+     * Сбрасывает промокод.
+     */
+    public function clearPromoCode()
+    {
+        $this->promoCode = null;
+
+        $this->hasChanged();
+    }
+
     public function getPromoCode(): ?PromoCode
     {
         return $this->promoCode;

@@ -29,6 +29,7 @@ interface Cart
 //    public function getBestDiscount();
 
     public function setPromoCode(PromoCode $code);
+    public function clearPromoCode();
     public function getPromoCode(): ?PromoCode;
     public function getLastPromoCodeInfo(): ?array;
 
