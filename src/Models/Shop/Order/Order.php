@@ -21,7 +21,12 @@ abstract class Order extends BaseModel
         'phone',
         'email',
         'city',
-        'address',
+        'street',
+        'house_number',
+        'apartment',
+        'floor',
+        'entrance',
+        'intercom',
         'post_code',
         'comment'
     ];
