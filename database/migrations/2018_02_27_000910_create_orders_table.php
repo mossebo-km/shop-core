@@ -31,10 +31,15 @@ class CreateOrdersTable extends Migration
 
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('city');
-            $table->text('address');
             $table->string('email');
             $table->string('phone');
+            $table->string('city');
+            $table->string('street');
+            $table->string('house_number', 64);
+            $table->string('apartment', 64);
+            $table->string('floor', 64);
+            $table->string('entrance', 64);
+            $table->string('intercom', 64);
             $table->string('post_code');
             $table->text('comment')->nullable();
 

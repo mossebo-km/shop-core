@@ -107,6 +107,8 @@ abstract class PromoCode implements PromoCodeInterface
                 break;
         }
 
+        $discountValue = round($discountValue);
+
         $price = clone $price;
         $price->setValue($discountValue);
 

@@ -98,9 +98,8 @@ class Cart implements CartInterface
             return $this->amount;
         }
 
-        $products = $this->getProducts();
-
-        $priceTypeId = $this->getPriceTypeId();
+        $products     = $this->getProducts();
+        $priceTypeId  = $this->getPriceTypeId();
         $currencyCode = $this->getCurrencyCode();
 
         $this->amount = app()->makeWith(Price::class, [
@@ -117,6 +116,8 @@ class Cart implements CartInterface
             $this->amount->plus($price);
         }
 
+        $this->amount = ceil($this->amount);
+
         return $this->amount;
     }
 
@@ -131,6 +132,8 @@ class Cart implements CartInterface
         if (! is_null($this->promoCode)) {
             $this->total = $this->promoCode->apply($this->total);
         }
+
+        $this->total = ceil($this->total);
 
         return $this->total;
     }

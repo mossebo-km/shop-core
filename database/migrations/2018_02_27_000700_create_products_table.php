@@ -18,9 +18,6 @@ class CreateProductsTable extends Migration
             $table->integer('supplier_id')->nullable();
             $table->integer('quantity')->nullable()->unsigned();
             $table->integer('showed')->unsigned()->default(0);
-            $table->integer('bought')->unsigned()->default(0);
-            $table->boolean('is_new')->index()->default(0);
-            $table->boolean('is_popular')->index()->default(0);
             $table->boolean('is_payable')->index()->default(0);
             $table->time('sale_time')->nullable();
             $table->boolean('enabled')->index()->default(1);
