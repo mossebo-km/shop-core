@@ -16,11 +16,23 @@ class ProductIndexConfigurator extends IndexConfigurator
      */
     protected $settings = [
         'analysis' => [
+            'filter' => [
+                'shop_synonym_filter' => [
+                    'type' => 'synonym',
+                    'synonyms' => [
+                        'стул, табурет, сиденье',
+                        'вигвам, шалаш',
+                        'светильник, бра, торшер, лампа',
+                    ]
+                ]
+            ],
+
             'analyzer' => [
                 'default' => [
                     'tokenizer' => 'keyword',
                     'filter' => [
                         'lowercase',
+                        'shop_synonym_filter'
                     ]
                 ]
             ]
