@@ -22,7 +22,9 @@ abstract class Category extends BaseModel implements HasMorphRelationInterface
         'parent_id',
         'slug',
         'enabled',
-        'position'
+        'position',
+        'miniature_image',
+        'is_popular'
     ];
 
     protected $dates = [

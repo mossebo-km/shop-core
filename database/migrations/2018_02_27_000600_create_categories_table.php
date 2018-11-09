@@ -17,6 +17,9 @@ class CreateCategoriesTable extends Migration
             $table->string('slug')->unique()->index();
             $table->boolean('enabled')->index()->default(1);
             $table->integer('position')->unsigned()->default(0);
+
+            $table->boolean('is_popular')->default(0);
+            $table->string('miniature_image')->nullable();
             $table->timestamps();
         });
     }
