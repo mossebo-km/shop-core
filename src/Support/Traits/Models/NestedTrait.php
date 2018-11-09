@@ -17,9 +17,14 @@ trait NestedTrait
     */
     public static function getDescendantIds($parentId = 0)
     {
-        return array_column(self::descendantsOf($parentId)->toArray(), 'id');
-    }
+        $item = static::where('id', $parentId)->first();
 
+        if (! $item) {
+            return [];
+        }
+
+        return array_column(static::rawQuery()->descendantsOf($item)->toArray(), 'id');
+    }
 
     // Удаление предка - обнуляет parent_id потомков
     public function delete()
