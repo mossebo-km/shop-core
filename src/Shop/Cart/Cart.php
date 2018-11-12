@@ -123,7 +123,7 @@ class Cart implements CartInterface
         return $this->amount;
     }
 
-    public function getTotal(): PriceInterface
+    public function getProductsTotal(): PriceInterface
     {
         if (! is_null($this->total)) {
             return $this->total;
@@ -136,6 +136,11 @@ class Cart implements CartInterface
         }
 
         return $this->total;
+    }
+
+    public function getTotal(): PriceInterface
+    {
+        return $this->getProductsTotal();
     }
 
     public function getCurrencyCode(): string
