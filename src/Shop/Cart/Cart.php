@@ -99,19 +99,14 @@ class Cart implements CartInterface
         }
 
         $products     = $this->getProducts();
-        $priceTypeId  = $this->getPriceTypeId();
-        $currencyCode = $this->getCurrencyCode();
 
         $this->amount = app()->makeWith(Price::class, [
             'value' => 0,
-            'currencyCode' => $currencyCode,
+            'currencyCode' => $this->getCurrencyCode(),
         ]);
 
         foreach ($products as $product) {
-            $price = $product->getTotalFinalPrice(
-                $priceTypeId,
-                $currencyCode
-            );
+            $price = $product->getTotalFinalPrice();
 
             $this->amount->plus($price);
         }
