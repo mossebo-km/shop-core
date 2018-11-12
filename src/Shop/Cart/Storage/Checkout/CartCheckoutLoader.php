@@ -2,17 +2,13 @@
 
 namespace MosseboShopCore\Shop\Cart\Storage\Checkout;
 
-use Illuminate\Session\SessionManager;
 use Shop;
 use Auth;
 use Cache;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Session;
 use MosseboShopCore\Contracts\Shop\Cart\CartLoader;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\User;
-use MosseboShopCore\Shop\Cart\CartProductData;
-
 
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;

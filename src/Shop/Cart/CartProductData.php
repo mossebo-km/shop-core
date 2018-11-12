@@ -57,6 +57,7 @@ class CartProductData implements CartProductDataInterface
 
     public function canBeShowed(): bool
     {
+        return true;
         // TODO: Implement canBeShow() method.
 //        ????
     }

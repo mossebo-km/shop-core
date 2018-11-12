@@ -20,6 +20,7 @@ interface Cart
     public function getPriceTypeId(): int;
 
     public function getAmount(): Price;
+    public function getTotal(): Price;
 
     public function getProductsQuantity(): int;
     public function getProductNamesQuantity(): int;

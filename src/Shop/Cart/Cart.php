@@ -123,7 +123,7 @@ class Cart implements CartInterface
         return $this->amount;
     }
 
-    public function getTotal()
+    public function getTotal(): PriceInterface
     {
         if (! is_null($this->total)) {
             return $this->total;

@@ -25,7 +25,7 @@ abstract class PromoCode implements PromoCodeInterface
         }
     }
 
-    public function setResource($codeName = ''): void
+    public function setResource($codeIdOrName = ''): void
     {
         // установить в реализации
     }

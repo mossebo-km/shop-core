@@ -10,7 +10,7 @@ interface PromoCode
 {
     public function notExist(): bool;
     public function notActual(): bool;
-    public function setResource($codeName = ''): void;
+    public function setResource($codeIdOrName = ''): void;
     public function validate(Cart $cart): PromoValidator;
     public function getConditions(): Collection;
     public function getName(): string;

@@ -93,7 +93,6 @@ abstract class CartProduct implements CartProductInterface
         return $this->quantity = max(1, $quantity);
     }
 
-
     public function getQuantity(): int
     {
         $this->updatedAt = time();

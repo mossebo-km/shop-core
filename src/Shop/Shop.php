@@ -7,7 +7,7 @@ use MosseboShopCore\Shop\Shop\Traits\HasLanguage;
 use MosseboShopCore\Shop\Shop\Traits\HasCurrency;
 use MosseboShopCore\Shop\Shop\Traits\HasPriceTypes;
 
-class Shop
+abstract class Shop
 {
     use HasLanguage, HasCurrency, HasPriceTypes;
 
