@@ -207,7 +207,7 @@ abstract class CartProduct implements CartProductInterface
         return $finalPrice ? $finalPrice : $this->getBasePrice($typeId, $currencyCode);
     }
 
-    public function getTotalFinalPrice($typeId, $currencyCode)
+    public function getTotalFinalPrice($typeId = null, $currencyCode = null): ?PriceInterface
     {
         $price = clone $this->getFinalPrice($typeId, $currencyCode);
         $price->setValue($price->getValue() * $this->getQuantity());

@@ -16,8 +16,9 @@ interface CartProduct
     public function getBasePriceTypeId(): int;
     public function getFinalPriceTypeId(): int;
     public function getPrice($typeId, $currencyCode): ?Price;
-    public function getBasePrice($typeId, $currencyCode): ?Price;
-    public function getFinalPrice($typeId, $currencyCode): ?Price;
+    public function getBasePrice($typeId = null, $currencyCode = null): ?Price;
+    public function getFinalPrice($typeId = null, $currencyCode = null): ?Price;
+    public function getTotalFinalPrice($typeId = null, $currencyCode = null): ?Price;
     public function getAddedAtTimestamp(): ?int;
     public function getUpdatedAtTimestamp(): ?int;
     public function getCurrencyCode();

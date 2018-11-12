@@ -109,8 +109,8 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
                 'finalPriceTypeId' => $storedProduct['final_price_type_id'],
                 'currencyCode'     => $storedProduct['currency_code'],
                 'quantity'         => $storedProduct['quantity'],
-                'addedAt'          => $storedProduct['addedAt'],
-                'updatedAt'        => $storedProduct['updatedAt'],
+                'addedAt'          => $storedProduct['created_at'],
+                'updatedAt'        => $storedProduct['updated_at'],
                 'productData' => app()->makeWith(CartProductData::class, [
                     'data' => $storedProduct['params']
                 ])
