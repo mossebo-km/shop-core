@@ -5,7 +5,7 @@ namespace MosseboShopCore\Contracts\Shop;
 interface Price
 {
     public function setValue($value): void;
-    public function getValue(): float;
+    public function getValue();
     public function setCurrencyCode($currencyCode): void;
     public function getCurrencyCode(): ?string;
     public function priceIsComparable(Price $price): bool;

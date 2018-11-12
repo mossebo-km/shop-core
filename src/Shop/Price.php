@@ -18,15 +18,15 @@ class Price implements PriceInterface
 
     public function setValue($value): void
     {
-        if (is_int($value)) {
-            $this->value = $value;
+        if ($value == (int) $value) {
+            $this->value = (int) $value;
         }
         else {
             $this->value = (float) $value;
         }
     }
 
-    public function getValue(): float
+    public function getValue()
     {
         return is_null($this->value) ? 0 : $this->value;
     }
