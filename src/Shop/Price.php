@@ -58,6 +58,8 @@ class Price implements PriceInterface
                 $this->value + $price->getValue()
             );
         }
+
+        return $this;
     }
 
     public function minus(PriceInterface $price)
@@ -67,6 +69,8 @@ class Price implements PriceInterface
                 $this->value - $price->getValue()
             );
         }
+
+        return $this;
     }
 
     public function moreThan(PriceInterface $price): bool
