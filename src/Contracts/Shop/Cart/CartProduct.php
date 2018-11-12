@@ -13,10 +13,14 @@ interface CartProduct
     public function getOptions(): array;
 
     public function getQuantity(): int;
+    public function getBasePriceTypeId(): int;
+    public function getFinalPriceTypeId(): int;
+    public function getPrice($typeId, $currencyCode): ?Price;
     public function getBasePrice($typeId, $currencyCode): ?Price;
     public function getFinalPrice($typeId, $currencyCode): ?Price;
     public function getAddedAtTimestamp(): ?int;
     public function getUpdatedAtTimestamp(): ?int;
+    public function getCurrencyCode();
 
     public function add($num): int;
     public function remove($num): int;

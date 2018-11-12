@@ -149,7 +149,7 @@ abstract class CartProduct implements CartProductInterface
         return Shop::sales()->hasActualSale('product', $this->getProductId());
     }
 
-    public function getBasePriceTypeId()
+    public function getBasePriceTypeId(): int
     {
         if (is_null($this->basePriceTypeId)) {
             $this->basePriceTypeId = Shop::getDefaultPriceTypeId();
@@ -158,7 +158,7 @@ abstract class CartProduct implements CartProductInterface
         return $this->basePriceTypeId;
     }
 
-    public function getFinalPriceTypeId()
+    public function getFinalPriceTypeId(): int
     {
         if (is_null($this->finalPriceTypeId)) {
             if ($this->hasSale()) {
@@ -172,7 +172,7 @@ abstract class CartProduct implements CartProductInterface
         return $this->finalPriceTypeId;
     }
 
-    protected function getCurrencyCode()
+    public function getCurrencyCode()
     {
         return $this->currencyCode;
     }
