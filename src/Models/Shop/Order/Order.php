@@ -12,6 +12,7 @@ abstract class Order extends BaseModel
     protected $fillable = [
         'user_id',
         'language_code',
+        'price_type_id',
         'currency_code',
         'order_status_id',
         'pay_type_id',

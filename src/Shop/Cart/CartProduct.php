@@ -277,15 +277,16 @@ abstract class CartProduct implements CartProductInterface
     {
         return [
             'key'                 => $this->getKey(),
-            'productId'           => $this->getProductId(),
+            'product_id'          => $this->getProductId(),
             'options'             => $this->getOptions(),
             'quantity'            => $this->getQuantity(),
             'base_price_type_id'  => $this->getBasePriceTypeId(),
             'final_price_type_id' => $this->getFinalPriceTypeId(),
-            'addedAt'             => $this->getAddedAtTimestamp(),
-            'updatedAt'           => $this->getUpdatedAtTimestamp(),
+            'currency_code'       => $this->getCurrencyCode(),
+            'created_at'          => $this->getAddedAtTimestamp(),
+            'updated_at'          => $this->getUpdatedAtTimestamp(),
 
-            'productData'   => [
+            'params'   => [
                 'image'  => $this->getImage(),
                 'prices' => $this->getPrices(),
                 'titles' => $this->getI18nTitles(),

@@ -103,16 +103,16 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
 
         foreach ($this->getCartData('products') as $storedProduct) {
             $result->push(app()->makeWith(CartProduct::class, [
-                'productId'        => $storedProduct['productId'],
+                'productId'        => $storedProduct['product_id'],
                 'options'          => $storedProduct['options'],
-                'basePriceTypeId'  => $this->getPriceTypeId(),
-                'finalPriceTypeId' => $this->getPriceTypeId(),
-                'currencyCode'     => $storedProduct['currencyCode'],
+                'basePriceTypeId'  => $storedProduct['base_price_type_id'],
+                'finalPriceTypeId' => $storedProduct['final_price_type_id'],
+                'currencyCode'     => $storedProduct['currency_code'],
                 'quantity'         => $storedProduct['quantity'],
                 'addedAt'          => $storedProduct['addedAt'],
                 'updatedAt'        => $storedProduct['updatedAt'],
                 'productData' => app()->makeWith(CartProductData::class, [
-                    'data' => $storedProduct['productData']
+                    'data' => $storedProduct['params']
                 ])
             ]));
         }

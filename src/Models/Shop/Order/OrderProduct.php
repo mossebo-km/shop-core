@@ -21,6 +21,8 @@ abstract class OrderProduct extends BaseModel
         'product_id',
         'default_price',
         'final_price',
+        'base_price_type_id',
+        'final_price_type_id',
         'currency_code',
         'quantity',
         'params'
