@@ -259,7 +259,7 @@ class Cart implements CartInterface
         if (is_null($product)) {
             $product = app()->make(CartProductInterface::class);
 
-            $product->initByKey($productKey, $quantity);
+            $product->initByKey($productKey, $quantity, $this->priceTypeId(), null, $this->getCurrencyCode());
 
             $this->products->prepend($product);
         }

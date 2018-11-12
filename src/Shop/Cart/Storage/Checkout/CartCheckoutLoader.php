@@ -16,6 +16,7 @@ use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 class CartCheckoutLoader implements CartLoader
 {
     protected $cartData = null;
+    protected $priceTypeId = null;
 
     public function __construct($data)
     {
@@ -65,6 +66,20 @@ class CartCheckoutLoader implements CartLoader
         return Auth::user();
     }
 
+    protected function getPriceTypeId()
+    {
+        if (is_null($this->priceTypeId)) {
+            if ($user = $this->getUser()) {
+                $this->priceTypeId = $user->getPriceTypeId();
+            }
+            else {
+                $this->priceTypeId = Shop::getDefaultPriceTypeId();
+            }
+        }
+
+        return $this->priceTypeId;
+    }
+
     public function getProducts(): Collection
     {
         $products = new Collection;
@@ -72,7 +87,12 @@ class CartCheckoutLoader implements CartLoader
         foreach ($this->getCartData('cart.products') as $productKey => $quantity) {
             $product = app()->make(CartProduct::class);
 
-            $product->initByKey($productKey, $quantity);
+            $product->initByKey(
+                $productKey,
+                $quantity,
+                $this->getPriceTypeId(),
+                null,
+                $this->getCurrencyCode());
 
             $products->push($product);
         }

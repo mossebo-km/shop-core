@@ -27,5 +27,5 @@ interface CartProduct
     public static function makeKey($id, $options = []);
     public static function decodeKey(string $key): array;
 
-    public function initByKey($productKey, $quantity = 1);
+    public function initByKey($productKey, $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null);
 }

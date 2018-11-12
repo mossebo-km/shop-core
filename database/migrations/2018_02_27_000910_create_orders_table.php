@@ -29,6 +29,12 @@ class CreateOrdersTable extends Migration
             $table->integer('delivery_type_id')->unsigned()->index();
             $table->foreign('delivery_type_id')->references('id')->on(config('tables.DeliveryTypes'));
 
+            $table->integer('price_type_id')->unsigned()->index();
+            $table->foreign('price_type_id')->references('id')->on(config('tables.PriceTypes'));
+
+            $table->char('currency_code', 3);
+            $table->foreign('currency_code')->references('code')->on(config('tables.Currencies'));
+
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');

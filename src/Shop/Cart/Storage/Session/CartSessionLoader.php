@@ -17,6 +17,7 @@ use MosseboShopCore\Shop\Cart\CartProductData;
 class CartSessionLoader extends CartSessionConnector implements CartLoader
 {
     protected $cartData = null;
+    protected $priceTypeId = null;
 
     public function getCart(): CartInterface
     {
@@ -82,17 +83,34 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
         return Auth::user();
     }
 
+    protected function getPriceTypeId()
+    {
+        if (is_null($this->priceTypeId)) {
+            if ($user = $this->getUser()) {
+                $this->priceTypeId = $user->getPriceTypeId();
+            }
+            else {
+                $this->priceTypeId = Shop::getDefaultPriceTypeId();
+            }
+        }
+
+        return $this->priceTypeId;
+    }
+
     public function getProducts(): Collection
     {
         $result = new Collection;
 
         foreach ($this->getCartData('products') as $storedProduct) {
             $result->push(app()->makeWith(CartProduct::class, [
-                'productId'   => $storedProduct['productId'],
-                'options'     => $storedProduct['options'],
-                'quantity'    => $storedProduct['quantity'],
-                'addedAt'     => $storedProduct['addedAt'],
-                'updatedAt'   => $storedProduct['updatedAt'],
+                'productId'        => $storedProduct['productId'],
+                'options'          => $storedProduct['options'],
+                'basePriceTypeId'  => $this->getPriceTypeId(),
+                'finalPriceTypeId' => $this->getPriceTypeId(),
+                'currencyCode'     => $storedProduct['currencyCode'],
+                'quantity'         => $storedProduct['quantity'],
+                'addedAt'          => $storedProduct['addedAt'],
+                'updatedAt'        => $storedProduct['updatedAt'],
                 'productData' => app()->makeWith(CartProductData::class, [
                     'data' => $storedProduct['productData']
                 ])

@@ -57,12 +57,14 @@ class CartModelLoader implements CartLoader
                 $params['options'] = Shop::getAvailableProductOptionIds($orderProduct->product_id);
 
                 $cartProduct = app()->make(CartProduct::class, [
-                    'productId'   => $orderProduct->product_id,
-                    'options'     => $options,
-                    'quantity'    => $orderProduct->quantity,
-                    'addedAt'     => $orderProduct->created_at,
-                    'updatedAt'   => $orderProduct->updated_at,
-                    'productData' => app()->make(CartProductData::class, ['data' => $params]),
+                    'productId'        => $orderProduct->product_id,
+                    'options'          => $options,
+                    'quantity'         => $orderProduct->quantity,
+                    'basePriceTypeId'  => $orderProduct->base_price_type_id,
+                    'finalPriceTypeId' => $orderProduct->final_price_type_id,
+                    'addedAt'          => $orderProduct->created_at,
+                    'updatedAt'        => $orderProduct->updated_at,
+                    'productData'      => app()->make(CartProductData::class, ['data' => $params]),
                 ]);
 
                 $products->push($cartProduct);

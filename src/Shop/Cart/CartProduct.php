@@ -10,35 +10,42 @@ use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 
 abstract class CartProduct implements CartProductInterface
 {
-    protected $key         = null;
-    protected $productId   = null;
-    protected $options     = [];
-    protected $quantity    = null;
-    protected $productData = null;
-    protected $addedAt     = null;
-    protected $updatedAt   = null;
+    protected $key              = null;
+    protected $productId        = null;
+    protected $options          = [];
+    protected $quantity         = null;
+    protected $productData      = null;
+    protected $basePriceTypeId  = null;
+    protected $finalPriceTypeId = null;
+    protected $currencyCode     = null;
 
-    protected $basePrice   = null;
-    protected $finalPrice  = null;
+    protected $addedAt          = null;
+    protected $updatedAt        = null;
 
-    public function __construct($productId = null, $options = [], $quantity = 1, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
+    protected $basePrice        = null;
+    protected $finalPrice       = null;
+
+    public function __construct($productId = null, $options = [], $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
     {
         if (! is_null($productId)) {
-            $this->init($productId, $options, $quantity, $addedAt, $updatedAt, $productData);
+            $this->init($productId, $options, $quantity, $basePriceTypeId, $finalPriceTypeId, $currencyCode, $addedAt, $updatedAt, $productData);
         }
     }
 
-    public function init($productId, $options = [], $quantity = 1, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
+    public function init($productId, $options = [], $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
     {
-        $this->productId   = $productId;
-        $this->options     = $options;
-        $this->quantity    = $quantity;
-        $this->addedAt     = is_null($addedAt) ? time() : $addedAt;
-        $this->updatedAt   = is_null($updatedAt) ? time() : $updatedAt;
-        $this->productData = $productData;
+        $this->productId        = $productId;
+        $this->options          = $options;
+        $this->quantity         = $quantity;
+        $this->basePriceTypeId  = $basePriceTypeId;
+        $this->finalPriceTypeId = $finalPriceTypeId;
+        $this->currencyCode     = $currencyCode;
+        $this->addedAt          = is_null($addedAt) ? time() : $addedAt;
+        $this->updatedAt        = is_null($updatedAt) ? time() : $updatedAt;
+        $this->productData      = $productData;
     }
 
-    public function initByKey($productKey, $quantity = 1)
+    public function initByKey($productKey, $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null)
     {
         $decoded = static::decodeKey($productKey);
 
@@ -46,6 +53,9 @@ abstract class CartProduct implements CartProductInterface
             $decoded['id'],
             $decoded['options'],
             $quantity,
+            $basePriceTypeId,
+            $finalPriceTypeId,
+            $currencyCode,
             time(),
             time(),
             static::findCartProductData($decoded['id'], $decoded['options'])
@@ -134,11 +144,42 @@ abstract class CartProduct implements CartProductInterface
         ]);
     }
 
-    public function getBasePrice($typeId, $currencyCode): ?PriceInterface
+    protected function hasSale()
     {
-        $prices = $this->getPrices();
+        return Shop::sales()->hasActualSale('product', $this->getProductId());
+    }
 
-        foreach ($prices as $price) {
+    public function getBasePriceTypeId()
+    {
+        if (is_null($this->basePriceTypeId)) {
+            $this->basePriceTypeId = Shop::getDefaultPriceTypeId();
+        }
+
+        return $this->basePriceTypeId;
+    }
+
+    public function getFinalPriceTypeId()
+    {
+        if (is_null($this->finalPriceTypeId)) {
+            if ($this->hasSale()) {
+                $this->finalPriceTypeId = Shop::getPriceTypeId('sale');
+            }
+            else {
+                $this->finalPriceTypeId = $this->getBasePriceTypeId();
+            }
+        }
+
+        return $this->finalPriceTypeId;
+    }
+
+    protected function getCurrencyCode()
+    {
+        return $this->currencyCode;
+    }
+
+    public function getPrice($typeId, $currencyCode): ?PriceInterface
+    {
+        foreach ($this->getPrices() as $price) {
             if ($price['price_type_id'] === $typeId && $price['currency_code'] === $currencyCode) {
                 return static::makePrice($price['value'], $currencyCode);
             }
@@ -147,17 +188,23 @@ abstract class CartProduct implements CartProductInterface
         return null;
     }
 
-    public function getFinalPrice($typeId, $currencyCode): ?PriceInterface
+    public function getBasePrice($typeId = null, $currencyCode = null): ?PriceInterface
     {
+        return $this->getPrice(
+            is_null($typeId) ? $this->getBasePriceTypeId() : $typeId,
+            is_null($currencyCode) ? $this->getCurrencyCode() : $currencyCode
+        );
+    }
+
+    public function getFinalPrice($typeId = null, $currencyCode = null): ?PriceInterface
+    {
+        $finalPrice = $this->getPrice(
+            is_null($typeId) ? $this->getFinalPriceTypeId() : $typeId,
+            is_null($currencyCode) ? $this->getCurrencyCode() : $currencyCode
+        );
+
         // TODO: Если потребуется доделать цену с учетом промокода или других модификаторов цены.
-        if ($sale = Shop::sales()->hasActualSale('product', $this->getProductId())) {
-            $salePrice = $this->getBasePrice(Shop::getPriceTypeId('sale'), $currencyCode);
-            $basePrice = $this->getBasePrice($typeId, $currencyCode);
-
-            return $basePrice->moreThan($salePrice) ? $salePrice : $basePrice;
-        }
-
-        return $this->getBasePrice($typeId, $currencyCode);
+        return $finalPrice ? $finalPrice : $this->getBasePrice($typeId, $currencyCode);
     }
 
     public function getTotalFinalPrice($typeId, $currencyCode)
@@ -168,7 +215,6 @@ abstract class CartProduct implements CartProductInterface
         return $price;
     }
 
-
     public function getAddedAtTimestamp(): int
     {
         return $this->addedAt;
@@ -178,7 +224,6 @@ abstract class CartProduct implements CartProductInterface
     {
         return $this->updatedAt;
     }
-
 
     public static function makeKey($id, $options = [])
     {
@@ -231,12 +276,14 @@ abstract class CartProduct implements CartProductInterface
     public function toStore()
     {
         return [
-            'key'       => $this->getKey(),
-            'productId' => $this->getProductId(),
-            'options'   => $this->getOptions(),
-            'quantity'  => $this->getQuantity(),
-            'addedAt'   => $this->getAddedAtTimestamp(),
-            'updatedAt' => $this->getUpdatedAtTimestamp(),
+            'key'                 => $this->getKey(),
+            'productId'           => $this->getProductId(),
+            'options'             => $this->getOptions(),
+            'quantity'            => $this->getQuantity(),
+            'base_price_type_id'  => $this->getBasePriceTypeId(),
+            'final_price_type_id' => $this->getFinalPriceTypeId(),
+            'addedAt'             => $this->getAddedAtTimestamp(),
+            'updatedAt'           => $this->getUpdatedAtTimestamp(),
 
             'productData'   => [
                 'image'  => $this->getImage(),
