@@ -11,7 +11,7 @@ use MosseboShopCore\Contracts\Shop\Cart\CartLoader;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
-use MosseboShopCore\Contracts\Shop\User;
+use MosseboShopCore\Contracts\Shop\Customer;
 use MosseboShopCore\Shop\Cart\CartProductData;
 
 class CartSessionLoader extends CartSessionConnector implements CartLoader
@@ -78,7 +78,7 @@ class CartSessionLoader extends CartSessionConnector implements CartLoader
         return $this->getCartData($key);
     }
 
-    public function getUser(): ?User
+    public function getUser(): ?Customer
     {
         return Auth::user();
     }

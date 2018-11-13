@@ -4,9 +4,9 @@ namespace MosseboShopCore\Models;
 
 use Shop;
 use MosseboShopCore\Models\Base\Authenticatable;
-use MosseboShopCore\Contracts\Shop\User as UserInterface;
+use MosseboShopCore\Contracts\Shop\Customer as CustomerInterface;
 
-abstract class User extends Authenticatable implements UserInterface
+abstract class User extends Authenticatable implements CustomerInterface
 {
     protected $relationFieldName = 'user_id';
 

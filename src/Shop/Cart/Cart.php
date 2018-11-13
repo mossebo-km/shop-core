@@ -5,7 +5,7 @@ namespace MosseboShopCore\Shop\Cart;
 use Auth;
 use Shop;
 use Illuminate\Support\Collection;
-use MosseboShopCore\Contracts\Shop\User;
+use MosseboShopCore\Contracts\Shop\Customer;
 use MosseboShopCore\Shop\Price;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
@@ -44,7 +44,7 @@ class Cart implements CartInterface
         return ! is_null($this->user);
     }
 
-    public function getUser(): ?User
+    public function getUser(): ?Customer
     {
         return $this->user;
     }

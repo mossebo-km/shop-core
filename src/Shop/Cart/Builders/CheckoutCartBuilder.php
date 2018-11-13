@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Cart\Storage\Checkout;
+namespace MosseboShopCore\Shop\Cart\Builders;
 
 use Shop;
 use Auth;
@@ -13,7 +13,7 @@ use MosseboShopCore\Contracts\Shop\Customer;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 
-class CartCheckoutLoader implements CartLoader
+class CheckoutCartBuilder implements CartLoader
 {
     protected $cartData = null;
     protected $priceTypeId = null;
@@ -25,7 +25,7 @@ class CartCheckoutLoader implements CartLoader
 
     public function getCart(): CartInterface
     {
-        return app()->makeWith(CartInterface::class, $this->getCartContent());
+        return Shop::make(CartInterface::class, $this->getCartContent());
     }
 
     public function getCartContent()
@@ -85,7 +85,7 @@ class CartCheckoutLoader implements CartLoader
         $products = new Collection;
 
         foreach ($this->getCartData('cart.products') as $productKey => $quantity) {
-            $product = app()->make(CartProduct::class);
+            $product = Shop::make(CartProduct::class);
 
             $product->initByKey(
                 $productKey,
@@ -113,7 +113,7 @@ class CartCheckoutLoader implements CartLoader
             return null;
         }
 
-        return app()->makeWith(PromoCode::class, [
+        return Shop::make(PromoCode::class, [
             'codeName' => $promoCodeName
         ]);
     }
