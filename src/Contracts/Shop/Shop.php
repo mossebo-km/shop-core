@@ -2,8 +2,8 @@
 
 namespace MosseboShopCore\Contracts\Shop;
 
-namespace MosseboShopCore\Contracts\Shop\Cart\Cart;
-namespace MosseboShopCore\Contracts\Shop\Order\Order;
+use MosseboShopCore\Contracts\Shop\Cart\Cart;
+use MosseboShopCore\Contracts\Shop\Order\Order;
 
 interface Shop
 {
