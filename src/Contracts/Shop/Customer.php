@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Contracts\Shop;
 
-interface User
+interface Customer
 {
     public function getPriceTypeId(): ?int;
     public function ordersCount(): int;

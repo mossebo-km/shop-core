@@ -4,7 +4,7 @@ namespace MosseboShopCore\Contracts\Shop\Cart;
 
 use Illuminate\Support\Collection;
 
-use MosseboShopCore\Contracts\Shop\User;
+use MosseboShopCore\Contracts\Shop\Customer;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 use MosseboShopCore\Contracts\Shop\Price;
 
@@ -12,7 +12,7 @@ use MosseboShopCore\Contracts\Shop\Price;
 interface Cart
 {
     public function hasUser(): bool;
-    public function getUser(): ?User;
+    public function getUser(): ?Customer;
 
     public function getProducts(): Collection;
 

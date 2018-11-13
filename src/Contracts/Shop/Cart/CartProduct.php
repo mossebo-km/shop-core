@@ -3,8 +3,9 @@
 namespace MosseboShopCore\Contracts\Shop\Cart;
 
 use MosseboShopCore\Contracts\Shop\Price;
+use MosseboShopCore\Contracts\Shop\Product\Product;
 
-interface CartProduct
+interface CartProduct extends Product
 {
     public function isExist(): bool;
 
