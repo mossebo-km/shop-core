@@ -46,7 +46,9 @@ abstract class User extends Authenticatable implements CustomerInterface
 
     public function getPriceTypeId(): int
     {
-        return Shop::getDefaultPriceTypeId();
+        $priceTypeId = $this->getAttribute('price_type_id');
+
+        return $priceTypeId ? $priceTypeId : Shop::getDefaultPriceTypeId();
     }
 
     public function isFranchisee()

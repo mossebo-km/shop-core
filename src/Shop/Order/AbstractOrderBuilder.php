@@ -7,8 +7,8 @@ use MosseboShopCore\Contracts\Shop\Order\OrderBuilder as OrderBuilderInterface;
 
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Customer;
-use MosseboShopCore\Contracts\Shop\Delivery;
-use MosseboShopCore\Contracts\Shop\Payment;
+use MosseboShopCore\Contracts\Shop\Shipping\Shipping;
+use MosseboShopCore\Contracts\Shop\Payment\Payment;
 
 abstract class AbstractOrderBuilder implements OrderBuilderInterface
 {
@@ -18,8 +18,9 @@ abstract class AbstractOrderBuilder implements OrderBuilderInterface
 
         $order->setCart($this->getCart());
         $order->setCustomer($this->getCustomer());
-        $order->setDelivery($this->getDelivery());
+        $order->setShipping($this->getShipping());
         $order->setPayment($this->getPayment());
+        $order->setComment($this->getComment());
 
         return $order;
     }
@@ -34,12 +35,17 @@ abstract class AbstractOrderBuilder implements OrderBuilderInterface
 
     }
 
-    protected function getDelivery(): ?Delivery
+    protected function getShipping(): ?Shipping
     {
 
     }
 
     protected function getPayment(): ?Payment
+    {
+
+    }
+
+    protected function getComment(): ?string
     {
 
     }

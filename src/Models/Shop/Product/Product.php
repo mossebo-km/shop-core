@@ -2,12 +2,12 @@
 
 namespace MosseboShopCore\Models\Shop\Product;
 
+use ScoutElastic\Searchable;
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Elasticsearch\Configurators\ProductIndexConfigurator;
-use MosseboShopCore\Contracts\Shop\Product as ProductInterface;
+use MosseboShopCore\Contracts\Shop\Product\Product as ProductInterface;
 use MosseboShopCore\Contracts\Models\HasMorphRelation as HasMorphRelationInterface;
 use MosseboShopCore\Support\Traits\Models\HasMorphRelation;
-use ScoutElastic\Searchable;
 use MosseboShopCore\Support\Traits\Models\HasI18n;
 use MosseboShopCore\Support\Traits\Models\HasEnabledStatus;
 

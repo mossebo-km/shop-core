@@ -273,16 +273,18 @@ abstract class CartProduct implements CartProductInterface
         return null;
     }
 
-    public function toStore()
+    public function toStore($encodeParams = false)
     {
-        return [
+        $data = [
             'key'                 => $this->getKey(),
             'product_id'          => $this->getProductId(),
             'options'             => $this->getOptions(),
-            'quantity'            => $this->getQuantity(),
             'base_price_type_id'  => $this->getBasePriceTypeId(),
             'final_price_type_id' => $this->getFinalPriceTypeId(),
             'currency_code'       => $this->getCurrencyCode(),
+            'quantity'            => $this->getQuantity(),
+            'default_price'       => $this->getBasePrice()->getValue(),
+            'final_price'         => $this->getFinalPrice()->getValue(),
             'created_at'          => $this->getAddedAtTimestamp(),
             'updated_at'          => $this->getUpdatedAtTimestamp(),
 
@@ -292,5 +294,11 @@ abstract class CartProduct implements CartProductInterface
                 'titles' => $this->getI18nTitles(),
             ]
         ];
+
+        if ($encodeParams) {
+            $data['params'] = json_encode($data['params'], JSON_UNESCAPED_UNICODE);
+        }
+
+        return $data;
     }
 }

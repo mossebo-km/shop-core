@@ -28,7 +28,7 @@ interface CartProduct extends Product
     public function remove($num): int;
     public function setQuantity($num): int;
 
-    public function toStore();
+    public function toStore($encodeParams = false);
 
     public static function makeKey($id, $options = []);
     public static function decodeKey(string $key): array;
