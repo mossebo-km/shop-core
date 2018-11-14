@@ -11,6 +11,7 @@ use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\Customer;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
+use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 
 class Cart implements CartInterface
@@ -302,11 +303,14 @@ class Cart implements CartInterface
         $product = $this->findProductByKey($productKey);
 
         if (is_null($product)) {
-            $product = Shop::makeCartProduct($productKey, null, $quantity, function (CartProduct $product) {
-                $product->setBasePriceTypeId($this->getPriceTypeId());
-                $product->setCurrencyCode($this->getCurrencyCode());
-                $product->setAddedAtTimestamp();
-            });
+            $product = Shop::make(CartProductInterface::class, [
+                'productId' => $productKey,
+                'quantity' => $quantity
+            ]);
+
+            $product->setBasePriceTypeId($this->getPriceTypeId());
+            $product->setCurrencyCode($this->getCurrencyCode());
+            $product->setAddedAtTimestamp();
 
             $this->products->prepend($product);
         }

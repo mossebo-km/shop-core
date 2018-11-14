@@ -6,7 +6,6 @@ use Shop;
 use Auth;
 use Cache;
 use Illuminate\Support\Collection;
-use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProductData as CartProductDataInterface;
