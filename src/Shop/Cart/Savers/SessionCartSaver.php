@@ -22,19 +22,24 @@ class SessionCartSaver implements CartSaver
 
         $data = [];
 
-        $this->setProductsToSave($data);
-        $this->setPromoToSave($data);
-        $this->setCurrencyCodeToSave($data);
-        $this->setTimestamps($data);
+        $this->prepareProducts($data);
+        $this->preparePromo($data);
+        $this->prepareCurrencyCode($data);
+        $this->prepareTimestamps($data);
 
         // todo: доделать, или убрать скидки из корзины
 
         $this->put('cart', $data);
     }
 
-    protected function setProductsToSave(& $data)
+    protected function getCart(): Cart
     {
-        $data['products'] = $this->cart->getProducts()->reduce(function ($carry, CartProduct $product) {
+        return $this->cart;
+    }
+
+    protected function prepareProducts(& $data)
+    {
+        $data['products'] = $this->getCart()->getProducts()->reduce(function ($carry, CartProduct $product) {
 //            if (! $product->isExist()) {
 //                return;
 //            }
@@ -45,23 +50,28 @@ class SessionCartSaver implements CartSaver
         }, []);
     }
 
-    protected function setPromoToSave(& $data)
+    protected function preparePromo(& $data)
     {
-        $promoCode = $this->cart->getPromoCode();
+        $promoCode = $this->getCart()->getPromoCode();
 
         if (! is_null($promoCode)) {
             $data['promoCode'] = $promoCode->getName();
         }
     }
 
-    protected function setCurrencyCodeToSave(& $data)
+    protected function preparePriceTypeId(& $data)
     {
-        $data['currencyCode'] = $this->cart->getCurrencyCode();
+        $data['priceTypeId'] = $this->getCart()->getPriceTypeId();
     }
 
-    protected function setTimestamps(& $data)
+    protected function prepareCurrencyCode(& $data)
     {
-        $data['createdAt'] = $this->cart->getCreatedAt();
-        $data['updatedAt'] = $this->cart->getUpdatedAt();
+        $data['currencyCode'] = $this->getCart()->getCurrencyCode();
+    }
+
+    protected function prepareTimestamps(& $data)
+    {
+        $data['createdAt'] = $this->getCart()->getCreatedAt();
+        $data['updatedAt'] = $this->getCart()->getUpdatedAt();
     }
 }

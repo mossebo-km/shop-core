@@ -31,12 +31,18 @@ class SessionCartLoader extends AbstractCartBuilder
         $defaultPromo = Shop::getDefaultPromoCode();
 
         return [
-            'products'     => new Collection,
             'currencyCode' => Shop::getCurrentCurrencyCode(),
             'promoCode'    => $defaultPromo ? $defaultPromo : null,
-            'createdAt'    => time(),
-            'updatedAt'    => time(),
         ];
+    }
+
+    protected function getPriceTypeId(): int
+    {
+        if ($priceTypeId = $this->getCartData('priceTypeId')) {
+            return $priceTypeId;
+        }
+
+        return parent::getPriceTypeId();
     }
 
     protected function getCurrencyCode(): ?string
@@ -86,5 +92,15 @@ class SessionCartLoader extends AbstractCartBuilder
         ]);
 
         return $promoCode->notExist() ? null : $promoCode;
+    }
+
+    protected function getCreatedAt()
+    {
+        return $this->getCartData('promoCode') ?: time();
+    }
+
+    protected function getUpdatedAt()
+    {
+        return time();
     }
 }
