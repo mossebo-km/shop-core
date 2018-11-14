@@ -1,8 +1,7 @@
 <?php
 
-namespace MosseboShopCore\Shop\Cart\Types\Checkout;
+namespace MosseboShopCore\Shop\Cart\Builders;
 
-use MosseboShopCore\Shop\Cart\Builders\AbstractCartBuilder;
 use Shop;
 use Auth;
 use Cache;

@@ -13,9 +13,9 @@ class CheckoutOrderBuilder extends AbstractOrderBuilder
 {
     protected $checkoutData = null;
 
-    public function __construct($checkoutData)
+    public function __construct($data)
     {
-        $this->checkoutData = $checkoutData;
+        $this->checkoutData = $data;
     }
 
     protected function getCart(): ?Cart
