@@ -258,6 +258,15 @@ class Cart implements CartInterface
         }
     }
 
+    public function getPromoDiscountPrice(): ?PriceInterface
+    {
+        if ($promoCode = $this->getPromoCode()) {
+            return $promoCode->getDiscountPrice($this->getAmount());
+        }
+
+        return null;
+    }
+
 
     /**
      * Работа с товарами

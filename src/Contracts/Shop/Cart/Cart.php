@@ -35,6 +35,7 @@ interface Cart
     public function clearPromoCode();
     public function getPromoCode(): ?PromoCode;
     public function getLastPromoCodeInfo(): ?array;
+    public function getPromoDiscountPrice(): ?Price;
 
     public function setCreatedAt($createdAt = null): Cart;
     public function getCreatedAt(): int;
