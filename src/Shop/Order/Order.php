@@ -80,7 +80,7 @@ class Order implements OrderInterface
         return $this;
     }
 
-    public function getComment(): ?string
+    public function getComment(): string
     {
         return $this->comment;
     }
