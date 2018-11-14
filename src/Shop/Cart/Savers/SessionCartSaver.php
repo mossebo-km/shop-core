@@ -28,6 +28,7 @@ class SessionCartSaver implements CartSaver
         $this->prepareProducts($data);
         $this->preparePromo($data);
         $this->prepareCurrencyCode($data);
+        $this->preparePriceTypeId($data);
         $this->prepareTimestamps($data);
 
         // todo: доделать, или убрать скидки из корзины
