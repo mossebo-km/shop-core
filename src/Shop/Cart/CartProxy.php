@@ -5,6 +5,7 @@ namespace MosseboShopCore\Shop\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\CartSaver;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
+use Shop;
 
 class CartProxy
 {

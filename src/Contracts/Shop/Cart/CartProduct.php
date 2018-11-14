@@ -41,6 +41,4 @@ interface CartProduct extends Product
 
     public static function makeKey($id, $options = []);
     public static function decodeKey($key): array;
-
-    public function initByKey($productKey, $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null);
 }

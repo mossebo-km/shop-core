@@ -10,6 +10,7 @@ use MosseboShopCore\Contracts\Shop\Price;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode as PromoCodeInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoValidator as PromoValidatorInterface;
 use MosseboShopCore\Support\Traits\HasResource;
+use Shop;
 
 abstract class PromoCode implements PromoCodeInterface
 {

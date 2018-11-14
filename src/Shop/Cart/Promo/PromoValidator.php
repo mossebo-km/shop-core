@@ -8,6 +8,7 @@ use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCondition;
 use MosseboShopCore\Contracts\Models\Shop\Promo\PromoCondition as PromoConditionResourceInterface;
 use MosseboShopCore\Exceptions\PromoCheckException;
+use Shop;
 
 class PromoValidator implements PromoValidatorInterface
 {
