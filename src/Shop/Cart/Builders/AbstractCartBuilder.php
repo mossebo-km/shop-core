@@ -17,7 +17,7 @@ abstract class AbstractCartBuilder implements CartBuilderInterface
 
     public function getCart(): CartInterface
     {
-        $cart = Shop::makeCart(CartInterface::class);
+        $cart = Shop::make(CartInterface::class);
 
         $cart->setManyParams(function($cart) {
             $cart->setCustomer($this->getCustomer());

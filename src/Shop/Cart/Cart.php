@@ -356,7 +356,7 @@ class Cart implements CartInterface
     {
         $this->blocked = true;
 
-        Shop::call($cb, $this);
+        $cb($this);
 
         $this->blocked = false;
 

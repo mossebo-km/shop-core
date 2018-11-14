@@ -33,7 +33,7 @@ abstract class Shop implements ShopInterface
         return [];
     }
 
-    public function call($callable, $params)
+    public function call($callable, $params = null)
     {
         return app()->call($callable, $params);
     }
