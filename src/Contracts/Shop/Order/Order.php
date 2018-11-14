@@ -11,6 +11,9 @@ interface Order
 {
 //    public function getOrder(): Order;
 
+    public function setId($id): Order;
+    public function getId(): ?int;
+
     public function setCart(Cart $cart = null): Order;
     public function getCart(): ?Cart;
     public function setCustomer(Customer $customer = null): Order;

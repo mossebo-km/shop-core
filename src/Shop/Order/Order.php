@@ -12,6 +12,7 @@ use Shop;
 
 class Order implements OrderInterface
 {
+    protected $id       = null;
     protected $cart     = null;
     protected $customer = null;
     protected $shipping = null;
@@ -19,6 +20,18 @@ class Order implements OrderInterface
 
     protected $statusId = 1;
     protected $comment  = null;
+
+    public function setId($id): OrderInterface
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
     public function setCart(Cart $cart = null): OrderInterface
     {
