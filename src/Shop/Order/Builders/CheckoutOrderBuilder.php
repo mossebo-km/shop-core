@@ -20,9 +20,7 @@ class CheckoutOrderBuilder extends AbstractOrderBuilder
 
     protected function getCart(): ?Cart
     {
-        return Shop::make(CheckoutCartBuilder::class, [
-            'data' => $this->checkoutData
-        ]);
+        return Shop::makeCart(CheckoutCartBuilder::class, $this->checkoutData);
     }
 
     protected function getCustomer(): ?Customer

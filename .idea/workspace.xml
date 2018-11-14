@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Shop/Order/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Order/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Order/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
+            <state relative-caret-position="1155">
               <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
             </state>
           </provider>
@@ -121,8 +121,26 @@
       <file leaf-file-name="CheckoutOrderBuilder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state relative-caret-position="382">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shipping.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shop/Shipping/Shipping.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Payment.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Shop/Payment/Payment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -141,15 +159,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartProduct.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2671">
-              <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -217,7 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Models/Shop/Order/Order.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Order/OrderProduct.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Payment.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Delivery.php" />
@@ -232,7 +240,6 @@
         <option value="$PROJECT_DIR$/src/Support/Traits/HasParams.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/HasAttributes.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Shipping/Shipping.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Shipping/Shipping.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Shop.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartFactory.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" />
@@ -264,10 +271,12 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/AbstractCartBuilder.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/CheckoutOrderBuilder.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/CheckoutCartBuilder.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/Builders/AbstractOrderBuilder.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Order/Order.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/Order.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Shipping/Shipping.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Payment/Payment.php" />
       </list>
     </option>
   </component>
@@ -441,55 +450,7 @@
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Builders" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Promo" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Promo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Conditions" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Savers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Order" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Order" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Builders" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Payment" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
@@ -497,6 +458,13 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shipping" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
@@ -560,11 +528,11 @@
       <recent name="$PROJECT_DIR$/public/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Shop" />
       <recent name="$PROJECT_DIR$/src/Shop/Order/Builders" />
       <recent name="$PROJECT_DIR$/src/Shop/Cart/Savers" />
       <recent name="$PROJECT_DIR$/src/Shop/Cart/Types" />
       <recent name="$PROJECT_DIR$/src/Shop/Cart/Builders" />
-      <recent name="$PROJECT_DIR$/src/Shop/Cart/Types/Checkout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -680,12 +648,12 @@
       <workItem from="1541754695058" duration="1553000" />
       <workItem from="1541762279941" duration="2045000" />
       <workItem from="1542007632995" duration="17729000" />
-      <workItem from="1542093220718" duration="34251000" />
+      <workItem from="1542093220718" duration="34724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="513580000" />
+    <option name="totallyTimeSpent" value="514053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -696,8 +664,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.3313433" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17838125" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.3313433" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17838125" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.15974441" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962587" />
@@ -725,13 +693,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://cb60a612-1843-4746-9932-b6c2a20d01c6/database/postgres/schema/public/table/shop_currencies">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProductData.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -808,13 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Shipping/Shipping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1045,13 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Order/Order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -1061,8 +1008,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Order/Order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
+        <state relative-caret-position="1155">
           <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Shipping/Shipping.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Payment/Payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
