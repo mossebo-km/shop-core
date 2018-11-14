@@ -5,6 +5,7 @@ namespace MosseboShopCore\Shop\Cart\Promo\Conditions;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCondition as ConditionInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Price;
+use Shop;
 
 class ProductExpensive extends BaseCondition implements ConditionInterface
 {

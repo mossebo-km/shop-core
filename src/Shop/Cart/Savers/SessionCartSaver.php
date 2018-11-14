@@ -5,9 +5,12 @@ namespace MosseboShopCore\Shop\Cart\Savers;
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 use MosseboShopCore\Contracts\Shop\Cart\CartSaver;
+use MosseboShopCore\Shop\Cart\Traits\HasSession;
 
 class SessionCartSaver implements CartSaver
 {
+    use HasSession;
+
     protected $cart = null;
 
     public function save(Cart $cart)

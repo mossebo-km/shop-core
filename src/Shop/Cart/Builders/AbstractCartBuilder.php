@@ -23,7 +23,11 @@ abstract class AbstractCartBuilder implements CartBuilderInterface
         $cart->setPriceTypeId($this->getPriceTypeId());
         $cart->setCurrencyCode($this->getCurrencyCode());
         $cart->setProducts($this->getProducts());
-        $cart->setPromoCode($this->getPromoCode());
+
+        if ($promoCode = $this->getPromoCode()) {
+            $cart->setPromoCode($promoCode);
+        }
+
         $cart->setCreatedAt($this->getCreatedAt());
         $cart->setUpdatedAt($this->getUpdatedAt());
 

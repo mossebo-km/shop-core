@@ -3,6 +3,7 @@
 namespace MosseboShopCore\Shop\Cart;
 
 use Auth;
+use Carbon\Carbon;
 use Shop;
 use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\Customer;
@@ -360,16 +361,37 @@ class Cart implements CartInterface
         $this->checkPromo();
     }
 
+    protected function prepareTime($time)
+    {
+        if (is_int($time)) {
+            return $time;
+        }
+
+        if (is_null($time)) {
+            return time();
+        }
+
+        if ($time instanceof \Carbon\Carbon) {
+            return $time->timestamp;
+        }
+
+        if ($time instanceof \DateTime) {
+            return $time->getTimestamp();
+        }
+
+        return time();
+    }
+
     public function setCreatedAt($createdAt = null): CartInterface
     {
-        $this->createdAt = is_null($createdAt) ? time() : $createdAt;
+        $this->createdAt = $this->prepareTime($createdAt);
 
         return $this;
     }
 
     public function setUpdatedAt($updatedAt = null): CartInterface
     {
-        $this->updatedAt = is_null($updatedAt) ? time() : $updatedAt;
+        $this->updatedAt = $this->prepareTime($updatedAt);
 
         return $this;
     }

@@ -8,6 +8,7 @@ use Auth;
 use MosseboShopCore\Shop\Shop\Traits\HasLanguage;
 use MosseboShopCore\Shop\Shop\Traits\HasCurrency;
 use MosseboShopCore\Shop\Shop\Traits\HasPriceTypes;
+use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
 
 abstract class Shop implements ShopInterface
 {
@@ -36,5 +37,14 @@ abstract class Shop implements ShopInterface
     public function call($callable, $params)
     {
         return app()->call($callable, $params);
+    }
+
+    public function makeCartProduct($productId, $options = null, $quantity = 1)
+    {
+        return static::make(CartProduct::class, [
+            'productId' => $productId,
+            'options'   => $options,
+            'quantity'  => $quantity
+        ]);
     }
 }

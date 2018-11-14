@@ -31,15 +31,10 @@ class CheckoutCartBuilder extends AbstractCartBuilder
         $products = new Collection;
 
         foreach ($this->getCartData('cart.products') as $productKey => $quantity) {
-            $product = Shop::make(CartProduct::class, [
-                'productId' => $productKey,
-                'quantity' => $quantity
-            ]);
-
-            $product->setBasePriceTypeId($this->getPriceTypeId());
-            $product->setCurrencyCode($this->getCurrencyCode());
-
-            $products->push($product);
+            $products->push(Shop::makeCartProduct($productKey, null, $quantity, function (CartProduct $product) {
+                $product->setBasePriceTypeId($this->getPriceTypeId());
+                $product->setCurrencyCode($this->getCurrencyCode());
+            }));
         }
 
         return $products;
