@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop;
+namespace MosseboShopCore\Shop\Order;
 
 use MosseboShopCore\Contracts\Shop\Order\Order as OrderInterface;
 

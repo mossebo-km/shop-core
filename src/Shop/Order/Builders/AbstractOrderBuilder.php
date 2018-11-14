@@ -9,6 +9,7 @@ use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Customer;
 use MosseboShopCore\Contracts\Shop\Shipping\Shipping;
 use MosseboShopCore\Contracts\Shop\Payment\Payment;
+use Shop;
 
 abstract class AbstractOrderBuilder implements OrderBuilderInterface
 {
