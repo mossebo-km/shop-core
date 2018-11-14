@@ -11,12 +11,17 @@ use MosseboShopCore\Contracts\Shop\Price;
 
 interface Cart
 {
-    public function hasUser(): bool;
-    public function getUser(): ?Customer;
+    public function hasCustomer(): bool;
+    public function setCustomer(Customer $customer = null): Cart;
+    public function getCustomer(): ?Customer;
 
+    public function setProducts(Collection $products = null): CartInterface;
     public function getProducts(): Collection;
 
+    public function setCurrencyCode($currencyCode = null): Cart;
     public function getCurrencyCode(): string;
+
+    public function setPriceTypeId($priceTypeId = null): Cart;
     public function getPriceTypeId(): int;
 
     public function getAmount(): Price;
@@ -24,18 +29,17 @@ interface Cart
     public function getTotal(): Price;
 
     public function getProductsQuantity(): int;
-    public function getProductNamesQuantity(): int;
-
-//    public function setAmountDiscount($amount, $currencyCode, $percent = 0, $isSummable = false): void;
-//    public function setPercentDiscount($percent, $isSummable = false): void;
-//    public function getBestDiscount();
+    public function getProductItemsQuantity(): int;
 
     public function setPromoCode(PromoCode $code);
     public function clearPromoCode();
     public function getPromoCode(): ?PromoCode;
     public function getLastPromoCodeInfo(): ?array;
 
+    public function setCreatedAt($createdAt = null): CartInterface;
     public function getCreatedAt(): int;
+
+    public function setUpdatedAt($updatedAt = null): CartInterface;
     public function getUpdatedAt(): int;
 
     public function addProductByKey($productKey, $quantity = 1);

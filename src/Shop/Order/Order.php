@@ -23,6 +23,8 @@ class Order implements OrderInterface
     public function setCart(Cart $cart)
     {
         $this->cart = $cart;
+
+        return $this;
     }
 
     public function getCart(): ?Cart
@@ -33,6 +35,8 @@ class Order implements OrderInterface
     public function setCustomer(Customer $customer)
     {
         $this->customer = $customer;
+
+        return $this;
     }
 
     public function getCustomer(): ?Customer
@@ -43,6 +47,8 @@ class Order implements OrderInterface
     public function setShipping(Shipping $shipping)
     {
         $this->shipping = $shipping;
+
+        return $this;
     }
 
     public function getShipping(): ?Shipping
@@ -53,6 +59,8 @@ class Order implements OrderInterface
     public function setPayment(Payment $payment)
     {
         $this->payment = $payment;
+
+        return $this;
     }
 
     public function getPayment(): ?Payment
@@ -68,14 +76,14 @@ class Order implements OrderInterface
     public function setComment($comment)
     {
         $this->comment = $comment;
+
+        return $this;
     }
 
     public function getComment(): ?string
     {
         return $this->comment;
     }
-
-
 
     public function toStore(): array
     {

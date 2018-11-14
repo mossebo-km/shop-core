@@ -22,44 +22,21 @@ abstract class CartProduct implements CartProductInterface
     protected $addedAt          = null;
     protected $updatedAt        = null;
 
-    protected $basePrice        = null;
-    protected $finalPrice       = null;
 
-    public function __construct($productId = null, $options = [], $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
+    public function __construct($productId = null, $options = null, $quantity = 1)
     {
-        if (! is_null($productId)) {
-            $this->init($productId, $options, $quantity, $basePriceTypeId, $finalPriceTypeId, $currencyCode, $addedAt, $updatedAt, $productData);
+        if (is_null($options)) {
+            $decoded = static::decodeKey($productId);
+
+            $this->productId = $decoded['id'];
+            $this->options = $decoded['options'];
         }
-    }
+        else {
+            $this->productId = $productId;
+            $this->options = $options;
+        }
 
-    public function init($productId, $options = [], $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null, $addedAt = null, $updatedAt = null, CartProductDataInterface $productData = null)
-    {
-        $this->productId        = $productId;
-        $this->options          = $options;
-        $this->quantity         = $quantity;
-        $this->basePriceTypeId  = $basePriceTypeId;
-        $this->finalPriceTypeId = $finalPriceTypeId;
-        $this->currencyCode     = $currencyCode;
-        $this->addedAt          = is_null($addedAt) ? time() : $addedAt;
-        $this->updatedAt        = is_null($updatedAt) ? time() : $updatedAt;
-        $this->productData      = $productData;
-    }
-
-    public function initByKey($productKey, $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null)
-    {
-        $decoded = static::decodeKey($productKey);
-
-        $this->init(
-            $decoded['id'],
-            $decoded['options'],
-            $quantity,
-            $basePriceTypeId,
-            $finalPriceTypeId,
-            $currencyCode,
-            time(),
-            time(),
-            static::findCartProductData($decoded['id'], $decoded['options'])
-        );
+        $this->setQuantity($quantity);
     }
 
     public function getOptions(): array
@@ -112,12 +89,14 @@ abstract class CartProduct implements CartProductInterface
 
     public function isExist(): bool
     {
-        if (is_null($this->productData)) {
+        $productData = $this->getProductData();
+
+        if (is_null($productData)) {
             return false;
         }
 
         if ($this->options) {
-            $allProductOptions = $this->productData->getOptions();
+            $allProductOptions = $productData->getOptions();
 
             foreach ($this->options as $optionId) {
                 if (! in_array((int) $optionId, $allProductOptions)) {
@@ -126,7 +105,7 @@ abstract class CartProduct implements CartProductInterface
             }
         }
 
-        return $this->productData->canBeShowed();
+        return $productData->canBeShowed();
     }
 
     public function setPromoPrice()
@@ -138,7 +117,7 @@ abstract class CartProduct implements CartProductInterface
 
     protected static function makePrice($value, $currencyCode)
     {
-        return app()->makeWith(PriceInterface::class, [
+        return Shop::make(PriceInterface::class, [
             'value' => $value,
             'currencyCode' => $currencyCode,
         ]);
@@ -149,6 +128,13 @@ abstract class CartProduct implements CartProductInterface
         return Shop::sales()->hasActualSale('product', $this->getProductId());
     }
 
+    public function setBasePriceTypeId($priceTypeId = null): CartProductInterface
+    {
+        $this->basePriceTypeId = $priceTypeId;
+
+        return $this;
+    }
+
     public function getBasePriceTypeId(): int
     {
         if (is_null($this->basePriceTypeId)) {
@@ -156,6 +142,13 @@ abstract class CartProduct implements CartProductInterface
         }
 
         return $this->basePriceTypeId;
+    }
+
+    public function setFinalPriceTypeId($priceTypeId = null): CartProductInterface
+    {
+        $this->finalPriceTypeId = $priceTypeId;
+
+        return $this;
     }
 
     public function getFinalPriceTypeId(): int
@@ -170,6 +163,13 @@ abstract class CartProduct implements CartProductInterface
         }
 
         return $this->finalPriceTypeId;
+    }
+
+    public function setCurrencyCode($currencyCode = null): CartProductInterface
+    {
+        $this->currencyCode = $currencyCode;
+
+        return $this;
     }
 
     public function getCurrencyCode()
@@ -215,9 +215,23 @@ abstract class CartProduct implements CartProductInterface
         return $price;
     }
 
+    public function setAddedAtTimestamp($time = null): CartProductInterface
+    {
+        $this->addedAt = is_null($time) ? time() : $time;
+
+        return $this;
+    }
+
     public function getAddedAtTimestamp(): int
     {
         return $this->addedAt;
+    }
+
+    public function setUpdatedAtTimestamp($time = null): CartProductInterface
+    {
+        $this->updatedAt = is_null($time) ? time() : $time;
+
+        return $this;
     }
 
     public function getUpdatedAtTimestamp(): int
@@ -232,7 +246,7 @@ abstract class CartProduct implements CartProductInterface
         return implode('-', $key);
     }
 
-    public static function decodeKey(string $key): array
+    public static function decodeKey($key): array
     {
         $keyArray = explode('-', $key);
 
@@ -242,31 +256,47 @@ abstract class CartProduct implements CartProductInterface
         ];
     }
 
-    protected static function findCartProductData($id, $options = []): ?CartProductDataInterface
+    public function setProductData(CartProductDataInterface $data = null): CartProductInterface
+    {
+        $this->productData = $data;
+
+        return $this;
+    }
+
+    public function getProductData(): ?CartProductDataInterface
+    {
+        if (is_null($this->productData)) {
+            $this->productData = static::findProductData($this->getProductId(), $this->getOptions());
+        }
+
+        return $this->productData;
+    }
+
+    protected static function findProductData($id, $options = []): ?CartProductDataInterface
     {
 
     }
 
-    public function getImage()
+    public function getImage(): array
     {
-        return $this->productData->getImage();
+        return $this->getProductData()->getImage();
     }
 
-    public function getPrices()
+    public function getPrices(): array
     {
-        return $this->productData->getPrices();
+        return $this->getProductData()->getPrices();
     }
 
-    public function getI18nTitles()
+    public function getI18nTitles(): array
     {
-        return $this->productData->getI18nTitles();
+        return $this->getProductData()->getI18nTitles();
     }
 
-    public function getTitle($languageCode)
+    public function getTitle($languageCode): ?string
     {
         $titles = $this->getI18nTitles();
 
-        if (isset($titles[$languageCode])) {
+        if ($titles && isset($titles[$languageCode])) {
             return $titles[$languageCode];
         }
 

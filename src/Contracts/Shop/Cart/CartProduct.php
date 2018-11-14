@@ -14,14 +14,23 @@ interface CartProduct extends Product
     public function getOptions(): array;
 
     public function getQuantity(): int;
+
+    public function setBasePriceTypeId($priceTypeId = null): CartProduct;
     public function getBasePriceTypeId(): int;
+    public function setFinalPriceTypeId($priceTypeId = null): CartProduct;
     public function getFinalPriceTypeId(): int;
+
     public function getPrice($typeId, $currencyCode): ?Price;
     public function getBasePrice($typeId = null, $currencyCode = null): ?Price;
     public function getFinalPrice($typeId = null, $currencyCode = null): ?Price;
     public function getTotalFinalPrice($typeId = null, $currencyCode = null): ?Price;
+
+    public function setAddedAtTimestamp($time = null);
     public function getAddedAtTimestamp(): ?int;
+    public function setUpdatedAtTimestamp($time = null);
     public function getUpdatedAtTimestamp(): ?int;
+
+    public function setCurrencyCode($currencyCode = null): CartProduct;
     public function getCurrencyCode();
 
     public function add($num): int;
@@ -31,7 +40,7 @@ interface CartProduct extends Product
     public function toStore($encodeParams = false);
 
     public static function makeKey($id, $options = []);
-    public static function decodeKey(string $key): array;
+    public static function decodeKey($key): array;
 
     public function initByKey($productKey, $quantity = 1, $basePriceTypeId = null, $finalPriceTypeId = null, $currencyCode = null);
 }

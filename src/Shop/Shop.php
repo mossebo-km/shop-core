@@ -27,4 +27,9 @@ abstract class Shop implements ShopInterface
     {
         return true;
     }
+
+    public function getAvailableProductOptionIds($productId)
+    {
+        return [];
+    }
 }

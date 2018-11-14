@@ -11,13 +11,10 @@ use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
-//use MosseboShopCore\Shop\Cart\Traits\HasDiscount;
 
 class Cart implements CartInterface
 {
-//    use HasDiscount;
-
-    protected $user              = null;
+    protected $customer          = null;
     protected $products          = null;
     protected $currencyCode      = null;
     protected $promoCode         = null;
@@ -29,24 +26,32 @@ class Cart implements CartInterface
     protected $amount            = null;
     protected $total             = null;
 
-    public function __construct($user = null, Collection $products, $currencyCode, $promoCode = null, $createdAt = null, $updatedAt = null)
+    public function hasCustomer(): bool
     {
-        $this->user         = $user;
-        $this->products     = $products;
-        $this->currencyCode = $currencyCode;
-        $this->promoCode    = $promoCode;
-        $this->createdAt    = is_null($createdAt) ? time() : $createdAt;
-        $this->updatedAt    = is_null($updatedAt) ? time() : $updatedAt;
+        return ! is_null($this->customer);
     }
 
-    public function hasUser(): bool
+    public function setCustomer(Customer $customer = null): Cart
     {
-        return ! is_null($this->user);
+        $this->customer = $customer;
+
+        $this->hasChanged();
+
+        return $this;
     }
 
-    public function getUser(): ?Customer
+    public function getCustomer(): ?Customer
     {
-        return $this->user;
+        return $this->customer;
+    }
+
+    public function setProducts(Collection $products = null): CartInterface
+    {
+        $this->products = $products;
+
+        $this->hasChanged();
+
+        return $this;
     }
 
     /**
@@ -80,7 +85,7 @@ class Cart implements CartInterface
      *
      * @return int
      */
-    public function getProductNamesQuantity(): int
+    public function getProductItemsQuantity(): int
     {
         return $this->getProducts()->count();
     }
@@ -98,9 +103,9 @@ class Cart implements CartInterface
             return $this->amount;
         }
 
-        $products     = $this->getProducts();
+        $products = $this->getProducts();
 
-        $this->amount = app()->makeWith(Price::class, [
+        $this->amount = Shop::make(Price::class, [
             'value' => 0,
             'currencyCode' => $this->getCurrencyCode(),
         ]);
@@ -138,22 +143,50 @@ class Cart implements CartInterface
         return $this->getProductsTotal();
     }
 
+
+    /**
+     * Устанавливает код валюты.
+     *
+     * @param $currencyCode
+     */
+    public function setCurrencyCode($currencyCode = null): Cart
+    {
+        $this->currencyCode = $currencyCode;
+
+        if (! is_null($this->products)) {
+            $this->products->each(function (CartProduct $product) use($currencyCode) {
+                $product->setCurrencyCode($currencyCode);
+            });
+        }
+
+        $this->hasChanged();
+
+        return $this;
+    }
+
     public function getCurrencyCode(): string
     {
         return $this->currencyCode;
     }
 
-    public function getPriceTypeId(): int
+    public function setPriceTypeId($priceTypeId = null): Cart
     {
-        if (is_null($this->priceTypeId)) {
-            if ($this->hasUser()) {
-                $this->priceTypeId = $this->getUser()->getPriceTypeId();
-            }
-            else {
-                $this->priceTypeId = Shop::getDefaultPriceTypeId();
-            }
+        $this->priceTypeId = $priceTypeId;
+
+        if (! is_null($this->products)) {
+            $this->products->each(function (CartProduct $product) use($priceTypeId) {
+                $product->setBasePriceTypeId($priceTypeId);
+                $product->setFinalPriceTypeId(null);
+            });
         }
 
+        $this->hasChanged();
+
+        return $this;
+    }
+
+    public function getPriceTypeId(): int
+    {
         return $this->priceTypeId;
     }
 
@@ -167,19 +200,6 @@ class Cart implements CartInterface
         return $this->updatedAt;
     }
 
-
-    /**
-     * Устанавливает код валюты.
-     *
-     * @param $currencyCode
-     */
-    public function setCurrencyCode($currencyCode)
-    {
-        $this->currencyCode = $currencyCode;
-
-        $this->hasChanged();
-    }
-
     /**
      * Устанавливает промокод.
      *
@@ -190,6 +210,8 @@ class Cart implements CartInterface
         $this->promoCode = $code;
 
         $this->hasChanged();
+
+        return $this;
     }
 
     /**
@@ -200,6 +222,8 @@ class Cart implements CartInterface
         $this->promoCode = null;
 
         $this->hasChanged();
+
+        return $this;
     }
 
     public function getPromoCode(): ?PromoCode
@@ -210,6 +234,25 @@ class Cart implements CartInterface
     public function getLastPromoCodeInfo(): ?array
     {
         return $this->lastPromoCodeInfo;
+    }
+
+    /**
+     * Сбрасываем промокод, если он перестал подходить.
+     */
+    protected function checkPromo()
+    {
+        if (is_null($this->promoCode)) return;
+
+        $validator = $this->promoCode->validate($this);
+
+        if ($validator->hasError()) {
+            $this->lastPromoCodeInfo = [
+                'error' => $validator->getErrorMessage(),
+                'code' => $this->promoCode
+            ];
+
+            $this->promoCode = null;
+        }
     }
 
 
@@ -240,11 +283,15 @@ class Cart implements CartInterface
     public function addProductByKey($productKey, $quantity = 1)
     {
         $this->handleProductOperation('add', $productKey, $quantity);
+
+        return $this;
     }
 
     public function setProductByKey($productKey, $quantity)
     {
         $this->handleProductOperation('setQuantity', $productKey, $quantity);
+
+        return $this;
     }
 
     protected function handleProductOperation($method, $productKey, $quantity)
@@ -252,9 +299,13 @@ class Cart implements CartInterface
         $product = $this->findProductByKey($productKey);
 
         if (is_null($product)) {
-            $product = app()->make(CartProductInterface::class);
+            $product = Shop::make(CartProductInterface::class, [
+                'productId' => $productKey,
+                'quantity' => $quantity
+            ]);
 
-            $product->initByKey($productKey, $quantity, $this->getPriceTypeId(), null, $this->getCurrencyCode());
+            $product->setPriceTypeId($this->getPriceTypeId());
+            $product->setCurrencyCode($this->getCurrencyCode());
 
             $this->products->prepend($product);
         }
@@ -272,6 +323,8 @@ class Cart implements CartInterface
         });
 
         $this->hasChanged();
+
+        return $this;
     }
 
     /**
@@ -283,42 +336,41 @@ class Cart implements CartInterface
         $this->promoCode = null;
 
         $this->hasChanged();
+
+        return $this;
     }
 
     public function clearProducts()
     {
         $this->products = new Collection;
+
+        return $this;
     }
 
     /**
-     * Удаляет вычисляемые данные
+     * Очищает вычисляемые данные
      */
     protected function hasChanged()
     {
         $this->amount = null;
         $this->total = null;
-        $this->updatedAt = time();
+        $this->setUpdatedAt(time());
 
         $this->checkPromo();
     }
 
-    /**
-     * Сбрасываем промокод, если он перестал подходить.
-     */
-    protected function checkPromo()
+    public function setCreatedAt($createdAt = null): CartInterface
     {
-        if (is_null($this->promoCode)) return;
+        $this->createdAt = is_null($createdAt) ? time() : $createdAt;
 
-        $validator = $this->promoCode->validate($this);
+        return $this;
+    }
 
-        if ($validator->hasError()) {
-            $this->lastPromoCodeInfo = [
-                'error' => $validator->getErrorMessage(),
-                'code' => $this->promoCode
-            ];
+    public function setUpdatedAt($updatedAt = null): CartInterface
+    {
+        $this->updatedAt = is_null($updatedAt) ? time() : $updatedAt;
 
-            $this->promoCode = null;
-        }
+        return $this;
     }
 
     /**
