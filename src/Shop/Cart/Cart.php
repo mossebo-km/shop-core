@@ -304,8 +304,9 @@ class Cart implements CartInterface
                 'quantity' => $quantity
             ]);
 
-            $product->setPriceTypeId($this->getPriceTypeId());
+            $product->setBasePriceTypeId($this->getPriceTypeId());
             $product->setCurrencyCode($this->getCurrencyCode());
+            $product->setAddedAtTimestamp();
 
             $this->products->prepend($product);
         }

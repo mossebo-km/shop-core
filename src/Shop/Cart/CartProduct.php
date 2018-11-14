@@ -218,6 +218,7 @@ abstract class CartProduct implements CartProductInterface
     public function setAddedAtTimestamp($time = null): CartProductInterface
     {
         $this->addedAt = is_null($time) ? time() : $time;
+        $this->setUpdatedAtTimestamp($this->addedAt);
 
         return $this;
     }
