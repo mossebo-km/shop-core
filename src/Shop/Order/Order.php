@@ -20,7 +20,7 @@ class Order implements OrderInterface
     protected $statusId = 1;
     protected $comment  = null;
 
-    public function setCart(Cart $cart)
+    public function setCart(Cart $cart = null): OrderInterface
     {
         $this->cart = $cart;
 
@@ -32,7 +32,7 @@ class Order implements OrderInterface
         return $this->cart;
     }
 
-    public function setCustomer(Customer $customer)
+    public function setCustomer(Customer $customer): OrderInterface
     {
         $this->customer = $customer;
 
@@ -44,7 +44,7 @@ class Order implements OrderInterface
         return $this->customer;
     }
 
-    public function setShipping(Shipping $shipping)
+    public function setShipping(Shipping $shipping): OrderInterface
     {
         $this->shipping = $shipping;
 

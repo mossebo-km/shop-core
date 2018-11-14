@@ -11,10 +11,14 @@ interface Order
 {
 //    public function getOrder(): Order;
 
-    public function setCart(Cart $cart = null);
-    public function setCustomer(Customer $customer = null);
-    public function setShipping(Shipping $shipping = null);
-    public function setPayment(Payment $payment = null);
+    public function setCart(Cart $cart = null): Order;
+    public function getCart(): ?Cart;
+    public function setCustomer(Customer $customer = null): Order;
+    public function getCustomer(): ?Customer;
+    public function setShipping(Shipping $shipping = null): Order;
+    public function getShipping(): ?Shipping;
+    public function setPayment(Payment $payment = null): Order;
+    public function getPayment(): ?Payment;
     public function toStore(): array;
 
     public function getStatusId();
