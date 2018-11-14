@@ -32,4 +32,9 @@ abstract class Shop implements ShopInterface
     {
         return [];
     }
+
+    public function call($callable, $params)
+    {
+        return app()->call($callable, $params);
+    }
 }

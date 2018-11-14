@@ -9,10 +9,10 @@ class FirstOrder extends BaseCondition implements ConditionInterface
 {
     public function check(Cart $cart): bool
     {
-        if (! $cart->hasUser()) {
+        if (! $cart->hasCustomer()) {
             return true;
         }
 
-        return $cart->getUser()->ordersCount() === 0;
+        return $cart->getCustomer()->ordersCount() === 0;
     }
 }

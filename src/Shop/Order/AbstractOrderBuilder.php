@@ -14,7 +14,7 @@ abstract class AbstractOrderBuilder implements OrderBuilderInterface
 {
     public function getOrder(): OrderInterface
     {
-        $order = app()->make(OrderInterface::class);
+        $order = Shop::make(OrderInterface::class);
 
         $order->setCart($this->getCart());
         $order->setCustomer($this->getCustomer());

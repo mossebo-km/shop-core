@@ -14,7 +14,7 @@ class ProductExpensive extends BaseCondition implements ConditionInterface
 
         $currencyCode = $this->getParam('currency_code');
 
-        $minPrice = app()->makeWith(Price::class, [
+        $minPrice = Shop::make(Price::class, [
             'value' => $this->getParam('value'),
             'currencyCode' => $currencyCode
         ]);

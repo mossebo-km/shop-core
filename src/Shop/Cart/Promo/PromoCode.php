@@ -78,7 +78,7 @@ abstract class PromoCode implements PromoCodeInterface
 
     public function validate(Cart $cart): PromoValidatorInterface
     {
-        return app()->makeWith(PromoValidator::class, [
+        return Shop::make(PromoValidator::class, [
             'promoCode' => $this,
             'cart' => $cart
         ]);

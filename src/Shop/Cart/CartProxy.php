@@ -106,7 +106,7 @@ class CartProxy
 
     public function __call($methodName, $arguments)
     {
-        return app()->call([$this->cart, $methodName], $arguments);
+        return Shop::call([$this->cart, $methodName], $arguments);
     }
 
     public function clear()
