@@ -70,7 +70,7 @@ class Order implements OrderInterface
 
     public function getStatusId()
     {
-        return $this->getStatusId();
+        return $this->statusId;
     }
 
     public function setComment($comment = ''): OrderInterface

@@ -46,7 +46,7 @@ class CheckoutCartBuilder extends AbstractCartBuilder
 
     protected function getCurrencyCode(): ?string
     {
-        return $this->getCartData('currencyCode');
+        return $this->getCartData('currencyCode') ?: Shop::getCurrentCurrencyCode();
     }
 
     protected function getPromoCode(): ?PromoCodeInterface

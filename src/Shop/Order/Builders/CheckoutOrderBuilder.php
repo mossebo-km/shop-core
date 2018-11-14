@@ -31,7 +31,9 @@ class CheckoutOrderBuilder extends AbstractOrderBuilder
             $customer = Shop::make(Customer::class);
         }
 
-        $customer->fill($this->checkoutData);
+        if ($this->checkoutData['shipping']['data'] && is_array($this->checkoutData['shipping']['data'])) {
+            $customer->fill($this->checkoutData['shipping']['data']);
+        }
 
         return $customer;
     }
@@ -40,7 +42,9 @@ class CheckoutOrderBuilder extends AbstractOrderBuilder
     {
         $shipping = Shop::make(Shipping::class);
 
-        $shipping->fill($this->checkoutData);
+        if ($this->checkoutData['shipping']['data'] && is_array($this->checkoutData['shipping']['data'])) {
+            $shipping->fill($this->checkoutData['shipping']['data']);
+        }
 
         return $shipping;
     }
@@ -52,6 +56,10 @@ class CheckoutOrderBuilder extends AbstractOrderBuilder
 
     protected function getComment(): ?string
     {
-        return $this->checkoutData['comment'];
+        if (isset($this->checkoutData['shipping']['data']['comment'])) {
+            return $this->checkoutData['shipping']['data']['comment'];
+        }
+
+        return '';
     }
 }
