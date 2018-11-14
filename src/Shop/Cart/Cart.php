@@ -31,7 +31,7 @@ class Cart implements CartInterface
         return ! is_null($this->customer);
     }
 
-    public function setCustomer(Customer $customer = null): Cart
+    public function setCustomer(Customer $customer = null): CartInterface
     {
         $this->customer = $customer;
 
@@ -149,7 +149,7 @@ class Cart implements CartInterface
      *
      * @param $currencyCode
      */
-    public function setCurrencyCode($currencyCode = null): Cart
+    public function setCurrencyCode($currencyCode = null): CartInterface
     {
         $this->currencyCode = $currencyCode;
 
@@ -169,7 +169,7 @@ class Cart implements CartInterface
         return $this->currencyCode;
     }
 
-    public function setPriceTypeId($priceTypeId = null): Cart
+    public function setPriceTypeId($priceTypeId = null): CartInterface
     {
         $this->priceTypeId = $priceTypeId;
 

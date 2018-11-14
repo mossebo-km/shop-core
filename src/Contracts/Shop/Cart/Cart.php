@@ -15,7 +15,7 @@ interface Cart
     public function setCustomer(Customer $customer = null): Cart;
     public function getCustomer(): ?Customer;
 
-    public function setProducts(Collection $products = null): CartInterface;
+    public function setProducts(Collection $products = null): Cart;
     public function getProducts(): Collection;
 
     public function setCurrencyCode($currencyCode = null): Cart;
@@ -36,10 +36,10 @@ interface Cart
     public function getPromoCode(): ?PromoCode;
     public function getLastPromoCodeInfo(): ?array;
 
-    public function setCreatedAt($createdAt = null): CartInterface;
+    public function setCreatedAt($createdAt = null): Cart;
     public function getCreatedAt(): int;
 
-    public function setUpdatedAt($updatedAt = null): CartInterface;
+    public function setUpdatedAt($updatedAt = null): Cart;
     public function getUpdatedAt(): int;
 
     public function addProductByKey($productKey, $quantity = 1);

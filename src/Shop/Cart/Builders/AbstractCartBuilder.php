@@ -2,7 +2,7 @@
 
 namespace MosseboShopCore\Shop\Cart\Builders;
 
-use Kalnoy\Nestedset\Collection;
+use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartBuilder as CartBuilderInterface;
 

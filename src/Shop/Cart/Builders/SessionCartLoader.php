@@ -5,11 +5,9 @@ namespace MosseboShopCore\Shop\Cart\Builders;
 use Shop;
 use Auth;
 use Illuminate\Support\Collection;
-use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
-use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
+use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
+use MosseboShopCore\Contracts\Shop\Cart\CartProductData as CartProductDataInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode as PromoCodeInterface;
-use MosseboShopCore\Contracts\Shop\Customer;
-use MosseboShopCore\Shop\Cart\CartProductData;
 
 use MosseboShopCore\Shop\Cart\Traits\HasSession;
 
@@ -17,7 +15,7 @@ class SessionCartLoader extends AbstractCartBuilder
 {
     use HasSession;
 
-    public function __construct($data)
+    public function __construct()
     {
         $this->cartData = $this->get('cart');
 
@@ -31,6 +29,7 @@ class SessionCartLoader extends AbstractCartBuilder
         $defaultPromo = Shop::getDefaultPromoCode();
 
         return [
+            'products' => [],
             'currencyCode' => Shop::getCurrentCurrencyCode(),
             'promoCode'    => $defaultPromo ? $defaultPromo : null,
         ];
@@ -55,7 +54,7 @@ class SessionCartLoader extends AbstractCartBuilder
         $result = new Collection;
 
         foreach ($this->getCartData('products') as $storedProduct) {
-            $product = Shop::make(CartProduct::class, [
+            $product = Shop::make(CartProductInterface::class, [
                 'productId' => $storedProduct['product_id'],
                 'options'   => $storedProduct['options'],
                 'quantity'  => $storedProduct['quantity'],
@@ -67,7 +66,7 @@ class SessionCartLoader extends AbstractCartBuilder
             $product->setAddedAtTimestamp($storedProduct['created_at']);
             $product->setUpdatedAtTimestamp($storedProduct['updated_at']);
 
-            $product->setProductData(Shop::make(CartProductData::class, [
+            $product->setProductData(Shop::make(CartProductDataInterface::class, [
                 'data' => $storedProduct['params']
             ]));
         }

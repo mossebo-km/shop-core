@@ -49,13 +49,13 @@ class PromoValidator implements PromoValidatorInterface
      */
     protected function checkIsUsed(): void
     {
-        if (! $this->cart->hasUser()) {
+        if (! $this->cart->hasCustomer()) {
             return;
         }
 
-        $user = $this->cart->getUser();
+        $customer = $this->cart->getCustomer();
 
-        $usesNum = $user->getPromoCodeUsesNum($this->promoCode->id);
+        $usesNum = $customer->getPromoCodeUsesNum($this->promoCode->id);
 
         // Если промокод можно использовать только раз для аккаунта и кол-во использований не равно нулю
         if ($this->promoCode->once && $usesNum > 0) {

@@ -15,6 +15,22 @@ class Customer implements CustomerInterface
         return $this->getAttribute('id');
     }
 
+    public function ordersCount(): int
+    {
+        return $this->getAttribute('ordersCount') ?: 0;
+    }
+
+    public function getPromoCodeUsesNum($promoCodeId): int
+    {
+        $promoCodesUses = $this->getAttribute('promoCodesUses');
+
+        if ($promoCodesUses && isset($promoCodesUses[$promoCodeId])) {
+            return count($promoCodesUses[$promoCodeId]);
+        }
+
+        return 0;
+    }
+
     public function getPriceTypeId(): int
     {
         $priceTypeId = $this->getAttribute('price_type_id');
