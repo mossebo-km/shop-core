@@ -30,6 +30,15 @@ class Cart implements CartInterface
 
     protected $blocked           = false;
 
+    public function init(\Closure $cb)
+    {
+        $this->blocked = true;
+
+        $cb($this);
+
+        $this->blocked = false;
+    }
+
     public function hasCustomer(): bool
     {
         return ! is_null($this->customer);
@@ -194,16 +203,6 @@ class Cart implements CartInterface
         return $this->priceTypeId;
     }
 
-    public function getCreatedAt(): int
-    {
-        return $this->createdAt;
-    }
-
-    public function getUpdatedAt(): int
-    {
-        return $this->updatedAt;
-    }
-
     /**
      * Устанавливает промокод.
      *
@@ -352,17 +351,6 @@ class Cart implements CartInterface
         return $this;
     }
 
-    public function setManyParams(\Closure $cb)
-    {
-        $this->blocked = true;
-
-        $cb($this);
-
-        $this->blocked = false;
-
-        $this->hasChanged();
-    }
-
     /**
      * Очищает вычисляемые данные
      */
@@ -407,11 +395,21 @@ class Cart implements CartInterface
         return $this;
     }
 
+    public function getCreatedAt(): int
+    {
+        return $this->createdAt;
+    }
+
     public function setUpdatedAt($updatedAt = null): CartInterface
     {
         $this->updatedAt = $this->prepareTime($updatedAt);
 
         return $this;
+    }
+
+    public function getUpdatedAt(): int
+    {
+        return $this->updatedAt;
     }
 
     /**
