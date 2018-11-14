@@ -37,6 +37,8 @@ class CheckoutCartBuilder extends AbstractCartBuilder
 
             $product->setBasePriceTypeId($this->getPriceTypeId());
             $product->setCurrencyCode($this->getCurrencyCode());
+            $product->setAddedAtTimestamp();
+            $product->setUpdatedAtTimestamp();
 
             $products->push($product);
         }
