@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Order;
+namespace MosseboShopCore\Shop\Order\Builders;
 
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Customer;

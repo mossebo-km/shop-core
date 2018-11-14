@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Order;
+namespace MosseboShopCore\Shop\Order\Builders;
 
 use MosseboShopCore\Contracts\Shop\Order\Order as OrderInterface;
 use MosseboShopCore\Contracts\Shop\Order\OrderBuilder as OrderBuilderInterface;
