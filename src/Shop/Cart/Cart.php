@@ -12,7 +12,7 @@ use MosseboShopCore\Contracts\Shop\Customer;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
-use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
+use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode as PromoCodeInterface;
 
 class Cart implements CartInterface
 {
@@ -208,7 +208,7 @@ class Cart implements CartInterface
      *
      * @param $currencyCode
      */
-    public function setPromoCode(PromoCode $code)
+    public function setPromoCode(PromoCodeInterface $code)
     {
         $this->promoCode = $code;
 
@@ -229,7 +229,7 @@ class Cart implements CartInterface
         return $this;
     }
 
-    public function getPromoCode(): ?PromoCode
+    public function getPromoCode(): ?PromoCodeInterface
     {
         return $this->promoCode;
     }
