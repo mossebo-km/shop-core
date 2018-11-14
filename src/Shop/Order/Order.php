@@ -56,7 +56,7 @@ class Order implements OrderInterface
         return $this->shipping;
     }
 
-    public function setPayment(Payment $payment)
+    public function setPayment(Payment $payment): OrderInterface
     {
         $this->payment = $payment;
 
@@ -73,9 +73,9 @@ class Order implements OrderInterface
         return $this->getStatusId();
     }
 
-    public function setComment($comment)
+    public function setComment($comment = ''): OrderInterface
     {
-        $this->comment = $comment;
+        $this->comment = (string) $comment;
 
         return $this;
     }

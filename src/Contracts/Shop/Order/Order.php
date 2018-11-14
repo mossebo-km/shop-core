@@ -19,7 +19,9 @@ interface Order
     public function getShipping(): ?Shipping;
     public function setPayment(Payment $payment = null): Order;
     public function getPayment(): ?Payment;
-    public function toStore(): array;
-
+    public function setComment($comment = ''): Order;
+    public function getComment(): string;
     public function getStatusId();
+
+    public function toStore(): array;
 }
