@@ -11,6 +11,6 @@ class Shipping implements ShippingInterface
 
     public function getId()
     {
-        return $this->getAttribute('id');
+        return 1;
     }
 }
