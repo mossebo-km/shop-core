@@ -32,7 +32,7 @@ class Order implements OrderInterface
         return $this->cart;
     }
 
-    public function setCustomer(Customer $customer): OrderInterface
+    public function setCustomer(Customer $customer = null): OrderInterface
     {
         $this->customer = $customer;
 
@@ -44,7 +44,7 @@ class Order implements OrderInterface
         return $this->customer;
     }
 
-    public function setShipping(Shipping $shipping): OrderInterface
+    public function setShipping(Shipping $shipping = null): OrderInterface
     {
         $this->shipping = $shipping;
 
@@ -56,7 +56,7 @@ class Order implements OrderInterface
         return $this->shipping;
     }
 
-    public function setPayment(Payment $payment): OrderInterface
+    public function setPayment(Payment $payment = null): OrderInterface
     {
         $this->payment = $payment;
 
