@@ -34,6 +34,11 @@ abstract class User extends Authenticatable implements CustomerInterface
         'updated_at'
     ];
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function ordersCount(): int
     {
         return $this->orders()->count();

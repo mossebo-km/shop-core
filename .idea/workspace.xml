@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Builders/SessionCartLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Builders/SessionCartLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Savers/SessionCartSaver.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Savers/SessionCartSaver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,11 +118,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionCartLoader.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SessionCartLoader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/SessionCartLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
+            <state relative-caret-position="1302">
               <caret line="85" column="59" lean-forward="true" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -234,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/Support/Traits/HasAttributes.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Shipping/Shipping.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shipping/Shipping.php" />
-        <option value="$PROJECT_DIR$/src/Models/User.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Customer.php" />
         <option value="$PROJECT_DIR$/src/Shop/Customer.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/AbstractOrderBuilder.php" />
@@ -260,6 +267,7 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Savers/SessionCartSaver.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/SessionCartLoader.php" />
+        <option value="$PROJECT_DIR$/src/Models/User.php" />
       </list>
     </option>
   </component>
@@ -655,12 +663,12 @@
       <workItem from="1541754695058" duration="1553000" />
       <workItem from="1541762279941" duration="2045000" />
       <workItem from="1542007632995" duration="17729000" />
-      <workItem from="1542093220718" duration="22287000" />
+      <workItem from="1542093220718" duration="22443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501616000" />
+    <option name="totallyTimeSpent" value="501772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -856,13 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="50" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Customer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1040,8 +1041,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/SessionCartLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
+        <state relative-caret-position="1302">
           <caret line="85" column="59" lean-forward="true" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
