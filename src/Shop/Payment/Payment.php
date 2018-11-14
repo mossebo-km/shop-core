@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Shipping;
+namespace MosseboShopCore\Shop\Payment;
 
 use MosseboShopCore\Contracts\Shop\Payment\Payment as PaymentInterface;
 use MosseboShopCore\Support\Traits\HasAttributes;
