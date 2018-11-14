@@ -54,20 +54,21 @@ class SessionCartLoader extends AbstractCartBuilder
         $products = new Collection;
 
         foreach ($this->getCartData('products') as $storedProduct) {
-            $productId = $storedProduct['product_id'];
-            $options   = $storedProduct['options'];
-            $quantity  = $storedProduct['quantity'];
+            $product = Shop::make(CartProductInterface::class, [
+                'productId' => $storedProduct['product_id'],
+                'options'   => $storedProduct['options'],
+                'quantity'  => $storedProduct['quantity'],
+            ]);
 
-            $product = Shop::makeCartProduct($productId, $options, $quantity, function (CartProduct $product) use($storedProduct) {
-                $product->setBasePriceTypeId($storedProduct['base_price_type_id']);
-                $product->setFinalPriceTypeId($storedProduct['final_price_type_id']);
-                $product->setCurrencyCode($storedProduct['currency_code']);
-                $product->setAddedAtTimestamp($storedProduct['created_at']);
-                $product->setUpdatedAtTimestamp($storedProduct['updated_at']);
-                $product->setProductData(Shop::make(CartProductDataInterface::class, [
-                    'data' => $storedProduct['params']
-                ]));
-            });
+            $product->setBasePriceTypeId($storedProduct['base_price_type_id']);
+            $product->setFinalPriceTypeId($storedProduct['final_price_type_id']);
+            $product->setCurrencyCode($storedProduct['currency_code']);
+            $product->setAddedAtTimestamp($storedProduct['created_at']);
+            $product->setUpdatedAtTimestamp($storedProduct['updated_at']);
+
+            $product->setProductData(Shop::make(CartProductDataInterface::class, [
+                'data' => $storedProduct['params']
+            ]));
 
             $products->push($product);
         }

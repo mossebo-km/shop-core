@@ -3,12 +3,12 @@
 namespace MosseboShopCore\Shop\Cart;
 
 use Auth;
-use Carbon\Carbon;
 use Shop;
+use DateTime;
+use Carbon\Carbon;
+use MosseboShopCore\Shop\Price;
 use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\Customer;
-use MosseboShopCore\Shop\Price;
-use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode;
@@ -26,6 +26,8 @@ class Cart implements CartInterface
 
     protected $amount            = null;
     protected $total             = null;
+
+    protected $blocked           = false;
 
     public function hasCustomer(): bool
     {
@@ -300,14 +302,11 @@ class Cart implements CartInterface
         $product = $this->findProductByKey($productKey);
 
         if (is_null($product)) {
-            $product = Shop::make(CartProductInterface::class, [
-                'productId' => $productKey,
-                'quantity' => $quantity
-            ]);
-
-            $product->setBasePriceTypeId($this->getPriceTypeId());
-            $product->setCurrencyCode($this->getCurrencyCode());
-            $product->setAddedAtTimestamp();
+            $product = Shop::makeCartProduct($productKey, null, $quantity, function (CartProduct $product) {
+                $product->setBasePriceTypeId($this->getPriceTypeId());
+                $product->setCurrencyCode($this->getCurrencyCode());
+                $product->setAddedAtTimestamp();
+            });
 
             $this->products->prepend($product);
         }
@@ -349,11 +348,26 @@ class Cart implements CartInterface
         return $this;
     }
 
+    public function setManyParams(\Closure $cb)
+    {
+        $this->blocked = true;
+
+        Shop::call($cb, $this);
+
+        $this->blocked = false;
+
+        $this->hasChanged();
+    }
+
     /**
      * Очищает вычисляемые данные
      */
     protected function hasChanged()
     {
+        if ($this->blocked) {
+            return;
+        }
+
         $this->amount = null;
         $this->total = null;
         $this->setUpdatedAt(time());
@@ -371,11 +385,11 @@ class Cart implements CartInterface
             return time();
         }
 
-        if ($time instanceof \Carbon\Carbon) {
+        if ($time instanceof Carbon) {
             return $time->timestamp;
         }
 
-        if ($time instanceof \DateTime) {
+        if ($time instanceof DateTime) {
             return $time->getTimestamp();
         }
 

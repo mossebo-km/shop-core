@@ -17,19 +17,21 @@ abstract class AbstractCartBuilder implements CartBuilderInterface
 
     public function getCart(): CartInterface
     {
-        $cart = Shop::make(CartInterface::class);
+        $cart = Shop::makeCart(CartInterface::class);
 
-        $cart->setCustomer($this->getCustomer());
-        $cart->setPriceTypeId($this->getPriceTypeId());
-        $cart->setCurrencyCode($this->getCurrencyCode());
-        $cart->setProducts($this->getProducts());
+        $cart->setManyParams(function($cart) {
+            $cart->setCustomer($this->getCustomer());
+            $cart->setPriceTypeId($this->getPriceTypeId());
+            $cart->setCurrencyCode($this->getCurrencyCode());
+            $cart->setProducts($this->getProducts());
 
-        if ($promoCode = $this->getPromoCode()) {
-            $cart->setPromoCode($promoCode);
-        }
+            if ($promoCode = $this->getPromoCode()) {
+                $cart->setPromoCode($promoCode);
+            }
 
-        $cart->setCreatedAt($this->getCreatedAt());
-        $cart->setUpdatedAt($this->getUpdatedAt());
+            $cart->setCreatedAt($this->getCreatedAt());
+            $cart->setUpdatedAt($this->getUpdatedAt());
+        });
 
         return $cart;
     }

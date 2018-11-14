@@ -9,7 +9,7 @@ use Cache;
 use Illuminate\Support\Collection;
 
 use MosseboShopCore\Contracts\Shop\Customer;
-use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
+use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode as PromoCodeInterface;
 
 class CheckoutCartBuilder extends AbstractCartBuilder
@@ -31,10 +31,15 @@ class CheckoutCartBuilder extends AbstractCartBuilder
         $products = new Collection;
 
         foreach ($this->getCartData('cart.products') as $productKey => $quantity) {
-            $products->push(Shop::makeCartProduct($productKey, null, $quantity, function (CartProduct $product) {
-                $product->setBasePriceTypeId($this->getPriceTypeId());
-                $product->setCurrencyCode($this->getCurrencyCode());
-            }));
+            $product = Shop::make(CartProductInterface::class, [
+                'productId' => $productKey,
+                'quantity' => $quantity
+            ]);
+
+            $product->setBasePriceTypeId($this->getPriceTypeId());
+            $product->setCurrencyCode($this->getCurrencyCode());
+
+            $products->push($product);
         }
 
         return $products;

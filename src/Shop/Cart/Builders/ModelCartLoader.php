@@ -8,8 +8,8 @@ use Cache;
 use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 
-use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
-use MosseboShopCore\Contracts\Shop\Cart\CartProductData;
+use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
+use MosseboShopCore\Contracts\Shop\Cart\CartProductData as CartProductDataInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode as PromoCodeInterface;
 use MosseboShopCore\Contracts\Shop\Customer as CustomerInterface;
 
@@ -45,19 +45,20 @@ class ModelCartLoader extends AbstractCartBuilder
 
                 $params['options'] = Shop::getAvailableProductOptionIds($orderProduct->product_id);
 
-                $id = $orderProduct->product_id;
-                $quantity = $orderProduct->quantity;
+                $product = Shop::make(CartProductInterface::class, [
+                    'productId'        => $orderProduct->product_id,
+                    'options'          => $options,
+                    'quantity'         => $orderProduct->quantity,
+                ]);
 
-                $product = Shop::makeCartProduct($id, $options, $quantity, function (CartProduct $product) use($orderProduct, $params) {
-                    $product->setBasePriceTypeId($orderProduct->base_price_type_id);
-                    $product->setFinalPriceTypeId($orderProduct->final_price_type_id);
-                    $product->setAddedAtTimestamp($orderProduct->created_at);
-                    $product->setUpdatedAtTimestamp($orderProduct->updated_at);
+                $product->setBasePriceTypeId($orderProduct->base_price_type_id);
+                $product->setFinalPriceTypeId($orderProduct->final_price_type_id);
+                $product->setAddedAtTimestamp($orderProduct->created_at);
+                $product->setUpdatedAtTimestamp($orderProduct->updated_at);
 
-                    $product->setProductData(
-                        Shop::make(CartProductData::class, ['data' => $params])
-                    );
-                });
+                $product->setProductData(
+                    Shop::make(CartProductDataInterface::class, ['data' => $params])
+                );
 
                 $products->push($product);
             }
