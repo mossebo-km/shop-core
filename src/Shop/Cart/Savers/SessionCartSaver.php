@@ -1,6 +1,6 @@
 <?php
 
-namespace MosseboShopCore\Shop\Cart\Storage\Session;
+namespace MosseboShopCore\Shop\Cart\Savers;
 
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
