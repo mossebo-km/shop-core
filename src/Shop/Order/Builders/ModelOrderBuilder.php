@@ -18,6 +18,11 @@ class ModelOrderBuilder extends AbstractOrderBuilder
         $this->orderData = $data;
     }
 
+    protected function getId(): ?int
+    {
+        return $this->orderData->id;
+    }
+
     protected function getCart(): ?CartInterface
     {
         return Shop::makeCart(ModelCartLoader::class, $this->orderData);

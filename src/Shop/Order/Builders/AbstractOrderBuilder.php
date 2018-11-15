@@ -17,6 +17,10 @@ abstract class AbstractOrderBuilder implements OrderBuilderInterface
     {
         $order = Shop::make(OrderInterface::class);
 
+        if ($id = $this->getId()) {
+            $order->setId($id);
+        }
+
         $order->setCart($this->getCart());
         $order->setCustomer($this->getCustomer());
         $order->setShipping($this->getShipping());
@@ -24,6 +28,11 @@ abstract class AbstractOrderBuilder implements OrderBuilderInterface
         $order->setComment($this->getComment());
 
         return $order;
+    }
+
+    protected function getId(): ?int
+    {
+        return null;
     }
 
     protected function getCart(): ?Cart
