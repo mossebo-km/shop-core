@@ -16,6 +16,7 @@ abstract class YandexPayment extends BaseModel
         'yandex_payment_id',
         'amount',
         'currency_code',
+        'status'
     ];
 
     protected $dates = [
