@@ -50,6 +50,7 @@ class ModelCartLoader extends AbstractCartBuilder
                     'quantity'         => $orderProduct->quantity,
                 ]);
 
+                $product->setCurrencyCode($this->getCurrencyCode());
                 $product->setBasePriceTypeId($orderProduct->base_price_type_id);
                 $product->setFinalPriceTypeId($orderProduct->final_price_type_id);
                 $product->setAddedAtTimestamp($orderProduct->created_at);

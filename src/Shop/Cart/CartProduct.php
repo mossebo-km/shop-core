@@ -191,20 +191,20 @@ abstract class CartProduct implements CartProductInterface
     public function getBasePrice($typeId = null, $currencyCode = null): ?PriceInterface
     {
         return $this->getPrice(
-            is_null($typeId) ? $this->getBasePriceTypeId() : $typeId,
-            is_null($currencyCode) ? $this->getCurrencyCode() : $currencyCode
+            $typeId ?: $this->getBasePriceTypeId(),
+            $currencyCode ?: $this->getCurrencyCode()
         );
     }
 
     public function getFinalPrice($typeId = null, $currencyCode = null): ?PriceInterface
     {
         $finalPrice = $this->getPrice(
-            is_null($typeId) ? $this->getFinalPriceTypeId() : $typeId,
-            is_null($currencyCode) ? $this->getCurrencyCode() : $currencyCode
+            $typeId ?: $this->getFinalPriceTypeId(),
+            $currencyCode ?: $this->getCurrencyCode()
         );
 
         // TODO: Если потребуется доделать цену с учетом промокода или других модификаторов цены.
-        return $finalPrice ? $finalPrice : $this->getBasePrice($typeId, $currencyCode);
+        return $finalPrice ?: $this->getBasePrice($typeId, $currencyCode);
     }
 
     public function getTotalFinalPrice($typeId = null, $currencyCode = null): ?PriceInterface

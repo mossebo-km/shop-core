@@ -30,9 +30,9 @@ class ModelOrderBuilder extends AbstractOrderBuilder
 
     protected function getShipping(): ?ShippingInterface
     {
-        $shipping = Shop::make(CustomerInterface::class);
+        $shipping = Shop::make(ShippingInterface::class);
 
-        $shipping->fill($this->orderData);
+        $shipping->fill($this->orderData->toArray());
 
         return $shipping;
     }

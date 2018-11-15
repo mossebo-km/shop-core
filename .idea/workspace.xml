@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Shop/Payment/Payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Shop/Payment/YandexPayment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,92 +91,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Cart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3193">
-              <caret line="260" column="41" selection-start-line="260" selection-start-column="20" selection-end-line="260" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ModelCartLoader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+            <state relative-caret-position="562">
+              <caret line="77" column="24" lean-forward="true" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractCartBuilder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/AbstractCartBuilder.php">
+      <file leaf-file-name="Payment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/Payment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckoutCartBuilder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/CheckoutCartBuilder.php">
+      <file leaf-file-name="2018_07_24_145100_create_payments_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+            <state relative-caret-position="396">
+              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionCartLoader.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/SessionCartLoader.php">
+      <file leaf-file-name="YandexPayment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/YandexPayment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="432">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckoutOrderBuilder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php">
+      <file leaf-file-name="2018_07_24_145200_create_yandex_payments_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="55" />
+            <state relative-caret-position="324">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractOrderBuilder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/AbstractOrderBuilder.php">
+      <file leaf-file-name="Price.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Price/Price.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="568">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModelOrderBuilder.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php">
+      <file leaf-file-name="tables.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shipping.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Shipping/Shipping.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="751">
+              <caret line="135" column="19" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Order/Order.php">
+        <entry file="file://$PROJECT_DIR$/src/Models/Shop/Order/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="698">
-              <caret line="54" column="31" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="31" />
+            <state relative-caret-position="138">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="36" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -176,8 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>findCa</find>
-      <find>productData</find>
       <find>null</find>
       <find>setCus</find>
       <find>: Cart</find>
@@ -206,6 +195,8 @@
       <find>PromoCode</find>
       <find>getTotal</find>
       <find>disc</find>
+      <find>pay</find>
+      <find>YandexPayments</find>
     </findStrings>
     <replaceStrings>
       <replace>getAttribute</replace>
@@ -226,12 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/Delivery.php" />
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/Order/OrderBuilder.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Order.php" />
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartBuilder.php" />
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/Product/Product.php" />
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/Payment/Payment.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Delivery/Delivery.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/OrderFactory.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Product/Product.php" />
@@ -258,9 +243,7 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/Promo/Conditions/MinSumm.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProxy.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProduct.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Promo/Conditions/ProductExpensive.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Savers/SessionCartSaver.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/AbstractCartBuilder.php" />
@@ -277,6 +260,14 @@
         <option value="$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/Builders/AbstractOrderBuilder.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php" />
+        <option value="$PROJECT_DIR$/src/Config/tables.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php" />
+        <option value="$PROJECT_DIR$/src/Models/Shop/Payment/YandexPayment.php" />
+        <option value="$PROJECT_DIR$/src/Models/Shop/Payment/Payment.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php" />
       </list>
     </option>
   </component>
@@ -330,6 +321,12 @@
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
@@ -424,43 +421,20 @@
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Builders" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Promo" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Savers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Order" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
@@ -468,14 +442,7 @@
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Order" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Builders" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Payment" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
@@ -483,15 +450,9 @@
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shipping" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Price" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
@@ -548,18 +509,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Support/Traits" />
       <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$/src/Support/Traits" />
       <recent name="$PROJECT_DIR$/src/Models/Shop" />
       <recent name="$PROJECT_DIR$/src/Models/Shop/Banner" />
       <recent name="$PROJECT_DIR$/public/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Models/Shop" />
       <recent name="$PROJECT_DIR$/src/Shop" />
       <recent name="$PROJECT_DIR$/src/Shop/Order/Builders" />
       <recent name="$PROJECT_DIR$/src/Shop/Cart/Savers" />
       <recent name="$PROJECT_DIR$/src/Shop/Cart/Types" />
-      <recent name="$PROJECT_DIR$/src/Shop/Cart/Builders" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -675,12 +636,12 @@
       <workItem from="1541754695058" duration="1553000" />
       <workItem from="1541762279941" duration="2045000" />
       <workItem from="1542007632995" duration="17729000" />
-      <workItem from="1542093220718" duration="41617000" />
+      <workItem from="1542093220718" duration="44624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="520946000" />
+    <option name="totallyTimeSpent" value="523953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -692,7 +653,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.3313433" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17838125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17838125" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.15974441" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962587" />
@@ -720,76 +681,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Language.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="1" lean-forward="true" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Product/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Payment/Payment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Order/OrderFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Product/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Price.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Shop/Traits/HasCurrency.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Shipping/Shipping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Price.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/HasAttributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Order/OrderBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -933,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2671">
-          <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProxy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2016">
@@ -1017,13 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Order/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Shipping/Shipping.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1059,17 +936,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php">
+    <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+        <state relative-caret-position="292">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php">
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/CartProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="378">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="77" column="24" lean-forward="true" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Order/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="36" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="135" column="19" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_142840_create_badge_types_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_142860_create_badges_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000510_create_prices_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/YandexPayment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Price/Price.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/Payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
         </state>
       </provider>
     </entry>

@@ -130,4 +130,8 @@ return [
     'InteriorPoints'  => 'shop_interior_points',
     'InteriorStyles'  => 'shop_interior_styles',
     'InteriorRooms'   => 'shop_interior_rooms',
+
+
+    'Payments'        => 'shop_payments',
+    'YandexPayments'  => 'shop_yandex_payments',
 ];

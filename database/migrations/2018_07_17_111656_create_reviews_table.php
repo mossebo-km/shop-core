@@ -19,8 +19,7 @@ class CreateReviewsTable extends Migration
             $table->engine = "InnoDB";
             $table->increments('id')->index();
 
-            $table->string('item_type');
-            $table->integer('item_id')->unsigned();
+            $table->morphs('item');
 
             $table->char('language_code', 2);
             $table->foreign('language_code')->references('code')->on(config('tables.Languages'));
