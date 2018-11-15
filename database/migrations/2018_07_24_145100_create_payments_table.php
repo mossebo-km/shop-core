@@ -18,9 +18,7 @@ class CreatePaymentsTable extends Migration
             $table->integer('order_id')->unsigned();
             $table->foreign('order_id')->references('id')->on(config('tables.Orders'));
 
-            $table->morphs('payment');
-
-            $table->integer('status');
+            $table->morphs('details');
         });
     }
 }

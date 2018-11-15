@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/Price.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Price.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000300_create_languages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000300_create_languages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/Order/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Order/Order.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,17 +89,17 @@
       <file leaf-file-name="Payment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/Payment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="288">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_07_24_145100_create_payments_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php">
+      <file leaf-file-name="Order.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Shop/Order/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+            <state relative-caret-position="474">
+              <caret line="117" column="29" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -110,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_07_24_145200_create_yandex_payments_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php">
+      <file leaf-file-name="tables.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="352">
+              <caret line="135" column="45" lean-forward="true" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -137,11 +140,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Price.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Price.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Price.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="107">
               <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_02_27_000300_create_languages_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000300_create_languages_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -150,7 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>: Cart</find>
       <find>hasCustomer</find>
       <find>ordersCount</find>
       <find>Customer</find>
@@ -180,6 +191,7 @@
       <find>YandexPayments</find>
       <find>Currencies</find>
       <find>getCurrency</find>
+      <find>order_status_id</find>
     </findStrings>
     <replaceStrings>
       <replace>getAttribute</replace>
@@ -200,8 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Support/Traits/HasAttributes.php" />
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/Shipping/Shipping.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Shop.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartFactory.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" />
@@ -229,7 +239,6 @@
         <option value="$PROJECT_DIR$/src/Shop/Order/CheckoutOrderBuilder.php" />
         <option value="$PROJECT_DIR$/src/Shop/Payment/Payment.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Order/Order.php" />
-        <option value="$PROJECT_DIR$/src/Shop/Order/Order.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shipping/Shipping.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Order/Order.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/CheckoutCartBuilder.php" />
@@ -242,15 +251,18 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartProduct.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/ModelCartLoader.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_07_17_111656_create_reviews_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Payment/YandexPayment.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Payment/Payment.php" />
         <option value="$PROJECT_DIR$/src/Config/tables.php" />
         <option value="$PROJECT_DIR$/src/Shop/Shop/Traits/HasCurrency.php" />
         <option value="$PROJECT_DIR$/src/Support/Traits/Models/Shop/StorePriceValueAsInteger.php" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Price/Price.php" />
         <option value="$PROJECT_DIR$/src/Shop/Price.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000300_create_languages_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php" />
+        <option value="$PROJECT_DIR$/src/Shop/Order/Order.php" />
       </list>
     </option>
   </component>
@@ -694,12 +706,12 @@
       <workItem from="1541754695058" duration="1553000" />
       <workItem from="1541762279941" duration="2045000" />
       <workItem from="1542007632995" duration="17729000" />
-      <workItem from="1542093220718" duration="47194000" />
+      <workItem from="1542093220718" duration="49831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="526523000" />
+    <option name="totallyTimeSpent" value="529160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -710,7 +722,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.3313433" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.3313433" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17838125" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.15974441" />
@@ -739,20 +751,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Cart/CartProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Promo/Conditions/MinSumm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Promo/Conditions/FirstOrder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -889,13 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Order/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/CheckoutOrderBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -969,13 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/YandexPayment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1004,20 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/Payment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="135" column="45" lean-forward="true" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1063,13 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/StorePriceValueAsInteger.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-785">
@@ -1079,8 +1042,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Price.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="107">
           <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000300_create_languages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="135" column="45" lean-forward="true" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145200_create_yandex_payments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_07_24_145100_create_payments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000910_create_orders_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/Payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Order/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="117" column="29" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
         </state>
       </provider>
     </entry>

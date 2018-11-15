@@ -18,6 +18,7 @@ class CreateYandexPaymentsTable extends Migration
             $table->string('yandex_payment_id');
             $table->integer('amount')->unsigned();
             $table->string('currency_code');
+            $table->string('status');
 
             $table->timestamps();
         });

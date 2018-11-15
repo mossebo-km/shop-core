@@ -107,7 +107,7 @@ class Order implements OrderInterface
         $shipping = $this->getShipping();
 
         return [
-            'order_status_id'  => $this->getStatusId(),
+            'status_id'        => $this->getStatusId(),
             'language_code'    => $currentLanguage->code,
             'currency_code'    => $cart->getCurrencyCode(),
             'price_type_id'    => $cart->getPriceTypeId(),
