@@ -14,7 +14,7 @@ abstract class Order extends BaseModel
         'language_code',
         'price_type_id',
         'currency_code',
-        'order_status_id',
+        'status_id',
         'shipping_type_id',
         'first_name',
         'last_name',
