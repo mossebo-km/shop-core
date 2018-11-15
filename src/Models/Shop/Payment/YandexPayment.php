@@ -5,7 +5,7 @@ namespace MosseboShopCore\Models\Shop\Payment;
 use MosseboShopCore\Models\Base\BaseModel;
 use MosseboShopCore\Support\Traits\Models\Shop\StorePriceValueAsInteger;
 
-abstract class Payment extends BaseModel
+abstract class YandexPayment extends BaseModel
 {
     use StorePriceValueAsInteger;
 
