@@ -4,6 +4,7 @@ namespace MosseboShopCore\Shop;
 
 use MosseboShopCore\Contracts\Shop\Price as PriceInterface;
 use MosseboShopCore\Contracts\Shop\Currency;
+use Shop;
 
 class Price implements PriceInterface
 {
