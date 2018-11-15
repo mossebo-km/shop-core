@@ -8,6 +8,11 @@ trait HasCurrency
 {
     protected $currencyCode = null;
 
+    public function getCurrency($currencyCode)
+    {
+        return Currencies::where('code', $currencyCode)->first();
+    }
+
     public function getCurrentCurrencyCode()
     {
         if (is_null($this->currencyCode)) {

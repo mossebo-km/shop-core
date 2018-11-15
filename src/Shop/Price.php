@@ -115,7 +115,7 @@ class Price implements PriceInterface
 
     public function getCurrency(): ?Currency
     {
-        return \Currencies::where('code', $this->currencyCode)->first();
+        return Shop::getCurrency($this->currencyCode);
     }
 
     /**

@@ -2,6 +2,9 @@
 
 namespace MosseboShopCore\Support\Traits\Models\Shop;
 
+use MosseboShopCore\Contracts\Shop\Currency;
+use Shop;
+
 /**
  * Для моделей, которые хранят цену в integer.
  *
@@ -25,6 +28,11 @@ trait StorePriceValueAsInteger
         }
 
         return $this->priceAttributeKeys[0];
+    }
+
+    public function getCurrency(): Currency
+    {
+        return Shop::getCurrency($this->currency_code);
     }
 
     /**
