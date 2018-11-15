@@ -13,7 +13,6 @@ abstract class Payment extends BaseModel
         'order_id',
         'payment_id',
         'payment_type',
-        'status'
     ];
 
     public $timestamps = false;
