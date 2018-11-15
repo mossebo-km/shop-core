@@ -133,5 +133,5 @@ return [
 
 
     'Payments'        => 'shop_payments',
-    'YandexPayments'  => 'shop_yandex_payments',
+    'YandexPayments'  => 'shop_payments_yandex',
 ];
