@@ -16,10 +16,7 @@ abstract class Payment extends BaseModel
         'status'
     ];
 
-    protected $dates = [
-        'created_at',
-        'updated_at'
-    ];
+    public $timestamps = false;
 
     public function details()
     {
