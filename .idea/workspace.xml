@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="" />
+    <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,11 +146,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PayType.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Models/Shop/PayType/PayType.php">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="611">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_02_27_000040_create_users_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -157,15 +169,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2430">
               <caret line="135" column="45" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2018_02_27_000300_create_languages_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000300_create_languages_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -224,7 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Contracts/Shop/Shop.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/CartFactory.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Session/CartSessionLoader.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Storage/Model/CartModelLoader.php" />
@@ -234,7 +236,6 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/Types/Session/CartSessionConnector.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Traits/HasSession.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Types/Session/CartSessionSaver.php" />
-        <option value="$PROJECT_DIR$/src/Models/User.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Shop/Customer.php" />
         <option value="$PROJECT_DIR$/src/Shop/Customer.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/AbstractOrderBuilder.php" />
@@ -275,6 +276,8 @@
         <option value="$PROJECT_DIR$/src/Models/Shop/Payment/YandexPayment.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/Builders/AbstractOrderBuilder.php" />
         <option value="$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php" />
+        <option value="$PROJECT_DIR$/src/Models/User.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php" />
       </list>
     </option>
   </component>
@@ -733,12 +736,12 @@
       <workItem from="1541762279941" duration="2045000" />
       <workItem from="1542007632995" duration="17729000" />
       <workItem from="1542093220718" duration="52015000" />
-      <workItem from="1542293557652" duration="1066000" />
+      <workItem from="1542293557652" duration="2093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="532410000" />
+    <option name="totallyTimeSpent" value="533437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -753,7 +756,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.330637" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.330637" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.5004975" side_tool="true" weight="0.25346112" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -778,27 +781,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Support/Traits/Models/Shop/StorePriceValueAsInteger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Price.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000300_create_languages_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Shop/Payment/YandexPayment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1121,10 +1103,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php">
+    <entry file="file://$PROJECT_DIR$/src/Models/Shop/PayType/PayTypeI18n.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="342">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1132,6 +1114,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Order/Builders/ModelOrderBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_27_000040_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>

@@ -17,12 +17,20 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('email')->unique()->index();
             $table->string('phone')->unique()->index()->nullable();
-            $table->string('address', 512)->nullable();
-            $table->string('city', 255)->nullable();
-            $table->string('post_code', 255)->nullable();
             $table->string('password');
             $table->string('api_token', 60)->unique();
             $table->boolean('is_franchisee')->default(false);
+
+
+            $table->string('city', 255)->nullable();
+            $table->string('street', 255)->nullable();
+            $table->string('house_number', 255)->nullable();
+            $table->string('apartment', 255)->nullable();
+            $table->string('floor', 255)->nullable();
+            $table->string('entrance', 255)->nullable();
+            $table->string('intercom', 255)->nullable();
+            $table->string('post_code', 255)->nullable();
+
             $table->rememberToken();
             $table->timestamps();
 

@@ -15,14 +15,21 @@ abstract class User extends Authenticatable implements CustomerInterface
         'last_name',
         'email',
         'phone',
-        'address',
-        'city',
-        'post_code',
         'password',
         'api_token',
+
+        'city',
+        'street',
+        'house_number',
+        'apartment',
+        'floor',
+        'entrance',
+        'intercom',
+        'post_code',
+
         'is_franchisee',
         'price_type_id',
-        'msb'
+        'msb',
     ];
 
     protected $hidden = [
