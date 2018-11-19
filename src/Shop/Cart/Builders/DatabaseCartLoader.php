@@ -29,9 +29,11 @@ class DatabaseCartLoader extends AbstractCartBuilder
     protected function getProducts(): Collection
     {
         $products = new Collection;
+        $priceTypeId = $this->getCustomer()->getPriceTypeId();
+        $currencyCode = $this->getCurrencyCode();
 
         if ($this->cartData->relationNotEmpty('products')) {
-            foreach ($this->cartData->products as $cartProduct) {
+            foreach ($this->cartData->cartProducts as $cartProduct) {
                 if ($cartProduct->options->count() > 0) {
                     $options = array_column($cartProduct->options->toArray(), 'option_id');
                 }
@@ -40,18 +42,16 @@ class DatabaseCartLoader extends AbstractCartBuilder
                 }
 
                 $params = json_decode($cartProduct->params, true);
-
                 $params['options'] = Shop::getAvailableProductOptionIds($cartProduct->product_id);
 
                 $product = Shop::make(CartProductInterface::class, [
                     'productId'        => $cartProduct->product_id,
-                    'options'          => $options,
                     'quantity'         => $cartProduct->quantity,
+                    'options'          => $options,
                 ]);
 
-                $product->setCurrencyCode($this->getCurrencyCode());
-                $product->setBasePriceTypeId($cartProduct->base_price_type_id);
-                $product->setFinalPriceTypeId($cartProduct->final_price_type_id);
+                $product->setCurrencyCode($currencyCode);
+                $product->setBasePriceTypeId($priceTypeId);
                 $product->setAddedAtTimestamp($cartProduct->created_at);
                 $product->setUpdatedAtTimestamp($cartProduct->updated_at);
 

@@ -21,6 +21,9 @@ class CreateCartProductsTable extends Migration
             $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on(config('tables.Products'))->onDelete('cascade');
 
+            $table->integer('quantity');
+            $table->text('params');
+
             $table->timestamps();
         });
     }

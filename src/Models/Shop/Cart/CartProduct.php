@@ -12,6 +12,8 @@ class CartProduct extends BaseModel
     protected $fillable = [
         'cart_id',
         'product_id',
+        'quantity',
+        'params'
     ];
 
     protected $dates = [
