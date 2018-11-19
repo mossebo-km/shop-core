@@ -11,6 +11,7 @@ class Cart extends BaseModel
 
     protected $fillable = [
         'user_id',
+        'currency_code',
     ];
 
     protected $dates = [

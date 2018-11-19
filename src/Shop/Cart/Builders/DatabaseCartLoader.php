@@ -19,11 +19,24 @@ class DatabaseCartLoader extends AbstractCartBuilder
     public function __construct($data)
     {
         $this->cartData = $data;
+
+        if (empty($this->cartData)) {
+            $this->cartData = $this->makeEmptyCartData();
+        }
+    }
+
+    protected function makeEmptyCartData()
+    {
+        return [
+            'products' => [],
+            'currencyCode' => Shop::getCurrentCurrencyCode(),
+            'promoCode'    => Shop::getDefaultPromoCode() ?: null,
+        ];
     }
 
     protected function getCustomer(): ?CustomerInterface
     {
-        return $this->cartData->user;
+        return $this->getCartData('user');
     }
 
     protected function getProducts(): Collection
@@ -32,8 +45,8 @@ class DatabaseCartLoader extends AbstractCartBuilder
         $priceTypeId = $this->getCustomer()->getPriceTypeId();
         $currencyCode = $this->getCurrencyCode();
 
-        if ($this->cartData->relationNotEmpty('products')) {
-            foreach ($this->cartData->cartProducts as $cartProduct) {
+        if ($cartProducts = $this->getCartData('products')) {
+            foreach ($cartProducts as $cartProduct) {
                 if ($cartProduct->options->count() > 0) {
                     $options = array_column($cartProduct->options->toArray(), 'option_id');
                 }

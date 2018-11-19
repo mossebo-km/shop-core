@@ -4,24 +4,19 @@ namespace MosseboShopCore\Shop\Cart\Savers;
 
 use MosseboShopCore\Contracts\Shop\Cart\Cart;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct;
-use MosseboShopCore\Contracts\Shop\Cart\CartSaver;
 use MosseboShopCore\Shop\Cart\Traits\HasSession;
 
-class SessionCartSaver implements CartSaver
+class SessionCartSaver extends AbstractCartSaver
 {
     use HasSession;
 
-    protected $cart = null;
-
-    public function save(Cart $cart)
+    public function save()
     {
-        if (! $cart->getProducts()->count()) {
+        if (! $this->cart->getProducts()->count()) {
             $this->forget('cart');
 
             return;
         }
-
-        $this->cart = $cart;
 
         $data = [];
 
@@ -34,11 +29,6 @@ class SessionCartSaver implements CartSaver
         // todo: доделать, или убрать скидки из корзины
 
         $this->put('cart', $data);
-    }
-
-    protected function getCart(): Cart
-    {
-        return $this->cart;
     }
 
     protected function prepareProducts(& $data)

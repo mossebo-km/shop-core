@@ -25,12 +25,10 @@ class SessionCartLoader extends AbstractCartBuilder
 
     protected function makeEmptyCartData()
     {
-        $defaultPromo = Shop::getDefaultPromoCode();
-
         return [
             'products' => [],
             'currencyCode' => Shop::getCurrentCurrencyCode(),
-            'promoCode'    => $defaultPromo ? $defaultPromo : null,
+            'promoCode'    => Shop::getDefaultPromoCode() ?: null,
         ];
     }
 

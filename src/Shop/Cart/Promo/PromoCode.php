@@ -31,6 +31,11 @@ abstract class PromoCode implements PromoCodeInterface
         // установить в реализации
     }
 
+    public function getId()
+    {
+        return $this->resource->id;
+    }
+
     public function getName(): string
     {
         return $this->resource->name;

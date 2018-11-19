@@ -13,6 +13,7 @@ interface PromoCode
     public function setResource($codeIdOrName = ''): void;
     public function validate(Cart $cart): PromoValidator;
     public function getConditions(): Collection;
+    public function getId();
     public function getName(): string;
     public function apply(Price $price): Price;
     public function getDiscountPrice(Price $price): Price;

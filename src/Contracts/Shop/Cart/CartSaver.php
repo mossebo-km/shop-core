@@ -4,5 +4,6 @@ namespace MosseboShopCore\Contracts\Shop\Cart;
 
 interface CartSaver
 {
-    public function save(Cart $cart);
+    public function __construct(Cart $cart);
+    public function save();
 }
