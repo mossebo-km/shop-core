@@ -29,7 +29,7 @@ class DatabaseCartLoader extends AbstractCartBuilder
     {
         return [
             'products' => [],
-            'currencyCode' => Shop::getCurrentCurrencyCode(),
+            'currency_code' => Shop::getCurrentCurrencyCode(),
             'promoCode'    => Shop::getDefaultPromoCode() ?: null,
         ];
     }
@@ -42,10 +42,11 @@ class DatabaseCartLoader extends AbstractCartBuilder
     protected function getProducts(): Collection
     {
         $products = new Collection;
-        $priceTypeId = $this->getCustomer()->getPriceTypeId();
-        $currencyCode = $this->getCurrencyCode();
 
         if ($cartProducts = $this->getCartData('products')) {
+            $priceTypeId = $this->getCustomer()->getPriceTypeId();
+            $currencyCode = $this->getCurrencyCode();
+
             foreach ($cartProducts as $cartProduct) {
                 if ($cartProduct->options->count() > 0) {
                     $options = array_column($cartProduct->options->toArray(), 'option_id');
@@ -81,12 +82,12 @@ class DatabaseCartLoader extends AbstractCartBuilder
 
     protected function getCurrencyCode(): ?string
     {
-        return $this->cartData->currency_code;
+        return $this->getCartData('currency_code');
     }
 
     protected function getPromoCode(): ?PromoCodeInterface
     {
-        if (! $this->cartData->relationNotEmpty('promoCode')) {
+        if ($promoCode = $this->getCartData('promoCode')) {
             return null;
         }
 
@@ -97,12 +98,12 @@ class DatabaseCartLoader extends AbstractCartBuilder
 
     protected function getCreatedAt()
     {
-        return $this->cartData->created_at;
+        return $this->getCartData('created_at');
     }
 
     protected function getUpdatedAt()
     {
-        return $this->cartData->updated_at;
+        return $this->getCartData('updated_at');
     }
 }
 
