@@ -12,8 +12,7 @@ use MosseboShopCore\Contracts\Shop\Cart\CartProductData as CartProductDataInterf
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode as PromoCodeInterface;
 use MosseboShopCore\Contracts\Shop\Customer as CustomerInterface;
 
-
-class ModelCartLoader extends AbstractCartBuilder
+class DatabaseCartLoader extends AbstractCartBuilder
 {
     protected $cartData = null;
 
@@ -31,30 +30,30 @@ class ModelCartLoader extends AbstractCartBuilder
     {
         $products = new Collection;
 
-        if ($this->cartData->relationNotEmpty('orderProducts')) {
-            foreach ($this->cartData->orderProducts as $orderProduct) {
-                if ($orderProduct->options->count() > 0) {
-                    $options = array_column($orderProduct->options->toArray(), 'option_id');
+        if ($this->cartData->relationNotEmpty('products')) {
+            foreach ($this->cartData->products as $cartProduct) {
+                if ($cartProduct->options->count() > 0) {
+                    $options = array_column($cartProduct->options->toArray(), 'option_id');
                 }
                 else {
                     $options = [];
                 }
 
-                $params = json_decode($orderProduct->params, true);
+                $params = json_decode($cartProduct->params, true);
 
-                $params['options'] = Shop::getAvailableProductOptionIds($orderProduct->product_id);
+                $params['options'] = Shop::getAvailableProductOptionIds($cartProduct->product_id);
 
                 $product = Shop::make(CartProductInterface::class, [
-                    'productId'        => $orderProduct->product_id,
+                    'productId'        => $cartProduct->product_id,
                     'options'          => $options,
-                    'quantity'         => $orderProduct->quantity,
+                    'quantity'         => $cartProduct->quantity,
                 ]);
 
                 $product->setCurrencyCode($this->getCurrencyCode());
-                $product->setBasePriceTypeId($orderProduct->base_price_type_id);
-                $product->setFinalPriceTypeId($orderProduct->final_price_type_id);
-                $product->setAddedAtTimestamp($orderProduct->created_at);
-                $product->setUpdatedAtTimestamp($orderProduct->updated_at);
+                $product->setBasePriceTypeId($cartProduct->base_price_type_id);
+                $product->setFinalPriceTypeId($cartProduct->final_price_type_id);
+                $product->setAddedAtTimestamp($cartProduct->created_at);
+                $product->setUpdatedAtTimestamp($cartProduct->updated_at);
 
                 $product->setProductData(
                     Shop::make(CartProductDataInterface::class, ['data' => $params])
@@ -74,12 +73,12 @@ class ModelCartLoader extends AbstractCartBuilder
 
     protected function getPromoCode(): ?PromoCodeInterface
     {
-        if (! $this->cartData->relationNotEmpty('promoUse')) {
+        if (! $this->cartData->relationNotEmpty('promoCode')) {
             return null;
         }
 
         return Shop::make(PromoCodeInterface::class, [
-            'codeName' => $this->cartData->promoUse->promo_code_id
+            'codeName' => $this->cartData->promoCode
         ]);
     }
 

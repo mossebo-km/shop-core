@@ -3,7 +3,7 @@
 namespace MosseboShopCore\Shop\Order\Builders;
 
 use Shop;
-use MosseboShopCore\Shop\Cart\Builders\ModelCartLoader;
+use MosseboShopCore\Shop\Cart\Builders\OrderCartLoader;
 use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
 use MosseboShopCore\Contracts\Shop\Customer as CustomerInterface;
 use MosseboShopCore\Contracts\Shop\Payment\Payment as PaymentInterface;
@@ -25,7 +25,7 @@ class ModelOrderBuilder extends AbstractOrderBuilder
 
     protected function getCart(): ?CartInterface
     {
-        return Shop::makeCart(ModelCartLoader::class, $this->orderData);
+        return Shop::makeCart(OrderCartLoader::class, $this->orderData);
     }
 
     protected function getCustomer(): ?CustomerInterface

@@ -18,6 +18,9 @@ class CreateCartsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on(config('tables.Users'));
 
+            $table->char('currency_code', 3);
+            $table->foreign('currency_code')->references('code')->on(config('tables.Currencies'));
+
             $table->timestamps();
         });
     }
