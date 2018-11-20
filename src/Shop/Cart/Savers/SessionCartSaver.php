@@ -11,7 +11,7 @@ class SessionCartSaver extends AbstractCartSaver
 
     public function save()
     {
-        if (! $this->cart->getProducts()->count()) {
+        if ($this->getCart()->isEmpty()) {
             Session::forget($this->storeKey);
 
             return;
