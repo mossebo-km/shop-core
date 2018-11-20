@@ -77,6 +77,11 @@ class Cart implements CartInterface
         return clone $this->products;
     }
 
+    public function isEmpty(): bool
+    {
+        return $this->getProducts()->count() === 0;
+    }
+
     /**
      * Возвращает количество товаров в корзине
      *

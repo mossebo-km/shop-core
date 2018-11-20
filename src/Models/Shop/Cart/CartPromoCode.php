@@ -16,5 +16,8 @@ class CartPromoCode extends BaseModel
         'promo_code_id',
     ];
 
-    public $timestamps = false;
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 }

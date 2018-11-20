@@ -20,6 +20,7 @@ interface Cart
 
     public function setCurrencyCode($currencyCode = null): Cart;
     public function getCurrencyCode(): string;
+    public function isEmpty(): bool;
 
     public function setPriceTypeId($priceTypeId = null): Cart;
     public function getPriceTypeId(): int;
