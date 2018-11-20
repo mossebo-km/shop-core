@@ -6,7 +6,7 @@ use MosseboShopCore\Models\Base\BaseModel;
 
 class CartPromoCode extends BaseModel
 {
-    protected $tableKey = 'CartPromoCode';
+    protected $tableKey = 'CartPromoCodes';
 
     public $incrementing = false;
     protected $primaryKey = null;

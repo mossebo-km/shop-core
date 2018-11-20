@@ -93,7 +93,7 @@ class DatabaseCartLoader extends AbstractCartBuilder
         }
 
         return Shop::make(PromoCodeInterface::class, [
-            'codeName' => $promoCode
+            'codeName' => $promoCode->getId()
         ]);
     }
 
