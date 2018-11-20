@@ -28,6 +28,7 @@ class DatabaseCartLoader extends AbstractCartBuilder
     protected function makeEmptyCartData()
     {
         return [
+            'user' => Auth::user(),
             'products' => [],
             'currency_code' => Shop::getCurrentCurrencyCode(),
             'promoCode'    => Shop::getDefaultPromoCode() ?: null,
@@ -87,12 +88,12 @@ class DatabaseCartLoader extends AbstractCartBuilder
 
     protected function getPromoCode(): ?PromoCodeInterface
     {
-        if ($promoCode = $this->getCartData('promoCode')) {
+        if (! ($promoCode = $this->getCartData('promoCode'))) {
             return null;
         }
 
         return Shop::make(PromoCodeInterface::class, [
-            'codeName' => $this->cartData->promoCode
+            'codeName' => $promoCode
         ]);
     }
 

@@ -8,15 +8,12 @@ use Illuminate\Support\Collection;
 use MosseboShopCore\Contracts\Shop\Cart\CartProduct as CartProductInterface;
 use MosseboShopCore\Contracts\Shop\Cart\CartProductData as CartProductDataInterface;
 use MosseboShopCore\Contracts\Shop\Cart\Promo\PromoCode as PromoCodeInterface;
-use MosseboShopCore\Shop\Cart\Traits\HasSession;
 
 class SessionCartLoader extends AbstractCartBuilder
 {
-    use HasSession;
-
-    public function __construct()
+    public function __construct($data)
     {
-        $this->cartData = $this->get('cart');
+        $this->cartData = $data;
 
         if (empty($this->cartData)) {
             $this->cartData = $this->makeEmptyCartData();

@@ -135,8 +135,8 @@ return [
     'Payments'        => 'shop_payments',
     'YandexPayments'  => 'shop_payments_yandex',
 
-    'Carts'                       => 'carts',
-    'CartProducts'                => 'cart_products',
-    'CartProductAttributeOptions' => 'cart_product_attribute_options',
-    'CartPromo'                   => 'cart_promos',
+    'Carts'                       => 'shop_carts',
+    'CartProducts'                => 'shop_cart_products',
+    'CartProductAttributeOptions' => 'shop_cart_product_attribute_options',
+    'CartPromo'                   => 'shop_cart_promos',
 ];
