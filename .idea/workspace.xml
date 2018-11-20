@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca70d7b3-fd00-473f-ba6e-3f78f3905735" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/badges.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/badges.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Shop/Cart/CartPromoCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Shop/Cart/CartPromoCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/Cart/Builders/DatabaseCartLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/Cart/Builders/DatabaseCartLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/tables.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartPromoCode.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartPromoCode.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Shop/Cart/CartPromoCode.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -95,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tables.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
@@ -231,11 +228,11 @@
         <option value="$PROJECT_DIR$/src/Shop/Cart/Savers/AbstractCartSaver.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Savers/SessionCartSaver.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/SessionCartLoader.php" />
-        <option value="$PROJECT_DIR$/src/Config/tables.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Promo/PromoCode.php" />
         <option value="$PROJECT_DIR$/src/Shop/Cart/Builders/DatabaseCartLoader.php" />
         <option value="$PROJECT_DIR$/public/assets/images/badges.svg" />
         <option value="$PROJECT_DIR$/src/Models/Shop/Cart/CartPromoCode.php" />
+        <option value="$PROJECT_DIR$/src/Config/tables.php" />
       </list>
     </option>
   </component>
@@ -620,12 +617,12 @@
       <workItem from="1542293557652" duration="3397000" />
       <workItem from="1542611759835" duration="14000" />
       <workItem from="1542611843280" duration="16176000" />
-      <workItem from="1542698220457" duration="1598000" />
+      <workItem from="1542698220457" duration="1692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="552529000" />
+    <option name="totallyTimeSpent" value="552623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -640,7 +637,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.33034825" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.33034825" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.5004975" side_tool="true" weight="0.25346112" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -951,13 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="141" column="2" lean-forward="true" selection-start-line="141" selection-start-column="2" selection-end-line="141" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Promo/PromoCode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -1011,6 +1001,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="141" column="2" lean-forward="true" selection-start-line="141" selection-start-column="2" selection-end-line="141" selection-end-column="2" />
         </state>
       </provider>
     </entry>
