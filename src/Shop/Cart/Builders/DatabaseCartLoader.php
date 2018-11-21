@@ -23,8 +23,6 @@ class DatabaseCartLoader extends AbstractCartBuilder
         if (empty($this->cartData)) {
             $this->cartData = $this->makeEmptyCartData();
         }
-
-        dd('a');
     }
 
     protected function makeEmptyCartData()
