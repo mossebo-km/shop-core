@@ -92,8 +92,6 @@ class DatabaseCartLoader extends AbstractCartBuilder
             return null;
         }
 
-        dd($promoCode);
-
         return Shop::make(PromoCodeInterface::class, [
             'codeName' => $promoCode->id
         ]);
