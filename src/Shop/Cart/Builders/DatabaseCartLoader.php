@@ -23,6 +23,8 @@ class DatabaseCartLoader extends AbstractCartBuilder
         if (empty($this->cartData)) {
             $this->cartData = $this->makeEmptyCartData();
         }
+
+        dd('a');
     }
 
     protected function makeEmptyCartData()
@@ -88,7 +90,6 @@ class DatabaseCartLoader extends AbstractCartBuilder
 
     protected function getPromoCode(): ?PromoCodeInterface
     {
-        dd($this->getCartData('promoCode'));
         if (! ($promoCode = $this->getCartData('promoCode'))) {
             return null;
         }
