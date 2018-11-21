@@ -31,7 +31,7 @@ class DatabaseCartLoader extends AbstractCartBuilder
             'user' => Auth::user(),
             'products' => [],
             'currency_code' => Shop::getCurrentCurrencyCode(),
-            'promoCode'    => Shop::getDefaultPromoCode() ?: null,
+            'promoCode' => Shop::getDefaultPromoCode() ?: null,
         ];
     }
 
@@ -60,9 +60,9 @@ class DatabaseCartLoader extends AbstractCartBuilder
                 $params['options'] = Shop::getAvailableProductOptionIds($cartProduct->product_id);
 
                 $product = Shop::make(CartProductInterface::class, [
-                    'productId'        => $cartProduct->product_id,
-                    'quantity'         => $cartProduct->quantity,
-                    'options'          => $options,
+                    'productId' => $cartProduct->product_id,
+                    'quantity'  => $cartProduct->quantity,
+                    'options'   => $options,
                 ]);
 
                 $product->setCurrencyCode($currencyCode);
@@ -88,6 +88,7 @@ class DatabaseCartLoader extends AbstractCartBuilder
 
     protected function getPromoCode(): ?PromoCodeInterface
     {
+        dd($this->getCartData('promoCode'));
         if (! ($promoCode = $this->getCartData('promoCode'))) {
             return null;
         }

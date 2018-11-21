@@ -41,8 +41,26 @@
       <file leaf-file-name="DatabaseCartLoader.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/DatabaseCartLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="424">
+              <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractCartBuilder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/AbstractCartBuilder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-722">
+              <caret line="23" column="59" lean-forward="true" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="790">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
         </entry>
@@ -68,8 +86,8 @@
       <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5003">
-              <caret line="326" lean-forward="true" selection-start-line="326" selection-end-line="326" />
+            <state relative-caret-position="405">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -87,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>makeCart</find>
       <find>getCart</find>
       <find>Shop::call</find>
       <find>blockChanges</find>
@@ -115,8 +132,9 @@
       <find>getPro</find>
       <find>MAIL_TO_ADDRESS</find>
       <find>codeName</find>
-      <find>getId</find>
       <find>promoC</find>
+      <find>getId</find>
+      <find>promoCode</find>
     </findStrings>
     <replaceStrings>
       <replace>getAttribute</replace>
@@ -307,14 +325,6 @@
               <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mossebo-shop-core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Category" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mossebo-shop-core" type="b2602c69:ProjectViewProjectNode" />
@@ -567,12 +577,12 @@
       <workItem from="1542293557652" duration="3397000" />
       <workItem from="1542611759835" duration="14000" />
       <workItem from="1542611843280" duration="16176000" />
-      <workItem from="1542698220457" duration="6807000" />
+      <workItem from="1542698220457" duration="7545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557738000" />
+    <option name="totallyTimeSpent" value="558476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -583,8 +593,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.32760364" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" visible="true" weight="0.33034825" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17358893" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946752" weight="0.33034825" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49950248" visible="true" weight="0.17358893" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.15974441" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962587" />
@@ -745,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Cart/CartSaver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -872,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/AbstractCartBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contracts/Shop/Cart/Promo/PromoCode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -917,13 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5003">
-          <caret line="326" lean-forward="true" selection-start-line="326" selection-end-line="326" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Savers/AbstractCartSaver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -952,10 +941,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/AbstractCartBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-722">
+          <caret line="23" column="59" lean-forward="true" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Cart/Builders/DatabaseCartLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="424">
+          <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
         </state>
       </provider>
     </entry>
