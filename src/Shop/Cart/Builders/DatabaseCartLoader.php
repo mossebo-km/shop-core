@@ -67,8 +67,8 @@ class DatabaseCartLoader extends AbstractCartBuilder
 
                 $product->setCurrencyCode($currencyCode);
                 $product->setBasePriceTypeId($priceTypeId);
-                $product->setAddedAtTimestamp($cartProduct->created_at);
-                $product->setUpdatedAtTimestamp($cartProduct->updated_at);
+                $product->setAddedAtTimestamp($cartProduct->created_at->timestamp);
+                $product->setUpdatedAtTimestamp($cartProduct->updated_at->timestamp);
 
                 $product->setProductData(
                     Shop::make(CartProductDataInterface::class, ['data' => $params])
@@ -92,8 +92,10 @@ class DatabaseCartLoader extends AbstractCartBuilder
             return null;
         }
 
+        dd($promoCode);
+
         return Shop::make(PromoCodeInterface::class, [
-            'codeName' => $promoCode->getId()
+            'codeName' => $promoCode->id
         ]);
     }
 
