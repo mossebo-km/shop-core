@@ -12,5 +12,5 @@ interface Shop
     public function makeCart($cartBuilderClassName, $data = null): Cart;
     public function makeOrder($orderBuilderClassName, $data = null): Order;
 
-    public function getCustomer(): ?Customer;
+//    public function getCustomer(): ?Customer;
 }
