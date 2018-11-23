@@ -56,6 +56,8 @@ abstract class City extends BaseModel
             'id' => $this->id,
             'name' => $this->name,
             'short_name' => $this->short_name,
+            'okato_code' => $this->okato_code,
+            'fias_code'  => $this->fias_code,
         ];
 
         if ($this->region) {
