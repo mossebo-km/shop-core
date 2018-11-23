@@ -8,6 +8,8 @@ use Auth;
 use MosseboShopCore\Shop\Shop\Traits\HasLanguage;
 use MosseboShopCore\Shop\Shop\Traits\HasCurrency;
 use MosseboShopCore\Shop\Shop\Traits\HasPriceTypes;
+use MosseboShopCore\Contracts\Shop\Cart\Cart as CartInterface;
+use MosseboShopCore\Contracts\Shop\Order\Order as OrderInterface;
 
 abstract class Shop implements ShopInterface
 {
@@ -36,5 +38,32 @@ abstract class Shop implements ShopInterface
     public function call($callable, $params = null)
     {
         return app()->call($callable, $params);
+    }
+
+    public function make($className, $data = null)
+    {
+        if (is_array($data)) {
+            return app()->makeWith($className, $data);
+        }
+
+        return app()->make($className);
+    }
+
+    public function makeCart($cartBuilderClassName, $data = null): CartInterface
+    {
+        $builder = $this->make($cartBuilderClassName, [
+            'data' => $data
+        ]);
+
+        return $builder->getCart();
+    }
+
+    public function makeOrder($orderBuilderClassName, $data = null): OrderInterface
+    {
+        $builder = $this->make($orderBuilderClassName, [
+            'data' => $data
+        ]);
+
+        return $builder->getOrder();
     }
 }
