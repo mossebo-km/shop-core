@@ -18,6 +18,11 @@ class CartProxy
         $this->saver = $saver;
     }
 
+    public function getResource()
+    {
+        return $this->cart;
+    }
+
     public function get()
     {
         return $this->cart;
