@@ -41,4 +41,9 @@ interface CartProduct extends Product
 
     public static function makeKey($id, $options = []);
     public static function decodeKey($key): array;
+
+    public function getImage(): array;
+    public function getPrices(): array;
+    public function getI18nTitles(): array;
+    public function getTitle($languageCode): ?string;
 }
