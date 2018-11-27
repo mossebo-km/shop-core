@@ -55,6 +55,11 @@ abstract class Product extends BaseModel implements ProductInterface, HasMorphRe
             $this->id
         ];
 
+        foreach ($this->i18n as $translate) {
+            $index[] = $translate->title;
+            $index[] = $translate->description;
+        }
+
         foreach ($this->attributeOptions as $option) {
             foreach ($option->i18n as $translate) {
                 $index[] = $translate->value;
@@ -77,11 +82,6 @@ abstract class Product extends BaseModel implements ProductInterface, HasMorphRe
             foreach ($room->i18n as $translate) {
                 $index[] = $translate->title;
             }
-        }
-
-        foreach ($this->i18n as $translate) {
-            $index[] = $translate->title;
-            $index[] = $translate->description;
         }
 
         $index = array_unique($index);
