@@ -27,7 +27,9 @@ abstract class Review extends BaseModel implements LikeableContract, HasMorphRel
         'comment',
         'usage_time',
         'confirmed',
-        'enabled'
+        'enabled',
+        'created_at',
+        'updated_at',
     ];
 
     protected $morphTypeName = 'review';
